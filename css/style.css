@@ -1,0 +1,101 @@
+:root{
+    --primary-color: #19ffe4;
+    --secondary-color: #000000;
+    --tertiary-color: #ff0000;
+    --text-color: #ffffff;
+    --background-color-primary: #212121;
+    --background-color-secondary: #303030;
+    --background-color-tertiary: #5d5d5d;
+    --font-size: 16px;
+    --font-family: 'Roboto', sans-serif;
+    --font-weight: 400;
+}
+
+body{
+    background-color: var(--background-color-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: var(--background-color-secondary);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 2em;
+    @media screen and (max-width: 768px){
+        width: 80%;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0.25em;
+        li{
+            margin: 0.25em;
+            transition: all 0.5s ease-in-out;
+            a{
+                /* make width the same as the height */
+                width: 4em;
+                height: 4em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: var(--primary-color);
+                /* background-color: var(--background-color-primary); */
+                padding: 1rem;
+                border-radius: 2em;
+                text-decoration: none;
+                font-size: 0.75rem;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                opacity: 0.5;
+                span{height: 0px;
+                    scale: 0;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover{
+                    opacity: 1;
+                    /* color: var(--tertiary-color); */
+                    span{
+                        height: 100%;
+                        scale: 1;
+                    }
+                }
+                i{
+                    scale: 1.75;
+                    padding: 0.5rem;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    };
+}
+
+.active{
+    background-color: var(--primary-color);
+    color: var(--background-color-secondary);
+    opacity: 1;
+    span{
+        height: 100%;
+        scale: 1;
+    }
+}
