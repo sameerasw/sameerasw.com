@@ -197,3 +197,10 @@ nav{
 #github{
     margin: 1em 0;
 }
+
+.wip{
+    width: 30%;
+    margin: auto;
+    transform: translate(-50%, 50%);
+    
+}
