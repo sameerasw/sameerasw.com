@@ -1,0 +1,6 @@
+:root{
+    --primary-color: var(--arc-palette-foregroundSecondary);
+    --secondary-color: var(--arc-palette-backgroundExtra);
+    --background-color-primary: var(--arc-palette-background);
+    --background-color-secondary: var(--arc-palette-backgroundExtra);
+}
