@@ -246,6 +246,15 @@ nav{
     }
 }
 
+#photo{
+    background-image: url('../assets/img/photo-professional.png');
+    width: 8em;
+    height: 8em;
+    background-size: cover;
+    background-position: center;
+    margin-right: 2em;
+}
+
 .scroll{
     opacity: 0.5;
 }
