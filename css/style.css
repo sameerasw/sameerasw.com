@@ -13,10 +13,6 @@
     --blur: 0.5em;
 }
 
-html{
-    /* background-color: var(--background-color-secondary) */
-}
-
 body{
     background-color: var(--background-color-primary);
     font-family: var(--font-family);
