@@ -13,7 +13,7 @@
 }
 
 html{
-    background-color: var(--background-color-secondary)
+    /* background-color: var(--background-color-secondary) */
 }
 
 body{
@@ -54,6 +54,7 @@ nav{
     border-radius: 2em;
     border: 0.15em solid var(--text-color);
     transition: border 0.5s ease-in-out;
+    z-index: 100;
     &:hover{
         border: 0.15em solid var(--primary-color);
     }
@@ -132,15 +133,32 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    /* align-items: center; */
+    align-items: center;
     width: 100vw;
     padding: 4em 0;
     margin: 0;
     /* height: 100vh; */
+    .heading{
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        flex-direction: row;
+        .container-mini{
+            margin: 0 2em;
+        }
+    
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            
+        }
+    }
     h1{
         font-size: 2rem;
         margin: 0;
-        padding: 1em 0 0.25em 0;
+        padding: 0;
     }
     p{
         font-size: 1rem;
@@ -150,7 +168,7 @@ nav{
 }
 
 #logo{
-    width: 12em;
+    width: 8em;
 }
 
 .container p {
@@ -231,24 +249,6 @@ section{
     justify-content: center;
     align-items: center;
     width: 100vw;
-}
-
-.heading{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    text-align: left;
-    flex-direction: row;
-    .container-mini{
-        margin: 0 2em;
-    }
-
-    @media screen and (max-width: 768px){
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        
-    }
 }
 
 #github{
