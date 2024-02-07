@@ -326,6 +326,7 @@ nav{
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 1em 6em;
         .button{
             align-items: center;
             justify-content: center;
