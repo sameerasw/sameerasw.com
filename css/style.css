@@ -344,27 +344,31 @@ section{
     width: 100vw;
 }
 
-#github{
-    margin: 1em 0;
+#music{
+    margin: 1em auto;
     padding: 0;
-    max-width: 100%;
+    max-width: 50%;
     transition: all 0.5s ease-in-out;
     z-index: 1;
 
-    @media screen and (max-width: 500px){
-        scale: 0.75;
-        @media screen and (max-width: 400px){
-            scale: 0.7;
-            
+    @media screen and (max-width: 768px){
+        max-width: 80%;
+        @media screen and (max-width: 500px){
+            max-width: 100%;
+            @media screen and (max-width: 300px){
+                display: none;
+            }
         }
-        
     }
+}
 
-    a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.stats{
+    margin: 2em auto;
+    scale: 0.75;
 
+    @media screen and (max-width: 768px){
+        scale: 1;
+        
     }
 }
 
