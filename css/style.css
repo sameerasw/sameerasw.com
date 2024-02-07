@@ -44,8 +44,7 @@ nav{
     bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
-
-    /* background-color: var(--background-color-primary); */
+    background-color: var(--background-color-secondary);
     color: var(--secondary-color);
     display: flex;
     justify-content:space-between;
