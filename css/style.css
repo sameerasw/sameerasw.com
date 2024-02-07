@@ -24,9 +24,11 @@ body{
     line-height: 1.5;
     color: var(--text-color);
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 100vh;
     width: 100vw;
 
@@ -102,7 +104,19 @@ nav{
                 }
             }
         }
-    };
+    }
+    @media screen and (max-width: 400px){
+        a{
+            width: 2em !important;
+            height: 2em !important;
+            span{
+                display: none;
+            }
+            i{
+                scale: 1.5 !important;
+            }
+        }
+    }
 }
 
 .active{
@@ -120,7 +134,8 @@ nav{
     flex-direction: column;
     justify-content: start;
     /* align-items: center; */
-    padding: 4em 10em;
+    width: 100vw;
+    padding: 4em 0;
     margin: 0;
     /* height: 100vh; */
     h1{
@@ -170,6 +185,7 @@ nav{
     /* align-items: center; */
     margin: 1em 0;
     padding: 0;
+    transition: all 0.5s ease-in-out;
     .button{
         a {
             border: var(--text-color) 2px solid;
@@ -194,10 +210,69 @@ nav{
             }
         }
     }
+    @media screen and (max-width: 500px){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .button{
+            align-items: center;
+            justify-content: center;
+            width: 4em;
+            height: 4em;
+            margin: auto;
+        }
+
+        
+    }
+}
+
+section{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    flex-direction: row;
+    .container-mini{
+        margin: 0 2em;
+    }
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
 }
 
 #github{
     margin: 1em 0;
+    padding: 0;
+    max-width: 100%;
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (max-width: 500px){
+        scale: 0.75;
+        @media screen and (max-width: 400px){
+            scale: 0.65;
+            
+        }
+        
+    }
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
 }
 
 .wip{
