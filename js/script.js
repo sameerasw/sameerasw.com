@@ -8,7 +8,7 @@ window.addEventListener('scroll', function(){
     //only if the window width is lower than 500px
     if(window.innerWidth < 500){
         let value = window.scrollY;
-        console.log(value);
+        // console.log(value);
         logo.style.height = 100 - value * 1/4 + 'vw';
         logo.style.opacity = 1 - value * 1/400;
         if(value > 450){

@@ -77,7 +77,7 @@ nav{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                color: var(--primary-color);
+                color: var(--text-color);
                 /* background-color: var(--background-color-primary); */
                 padding: 1rem;
                 border-radius: 2em;
@@ -143,9 +143,9 @@ nav{
     .heading{
         display: flex;
         justify-content: center;
-        align-items: left;
-        text-align: left;
-        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
         .container-mini{
             margin: 0 2em;
         }
@@ -296,7 +296,7 @@ section{
     @media screen and (max-width: 500px){
         scale: 0.75;
         @media screen and (max-width: 400px){
-            scale: 0.65;
+            scale: 0.7;
             
         }
         
@@ -317,7 +317,72 @@ section{
     
 }
 
-.sample-text{
-    text-align: left;
-    text-wrap: wrap;
+#highlights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em 8em;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+    a{
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        border: 0.15em solid var(--text-color);
+        overflow: hidden;
+        height: 15em;
+        margin: 1em;
+        h2{
+            margin: 0.5em 0.5em;
+            width:auto;
+            padding: 0.5em;
+            font-size: 1.25rem;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 0.5em;
+            color: var(--black);
+            background-color: var(--text-color);
+            transition: all 0.5s ease-in-out;
+        }
+        &:hover{
+            scale: 0.95;
+            border: 0.15em solid var(--primary-color);
+            h2{
+                background-color: var(--primary-color);
+            }
+        }
+    }
+    #hack{
+        background-image: url('../assets/img/hackintosh-ventura.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
+    #foldericons{
+        background-image: url('../assets/img/folder-icons-web.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
+    #tidwib{
+        background-image: url('../assets/img/tidwib-banner.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
+
+    @media screen and (max-width: 1000px){
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2em 4em;
+        @media screen and (max-width: 500px){
+            grid-template-columns: repeat(1, 1fr);
+            margin: 2em 2em;
+            
+        }
+        
+    }
 }
