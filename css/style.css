@@ -253,6 +253,7 @@ nav{
     height: 8em;
     background-size: cover;
     background-position: center;
+    border-radius: 2em;
     margin: 2em;
 }
 
@@ -413,7 +414,7 @@ section{
             transition: all 0.5s ease-in-out;
         }
         &:hover{
-            scale: 0.95;
+            scale: 1.1;
             border: 0.15em solid var(--primary-color);
             h2{
                 background-color: var(--primary-color);
@@ -422,19 +423,46 @@ section{
         }
     }
     #hack{
-        background-image: url('../assets/img/hackintosh-ventura.png');
+        background-image: url('../assets/img/macos.png');
         background-size: cover;
         background-position: center;
         border-radius: 1em;
+        &:hover{
+            background-image: url('../assets/img/macos-preview.png');
+        }
     }
     #foldericons{
-        background-image: url('../assets/img/folder-icons-web.png');
+        background-image: url('../assets/img/folder-icons.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+        &:hover{
+            background-image: url('../assets/img/folder-icons-preview.png');
+        }
+    }
+    #tidwib{
+        background-image: url('../assets/img/telegram-tidwib.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+        &:hover{
+            background-image: url('../assets/img/telegram-tidwib-preview.png');
+        }
+    }
+    #macro{
+        background-image: url('../assets/img/numpad-macros.png');
         background-size: cover;
         background-position: center;
         border-radius: 1em;
     }
-    #tidwib{
-        background-image: url('../assets/img/tidwib-banner.png');
+    #more-github{
+        background-image: url('../assets/img/github.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
+    #notion{
+        background-image: url('../assets/img/notion-notes.png');
         background-size: cover;
         background-position: center;
         border-radius: 1em;
