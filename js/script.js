@@ -28,11 +28,13 @@ let lastScrollTop = 0;
 window.addEventListener('scroll', function(){
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if(currentScroll > lastScrollTop){
-        nav.style.bottom = "-20em";
-        totop.style.bottom = "1em";
+        nav.classList.add('mini');
+        // nav.style.bottom = "-20em";
+        // totop.style.bottom = "1em";
     } else{
-        nav.style.bottom = "1em";
-        totop.style.bottom = "-20em";
+        nav.classList.remove('mini');
+        // nav.style.bottom = "1em";
+        // totop.style.bottom = "-20em";
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
@@ -53,3 +55,48 @@ function animate(){
 window.onload = function(){
     animate();
 }
+
+//change the active nav to the current scroll position based on sections
+let intro = document.getElementById('intro');
+let projects = document.getElementById('projects');
+let about = document.getElementById('about-me');
+
+let intro_nav = document.getElementById('home-nav');
+let projects_nav = document.getElementById('projects-nav');
+let about_nav = document.getElementById('about-nav');
+
+window.addEventListener('scroll', function(){
+    let scroll = window.scrollY;
+    if(scroll < projects.offsetTop - 100){
+        intro_nav.classList.add('active');
+        projects_nav.classList.remove('active');
+        about_nav.classList.remove('active');
+    } else if(scroll < about.offsetTop - 100){
+        intro_nav.classList.remove('active');
+        projects_nav.classList.add('active');
+        about_nav.classList.remove('active');
+    } else{
+        intro_nav.classList.remove('active');
+        projects_nav.classList.remove('active');
+        about_nav.classList.add('active');
+    }
+}
+);
+
+//expand more projects by letting elements show as block if it has the hidden class
+let more_projects = document.getElementById('more-projects-button');
+
+more_projects.addEventListener('click', function(){
+    //get all the hidden projects and display or hide with button toggle
+    let hidden_projects = document.querySelectorAll('.hidden');
+    for(let i = 0; i < hidden_projects.length; i++){
+        if(hidden_projects[i].style.display === 'block'){
+            hidden_projects[i].style.display = 'none';
+            more_projects.innerHTML = 'Show more';
+        } else{
+            hidden_projects[i].style.display = 'block';
+            more_projects.innerHTML = 'Show less';
+        }
+    }
+}
+);

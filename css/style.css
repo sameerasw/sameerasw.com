@@ -24,7 +24,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 4em 0 0 0;
     /* overflow-x: hidden; */
     height: 100vh;
     width: 100vw;
@@ -121,10 +121,26 @@ nav{
 .active{
     background-color: var(--primary-color);
     color: var(--background-color-secondary);
+    border-radius: 1.5em;
     opacity: 1;
     span{
         height: 100%;
         scale: 1;
+    }
+}
+
+.mini{
+    border-radius: 10em;
+    a{
+        border-radius: 5em;
+        width: 0.9em !important;
+        height: 0.9em !important;
+        span{
+            display: none;
+        }
+        i{
+            scale: 1 !important;
+        }
     }
 }
 
@@ -176,7 +192,7 @@ nav{
     align-items: center;
     width: 100vw;
     padding: 0;
-    padding: 4em 0 0 0;
+    padding: 0;
     margin: 0;
     /* height: 100vh; */
     .heading{
@@ -203,8 +219,8 @@ nav{
         transition: all 0.5s ease-in-out;
         width: 100vw;
         height: 2em;
-        position: sticky;
-        top: 1em;
+        /* position: sticky;
+        top: 1em; */
         /* background-color: var(--background-color-secondary); */
         z-index: 1;
     }
@@ -221,8 +237,23 @@ nav{
     @media screen and (max-width: 500px){
         padding: 0;
         #title{
-            margin-top: 105vw;
+            margin-top: 90vw;
         }
+    }
+}
+
+.button-view{
+    background-color: var(--background-color-secondary);
+    padding: 0.5em 1em;
+    margin-bottom: 4em;
+    border: 0.1em solid var(--text-color);
+    border-radius: 5em;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background-color: var(--primary-color);
+        border: 0.1em solid var(--primary-color);
+        color: var(--background-color-secondary);
+        cursor: pointer;
     }
 }
 
@@ -308,6 +339,7 @@ nav{
             justify-content: center;
             align-items: center;
             text-decoration: none;
+            transition: all 0.5s ease-in-out;
             .fa{
                 font-size: 1.75rem !important;
                 transition: all 0.5s ease-in-out;
@@ -387,7 +419,8 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2em 8em;
+    margin: 2em 0em;
+    width: 90vw;
     padding: 0;
     transition: all 0.5s ease-in-out;
     a{
@@ -414,7 +447,7 @@ section{
             transition: all 0.5s ease-in-out;
         }
         &:hover{
-            scale: 1.1;
+            scale: 1.05;
             border: 0.15em solid var(--primary-color);
             h2{
                 background-color: var(--primary-color);
@@ -467,6 +500,18 @@ section{
         background-position: center;
         border-radius: 1em;
     }
+    #website{
+        background-image: url('../assets/img/website-source.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
+    #menubar{
+        background-image: url('../assets/img/menu-bar.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 1em;
+    }
 
     @media screen and (max-width: 1000px){
         grid-template-columns: repeat(2, 1fr);
@@ -478,6 +523,10 @@ section{
         }
         
     }
+}
+
+.hidden{
+    display: none;
 }
 
 .content{
@@ -509,8 +558,12 @@ section{
     }
 }
 
-#about-me{
+#contact{
     margin-bottom: 20em;
+}
+
+.skills{
+    margin-top: 4em;
 }
 
 .skills{

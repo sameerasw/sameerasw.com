@@ -43,19 +43,19 @@
 </script>
     <nav id="nav">
         <ul>
-            <li class="item"><a href="#" class="active">
+            <li class="item"><a href="#" id='home-nav' class="active">
                 <i class="material-icons">home</i>
                 <span>Home</span>
             </a></li>
-            <li class="item"><a href="#about-me">
-                <i class="material-icons">info</i>
-                <span>About</span>
-            </a></li>
-            <li class="item"><a href="projects.html">
+            <li class="item"><a href="#projects" id="projects-nav">
                 <i class="material-icons">history</i>
                 <span>Projects</span>
             </a></li>
-            <li class="item"><a href="contact.html">
+            <li class="item"><a href="#about-me" id="about-nav">
+                <i class="material-icons">info</i>
+                <span>About</span>
+            </a></li>
+            <li class="item"><a href="#contact" id="contact-nav">
                 <i class="material-icons">mail</i>
                 <span>Contact</span>
             </a></li>
@@ -121,21 +121,48 @@
             <div id="music" class="item">
                 <img src="https://lastfm-recently-played.vercel.app/api?user=S4M33R4&loved=true&header_size=none&footer_style=normal_stats&width=300" alt="">
             </div>
-            <div id="highlights">
-                <a id="hack" class="highlight-item item" href="https://hackbook.simple.ink/">
-                        <h2>My Hackintosh Build</h2>
-                </a>
-                <a id="foldericons" class="highlight-item item" href="https://github.com/sameerasw/folder-icons">
-                    <h2>Folder Icons</h2>
-                </a>
-                <a id="tidwib" class="highlight-item item" href="https://t.me/tidwib">
-                    <h2>My Community</h2>
-                </a>
+        </section>
+
+        <section id="projects">
+            <div class="heading item">
+                <h2>Projects</h2>
+            </div>
+            <div class="container">
+                <div id="highlights">
+                    <a id="hack" class="highlight-item item" href="https://hackbook.simple.ink/">
+                            <h2>My Hackintosh Build</h2>
+                    </a>
+                    <a id="foldericons" class="highlight-item item" href="https://github.com/sameerasw/folder-icons">
+                        <h2>Folder Icons</h2>
+                    </a>
+                    <a id="tidwib" class="highlight-item item" href="https://t.me/tidwib">
+                        <h2>My Community</h2>
+                    </a>
+                    <a id="macro" class="highlight-item item" href="https://github.com/sameerasw/numpad-macros">
+                        <h2>Numpad Macros</h2>
+                    </a>
+                    <a id="more-github" class="highlight-item item" href="https://github.com/sameerasw/">
+                        <h2>More on GitHub</h2>
+                    </a>
+                    <a id="notion" class="highlight-item item" href="https://sameerasw.notion.site/">
+                        <h2>My Notions</h2>
+                    </a>
+                    <a id="website" class="highlight-item item hidden" href="https://github.com/sameerasw/sameerasw.me">
+                        <h2>Website Repo</h2>
+                    </a>
+                    <a id="menubar" class="highlight-item item hidden" href="https://github.com/sameerasw/menubar">
+                        <h2>MenuBar</h2>
+                    </a>
+                </div>
+                <div class="button-view item" id="more-projects-button">
+                    Show more
+                </div>
             </div>
         </section>
+
         <section id="about-me">
             <div class="heading item">
-                <h1>About Me</h1>
+                <h2>About Me</h2>
                 <div id="photo"></div>
             </div>
             <div class="content item">
@@ -165,7 +192,6 @@
                     </tr>
                 </table>
                 <div class="skills">
-                    <h2>Skills</h2>
                     <a href="https://skillicons.dev">
                         <img src="https://skillicons.dev/icons?i=github,gitlab,py,java,androidstudio,kotlin,html,css,js,ts,react,bootstrap,vscode,idea,ps,ai,figma,xd,linux,md&theme=light&perline=10" />
                     </a>
@@ -177,6 +203,14 @@
                     /></a>
                 </div>
                 
+            </div>
+        </section>
+        <section id="contact">
+            <div class="heading item">
+                <h2>Contact</h2>
+            </div>
+            <div class="content item">
+
             </div>
         </section>
     </div>
