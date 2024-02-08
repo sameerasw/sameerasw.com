@@ -60,25 +60,35 @@ window.onload = function(){
 let intro = document.getElementById('intro');
 let projects = document.getElementById('projects');
 let about = document.getElementById('about-me');
+let contatc = document.getElementById('contact');
 
 let intro_nav = document.getElementById('home-nav');
 let projects_nav = document.getElementById('projects-nav');
 let about_nav = document.getElementById('about-nav');
+let contact_nav = document.getElementById('contact-nav');
 
 window.addEventListener('scroll', function(){
     let scroll = window.scrollY;
-    if(scroll < projects.offsetTop - 100){
+    if(scroll < projects.offsetTop - 400){
         intro_nav.classList.add('active');
         projects_nav.classList.remove('active');
         about_nav.classList.remove('active');
-    } else if(scroll < about.offsetTop - 100){
+        contact_nav.classList.remove('active');
+    } else if(scroll < about.offsetTop - 400){
         intro_nav.classList.remove('active');
         projects_nav.classList.add('active');
         about_nav.classList.remove('active');
-    } else{
+        contact_nav.classList.remove('active');
+    } else if(scroll < contatc.offsetTop - 400){
         intro_nav.classList.remove('active');
         projects_nav.classList.remove('active');
         about_nav.classList.add('active');
+        contact_nav.classList.remove('active');
+    } else{
+        intro_nav.classList.remove('active');
+        projects_nav.classList.remove('active');
+        about_nav.classList.remove('active');
+        contact_nav.classList.add('active');
     }
 }
 );

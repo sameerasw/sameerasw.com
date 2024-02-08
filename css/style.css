@@ -144,41 +144,6 @@ nav{
     }
 }
 
-#totop{
-    position: fixed;
-    bottom: -20em;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--background-color-tr);
-    backdrop-filter: blur(var(--blur));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4em;
-    height: 4em;
-    border-radius: 2em;
-    border: 0.1em solid var(--text-color);
-    transition: all 0.5s ease-in-out;
-    z-index: 100;
-
-    i{
-        color: var(--text-color);
-    }
-
-    &:hover{
-        border: 0.1em solid var(--primary-color);
-        i{
-            color: var(--primary-color);
-            transform: translate(0, -0.25em);
-        }
-    }
-    i{
-        scale: 1.75;
-        padding: 0.5rem;
-        transition: all 0.5s ease-in-out;
-    }
-}
-
 .item{
     transition: all 0.5s ease-in-out;
     opacity: 0;
@@ -572,6 +537,56 @@ section{
         @media screen and (max-width: 500px){
             width: 80vw;
             
+        }
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    input{
+        width: 50%;
+        padding: 1.5em;
+        margin: 1em;
+        border: 0.1em solid var(--text-color);
+        background-color: var(--background-color-secondary);
+        color: var(--text-color);
+        border-radius: 0.5em;
+        transition: all 0.5s ease-in-out;
+        &:focus{
+            border: 0.1em solid var(--primary-color);
+        }
+        &:hover{
+            border: 0.1em solid var(--primary-color);
+        }
+        &#btn{
+            background-color: var(--primary-color);
+            color: var(--background-color-secondary);
+            border: 0.1em solid var(--primary-color);
+            &:hover{
+                background-color: var(--background-color-secondary);
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+        }
+    }
+    textarea{
+        width: 50%;
+        padding: 1.5em;
+        margin: 1em;
+        border: 0.1em solid var(--text-color);
+        border-radius: 0.5em;
+        transition: all 0.5s ease-in-out;
+        background-color: var(--background-color-secondary);
+        color: var(--text-color);
+        &:focus{
+            border: 0.1em solid var(--primary-color);
+        }
+        &:hover{
+            border: 0.1em solid var(--primary-color);
         }
     }
 }
