@@ -2,7 +2,6 @@ const cursor = document.getElementById("cursor");
 //select all the links on the page
 const links = document.querySelectorAll("a");
 const hoverables = document.querySelectorAll(".hover-state");
-// let background = document.getElementById("navbar");
 
 
 const moveCursor = (e)=> {
@@ -10,7 +9,13 @@ const moveCursor = (e)=> {
   const mouseX = e.clientX;
    
   cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-  // background.style.transform = `translate3d(-${mouseX/90}px, -${mouseY/90}px, 0)`;
+}
+
+
+function updateTitle(titleText){
+  if(titleText){
+    document.getElementById('title').innerHTML = titleText;
+  }
 }
 
 window.addEventListener('mousemove', moveCursor)
@@ -19,13 +24,14 @@ links.forEach(link => {
   link.addEventListener('mouseenter', () => {
     cursor.classList.add('blur-mini');
     cursor.classList.add('cursor-grow');
+    updateTitle(link.getAttribute('data-title'));
   })
   link.addEventListener('mouseleave', () => {
     cursor.classList.remove('blur-mini');
     cursor.classList.remove('cursor-grow');
+    updateTitle("Sameera Sandakelum");
   })
 }
-
 )
 
 
