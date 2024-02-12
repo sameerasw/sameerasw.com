@@ -3,6 +3,7 @@ let typing_text = document.getElementById('typing-text');
 let title = document.getElementById('title');
 let nav = document.getElementById('nav');
 let totop = document.getElementById('totop');
+let pastelColors = ['#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#DB7093', '#C71585', '#FFA07A', '#FA8072', '#E9967A', '#F08080', '#CD5C5C', '#DC143C', '#B22222', '#8B0000', '#FF0000', '#FF6347', '#FF4500', '#FF8C00', '#FFA500', '#FFD700', '#FFFF00', '#FFFFE0', '#FFFACD', '#FAFAD2', '#FFEFD5', '#FFE4B5', '#FFDAB9', '#EEE8AA', '#F0E68C', '#BDB76B', '#ADFF2F', '#7FFF00', '#7CFC00', '#00FF00', '#32CD32', '#98FB98', '#90EE90', '#00FA9A', '#00FF7F', '#3CB371', '#2E8B57', '#228B22', '#008000', '#006400', '#9ACD32', '#6B8E23', '#808000', '#556B2F', '#66CDAA', '#8FBC8F', '#20B2AA', '#008B8B', '#008080', '#00CED1', '#48D1CC', '#40E0D0', '#7FFFD4', '#66CDAA', '#20B2AA', '#5F9EA0', '#008B8B', '#008080', '#00CED1', '#48D1CC', '#40E0D0', '#7FFFD4', '#66CDAA', '#20B2AA', '#5F9EA0', '#008B8B', '#008080', '#00CED1', '#48D1CC', '#40E0D0', '#7FFFD4', '#66CDAA', '#20B2AA', '#5F9EA0', '#008B8B', '#008080', '#00CED1', '#48D1CC', '#40E0D0', '#7FFFD4', '#66CDAA', '#20B2AA', '#5F9EA0', '#008B8B', '#008080'];
 
 
 //reduce the hight of the logo according to how much the user has scrolled
@@ -126,23 +127,25 @@ window.addEventListener('scroll', function(){
 
 //generate a random pastel themed color and assign to the accent color css var
 const randomColor = () => {
-    let color = Math.floor(Math.random()*16777215).toString(16);
-    //avoid being a shade of gray
-    if(color.length < 6){
-      color += "f";
-    }
+    // let color = Math.floor(Math.random()*16777215).toString(16);
+    // //avoid being a shade of gray
+    // if(color.length < 6){
+    //   color += "f";
+    // }
+
+    let color = pastelColors[Math.floor(Math.random()*pastelColors.length)];
     return color;
   }
   
   let random = randomColor();
   const accentColor = document.querySelector(':root');
-  accentColor.style.setProperty('--primary-color', `#${random}`);
+    accentColor.style.setProperty('--primary-color', `${random}`);
   
   //call color change on key "R" press
   document.addEventListener('keydown', (e) => {
     if (e.key === "r") {
       random = randomColor();
-      accentColor.style.setProperty('--primary-color', `#${random}`);
+      accentColor.style.setProperty('--primary-color', `${random}`);
     }
   }
   )
@@ -150,6 +153,6 @@ const randomColor = () => {
   //call the color change on click on the logo
   title.addEventListener('click', () => {
     random = randomColor();
-    accentColor.style.setProperty('--primary-color', `#${random}`);
+    accentColor.style.setProperty('--primary-color', `${random}`);
   }
     );
