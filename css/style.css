@@ -13,6 +13,7 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scrollbar-color: var(--primary-color) var(--background-color-primary);
 }
 
 body{
