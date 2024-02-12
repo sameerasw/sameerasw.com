@@ -53,6 +53,8 @@ function animate(){
 }
 
 window.onload = function(){
+    let body = document.querySelector('body');
+    body.style.filter = "none";
     animate();
 }
 

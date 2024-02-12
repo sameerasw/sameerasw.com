@@ -33,6 +33,8 @@ body{
     /* overflow-x: hidden; */
     height: 100vh;
     width: 100vw;
+    filter: blur(20px);
+    transition: all 0.5s ease-in-out;
 
     /* @media screen and (max-width: 768px){
         text-align: center;
@@ -48,7 +50,7 @@ nav{
     transform: translateX(-50%);
     background-color: var(--background-color-tr);
     backdrop-filter: blur(var(--blur));
-    color: var(--secondary-color);
+    color: var(--background-color-primary);
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -126,7 +128,7 @@ nav{
 .active{
     background-color: var(--primary-color);
     color: var(--background-color-secondary);
-    border-radius: 1.5em;
+    /* border-radius: 1.5em; */
     opacity: 1;
     span{
         height: 100%;
