@@ -118,11 +118,11 @@ more_projects.addEventListener('click', function(){
 window.addEventListener('scroll', function(){
     for(let i = 0; i < items.length; i++){
         let position = items[i].getBoundingClientRect();
-        if(position.top > window.innerHeight - 10 || position.bottom < 150){
-            items[i].style.filter = "blur(5px)";
+        if(position.top > window.innerHeight - 10 || position.bottom < 20){
+            // items[i].style.filter = "blur(5px)";
             items[i].style.scale = "0.75";
         } else{
-            items[i].style.filter = "none";
+            // items[i].style.filter = "none";
             items[i].style.scale = "1";
         }
     }
