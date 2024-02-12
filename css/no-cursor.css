@@ -15,9 +15,8 @@ body{
       pointer-events: none;
       transition: outline 0.5s ease-in-out;
 
-      @media screen and (max-width: 768px) {
-        display: none;
-        
+      @media screen and (max-width: 500px){
+        display: none !important;
       }
   }
 

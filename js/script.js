@@ -12,7 +12,10 @@ window.addEventListener('scroll', function(){
     if(window.innerWidth < 500){
         let value = window.scrollY;
         // console.log(value);
-        logo.style.opacity = 1 - value * 1/300;
+        logo.style.opacity = 1 - value * 1/400;
+        // logo.style.scale = 1 - value * 1/400;
+        // logo.style.borderRadius = `${value * 1/10+ 2}em`;
+        logo.style.transform = `translateY(${value * - 1.1}px)`;
     } else{
     }
 }
@@ -109,7 +112,6 @@ more_projects.addEventListener('click', function(){
 );
 
 //if an item goes outside the screen, depth effect will be applied
-
 window.addEventListener('scroll', function(){
     for(let i = 0; i < items.length; i++){
         let position = items[i].getBoundingClientRect();
@@ -127,12 +129,6 @@ window.addEventListener('scroll', function(){
 
 //generate a random pastel themed color and assign to the accent color css var
 const randomColor = () => {
-    // let color = Math.floor(Math.random()*16777215).toString(16);
-    // //avoid being a shade of gray
-    // if(color.length < 6){
-    //   color += "f";
-    // }
-
     let color = pastelColors[Math.floor(Math.random()*pastelColors.length)];
     return color;
   }

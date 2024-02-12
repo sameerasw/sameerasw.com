@@ -59,8 +59,10 @@ nav{
     transition: all 0.5s ease-in-out;
     /* transition: opacity 0.5s ease-in-out; */
     z-index: 100;
-    &:hover{
-        border: 0.1em solid var(--primary-color);
+    @media screen and (min-width: 500px){
+        &:hover{
+            border: 0.1em solid var(--primary-color);
+        }
     }
     ul{
         display: flex;
@@ -94,11 +96,13 @@ nav{
                     scale: 0;
                     transition: all 0.5s ease-in-out;
                 }
-                &:hover{
-                    opacity: 1;
-                    span{
-                        height: 100%;
-                        scale: 1;
+                @media screen and (min-width: 500px){
+                    &:hover{
+                        opacity: 1;
+                        span{
+                            height: 100%;
+                            scale: 1;
+                        }
                     }
                 }
                 i{
@@ -220,11 +224,13 @@ nav{
     border: 0.1em solid var(--text-color);
     border-radius: 5em;
     transition: all 0.5s ease-in-out;
-    &:hover{
-        background-color: var(--primary-color);
-        border: 0.1em solid var(--primary-color);
-        color: var(--background-color-secondary);
-        cursor: none;
+    @media screen and (min-width: 500px){
+        &:hover{
+            background-color: var(--primary-color);
+            border: 0.1em solid var(--primary-color);
+            color: var(--background-color-secondary);
+            cursor: none;
+        }
     }
 }
 
@@ -318,10 +324,12 @@ nav{
                 transition: all 0.5s ease-in-out;
                 color: var(--text-color);
             }
-            &:hover{
-                border: var(--primary-color) 2px solid;
-                .fa{
-                    color: var(--primary-color);
+            @media screen and (min-width: 500px){
+                &:hover{
+                    border: var(--primary-color) 2px solid;
+                    .fa{
+                        color: var(--primary-color);
+                    }
                 }
             }
         }
@@ -419,71 +427,64 @@ section{
             backdrop-filter: blur(var(--blur));
             transition: all 0.5s ease-in-out;
         }
-        &:hover{
-            scale: 1.05;
-            border: 0.15em solid var(--primary-color);
-            h2{
-                background-color: var(--primary-color);
-                color: var(--background-color-secondary);
+        @media screen and (min-width: 500px){
+            &:hover{
+                scale: 1.05;
+                border: 0.15em solid var(--primary-color);
+                h2{
+                    background-color: var(--primary-color);
+                    color: var(--background-color-secondary);
+                }
             }
         }
     }
-    #hack{
-        background-image: url('../assets/img/macos.png');
+
+    .highlight-item{
         background-size: cover;
         background-position: center;
         border-radius: 1em;
-        &:hover{
-            background-image: url('../assets/img/macos-preview.png');
+    }
+
+    #hack{
+        background-image: url('../assets/img/macos.png');
+        @media screen and (min-width: 500px){
+            &:hover{
+                background-image: url('../assets/img/macos-preview.png');
+            }
         }
     }
     #foldericons{
         background-image: url('../assets/img/folder-icons.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
-        &:hover{
-            background-image: url('../assets/img/folder-icons-preview.png');
+        @media screen and (min-width: 500px){
+            &:hover{
+                background-image: url('../assets/img/folder-icons-preview.png');
+            }
+            
         }
     }
     #tidwib{
         background-image: url('../assets/img/telegram-tidwib.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
-        &:hover{
-            background-image: url('../assets/img/telegram-tidwib-preview.png');
+        @media screen and (min-width: 500px){
+            &:hover{
+                background-image: url('../assets/img/telegram-tidwib-preview.png');
+            }
+            
         }
     }
     #macro{
         background-image: url('../assets/img/numpad-macros.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
     }
     #more-github{
         background-image: url('../assets/img/github.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
     }
     #notion{
         background-image: url('../assets/img/notion-notes.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
     }
     #website{
         background-image: url('../assets/img/website-source.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
     }
     #menubar{
         background-image: url('../assets/img/menu-bar.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 1em;
     }
 
     @media screen and (max-width: 1000px){
@@ -492,7 +493,6 @@ section{
         @media screen and (max-width: 500px){
             grid-template-columns: repeat(1, 1fr);
             margin: 2em 2em;
-            
         }
         
     }
@@ -567,17 +567,21 @@ form{
         &:focus{
             border: 0.1em solid var(--primary-color);
         }
-        &:hover{
-            border: 0.1em solid var(--primary-color);
+        @media screen and (min-width: 500px){
+            &:hover{
+                border: 0.1em solid var(--primary-color);
+            }
         }
         &#btn{
             background-color: var(--primary-color);
             color: var(--background-color-secondary);
             border: 0.1em solid var(--primary-color);
-            &:hover{
-                background-color: var(--background-color-secondary);
-                color: var(--primary-color);
-                cursor: pointer;
+            @media screen and (min-width: 500px){
+                &:hover{
+                    background-color: var(--background-color-secondary);
+                    color: var(--primary-color);
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -590,11 +594,13 @@ form{
         transition: all 0.5s ease-in-out;
         background-color: var(--background-color-secondary);
         color: var(--text-color);
-        &:focus{
-            border: 0.1em solid var(--primary-color);
-        }
-        &:hover{
-            border: 0.1em solid var(--primary-color);
+        @media screen and (min-width: 500px){
+            &:focus{
+                border: 0.1em solid var(--primary-color);
+            }
+            &:hover{
+                border: 0.1em solid var(--primary-color);
+            }
         }
     }
 }
