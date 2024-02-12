@@ -20,6 +20,7 @@
     />
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/no-cursor.css">
     <!-- <link rel="stylesheet" href="css/arc.css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- favicon -->
@@ -41,8 +42,9 @@
 
     gtag('config', 'G-6F3G1NW62X');
 </script>
+    <div class="cursor rounded move blur cursor-normal" id="cursor"></div>
     <nav id="nav">
-        <ul>
+        <ul class="item">
             <li class="item"><a href="#" id='home-nav' class="active">
                 <i class="material-icons">home</i>
                 <span>Home</span>
@@ -150,7 +152,7 @@
                     </a>
                 </div>
                 <div class="button-view item" id="more-projects-button">
-                    Show more
+                    <a>Show more</a>
                 </div>
             </div>
         </section>
@@ -210,10 +212,10 @@
                 </p>
                 <div id="contact-form">
                     <form name="contact" netlify>
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                        <input type="email" name="_replyto" id="email" placeholder="Email" required>
-                        <textarea name="message" id="message" placeholder="Message" required></textarea>
-                        <input type="submit" value="Send" id="btn">
+                        <input type="text" name="name" id="name" placeholder="Name" required class="hover-state">
+                        <input type="email" name="_replyto" id="email" placeholder="Email" required class="hover-state">
+                        <textarea name="message" id="message" placeholder="Message" required class="hover-state"></textarea>
+                        <input type="submit" value="Send" id="btn" class="hover-state">
                     </form>
                 </div>
             </div>
@@ -222,5 +224,6 @@
     
     <script src="js/script.js"></script>
     <script src="js/typing.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>

@@ -71,6 +71,7 @@ nav{
         list-style: none;
         padding: 0;
         margin: 0.25em;
+        transition: all 0.5s ease-in-out;
         li{
             margin: 0.25em;
             transition: all 0.5s ease-in-out;
@@ -225,7 +226,7 @@ nav{
         background-color: var(--primary-color);
         border: 0.1em solid var(--primary-color);
         color: var(--background-color-secondary);
-        cursor: pointer;
+        cursor: none;
     }
 }
 
