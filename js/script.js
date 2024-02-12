@@ -10,15 +10,8 @@ window.addEventListener('scroll', function(){
     if(window.innerWidth < 500){
         let value = window.scrollY;
         // console.log(value);
-        logo.style.height = 100 - value * 1/4 + 'vw';
-        logo.style.opacity = 1 - value * 1/400;
-        if(value > 300){
-            typing_text.style.opacity = 0;
-        } else{
-            typing_text.style.opacity = 1;
-        }
+        logo.style.opacity = 1 - value * 1/300;
     } else{
-        logo.style.height = '8em';
     }
 }
 );

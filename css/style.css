@@ -174,6 +174,9 @@ nav{
         align-items: center;
         text-align: center;
         flex-direction: column;
+        /* position: sticky;
+        top: 1em; */
+        z-index: 1;
         .container-mini{
             margin: 0 2em;
         }
@@ -192,8 +195,6 @@ nav{
         transition: all 0.5s ease-in-out;
         width: 100vw;
         height: 2em;
-        /* position: sticky;
-        top: 1em; */
         /* background-color: var(--background-color-secondary); */
         z-index: 1;
     }
