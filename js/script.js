@@ -12,11 +12,7 @@ window.addEventListener('scroll', function(){
     if(window.innerWidth < 500){
         let value = window.scrollY;
         // console.log(value);
-        logo.style.opacity = 1 - value * 1/400;
-        // logo.style.scale = 1 - value * 1/400;
-        // logo.style.borderRadius = `${value * 1/10+ 2}em`;
-        logo.style.transform = `translateY(${value * - 1.1}px)`;
-    } else{
+        logo.style.opacity = 1 - value * 1/200;
     }
 }
 );
@@ -27,12 +23,8 @@ window.addEventListener('scroll', function(){
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if(currentScroll > lastScrollTop){
         nav.classList.add('mini');
-        // nav.style.bottom = "-20em";
-        // totop.style.bottom = "1em";
     } else{
         nav.classList.remove('mini');
-        // nav.style.bottom = "1em";
-        // totop.style.bottom = "-20em";
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
