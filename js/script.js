@@ -4,6 +4,7 @@ let title = document.getElementById('title');
 let nav = document.getElementById('nav');
 let totop = document.getElementById('totop');
 
+
 //reduce the hight of the logo according to how much the user has scrolled
 window.addEventListener('scroll', function(){
     //only if the window width is lower than 500px
@@ -106,7 +107,7 @@ more_projects.addEventListener('click', function(){
 }
 );
 
-//if an item goes outside the screen, it will be blurred
+//if an item goes outside the screen, depth effect will be applied
 
 window.addEventListener('scroll', function(){
     for(let i = 0; i < items.length; i++){
@@ -121,3 +122,34 @@ window.addEventListener('scroll', function(){
     }
 }
 );
+
+
+//generate a random pastel themed color and assign to the accent color css var
+const randomColor = () => {
+    let color = Math.floor(Math.random()*16777215).toString(16);
+    //avoid being a shade of gray
+    if(color.length < 6){
+      color += "f";
+    }
+    return color;
+  }
+  
+  let random = randomColor();
+  const accentColor = document.querySelector(':root');
+  accentColor.style.setProperty('--primary-color', `#${random}`);
+  
+  //call color change on key "R" press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "r") {
+      random = randomColor();
+      accentColor.style.setProperty('--primary-color', `#${random}`);
+    }
+  }
+  )
+
+  //call the color change on click on the logo
+  title.addEventListener('click', () => {
+    random = randomColor();
+    accentColor.style.setProperty('--primary-color', `#${random}`);
+  }
+    );

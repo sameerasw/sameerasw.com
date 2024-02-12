@@ -1,12 +1,9 @@
 :root{
     --primary-color: #4AFFBD;
-    --secondary-color: #000000;
-    --tertiary-color: #ff0000;
     --text-color: #ffffff;
-    --background-color-primary: #212121;
+    --background-color-primary: #000000;
     --background-color-secondary: #303030;
     --background-color-tr: #30303088;
-    --black: #000000;
     --font-size: 16px;
     --font-family: 'Roboto', sans-serif;
     --font-weight: 400;
@@ -98,7 +95,6 @@ nav{
                 }
                 &:hover{
                     opacity: 1;
-                    /* color: var(--tertiary-color); */
                     span{
                         height: 100%;
                         scale: 1;
@@ -153,7 +149,7 @@ nav{
 }
 
 .item{
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
     transform: translate(0, 2em);
 }
@@ -232,6 +228,7 @@ nav{
 }
 
 #logo{
+    background-color: var(--primary-color);
     background-image: url('../assets/img/notion.png');
     width: 8em;
     height: 8em;
@@ -253,6 +250,7 @@ nav{
 
 
 #photo{
+    background-color: var(--primary-color);
     background-image: url('../assets/img/photo-professional.png');
     width: 8em;
     height: 8em;
