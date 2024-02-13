@@ -373,8 +373,9 @@ nav{
 #socials{
     display: inline-flex;
     /* align-items: center; */
+    width: fit-content;
     margin: 2em 0;
-    padding: 0.5em;
+    /* padding: 0.5em; */
     transition: all 0.5s ease-in-out;
     border-radius: 1.25em;
     background-color: var(--background-color-primary);
@@ -415,7 +416,7 @@ nav{
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 1em 6em;
+        margin: 1em auto;
         .button{
             align-items: center;
             justify-content: center;
