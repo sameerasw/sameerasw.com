@@ -1,15 +1,3 @@
-:root{
-    --primary-color: #4AFFBD;
-    --text-color: #ffffff;
-    --background-color-primary: #000000;
-    --background-color-secondary: #303030;
-    --background-color-tr: #30303088;
-    --font-size: 16px;
-    --font-family: 'Roboto', sans-serif;
-    --font-weight: 400;
-    --blur: 0.5em;
-}
-
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -40,6 +28,90 @@ body{
     } */
 }
 
+#sidebar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    margin: 0.25em;
+    background-color: var(--background-color-tr);
+    backdrop-filter: blur(var(--blur));
+    border-radius: 10em;
+
+    a{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar-button{
+        height: 3em;
+        width: 3em;
+        margin: 0.25em;
+        border-radius: 50%;
+        background-color: var(--background-color-primary);
+        color: var(--text-color);
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            transition: all 0.5s ease-in-out;
+        }
+        @media screen and (min-width: 500px){
+            &:hover{
+                background-color: var(--primary-color);
+                color: var(--background-color-primary);
+                i{
+                    rotate: 180deg;
+                }
+            }
+            
+        }
+    }
+
+    &.mini-sidebar{
+        top: -4em;
+    }
+
+    @media screen and (min-width: 500px){
+        top: -2.7em;
+        &:hover{
+            top: 0;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        top: -3em;
+        width: 7em;
+        height: 4em;
+        a{
+            display: none;
+            pointer-events: none;
+            .sidebar-button{
+                pointer-events: none;
+            }
+        }
+        &:hover{
+            top: -2.7em;
+            width: 7em;
+            height: 3.5em;
+            top: 0;
+            a{
+                display: flex;
+                pointer-events: all;
+                .sidebar-button{
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}
 
 nav{
     position: fixed;
@@ -55,15 +127,10 @@ nav{
     width: fit-content;
     margin: 0 auto;
     border-radius: 2em;
-    border: 0.1em solid var(--text-color);
+    /* border: 0.1em solid var(--text-color); */
     transition: all 0.5s ease-in-out;
     /* transition: opacity 0.5s ease-in-out; */
     z-index: 100;
-    @media screen and (min-width: 500px){
-        &:hover{
-            border: 0.1em solid var(--primary-color);
-        }
-    }
     ul{
         display: flex;
         justify-content: space-between;
@@ -244,6 +311,7 @@ nav{
     background-position: center;
     border-radius: 2em;
     transition: all 1s ease-in-out;
+    margin-top: 10em;
 
     @media screen and (max-width: 500px){
         position: fixed;
@@ -253,9 +321,9 @@ nav{
         border-radius: 0 0 2em 2em;
         z-index: -1;
         transition: all 0s ease-in-out;
+        margin-top: 0;
     }
 }
-
 
 #photo{
     background-color: var(--primary-color);
@@ -305,9 +373,15 @@ nav{
 #socials{
     display: inline-flex;
     /* align-items: center; */
-    margin: 1em 0;
-    padding: 0;
+    margin: 2em 0;
+    padding: 0.5em;
     transition: all 0.5s ease-in-out;
+    border-radius: 1.25em;
+    background-color: var(--background-color-primary);
+    outline: 0.2em dotted var(--primary-color);
+    &:hover{
+        outline: 0.4em dotted var(--primary-color);
+    }
     .button{
         a {
             border: var(--text-color) 2px solid;
@@ -448,29 +522,12 @@ section{
 
     #hack{
         background-image: url('../assets/img/macos.png');
-        @media screen and (min-width: 500px){
-            &:hover{
-                background-image: url('../assets/img/macos-preview.png');
-            }
-        }
     }
     #foldericons{
         background-image: url('../assets/img/folder-icons.png');
-        @media screen and (min-width: 500px){
-            &:hover{
-                background-image: url('../assets/img/folder-icons-preview.png');
-            }
-            
-        }
     }
     #tidwib{
         background-image: url('../assets/img/telegram-tidwib.png');
-        @media screen and (min-width: 500px){
-            &:hover{
-                background-image: url('../assets/img/telegram-tidwib-preview.png');
-            }
-            
-        }
     }
     #macro{
         background-image: url('../assets/img/numpad-macros.png');

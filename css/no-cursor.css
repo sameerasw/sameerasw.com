@@ -45,6 +45,29 @@ body{
     transition: backdrop-filter 0.5s ease-in-out;
   }
 
+  #cursor-text{
+    position: fixed;
+    text-align: left;
+    text-wrap:nowrap;
+    background-color: var(--primary-color);
+    color: var(--background-color-primary);
+    padding: 1em;
+    border-radius: 1em;
+    z-index: 10000;
+    pointer-events: none;
+    scale: 0;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 20px 0 var(--background-color-primary);
+    &.image-view{
+      width: 750px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      object-fit: cover;
+    }
+  }
+
   /* Paste 
             <div class="cursor rounded move" id="cursor"></div>
     in your html under body (preferably in container) */
