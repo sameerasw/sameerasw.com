@@ -1,3 +1,18 @@
+:root {
+    /*  change this for scaling  */
+      --m: 4rem;
+      
+      --red: #FF6565;
+      --pink: #FF64F9;
+      --purple: #6B5FFF;
+      --blue: #4D8AFF;
+      --green: #5BFF89;
+      --yellow: #FFEE55;
+      --orange: #FF6D1B;
+      
+}
+
+
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -22,10 +37,9 @@ body{
     width: 100vw;
     transition: all 0.5s ease-in-out;
 
-    /* @media screen and (max-width: 768px){
-        text-align: center;
-        
-    } */
+    @media screen and (max-width: 300px){
+        opacity: 0.5;
+    }
 }
 
 #sidebar{
@@ -285,6 +299,8 @@ nav{
     }
 }
 
+
+
 .button-view{
     background-color: var(--background-color-secondary);
     padding: 0.5em 1em;
@@ -370,6 +386,8 @@ nav{
     100%  { background-color: #ccc; }
   }
 
+
+
 #socials{
     display: inline-flex;
     /* align-items: center; */
@@ -379,11 +397,9 @@ nav{
     transition: all 0.5s ease-in-out;
     border-radius: 1.25em;
     background-color: var(--background-color-primary);
-    outline: 0.2em dotted var(--primary-color);
-    &:hover{
-        outline: 0.4em dotted var(--primary-color);
-    }
     .button{
+        background-color: var(--background-color-primary);
+        border-radius: 1em;
         a {
             border: var(--text-color) 2px solid;
             border-radius: 1em;
@@ -429,6 +445,50 @@ nav{
     }
 }
 
+#socials{
+    border: calc(0.08 * var(--m)) solid transparent;
+    /* position: relative; */
+    color: #F3F3F3;
+    /* background-color: var(--background-color-primary); */
+    /* font-family: 'Space Grotesk'; */
+    /* font-size: var(--m); */
+    /* border-radius: calc(0.7 * var(--m)); */
+    /* padding: calc(0.5 * var(--m)) calc(1 * var(--m)); */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* cursor: pointer; */
+    
+    background:linear-gradient(var(--background-color-primary), #12121300), linear-gradient(var(--background-color-primary) 50%, var(--background-color-tr) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+}
+
+#socials::before {
+    content: '';
+    background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    height: 30%;
+    width: 110%;
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    z-index: -5;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+    filter: blur(calc(0.4 * var(--m)));
+}
+
+#socials:hover, #socials:hover::before {
+    animation: animate 0.5s infinite linear;
+}
+
+@keyframes animate {
+    0% {background-position: 0}
+    100% {background-position: 200%}
+}
+
+
 section{
     justify-content: center;
     align-items: center;
@@ -438,17 +498,17 @@ section{
 #music{
     margin: 1em auto;
     padding: 0;
-    max-width: 50%;
+    max-width: 300px;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    background-color: var(--primary-color);
+    border-radius: 1em;
 
     @media screen and (max-width: 768px){
-        max-width: 80%;
+        /* max-width: 80%; */
         @media screen and (max-width: 500px){
-            max-width: 100%;
-            @media screen and (max-width: 300px){
-                display: none;
-            }
+            /* max-width: 100%; */
+            margin-top: 4em;
         }
     }
 }
