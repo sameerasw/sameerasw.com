@@ -1,0 +1,14 @@
+#background{
+    /* https://10015.io/tools/css-background-pattern-generator */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -100;
+    top:0;
+    background-color: var(--background-color-primary);
+    opacity: 0.2;
+    background-image:  radial-gradient(var(--primary-color) 2px, transparent 2px), radial-gradient(var(--primary-color) 2px, var(--background-color-primary) 2px);
+    background-size: 50px 50px;
+    background-position: 0 0,25px 25px;
+    /* transition: all 5s ease-in-out; */
+}
