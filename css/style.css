@@ -315,7 +315,6 @@ nav {
 
 #logo {
   background-color: var(--primary-color);
-  background-image: url("../assets/img/notion.png");
   width: 8em;
   height: 8em;
   background-size: cover;
@@ -334,6 +333,14 @@ nav {
     transition: all 0s ease-in-out;
     margin-top: 0;
   }
+
+  &.macos-logo{
+    background-image: url("../assets/img/article-icon-macos.png");
+  }
+  &.home-logo{
+    background-image: url("../assets/img/notion.png"); 
+  }
+
 }
 
 #photo {

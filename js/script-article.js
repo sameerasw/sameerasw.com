@@ -1,7 +1,6 @@
 let logo = document.getElementById('logo');
 let title = document.getElementById('title');
 let nav = document.getElementById('nav');
-let totop = document.getElementById('totop');
 let sidebar = document.getElementById('sidebar');
 let themeButton = document.getElementById('theme');
 let colorButton = document.getElementById('color');
@@ -82,63 +81,13 @@ document.addEventListener('DOMContentLoaded', function(){
 }
 );
 
-//change the active nav to the current scroll position based on sections
-let intro = document.getElementById('intro');
-let projects = document.getElementById('projects');
-let about = document.getElementById('about-me');
-let contact = document.getElementById('contact');
-
-let intro_nav = document.getElementById('home-nav');
-let projects_nav = document.getElementById('projects-nav');
-let about_nav = document.getElementById('about-nav');
-let contact_nav = document.getElementById('contact-nav');
 
 window.addEventListener('scroll', function(){
-    let scroll = window.scrollY;
-    if(scroll < projects.offsetTop - 400){
-        intro_nav.classList.add('active');
-        projects_nav.classList.remove('active');
-        about_nav.classList.remove('active');
-        contact_nav.classList.remove('active');
-    } else if(scroll < about.offsetTop - 400){
-        intro_nav.classList.remove('active');
-        projects_nav.classList.add('active');
-        about_nav.classList.remove('active');
-        contact_nav.classList.remove('active');
-    } else if(scroll < contact.offsetTop - 400){
-        intro_nav.classList.remove('active');
-        projects_nav.classList.remove('active');
-        about_nav.classList.add('active');
-        contact_nav.classList.remove('active');
-    } else{
-        intro_nav.classList.remove('active');
-        projects_nav.classList.remove('active');
-        about_nav.classList.remove('active');
-        contact_nav.classList.add('active');
-    }
     //only if the window width is lower than 500px
     if(window.innerWidth < 500){
         let value = window.scrollY;
         // console.log(value);
         logo.style.opacity = 1 - value * 1/200;
-    }
-}
-);
-
-//expand more projects by letting elements show as block if it has the hidden class
-let more_projects = document.getElementById('more-projects-button');
-
-more_projects.addEventListener('click', function(){
-    //get all the hidden projects and display or hide with button toggle
-    let hidden_projects = document.querySelectorAll('.hidden');
-    for(let i = 0; i < hidden_projects.length; i++){
-        if(hidden_projects[i].style.display === 'block'){
-            hidden_projects[i].style.display = 'none';
-            more_projects.innerHTML = 'Show more';
-        } else{
-            hidden_projects[i].style.display = 'block';
-            more_projects.innerHTML = 'Show less';
-        }
     }
 }
 );

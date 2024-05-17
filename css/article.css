@@ -1,0 +1,37 @@
+.article-text{
+    text-align: justify;
+
+    width: 40%;
+    margin: auto 30% !important;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin: auto 5% !important;
+  }
+}
+
+table{
+    margin: auto 10% !important;
+    width: 90%;
+    td{
+        padding: 5px;
+    }
+    .table-left{
+        text-align: left;
+    }
+    .table-right{
+        text-align: left;
+    }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+}
+
+#specs-table{
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
+}
