@@ -1,12 +1,13 @@
 .article-text{
     text-align: justify;
-
     width: 40%;
     margin: auto 30% !important;
+    margin-top: 2em !important;
 
   @media screen and (max-width: 500px) {
     width: 90%;
     margin: auto 5% !important;
+    margin-top: 1em !important;
   }
 }
 
@@ -15,7 +16,7 @@ h1{
   margin-left: 5% !important;
   margin-right: 5% !important;
   @media screen and (max-width: 500px) {
-    margin-bottom: 2em !important;
+    margin-bottom: 1em !important;
   }
 }
 
@@ -45,9 +46,22 @@ table{
     }
 }
 
+#featureHeader{
+  background-color: var(--background-color-primary);
+  border: 0.1em solid var(--primary-color);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  width: fit-content;
+  &:hover{
+    background-color: var(--primary-color);
+  }
+}
+
 #featureList{
     display: grid;
     scale: 0;
+    height: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
@@ -65,22 +79,52 @@ table{
       transition: all 0.5s ease-in-out;
     }
     .featureok{
-      background-color: #003300;
+      background-color: #00ff0033;
     }
     .featureoff{
-      background-color: #330000;
+      background-color: #ff000033;
     }
+    
+}
 
-    details{
-      user-select: none;
-    }
-    details > summary {
-      list-style: none;
-    }
-    
-    /* hide the arrow on the html details */
-    details > summary::-webkit-details-marker {
-      display: none;
-    }
-    
+#screenshot{
+  width: 50%;
+  border: 0.125em solid var(--primary-color);
+  border-radius: 1em;
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+}
+
+footer{
+  margin-top: 5em;
+  text-align: center;
+}
+
+#logo{
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-color:  var(--orange);
+  }
+  10% {
+    background-color:  var(--yellow);
+  }
+  25% {
+    background-color:  var(--green);
+  }
+  35% {
+    background-color:  var(--blue);
+  }
+  50% {
+    background-color:  var(--purple);
+  }
+  75% {
+    background-color:  var(--pink);
+  }
+  100% {
+    background-color:  var(--red);
+  }
 }
