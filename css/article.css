@@ -10,6 +10,15 @@
   }
 }
 
+h1{
+  max-width: 90%;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 2em !important;
+  }
+}
+
 table{
     margin: auto 10% !important;
     width: 90%;
@@ -34,4 +43,44 @@ table{
     @media screen and (max-width: 500px) {
         flex-direction: column;
     }
+}
+
+#featureList{
+    display: grid;
+    scale: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+    align-items: center;
+    margin: 0 10%;
+    transition: all 0.5s ease-in-out;
+    li{
+      text-align: left;
+      /* remove list bullets */
+      list-style-type: none;
+      padding: 1em;
+      margin: 5px;
+      border-radius: 1em;
+      transition: all 0.5s ease-in-out;
+    }
+    .featureok{
+      background-color: #003300;
+    }
+    .featureoff{
+      background-color: #330000;
+    }
+
+    details{
+      user-select: none;
+    }
+    details > summary {
+      list-style: none;
+    }
+    
+    /* hide the arrow on the html details */
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    
 }
