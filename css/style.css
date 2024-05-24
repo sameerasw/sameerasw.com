@@ -335,10 +335,13 @@ nav {
   }
 
   &.macos-logo{
-    background-image: url("../assets/img/article-icon-macos.png");
+    background-image: url("../assets/img/articles/macos/article-icon-macos.png");
   }
   &.home-logo{
     background-image: url("../assets/img/notion.png"); 
+  }
+  &.pixel-logo{
+    background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
   }
 
 }
@@ -616,28 +619,28 @@ section {
   }
 
   #hack {
-    background-image: url("../assets/img/macos.png");
+    background-image: url("../assets/img/articles/macos.png");
   }
   #foldericons {
-    background-image: url("../assets/img/folder-icons.png");
+    background-image: url("../assets/img/articles/folder-icons.png");
   }
   #tidwib {
-    background-image: url("../assets/img/telegram-tidwib.png");
+    background-image: url("../assets/img/articles/telegram-tidwib.png");
   }
   #macro {
-    background-image: url("../assets/img/numpad-macros.png");
+    background-image: url("../assets/img/articles/numpad-macros.png");
   }
   #more-github {
-    background-image: url("../assets/img/github.png");
+    background-image: url("../assets/img/articles/github.png");
   }
-  #notion {
-    background-image: url("../assets/img/notion-notes.png");
+  #pixel {
+    background-image: url("../assets/img/articles/pixel-notes.png");
   }
   #website {
-    background-image: url("../assets/img/website-source.png");
+    background-image: url("../assets/img/articles/website-source.png");
   }
   #menubar {
-    background-image: url("../assets/img/menu-bar.png");
+    background-image: url("../assets/img/articles/menu-bar.png");
   }
 
   @media screen and (max-width: 1000px) {
