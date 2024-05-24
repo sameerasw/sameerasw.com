@@ -144,8 +144,8 @@ footer{
   }
 }
 
-details{
-  padding: 1em;
+details, #article-info{
+  padding: 0.5em;
   border-radius: 1em;
   background-color: var(--background-color-primary);
   border: 0.1em solid var(--primary-color);
@@ -158,9 +158,9 @@ details{
   }
   max-width: 70%;
 
-@media screen and (max-width: 500px) {
-  max-width: 95%;
-}
+  @media screen and (max-width: 500px) {
+    max-width: 95%;
+  }
   
   .article-text, .container{
     width: fit-content;
@@ -181,6 +181,16 @@ details{
     max-height: 1em;
     margin-left: 2em;
   
+  }
+}
+
+#article-info{
+  width: fit-content;
+  margin: 1em !important;
+
+  img{
+    width: 100%;
+    border-radius: 1em;
   }
 }
 
@@ -224,3 +234,4 @@ details{
     scale: 1.05;
   }
 }
+
