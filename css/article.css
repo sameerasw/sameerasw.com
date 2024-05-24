@@ -53,6 +53,11 @@ table{
 }
 
 #specs-table{
+  width: 100% !important;
+  padding: 0 auto !important;
+  margin: 0 !important;
+  align-items: center;
+  justify-content: center;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -144,7 +149,7 @@ footer{
   }
 }
 
-details, #article-info{
+details, #article-info, .card{
   padding: 0.5em;
   border-radius: 1em;
   background-color: var(--background-color-primary);
@@ -156,10 +161,10 @@ details, #article-info{
     text-decoration: none;
     /* color: var(--primary-color); */
   }
-  max-width: 70%;
+  max-width: 70vw;
 
   @media screen and (max-width: 500px) {
-    max-width: 95%;
+    max-width: 95vw;
   }
   
   .article-text, .container{
@@ -191,6 +196,32 @@ details, #article-info{
   img{
     width: 100%;
     border-radius: 1em;
+  }
+}
+
+.card{
+  background-image: url(https://play-lh.googleusercontent.com/ZyWNGIfzUyoajtFcD7NhMksHEZh37f-MkHVGr5Yfefa-IX7yj9SMfI82Z7a2wpdKCA);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color-primary);
+  /* height: 10em; */
+  width: 65%;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+
+  p{
+    color: var(--background-color-primary);
+    background-color: var(--primary-color);
+    text-align: center;
+    width: fit-content;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 3em auto !important;
   }
 }
 
