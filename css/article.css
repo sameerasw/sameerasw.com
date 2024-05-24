@@ -205,3 +205,22 @@ details{
     }
   }
 }
+
+
+.button{
+  background-color: var(--primary-color);
+  width: fit-content;
+  border-radius: 1em;
+  border: 0.1em solid var(--background-color-primary);
+  padding: 1em 2em;
+  margin: 1em;
+  transition: all 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--background-color-primary);
+
+  &:hover{
+    scale: 1.05;
+  }
+}
