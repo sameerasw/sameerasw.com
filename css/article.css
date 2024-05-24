@@ -3,6 +3,7 @@
     width: 40%;
     margin: auto 30% !important;
     margin-top: 2em !important;
+    text-wrap: wrap;
 
   @media screen and (max-width: 500px) {
     width: 90%;
@@ -20,17 +21,30 @@ h1{
   }
 }
 
+.spacer{
+  width: 3em;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
 table{
-    margin: auto 10% !important;
-    width: 90%;
+    width: fit-content;
     td{
         padding: 5px;
+        /* border: 0.1em solid var(--primary-color); */
+        width: fit-content;
+        text-wrap:nowrap;
     }
     .table-left{
         text-align: left;
     }
     .table-right{
         text-align: left;
+    }
+
+    .accent{
+      color: var(--primary-color);
     }
 
   @media screen and (max-width: 500px) {
@@ -41,6 +55,7 @@ table{
 #specs-table{
     display: flex;
     flex-direction: row;
+    width: fit-content;
     @media screen and (max-width: 500px) {
         flex-direction: column;
     }
@@ -126,5 +141,67 @@ footer{
   }
   100% {
     background-color:  var(--red);
+  }
+}
+
+details{
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--background-color-primary);
+  border: 0.1em solid var(--primary-color);
+  width: fit-content;
+  margin: 1em auto;
+  transition: all 0.5s ease-in-out;
+  a{
+    text-decoration: none;
+    /* color: var(--primary-color); */
+  }
+  max-width: 70%;
+
+@media screen and (max-width: 500px) {
+  max-width: 95%;
+}
+  
+  .article-text, .container{
+    width: fit-content;
+    margin: 1em !important;
+    text-wrap: wrap;
+  }
+
+  summary{
+    padding: 1em;
+  }
+
+  .list-left{
+    text-align: left;
+  }
+
+  .details-favicon{
+    max-width: 5em;
+    max-height: 1em;
+    margin-left: 2em;
+  
+  }
+}
+
+.warn{
+  color: var(--red);
+}
+
+#carrier-list{
+  width: 100%;
+  details{
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+#volte{
+  #ims-img{
+    width: 50%;
+    @media screen and (max-width: 500px) {
+      width: 90%;
+    }
   }
 }
