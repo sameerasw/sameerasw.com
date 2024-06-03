@@ -19,6 +19,16 @@
         content="https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/web-preview.png"
     />
     <link rel="stylesheet" href="preview/style.css">
+    <link rel="stylesheet" href="../css/dark.css" id="css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/no-cursor.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <!-- <link rel="stylesheet" href="css/arc.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="../assets/img/logo-mini.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <!-- Google tag (gtag.js) -->
@@ -35,15 +45,25 @@
 
     gtag('config', 'G-6F3G1NW62X');
 </script>
+<div class="cursor rounded move blur cursor-normal" id="cursor">
+    <div id="cursor-text"></div>
+</div>
+<nav id="nav">
+    <ul>
+        <li><a href="icons.html" id='home-nav'>
+            <i class="material-icons">arrow_back</i>
+            <span>Back</span>
+        </a></li>
+    </ul>
+</nav>
 
-    <a href="icons.html" class="back">
-        <div>Back</div>
-    </a>
     <a href="https://github.com/sameerasw/mac-icons"><h1>mac-icons</h1></a>
     <div id="search">
         <input type="text" id="search-input" placeholder="Search">
     </div>
     <div id="grid"></div>
     <script src="preview/macos.js"></script>
+    <script src="../js/typing.js"></script>
+    <script src="../js/cursor.js"></script>
 </body>
 </html>
