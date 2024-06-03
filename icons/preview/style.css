@@ -1,10 +1,10 @@
 body{
-    background-color: #000;
-    color: #fff;
+    background-color: var(--background-color-primary);
+    color: var(--primary-color);
 }
 
 a{
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -49,11 +49,11 @@ input{
     border: none;
     width: 20em;
     transition: all 0.5s ease-in-out;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--background-color-primary);
+    color: var(--primary-color);
     &:focus{
         outline: none;
-        box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px var(--primary-color);
     }
 }
 
@@ -69,11 +69,11 @@ input{
         border: none;
         width: 10em;
         transition: all 0.5s ease-in-out;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--background-color-secondary);
+        color: var(--primary-color);
         &:hover{
-            background-color: #fff;
-            color: #000;
+            background-color: var(--primary-color);
+            color: var(--background-color-primary);
         }
     }
 }
@@ -87,10 +87,10 @@ input{
     border-radius: 10px;
     border: none;
     transition: all 0.5s ease-in-out;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--background-color-primary);
+    color: var(--primary-color);
     &:hover{
-        background-color: #fff;
-        color: #000;
+        background-color: var(--primary-color);
+        color: var(--background-color-primary);
     }
 }
