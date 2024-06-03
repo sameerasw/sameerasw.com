@@ -40,6 +40,10 @@ img{
     display: flex;
     justify-content: center;
     margin: 2em 0;
+    input {
+        background-color: var(--background-color-secondary);
+        color: var(--primary-color);
+    }
 }
 
 input{
@@ -93,4 +97,8 @@ input{
         background-color: var(--primary-color);
         color: var(--background-color-primary);
     }
+}
+
+i{
+    margin: 0.5em;
 }
