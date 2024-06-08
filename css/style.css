@@ -383,7 +383,7 @@ nav {
 }
 
 #photo {
-  background-color: #222;
+  background-color: var(--background-color-tr);
   animation: photos 20s infinite;
   transition: all 0.5s ease-in-out;
   width: 15em;
