@@ -346,15 +346,59 @@ nav {
 
 }
 
+@keyframes photos {
+  0% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+  15% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+  20% {
+    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
+  }
+  35% {
+    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
+  }
+  40% {
+    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
+  }
+  55% {
+    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
+  }
+  60% {
+    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
+  }
+  75% {
+    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
+  }
+  80% {
+    background-image: url("../assets/img/photos/sameerasw-5.png");
+  }
+  95% {
+    background-image: url("../assets/img/photos/sameerasw-5.png");
+  }
+  100% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+}
+
 #photo {
-  background-color: var(--primary-color);
-  background-image: url("../assets/img/photo-professional.png");
-  width: 8em;
-  height: 8em;
+  background-color: #222;
+  animation: photos 20s infinite;
+  transition: all 0.5s ease-in-out;
+  width: 15em;
+  height: 15em;
   background-size: cover;
   background-position: center;
   border-radius: 2em;
-  margin: 2em;
+  margin: 3em;
+
+  &:hover{
+    scale: 1.2;
+    border-radius: 0.5em;
+    /* pause the animation */
+    animation-play-state: paused;
+  }
 }
 
 .scroll {
@@ -669,8 +713,8 @@ section {
   }
   p {
     padding: 0;
-    text-align: left;
-    text-wrap: wrap;
+    text-wrap:wrap;
+    text-align: justify;
   }
 
   .details {
