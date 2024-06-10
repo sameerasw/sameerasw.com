@@ -256,7 +256,6 @@ nav {
     flex-direction: column;
     /* position: sticky;
         top: 1em; */
-    z-index: 1;
     .container-mini {
       margin: 0 2em;
     }
@@ -315,11 +314,11 @@ nav {
 
 #logo {
   background-color: var(--primary-color);
-  width: 8em;
-  height: 8em;
+  width: 15em;
+  height: 15em;
   background-size: cover;
   background-position: center;
-  border-radius: 2em;
+  border-radius: 3em;
   transition: all 1s ease-in-out;
   margin-top: 10em;
 
