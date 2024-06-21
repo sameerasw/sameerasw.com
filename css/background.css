@@ -7,27 +7,8 @@
     top:0;
     background-color: var(--background-color-primary);
     opacity: 0.2;
-    background-image:  radial-gradient(var(--primary-color) 2px, transparent 2px), radial-gradient(var(--text-color) 2px, var(--background-color-primary) 2px);
-    animation: bg-anim 20s infinite cubic-bezier(0.23, 1, 0.320, 1);
+    background-image:  radial-gradient(var(--primary-color) 2px, transparent 2px), radial-gradient(var(--primary-color) 2px, var(--background-color-primary) 2px);
     background-size: 50px 50px;
     background-position: 0 0,25px 25px;
     /* transition: all 5s ease-in-out; */
-}
-
-@keyframes bg-anim {
-    0% {
-        background-position: 0 10px,0 -10px;
-    }
-    25% {
-        background-position: -10px 0,10px 0;
-    }
-    50% {
-        background-position: 0 -10px,0 10px;
-    }
-    75% {
-        background-position: 10px 0,-10px 0;
-    }
-    100% {
-        background-position: 0 10px,0 -10px;
-    }
 }
