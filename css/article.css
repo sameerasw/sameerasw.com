@@ -108,11 +108,25 @@ table{
 }
 
 #screenshot{
-  width: 50%;
+  width: 40vw !important;
   border: 0.125em solid var(--primary-color);
   border-radius: 1em;
-  @media screen and (max-width: 500px) {
-    width: 90%;
+  transition: all 0.5s ease-in-out;
+
+  &:hover{
+    scale: 1.2;
+    box-shadow: 0 0 1em var(--primary-color);
+  }
+  @media screen and (max-width: 800px) {
+    width: 60vw !important;
+    
+    @media screen and (max-width: 500px) {
+      width: 95vw !important;
+      &:hover{
+        scale: 1;
+        box-shadow: none;
+      }
+    }
   }
 }
 
@@ -199,7 +213,7 @@ details, #article-info, .card{
   }
 }
 
-.card{
+#photos{
   background-image: url(https://play-lh.googleusercontent.com/ZyWNGIfzUyoajtFcD7NhMksHEZh37f-MkHVGr5Yfefa-IX7yj9SMfI82Z7a2wpdKCA);
   background-size: cover;
   background-position: center;
@@ -207,6 +221,8 @@ details, #article-info, .card{
   background-color: var(--background-color-primary);
   /* height: 10em; */
   width: 65%;
+  margin: 1em auto;
+  border-radius: 1em;
   align-items: center;
   justify-content: center;
 
@@ -217,6 +233,7 @@ details, #article-info, .card{
   p{
     color: var(--background-color-primary);
     background-color: var(--primary-color);
+    text-decoration: none;
     text-align: center;
     width: fit-content;
     padding: 0.5em;
@@ -267,10 +284,13 @@ details, #article-info, .card{
 }
 
 #charging{
-  text-align: left;
+  text-align: justify;
   .article-text{
     padding: auto 40%;
   }
+  summary{
+    text-align: center;
+  };
 }
 
 .accent{
@@ -303,4 +323,12 @@ details, #article-info, .card{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+details, section{
+  width: 80%;
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+  margin: 0.5em auto;
 }
