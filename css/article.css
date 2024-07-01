@@ -238,7 +238,7 @@ details, #article-info, .card{
   }
 }
 
-#volte{
+.article-summary{
   #ims-img{
     width: 50%;
     @media screen and (max-width: 500px) {
@@ -266,3 +266,41 @@ details, #article-info, .card{
   }
 }
 
+#charging{
+  text-align: left;
+  .article-text{
+    padding: auto 40%;
+  }
+}
+
+.accent{
+  color: var(--primary-color);
+}
+
+#tldr{
+  border: 0.1em solid var(--primary-color);
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.article-img{
+  display: block;
+  max-height: 25vh;
+  max-width: 100%;
+  margin: 1em;;
+  border-radius: 1em;
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    scale: 1.05;
+  }
+}
+
+.article-img-carousel{
+  max-width: 95%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

@@ -120,9 +120,14 @@ const randomColor = (darkMode) => {
     }
   }
 
-//clicking on featureHeader will toggle the featureList
-featureHeader.addEventListener('click', function(){
-    featureList.style.height = featureList.style.height === 'auto' ? '0' : 'auto';
-    featureList.style.scale = featureList.style.scale === '1' ? '0' : '1';
-}
-);
+  try{
+    
+        //clicking on featureHeader will toggle the featureList
+        featureHeader.addEventListener('click', function(){
+            featureList.style.height = featureList.style.height === 'auto' ? '0' : 'auto';
+            featureList.style.scale = featureList.style.scale === '1' ? '0' : '1';
+        }
+        );
+
+    } catch(e){
+    }
