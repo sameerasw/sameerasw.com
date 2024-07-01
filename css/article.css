@@ -284,7 +284,7 @@ details, #article-info, .card{
 }
 
 #charging{
-  text-align: justify;
+  text-align: left;
   .article-text{
     padding: auto 40%;
   }
