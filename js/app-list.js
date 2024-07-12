@@ -41,6 +41,69 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Open source, cross-platform, unofficial YouTube Music Desktop App with built-in ad blocker, downloader and a lot mmore features being continuously added.',
             iconUrl: 'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/2b456a86229b8f12bc39043a2b417c32_low_res_YouTube_Music.png',
             imageUrl: '/assets/img/articles/macos/app-screenshots/yt-music.png'
+        },
+        {
+            name: 'Latest',
+            link: 'https://max.codes/latest/',
+            description: 'Latest is a free and open source app for macOS that checks if all your apps are up to date. Get a quick overview of which apps changed and what changed and update them right away.',
+            iconUrl: 'https://github.com/mangerlahn/Latest/blob/main/Latest/Resources/Assets.xcassets/AppIcon.appiconset/64.png?raw=true',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/latest.png'
+        },
+        {
+            name: 'IINA',
+            link: 'https://iina.io/',
+            description: 'IINA is born to be a modern macOS application, from its framework to the user interface. It adopts the post-Yosemite design language of macOS and keeps up the pace of new technologies.',
+            iconUrl: 'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/5132d30ec156bd6d1ce27dce2c50f567_zb8tSYdlVC.png',
+            imageUrl: 'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb420cf1b-b5de-455a-bc03-3990ae2d77ba%2Fd9e4cc7c-5a32-4dcd-bdfb-e2c081bda75f%2FUntitled.png?table=block&id=cbdcc7c0-13fa-4a42-9ec9-1ea08f8ded6c&cache=v2'
+        },
+        {
+            name: 'Raycast',
+            link: 'https://www.raycast.com/',
+            description: 'A collection of powerful productivity tools all within an extendable launcher. Fast, ergonomic and reliable.',
+            iconUrl: 'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/ff9688e8751c364dbe41e7ec986e63ec_low_res_Raycast.png',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/raycast.png'
+        },
+        {
+            name: 'scrcpy',
+            link: 'https://github.com/Genymobile/scrcpy/blob/master/doc/macos.md',
+            description: 'This application mirrors Android devices (video and audio) connected via USB or over TCP/IP, and allows to control the device with the keyboard and the mouse of the computer.',
+            iconUrl: 'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/b7cda5b2e776c4dde49eb3ef8ab2d35e_prk2we4Lr1.png',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/scrcpy.png'
+        },
+        {
+            name: 'LocalSend',
+            link: 'https://localsend.org',
+            description: 'Share files to nearby devices. Free, open-source, cross-platform.',
+            iconUrl: 'https://static.macupdate.com/products/64323/l/phpzoeizw-logo.png?v=1684308099',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/localsend.png'
+        },
+        {
+            name: 'ProtonVPN',
+            link: 'https://localsend.org',
+            description: 'The best VPN for speed and security. Stay safe. Play fast.',
+            iconUrl: 'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/85f7bae7b0c9c4e4e47b530ea127e3cd_low_res_Proton%20VPN.png',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/protonvpn.png'
+        },
+        {
+            name: 'CleanShot X',
+            link: 'https://cleanshot.com/',
+            description: 'CleanShot X provides over 50 features making it the ultimate screen capturing tool.',
+            iconUrl: 'https://www.podfeet.com/blog/wp-content/uploads/2022/04/CleanShot-X-logo.png',
+            imageUrl: 'https://cleanshot.com/_nuxt/bgtool.18b35a89.jpg'
+        },
+        {
+            name: 'Blip',
+            link: 'https://localsend.org',
+            description: 'Send any size file, right from your desktop via internet. A cross platform free to use app.',
+            iconUrl: '/assets/img/articles/macos/app-screenshots/blip-icon.png',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/blip.png'
+        },
+        {
+            name: 'Battery Toolkit',
+            link: 'https://github.com/mhaeuser/Battery-Toolkit',
+            description: 'Control the platform power state of your Apple Silicon Mac.',
+            iconUrl: 'https://raw.githubusercontent.com/mhaeuser/Battery-Toolkit/main/Resources/AppIcon.svg',
+            imageUrl: '/assets/img/articles/macos/app-screenshots/battery-toolkit.png'
         }
     ];
 
