@@ -338,13 +338,41 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 80%;
+  .free{
+    border: 0.2em solid lightskyblue;
+  }
+  .paid{
+    border: 0.2em solid lightcoral;
+  }
+  .foss{
+    border: 0.2em solid lightgreen;
+  }
+
+  #apps-guide{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin: 5em 0;
+    p{
+      margin: 0.25em;
+      padding: 0.25em;
+      border-radius: 0.5em;
+      padding: 0.25em;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
 
   #apps-list {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 1.5em;
     @media screen and (max-width: 1300px) {
       grid-template-columns: 1fr 1fr;
       @media screen and (max-width: 900px) {
@@ -357,13 +385,12 @@ section {
     .card {
       border-radius: 1em;
       background-color: var(--background-color-primary);
-      border: 0.1em solid var(--primary-color);
       transition: all 0.5s ease-in-out;
       text-decoration: none;
       color: var(--text-color);
       width: 100%;
       height: 100%;
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       h3 {
         text-align: center;
