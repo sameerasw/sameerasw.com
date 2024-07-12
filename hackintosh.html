@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My MacBook Setup</title>
+    <meta content="A complete lookaround of my personal macOS setup on the MacBook Air." name="description" />
+    <meta content="macos, hackintosh, hackbook, nitro 5, acer nitro 5, Sri Lanka, sameerasw, Sameera Sandakleum" name="keywords" />
+    <meta data-rh="true" property="og:type" content="article" />
+    <meta data-rh="true" property="og:title" content="macOS Setup - Hackintosh build on Acer Nitro 5" />
+    <meta data-rh="true" property="og:description"
+        content="A complete lookaround of my personal macOS - Hackintosh build on my ACER Nitro 5 (2018) laptop.">
+    <meta data-rh="true" property="og:url" content="https://sameerasw.com/macos/" />
+    <meta data-rh="true" property="og:image"
+        content="https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/articles/macos/web-preview-macos.png" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sameera_s_w">
+    <meta name="twitter:creator" content="@sameera_s_w">
+    <meta name="twitter:title" content="Sameera's macOS Setup">
+    <meta name="twitter:description"
+        content="A complete lookaround of my personal macOS - Hackintosh build on my ACER Nitro 5 (2018) laptop.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/articles/macos/web-preview-macos.png">
+
+        <link rel=”canonical” href=”https://www.sameerasw.com/macos/” />
+
+    <link rel="stylesheet" href="css/dark.css" id="css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/no-cursor.css">
+    <link rel="stylesheet" href="css/background.css">
+    <!-- <link rel="stylesheet" href="css/arc.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="assets/img/logo-mini.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3590027174378636"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F3G1NW62X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6F3G1NW62X');
+    </script>
+    <div class="cursor rounded move blur cursor-normal" id="cursor">
+        <div id="cursor-text"></div>
+    </div>
+    <nav id="nav">
+        <ul>
+            <li><a href="./index.html" id='home-nav'>
+                    <i class="material-icons">arrow_back</i>
+                    <span>Back</span>
+                </a></li>
+        </ul>
+    </nav>
+
+    <div id="sidebar">
+        <a>
+            <div id="theme" class="sidebar-button">
+                <i class="material-icons">brightness_4</i>
+            </div>
+            <div id="color" class="sidebar-button">
+                <i class="material-icons">color_lens</i>
+            </div>
+        </a>
+    </div>
+
+    <div id="background"></div>
+
+    <div class="container">
+        <section id="intro">
+            <div class="heading">
+                <div id="logo" class="macos-logo"></div>
+                <div class="container-mini item content">
+                    <h1 id="title">macOS Setup - Hackintosh</h1>
+                    <img src="./assets/img/articles/macos/macos-screenshot.jpeg" alt="screenshot preview"
+                        id="screenshot">
+                    <p class="item article-text">A complete lookaround of my personal macOS - Hackintosh build on my
+                        ACER Nitro 5 (2018) laptop. The apps I use, tools, guides that helped, browser usage,
+                        productivity tricks will be mentioned below and updated often as my setup changes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="article-info">
+            <div class="heading item">
+                <h2>Specs</h2>
+            </div>
+            <div class="container" id="specs-table">
+                <table>
+                    <tr>
+                        <td class="table-left"><b class="accent">Model</b></td>
+                        <td class="table-right">: Acer Nitro 5 AN515-52</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">CPU</b></td>
+                        <td class="table-right">: Intel Core i7+ 8750H</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Chipset</b></td>
+                        <td class="table-right">: Intel H370 (Coffee Lake)</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">RAM</b></td>
+                        <td class="table-right">: DDR4 2666MHz 8GB x 2</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">iGPU</b></td>
+                        <td class="table-right">: Intel UHD Graphics 630</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">dGPU</b></td>
+                        <td class="table-right">: NVIDIA GeForce GTX 1050 4GB</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Storage</b></td>
+                        <td class="table-right">: ADATA Legend 256GB m.2 <br>1TB HDD</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Display</b></td>
+                        <td class="table-right">: 15.6" FHD LCD (1920x1080)</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Wi-Fi</b></td>
+                        <td class="table-right">: Intel Wireless-AC 9560</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Trackpad</b></td>
+                        <td class="table-right">: l2C HID Synaptics</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Wireless</b></td>
+                        <td class="table-right">: Intel Wireless AC9560 + Bluetooth</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">Ethernet</b></td>
+                        <td class="table-right">: Realtek</td>
+                    </tr>
+                    <tr>
+                        <td class="table-left"><b class="accent">OS</b></td>
+                        <td class="table-right">: macOS Sonoma 14.2.1 <br>Windows 11 23H2</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2 id="featureHeader" class="button-view item">Feature Availability</h2>
+                <ui id="featureList">
+                    <li class="featureok">✅ All USB Ports</li>
+                    <li class="featureok">✅ Intel UHD 630 iGPU</li>
+                    <li class="featureok">✅ Display w/backlight</li>
+                    <li class="featureok">✅ WiFi + Bluetooth</li>
+                    <li class="featureok">✅ LAN</li>
+                    <li class="featureok">✅ Keyboard</li>
+                    <li class="featureok">✅ Keyboard Fn keys</li>
+                    <li class="featureok">✅ Trackpad</li>
+                    <li class="featureok">✅ Trackpad gestures</li>
+                    <li class="featureok">✅ m.2 and SATA</li>
+                    <li class="featureok">✅ Audio + Mic</li>
+                    <li class="featureok">✅ Camera</li>
+                    <li class="featureok">✅ Battery</li>
+                    <li class="featureok">✅ Device standby</li>
+                    <li class="featureok">✅ iMessage + Face time</li>
+                    <li class="featureok">✅ USB Tethering</li>
+                    <li class="featureoff">❌ Nvidia GTX1050</li>
+                    <li class="featureoff">❌ HDMI - dGPU</li>
+                    <li class="featureoff">❌ 3.5mm port (partial)</li>
+                </ui>
+            </div>
+        </section>
+
+        <section>
+            <div class="heading item">
+                <h2>WIP</h2>
+            </div>
+        </section>
+        <footer></footer>
+        <script src="js/script-article.js"></script>
+        <script src="js/typing.js"></script>
+        <script src="js/cursor.js"></script>
+</body>
+
+</html>
