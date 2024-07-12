@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     apps.forEach(app => {
         const card = document.createElement('a');
-        card.className = 'card';
+        card.className = 'card item';
         card.href = app.link;
 
         const iconImg = document.createElement('img');

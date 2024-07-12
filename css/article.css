@@ -351,6 +351,9 @@ section {
         grid-template-columns: 1fr;
       }
     }
+    .item{
+      opacity: 1;
+    }
     .card {
       border-radius: 1em;
       background-color: var(--background-color-primary);
