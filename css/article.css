@@ -105,7 +105,7 @@ table {
 }
 
 #screenshot {
-  width: 40vw !important;
+  width: 60vw !important;
   border: 0.125em solid var(--primary-color);
   border-radius: 1em;
   transition: all 0.5s ease-in-out;
@@ -340,23 +340,23 @@ section {
   align-items: center;
   justify-content: center;
   width: 80%;
-  .free{
+  .free {
     border: 0.2em solid lightskyblue;
   }
-  .paid{
+  .paid {
     border: 0.2em solid lightcoral;
   }
-  .foss{
+  .foss {
     border: 0.2em solid lightgreen;
   }
 
-  #apps-guide{
-    width:max-content;
+  #apps-guide {
+    width: max-content;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     margin: 5em 0;
-    p{
+    p {
       margin: 0.25em;
       padding: 0.25em;
       border-radius: 0.5em;
