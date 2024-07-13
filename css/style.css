@@ -475,7 +475,7 @@ nav {
   background-color: var(--primary-color);
   border-radius: 1em;
 
-  p{
+  p {
     margin: 0.25em;
     color: var(--background-color-secondary);
   }
@@ -626,7 +626,6 @@ nav {
     text-align: left;
     line-height: 2;
   }
-
 }
 
 #contact {
