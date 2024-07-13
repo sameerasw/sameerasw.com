@@ -169,8 +169,8 @@ nav {
       margin: 0.25em;
       transition: all 0.5s ease-in-out;
       a {
-        width: 4em;
-        height: 4em;
+        width: 3em;
+        height: 3em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -182,7 +182,7 @@ nav {
         font-size: 0.75rem;
         text-align: center;
         transition: all 0.5s ease-in-out;
-        opacity: 0.5;
+        opacity: 0.4;
         .caption {
           height: 0px;
           scale: 0;
@@ -224,8 +224,8 @@ nav {
     border-radius: 10em;
     a {
       border-radius: 5em;
-      width: 0.9em !important;
-      height: 0.9em !important;
+      width: 1em !important;
+      height: 1em !important;
       .caption {
         display: none;
       }
