@@ -12,15 +12,6 @@
   }
 }
 
-h1 {
-  max-width: 90%;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
-  @media screen and (max-width: 500px) {
-    margin-bottom: 1em !important;
-  }
-}
-
 .spacer {
   width: 3em;
   @media screen and (max-width: 500px) {
@@ -393,9 +384,8 @@ section {
       margin: 0 auto;
       padding: 0;
       h3 {
-        text-align: center;
         color: var(--primary-color);
-        margin: 0 0 0.5em 0;
+        background-color: #0000;
       }
       &:hover {
         scale: 1.05;
