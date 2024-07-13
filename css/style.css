@@ -169,7 +169,6 @@ nav {
       margin: 0.25em;
       transition: all 0.5s ease-in-out;
       a {
-        /* make width the same as the height */
         width: 4em;
         height: 4em;
         display: flex;
@@ -177,7 +176,6 @@ nav {
         justify-content: center;
         align-items: center;
         color: var(--text-color);
-        /* background-color: var(--background-color-primary); */
         padding: 1rem;
         border-radius: 2em;
         text-decoration: none;
@@ -212,6 +210,31 @@ nav {
     }
   }
 
+  .active {
+    background-color: var(--primary-color);
+    color: var(--background-color-secondary);
+    opacity: 1;
+    span {
+      height: 100%;
+      scale: 1;
+    }
+  }
+
+  &.mini {
+    border-radius: 10em;
+    a {
+      border-radius: 5em;
+      width: 0.9em !important;
+      height: 0.9em !important;
+      span {
+        display: none;
+      }
+      i {
+        scale: 1 !important;
+      }
+    }
+  }
+
   @media screen and (max-width: 750px) {
     display: flex;
     flex-direction: column;
@@ -219,9 +242,8 @@ nav {
     left: 50%;
     top: auto;
     transform: translateX(-50%);
-    
   }
-  
+
   @media screen and (max-width: 500px) {
     a {
       width: 2em !important;
@@ -236,34 +258,8 @@ nav {
   }
 }
 
-.active {
-  background-color: var(--primary-color);
-  color: var(--background-color-secondary);
-  /* border-radius: 1.5em; */
-  opacity: 1;
-  span {
-    height: 100%;
-    scale: 1;
-  }
-}
-
-.mini {
-  border-radius: 10em;
-  a {
-    border-radius: 5em;
-    width: 0.9em !important;
-    height: 0.9em !important;
-    span {
-      display: none;
-    }
-    i {
-      scale: 1 !important;
-    }
-  }
-}
-
 .item {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
   transform: translate(0, 2em);
 }
@@ -271,35 +267,44 @@ nav {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: center;
   width: 100vw;
-  padding: 0;
-  padding: 0;
-  margin: 0;
-  /* height: 100vh; */
   .heading {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     flex-direction: column;
-    /* position: sticky;
-        top: 1em; */
-    .container-mini {
-      margin: 0 2em;
+  }
+
+  #logo {
+    background-color: var(--primary-color);
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3em;
+    transition: all 1s ease-in-out;
+    margin-top: 10em;
+
+    @media screen and (max-width: 500px) {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100vw;
+      border-radius: 0 0 2em 2em;
+      z-index: -1;
+      transition: all 0s ease-in-out;
+      margin-top: 0;
     }
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
+    &.macos-logo {
+      background-image: url("../assets/img/articles/macos/article-icon-macos.png");
     }
-  }
-  p {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
+    &.home-logo {
+      background-image: url("../assets/img/notion.png");
+    }
+    &.pixel-logo {
+      background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
+    }
   }
 
   #title {
@@ -308,10 +313,51 @@ nav {
   }
 
   @media screen and (max-width: 500px) {
-    padding: 0;
     #title {
       margin-top: 90vw;
     }
+  }
+}
+
+#typing-text {
+  transition: all 0.5s ease-in-out;
+}
+
+.container p {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.2em;
+
+  span.typed-text {
+    color: var(--primary-color);
+  }
+  span.cursor {
+    display: inline-block;
+    background-color: var(--primary-color);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  span.cursor.typing {
+    animation: none;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
   }
 }
 
@@ -321,48 +367,13 @@ nav {
   margin-bottom: 4em;
   border: 0.1em solid var(--text-color);
   border-radius: 5em;
-  transition: all 0.5s ease-in-out;
   @media screen and (min-width: 500px) {
     &:hover {
       background-color: var(--primary-color);
-      border: 0.1em solid var(--primary-color);
       color: var(--background-color-secondary);
       cursor: none;
     }
   }
-}
-
-#logo {
-  background-color: var(--primary-color);
-  width: 15em;
-  height: 15em;
-  background-size: cover;
-  background-position: center;
-  border-radius: 3em;
-  transition: all 1s ease-in-out;
-  margin-top: 10em;
-
-  @media screen and (max-width: 500px) {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vw;
-    border-radius: 0 0 2em 2em;
-    z-index: -1;
-    transition: all 0s ease-in-out;
-    margin-top: 0;
-  }
-
-  &.macos-logo{
-    background-image: url("../assets/img/articles/macos/article-icon-macos.png");
-  }
-  &.home-logo{
-    background-image: url("../assets/img/notion.png"); 
-  }
-  &.pixel-logo{
-    background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
-  }
-
 }
 
 @keyframes photos {
@@ -402,7 +413,7 @@ nav {
 }
 
 #photo {
-  background-color: var(--background-color-tr);
+  background-color: var(--background-color-secondary);
   animation: photos 20s infinite;
   transition: all 0.5s ease-in-out;
   width: 15em;
@@ -412,55 +423,11 @@ nav {
   border-radius: 2em;
   margin: 3em;
 
-  &:hover{
+  &:hover {
     scale: 1.2;
     border-radius: 0.5em;
     /* pause the animation */
     animation-play-state: paused;
-  }
-}
-
-.scroll {
-  opacity: 0.5;
-}
-
-#typing-text {
-  transition: all 0.5s ease-in-out;
-}
-
-.container p {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 1.2em;
-}
-.container p span.typed-text {
-  color: var(--primary-color);
-}
-.container p span.cursor {
-  display: inline-block;
-  background-color: var(--primary-color);
-  margin-left: 0.1rem;
-  width: 3px;
-  animation: blink 1s infinite;
-}
-.container p span.cursor.typing {
-  animation: none;
-}
-@keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
   }
 }
 
@@ -718,7 +685,7 @@ section {
   }
   p {
     padding: 0;
-    text-wrap:wrap;
+    text-wrap: wrap;
     text-align: justify;
   }
 
@@ -810,7 +777,7 @@ form {
   color: var(--text-color);
   padding: 0;
   margin: 0;
-  div{
+  div {
     width: 50%;
     margin: 7.5em 25%;
     padding: 1em 0;
