@@ -1,13 +1,10 @@
 .article-text {
-  text-align: justify;
-  width: 40%;
-  margin: auto 30% !important;
+  width: 100%;
+  margin: auto;
   margin-top: 2em !important;
   text-wrap: wrap;
 
   @media screen and (max-width: 500px) {
-    width: 90%;
-    margin: auto 5% !important;
     margin-top: 1em !important;
   }
 }
@@ -31,7 +28,7 @@ table {
     text-align: left;
   }
   .table-right {
-    text-align: center;
+    text-align: left;
   }
 
   .accent {
@@ -96,13 +93,14 @@ table {
 }
 
 #screenshot {
-  width: 60vw !important;
+  max-width: 90vw;
+  max-height: 50vh;
   border: 0.125em solid var(--primary-color);
   border-radius: 1em;
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    scale: 1.2;
+    scale: 1.05;
     box-shadow: 0 0 1em var(--primary-color);
   }
   @media screen and (max-width: 800px) {
@@ -198,7 +196,6 @@ details,
 }
 
 #article-info {
-  width: fit-content;
 
   img {
     width: 100%;
