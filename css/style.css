@@ -54,7 +54,7 @@ h2 {
   padding: 0.75em;
   font-size: 1.25rem;
   border-radius: 0.5em;
-  color: var(--text-color);
+  color: var(--primary-color);
   background-color: var(--background-color-secondary);
   transition: all 0.5s ease-in-out;
 }
@@ -361,91 +361,21 @@ nav {
   }
 }
 
-.button-view {
-  background-color: var(--background-color-secondary);
-  padding: 0.5em 1em;
-  margin-bottom: 4em;
-  border: 0.1em solid var(--text-color);
-  border-radius: 5em;
-  @media screen and (min-width: 500px) {
-    &:hover {
-      background-color: var(--primary-color);
-      color: var(--background-color-secondary);
-      cursor: none;
-    }
-  }
-}
-
-@keyframes photos {
-  0% {
-    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
-  }
-  15% {
-    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
-  }
-  20% {
-    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
-  }
-  35% {
-    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
-  }
-  40% {
-    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
-  }
-  55% {
-    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
-  }
-  60% {
-    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
-  }
-  75% {
-    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
-  }
-  80% {
-    background-image: url("../assets/img/photos/sameerasw-5.png");
-  }
-  95% {
-    background-image: url("../assets/img/photos/sameerasw-5.png");
-  }
-  100% {
-    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
-  }
-}
-
-#photo {
-  background-color: var(--background-color-secondary);
-  animation: photos 20s infinite;
-  transition: all 0.5s ease-in-out;
-  width: 15em;
-  height: 15em;
-  background-size: cover;
-  background-position: center;
-  border-radius: 2em;
-  margin: 3em;
-
-  &:hover {
-    scale: 1.2;
-    border-radius: 0.5em;
-    /* pause the animation */
-    animation-play-state: paused;
-  }
-}
-
 #socials {
   display: inline-flex;
-  /* align-items: center; */
   width: fit-content;
-  margin: 2em 0;
-  /* padding: 0.5em; */
+  margin: 1em auto;
   transition: all 0.5s ease-in-out;
   border-radius: 1.25em;
+  color: var(--text-color);
   background-color: var(--background-color-primary);
+  border: calc(0.08 * var(--m)) solid transparent;
   .button {
     background-color: var(--background-color-primary);
     border-radius: 1em;
     a {
       border: var(--text-color) 2px solid;
-      border-radius: 1em;
+      border-radius: 0.8em;
       margin: 0.25em;
       width: 3em;
       height: 3em;
@@ -469,36 +399,14 @@ nav {
       }
     }
   }
+
   @media screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 1em auto;
-    .button {
-      align-items: center;
-      justify-content: center;
-      width: 4em;
-      height: 4em;
-      margin: auto;
-    }
   }
 }
 
 #socials {
-  border: calc(0.08 * var(--m)) solid transparent;
-  /* position: relative; */
-  color: #f3f3f3;
-  /* background-color: var(--background-color-primary); */
-  /* font-family: 'Space Grotesk'; */
-  /* font-size: var(--m); */
-  /* border-radius: calc(0.7 * var(--m)); */
-  /* padding: calc(0.5 * var(--m)) calc(1 * var(--m)); */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* cursor: pointer; */
-
   background: linear-gradient(var(--background-color-primary), #12121300),
     linear-gradient(
       var(--background-color-primary) 50%,
@@ -558,27 +466,88 @@ nav {
   }
 }
 
-section {
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+.button-view {
+  background-color: var(--background-color-secondary);
+  padding: 0.5em 1em;
+  margin-bottom: 4em;
+  border: 0.1em solid var(--text-color);
+  border-radius: 5em;
+  @media screen and (min-width: 500px) {
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--background-color-secondary);
+      cursor: none;
+    }
+  }
+}
+
+#photo {
+  background-color: var(--background-color-secondary);
+  animation: photos 20s infinite;
+  transition: all 0.5s ease-in-out;
+  width: 15em;
+  height: 15em;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2em;
+  margin: 3em;
+
+  &:hover {
+    scale: 1.2;
+    border-radius: 0.5em;
+    /* pause the animation */
+    animation-play-state: paused;
+  }
+}
+
+@keyframes photos {
+  0% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+  15% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+  20% {
+    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
+  }
+  35% {
+    background-image: url("../assets/img/photos/sameerasw-2.jpeg");
+  }
+  40% {
+    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
+  }
+  55% {
+    background-image: url("../assets/img/photos/sameerasw-3.jpeg");
+  }
+  60% {
+    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
+  }
+  75% {
+    background-image: url("../assets/img/photos/sameerasw-4.jpeg");
+  }
+  80% {
+    background-image: url("../assets/img/photos/sameerasw-5.png");
+  }
+  95% {
+    background-image: url("../assets/img/photos/sameerasw-5.png");
+  }
+  100% {
+    background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
 }
 
 #music {
-  margin: 1em auto;
-  padding: 0;
+  margin: 2em auto;
+  padding: 0.1em 0.5em;
   max-width: 300px;
   transition: all 0.5s ease-in-out;
   z-index: 1;
   background-color: var(--primary-color);
   border-radius: 1em;
 
-  @media screen and (max-width: 768px) {
-    /* max-width: 80%; */
-    @media screen and (max-width: 500px) {
-      /* max-width: 100%; */
-      margin-top: 4em;
-    }
+  p{
+    margin: 0.25em;
+    color: var(--background-color-secondary);
   }
 }
 
