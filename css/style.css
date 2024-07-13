@@ -562,7 +562,7 @@ nav {
     text-decoration: none;
     transition: all 0.5s ease-in-out;
     border: 0.15em solid var(--text-color);
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 15em;
   }
 
@@ -727,4 +727,15 @@ form {
   width: 30%;
   margin: auto;
   transform: translate(-50%, 50%);
+}
+
+.new-article{
+  position: absolute;
+  /* filter: invert(1); */
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -30%);
+  max-width: 5em;
+  max-height: 5em;
+  z-index: 10000;
 }
