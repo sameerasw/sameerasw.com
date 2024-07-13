@@ -466,6 +466,21 @@ nav {
   }
 }
 
+#music {
+  margin: 2em auto;
+  padding: 0.1em 0.5em;
+  max-width: 300px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  background-color: var(--primary-color);
+  border-radius: 1em;
+
+  p{
+    margin: 0.25em;
+    color: var(--background-color-secondary);
+  }
+}
+
 .button-view {
   background-color: var(--background-color-secondary);
   padding: 0.5em 1em;
@@ -536,65 +551,19 @@ nav {
   }
 }
 
-#music {
-  margin: 2em auto;
-  padding: 0.1em 0.5em;
-  max-width: 300px;
-  transition: all 0.5s ease-in-out;
-  z-index: 1;
-  background-color: var(--primary-color);
-  border-radius: 1em;
-
-  p{
-    margin: 0.25em;
-    color: var(--background-color-secondary);
-  }
-}
-
-.stats {
-  margin: 2em auto;
-  scale: 0.75;
-
-  @media screen and (max-width: 768px) {
-    scale: 1;
-  }
-}
-
-.wip {
-  width: 30%;
-  margin: auto;
-  transform: translate(-50%, 50%);
-}
-
 #highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 2em 0em;
+  gap: 1em;
   width: 90vw;
-  padding: 0;
+  margin: 2em auto;
   transition: all 0.5s ease-in-out;
   a {
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
     border: 0.15em solid var(--text-color);
     overflow: hidden;
     height: 15em;
-    margin: 1em;
-    @media screen and (min-width: 500px) {
-      &:hover {
-        scale: 1.05;
-        border: 0.15em solid var(--primary-color);
-        h2 {
-          background-color: var(--primary-color);
-          color: var(--background-color-secondary);
-        }
-      }
-    }
   }
 
   .highlight-item {
@@ -603,7 +572,7 @@ nav {
     border-radius: 1em;
   }
 
-  #hack {
+  #macos {
     background-image: url("../assets/img/articles/macos.png");
   }
   #foldericons {
@@ -630,28 +599,22 @@ nav {
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
-    margin: 2em 4em;
+    gap: 2em;
     @media screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
-      margin: 2em 2em;
     }
   }
 }
 
-.hidden {
-  display: none;
-}
-
 .content {
-  margin: 0 20%;
-  align-items: center;
-  justify-content: center;
+  margin: 0 25%;
   @media screen and (max-width: 1000px) {
     margin: 15%;
     @media screen and (max-width: 500px) {
       margin: 0 10%;
     }
   }
+
   p {
     padding: 0;
     text-wrap: wrap;
@@ -659,13 +622,11 @@ nav {
   }
 
   .details {
-    margin-top: 2em;
+    margin: 2em 2em;
     text-align: left;
+    line-height: 2;
   }
 
-  .accent {
-    color: var(--primary-color);
-  }
 }
 
 #contact {
@@ -673,16 +634,18 @@ nav {
 }
 
 .skills {
-  margin-top: 4em;
-}
-
-.skills {
+  margin: 4em auto;
   img {
     width: 50vw;
     @media screen and (max-width: 500px) {
       width: 80vw;
     }
   }
+}
+
+.stats {
+  margin-top: 2em;
+  filter: invert(1);
 }
 
 form {
@@ -751,4 +714,18 @@ form {
     margin: 7.5em 25%;
     padding: 1em 0;
   }
+}
+
+.accent {
+  color: var(--primary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.wip {
+  width: 30%;
+  margin: auto;
+  transform: translate(-50%, 50%);
 }
