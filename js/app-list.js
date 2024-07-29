@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "ProtonVPN",
-      link: "https://localsend.org",
+      link: "https://protonvpn.com/",
       description: "The best VPN for speed and security. Stay safe. Play fast.",
       iconUrl:
         "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/85f7bae7b0c9c4e4e47b530ea127e3cd_low_res_Proton%20VPN.png",
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Blip",
-      link: "https://localsend.org",
+      link: "https://blip.net/",
       description:
         "Send any size file, right from your desktop via internet. A cross platform free to use app.",
       iconUrl: "/assets/img/articles/macos/app-screenshots/blip-icon.png",
