@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // console.log(localStorage.getItem('theme'));
     // console.log(darkMode);
 
-    colorChange();
+    // colorChange();
 
     //call the color change on click on the logo
     colorButton.addEventListener('click', () => {

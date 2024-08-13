@@ -1,3 +1,4 @@
+
 :root {
   /*  change this for scaling  */
   --m: 4rem;
@@ -14,16 +15,16 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scrollbar-color: var(--primary-color) var(--background-color-primary);
+  scrollbar-color: rgb(var(--mdui-color-primary)) rgb(var(--mdui-color-background));
 }
 
 body {
-  background-color: var(--background-color-primary);
+  /* background-color: rgb(var(--mdui-color-background)); */
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: 1.5;
-  color: var(--text-color);
+  color: rgb(var(--mdui-color-on-surface));
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -54,8 +55,8 @@ h2 {
   padding: 0.75em;
   font-size: 1.25rem;
   border-radius: 0.5em;
-  color: var(--primary-color);
-  background-color: var(--background-color-secondary);
+  color: rgb(var(--mdui-color-primary));
+  background-color: rgb(var(--mdui-color-secondary-container));
   transition: all 0.5s ease-in-out;
 }
 
@@ -64,8 +65,8 @@ h3 {
   margin: 0;
   font-size: 1.25rem;
   border-radius: 0.5em;
-  color: var(--text-color);
-  background-color: var(--background-color-tr);
+  color: rgb(var(--mdui-color-on-surface));
+  background-color: rgb(var(--mdui-color-secondary-container), 0.8);
   backdrop-filter: blur(var(--blur));
   transition: all 0.5s ease-in-out;
 }
@@ -76,7 +77,7 @@ h3 {
   transform: translateX(-50%);
   z-index: 1000;
   transition: all 0.5s ease-in-out;
-  background-color: var(--background-color-tr);
+  background-color: rgb(var(--mdui-color-secondary-container), 0.8);
   backdrop-filter: blur(var(--blur));
   border-radius: 10em;
 
@@ -90,8 +91,8 @@ h3 {
     width: 3em;
     margin: 0.25em;
     border-radius: 50%;
-    background-color: var(--background-color-primary);
-    color: var(--text-color);
+    background-color: rgb(var(--mdui-color-background));
+    color: rgb(var(--mdui-color-on-surface));
     transition: all 0.5s ease-in-out;
     display: flex;
     justify-content: center;
@@ -101,8 +102,8 @@ h3 {
     }
     @media screen and (min-width: 500px) {
       &:hover {
-        background-color: var(--primary-color);
-        color: var(--background-color-primary);
+        background-color: rgb(var(--mdui-color-primary));
+        color: rgb(var(--mdui-color-background));
         i {
           rotate: 180deg;
         }
@@ -149,9 +150,9 @@ nav {
   left: 1em;
   top: 50vh;
   transform: translateY(-50%);
-  background-color: var(--background-color-tr);
+  background-color: rgb(var(--mdui-color-secondary-container), 0.8);
   backdrop-filter: blur(var(--blur));
-  color: var(--background-color-primary);
+  color: rgb(var(--mdui-color-background));
   width: fit-content;
   height: fit-content;
   border-radius: 2em;
@@ -175,7 +176,7 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: var(--text-color);
+        color: rgb(var(--mdui-color-on-surface));
         padding: 1rem;
         border-radius: 2em;
         text-decoration: none;
@@ -211,8 +212,8 @@ nav {
   }
 
   .active {
-    background-color: var(--primary-color);
-    color: var(--background-color-secondary);
+    background-color: rgb(var(--mdui-color-primary));
+    color: rgb(var(--mdui-color-secondary-container));
     opacity: 1;
     .caption {
       height: 100%;
@@ -276,7 +277,7 @@ nav {
   }
 
   #logo {
-    background-color: var(--primary-color);
+    background-color: rgb(var(--mdui-color-primary));
     width: 15em;
     height: 15em;
     background-size: cover;
@@ -329,11 +330,11 @@ nav {
   font-size: 1.2em;
 
   span.typed-text {
-    color: var(--primary-color);
+    color: rgb(var(--mdui-color-primary));
   }
   span.cursor {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: rgb(var(--mdui-color-primary));
     margin-left: 0.1rem;
     width: 3px;
     animation: blink 1s infinite;
@@ -367,14 +368,14 @@ nav {
   margin: 1em auto;
   transition: all 0.5s ease-in-out;
   border-radius: 1.25em;
-  color: var(--text-color);
-  background-color: var(--background-color-primary);
+  color: rgb(var(--mdui-color-on-surface));
+  background-color: rgb(var(--mdui-color-background));
   border: calc(0.08 * var(--m)) solid transparent;
   .button {
-    background-color: var(--background-color-primary);
+    background-color: rgb(var(--mdui-color-background));
     border-radius: 1em;
     a {
-      border: var(--text-color) 2px solid;
+      border: rgb(var(--mdui-color-on-surface)) 2px solid;
       border-radius: 0.8em;
       margin: 0.25em;
       width: 3em;
@@ -387,13 +388,13 @@ nav {
       .fa {
         font-size: 1.75rem !important;
         transition: all 0.5s ease-in-out;
-        color: var(--text-color);
+        color: rgb(var(--mdui-color-on-surface));
       }
       @media screen and (min-width: 500px) {
         &:hover {
-          border: var(--primary-color) 2px solid;
+          border: rgb(var(--mdui-color-primary)) 2px solid;
           .fa {
-            color: var(--primary-color);
+            color: rgb(var(--mdui-color-primary));
           }
         }
       }
@@ -407,10 +408,10 @@ nav {
 }
 
 #socials {
-  background: linear-gradient(var(--background-color-primary), #12121300),
+  background: linear-gradient(rgb(var(--mdui-color-background)), #12121300),
     linear-gradient(
-      var(--background-color-primary) 50%,
-      var(--background-color-tr) 80%,
+      rgb(var(--mdui-color-background)) 50%,
+      rgb(var(--mdui-color-secondary-container), 0.8) 80%,
       rgba(18, 18, 19, 0)
     ),
     linear-gradient(
@@ -472,32 +473,32 @@ nav {
   max-width: 300px;
   transition: all 0.5s ease-in-out;
   z-index: 1;
-  background-color: var(--primary-color);
+  background-color: rgb(var(--mdui-color-primary));
   border-radius: 1em;
 
   p {
     margin: 0.25em;
-    color: var(--background-color-secondary);
+    color: rgb(var(--mdui-color-secondary-container));
   }
 }
 
 .button-view {
-  background-color: var(--background-color-secondary);
+  background-color: rgb(var(--mdui-color-secondary-container));
   padding: 0.5em 1em;
   margin-bottom: 4em;
-  border: 0.1em solid var(--text-color);
+  border: 0.1em solid rgb(var(--mdui-color-on-surface));
   border-radius: 5em;
   @media screen and (min-width: 500px) {
     &:hover {
-      background-color: var(--primary-color);
-      color: var(--background-color-secondary);
+      background-color: rgb(var(--mdui-color-primary));
+      color: rgb(var(--mdui-color-secondary-container));
       cursor: none;
     }
   }
 }
 
 #photo {
-  background-color: var(--background-color-secondary);
+  background-color: rgb(var(--mdui-color-secondary-container));
   animation: photos 20s infinite;
   transition: all 0.5s ease-in-out;
   width: 15em;
@@ -561,7 +562,7 @@ nav {
   a {
     text-decoration: none;
     transition: all 0.5s ease-in-out;
-    border: 0.15em solid var(--text-color);
+    border: 0.15em solid rgb(var(--mdui-color-on-surface));
     /* overflow: hidden; */
     height: 15em;
   }
@@ -657,27 +658,27 @@ form {
     width: 50%;
     padding: 1.5em;
     margin: 1em;
-    border: 0.1em solid var(--text-color);
-    background-color: var(--background-color-secondary);
-    color: var(--text-color);
+    border: 0.1em solid rgb(var(--mdui-color-on-surface));
+    background-color: rgb(var(--mdui-color-secondary-container));
+    color: rgb(var(--mdui-color-on-surface));
     border-radius: 5em;
     transition: all 0.5s ease-in-out;
     &:focus {
-      border: 0.1em solid var(--primary-color);
+      border: 0.1em solid rgb(var(--mdui-color-primary));
     }
     @media screen and (min-width: 500px) {
       &:hover {
-        border: 0.1em solid var(--primary-color);
+        border: 0.1em solid rgb(var(--mdui-color-primary));
       }
     }
     &#btn {
-      background-color: var(--primary-color);
-      color: var(--background-color-secondary);
-      border: 0.1em solid var(--primary-color);
+      background-color: rgb(var(--mdui-color-primary));
+      color: rgb(var(--mdui-color-secondary-container));
+      border: 0.1em solid rgb(var(--mdui-color-primary));
       @media screen and (min-width: 500px) {
         &:hover {
-          background-color: var(--background-color-secondary);
-          color: var(--primary-color);
+          background-color: rgb(var(--mdui-color-secondary-container));
+          color: rgb(var(--mdui-color-primary));
           cursor: pointer;
         }
       }
@@ -687,17 +688,17 @@ form {
     width: 50%;
     padding: 1.5em;
     margin: 1em;
-    border: 0.1em solid var(--text-color);
+    border: 0.1em solid rgb(var(--mdui-color-on-surface));
     border-radius: 5em;
     transition: all 0.5s ease-in-out;
-    background-color: var(--background-color-secondary);
-    color: var(--text-color);
+    background-color: rgb(var(--mdui-color-secondary-container));
+    color: rgb(var(--mdui-color-on-surface));
     @media screen and (min-width: 500px) {
       &:focus {
-        border: 0.1em solid var(--primary-color);
+        border: 0.1em solid rgb(var(--mdui-color-primary));
       }
       &:hover {
-        border: 0.1em solid var(--primary-color);
+        border: 0.1em solid rgb(var(--mdui-color-primary));
       }
     }
   }
@@ -705,7 +706,7 @@ form {
 
 #resume {
   text-decoration: none;
-  color: var(--text-color);
+  color: rgb(var(--mdui-color-on-surface));
   padding: 0;
   margin: 0;
   div {
@@ -716,7 +717,7 @@ form {
 }
 
 .accent {
-  color: var(--primary-color);
+  color: rgb(var(--mdui-color-primary));
 }
 
 .hidden {

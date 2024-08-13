@@ -5,9 +5,9 @@
     position: fixed;
     z-index: -100;
     top:0;
-    background-color: var(--background-color-primary);
+    background-color: rgb(var(--mdui-color-background));
     opacity: 0.2;
-    background-image:  radial-gradient(var(--primary-color) 2px, transparent 2px), radial-gradient(var(--primary-color) 2px, var(--background-color-primary) 2px);
+    background-image:  radial-gradient(rgb(var(--mdui-color-primary)) 2px, transparent 2px), radial-gradient(rgb(var(--mdui-color-primary)) 2px, rgb(var(--mdui-color-background)) 2px);
     background-size: 50px 50px;
     background-position: 0 0,25px 25px;
     /* transition: all 5s ease-in-out; */

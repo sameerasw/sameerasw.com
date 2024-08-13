@@ -1,8 +1,8 @@
 :root{
-    --primary-color: #4AFFBD;
-    --text-color: #ffffff;
-    --background-color-primary: #000000;
-    --background-color-secondary: #303030;
+    --primary-color: var(--mdui-color-primary);
+    --text-color: var(--mdui-color-on-surface);
+    --background-color-primary: var(--mdui-color-background);
+    --background-color-secondary: var(--mdui-color-surface);
     --background-color-tr: #55555588;
     --font-size: 16px;
     --font-family: 'Roboto', sans-serif;
