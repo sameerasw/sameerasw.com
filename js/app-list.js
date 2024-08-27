@@ -70,15 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "foss",
     },
     {
-      name: "IINA",
-      link: "https://iina.io/",
+      name: "Elmedia Video Player",
+      link: "https://apps.apple.com/us/app/elmedia-universal-video-player/id937759555?mt=12",
       description:
-        "IINA is born to be a modern macOS application, from its framework to the user interface. It adopts the post-Yosemite design language of macOS and keeps up the pace of new technologies.",
+        "ELMEDIA is a Mac video player that offers advanced playback and streaming options. It can handle any conceivable media format. Local files can be streamed to Chromecast, AirPlay, Roku and DLNA devices.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/5132d30ec156bd6d1ce27dce2c50f567_zb8tSYdlVC.png",
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/609cbad939b456df49fd7d8b14f511b3_8IBWfjKvFa.png",
       imageUrl:
-        "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb420cf1b-b5de-455a-bc03-3990ae2d77ba%2Fd9e4cc7c-5a32-4dcd-bdfb-e2c081bda75f%2FUntitled.png?table=block&id=cbdcc7c0-13fa-4a42-9ec9-1ea08f8ded6c&cache=v2",
-      price: "foss",
+        "/assets/img/articles/macos/app-screenshots/elmedia.png",
+      price: "free",
     },
     {
       name: "Raycast",
@@ -115,9 +115,27 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "https://protonvpn.com/",
       description: "The best VPN for speed and security. Stay safe. Play fast.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/85f7bae7b0c9c4e4e47b530ea127e3cd_low_res_Proton%20VPN.png",
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/8ef87b0fb3b73ced0ee18224baca3293_z7sHQzGa3S.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/protonvpn.png",
       price: "free",
+    },
+    {
+      name: "Proton Pass",
+      link: "https://protonvpn.com/",
+      description: "Proton Pass is a password manager developed by the Swiss software company Proton AG. It stores login credentials, email aliases, credit card data, passkeys, 2FA secret keys, and notes in virtual vaults.",
+      iconUrl:
+        "/assets/img/articles/macos/app-screenshots/protonpass.png",
+      imageUrl: "https://images.prismic.io/proton-me/ZpVD6B5LeNNTxKho_Frame3465630.png?auto=format%2Ccompress&fit=max",
+      price: "free",
+    },
+    {
+      name: "Ente Auth",
+      link: "https://github.com/ente-io/ente?tab=readme-ov-file#ente-auth",
+      description: "End to end encrypted open source authentication app that syncs your 2FA codes across devices on multiple platforms.",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/9447d3c11138f440e3ddf42adef1cff1_low_res_Proton_Pass.png",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/ente.png",
+      price: "foss",
     },
     {
       name: "CleanShot X",
@@ -149,6 +167,39 @@ document.addEventListener("DOMContentLoaded", function () {
         "/assets/img/articles/macos/app-screenshots/battery-toolkit.png",
       price: "foss",
     },
+    {
+      name: "Keka",
+      link: "https://www.keka.io/en/",
+      description:
+        "With Keka you can compress as many files as you want in a bunch of formats. You can also encrypt them to store and share securely and with privacy.",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/df314a3478afb8505106f1dede53b40e_WvS8oRjSkY.png",
+      imageUrl:
+        "https://www.keka.io/img/demo/dock/Keka-Square-dock-b2x.png",
+      price: "foss",
+    },
+    {
+      name: "Progressive Downloader",
+      link: "https://www.macpsd.net/",
+      description:
+        "A download manager to get 'em as fast as possible using the whole breadth of the Internet connection.",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/e3cdb6853dfd67648c9462259f7e97ce_wzff0nFDwq.png",
+      imageUrl:
+        "/assets/img/articles/macos/app-screenshots/progressive-downloader.png",
+      price: "free",
+    },
+    {
+      name: "Calendr",
+      link: "https://github.com/pakerwreah/Calendr",
+      description:
+        "Menubar calendar for macOS with upcoming events",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/11cf7e1246732249b92348ca71e557fc_low_res_Proton_Calendar.png",
+      imageUrl:
+        "https://github.com/pakerwreah/Calendr/raw/master/resources/screenshot.png",
+      price: "foss",
+    },
   ];
 
   const appsListContainer = document.getElementById("apps-list");
@@ -167,6 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageImg = document.createElement("img");
     imageImg.src = app.imageUrl;
     imageImg.alt = "";
+    imageImg.className = "app-image";
 
     const cardHeader = document.createElement("div");
     cardHeader.className = "card-header";
