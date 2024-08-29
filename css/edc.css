@@ -1,0 +1,59 @@
+#setup-wire {
+  background-image: url(../assets/img/articles/edc/setup-wire.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 90vw;
+  max-height: 80vh;
+  aspect-ratio: 1/1;
+}
+
+.device {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  width: 100%;
+  max-width: 70vw;
+  margin: 5em auto 0 auto;
+
+  div {
+    margin: 0 3em;
+
+    .heading {
+      margin: auto 0;
+      align-items: start;
+    }
+
+    .content {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 95vw;
+
+    div {
+      margin: 0 auto;
+
+      .heading {
+        margin: auto 0;
+        align-items: center;
+      }
+
+      .content {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.container {
+  @media screen and (max-width: 500px) {
+    #title {
+      margin-top: 4em;
+    }
+  }
+}

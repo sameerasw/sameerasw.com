@@ -571,7 +571,9 @@ nav {
     background-position: center;
     border-radius: 1em;
   }
-
+  #edc {
+    background-image: url("../assets/img/articles/edc/edc.jpeg");
+  }
   #macos {
     background-image: url("../assets/img/articles/macos.png");
   }
