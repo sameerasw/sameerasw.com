@@ -392,8 +392,10 @@ nav {
       @media screen and (min-width: 500px) {
         &:hover {
           border: var(--primary-color) 2px solid;
+          background-color: var(--primary-color);
+          border-radius: 2em;
           .fa {
-            color: var(--primary-color);
+            color: var(--background-color-primary);
           }
         }
       }
