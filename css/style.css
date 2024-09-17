@@ -742,7 +742,7 @@ form {
   z-index: 10000;
 }
 
-#email {
+#email-btn {
   margin: 3em 0.5em;
   background-color: var(--background-color-primary);
   border-radius: 1em;
