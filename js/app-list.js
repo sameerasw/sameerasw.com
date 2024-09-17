@@ -49,16 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl: "/assets/img/articles/macos/app-screenshots/mac-mouse-fix.png",
       price: "paid",
     },
-    {
-      name: "YouTube Music Desktop",
-      link: "https://th-ch.github.io/youtube-music/",
-      description:
-        "Open source, cross-platform, unofficial YouTube Music Desktop App with built-in ad blocker, downloader and a lot mmore features being continuously added.",
-      iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/fdf3365454022eab82c11a692e2dea7c_pwi9IYN1v9.png",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/yt-music.png",
-      price: "foss",
-    },
+    // {
+    //   name: "YouTube Music Desktop",
+    //   link: "https://th-ch.github.io/youtube-music/",
+    //   description:
+    //     "Open source, cross-platform, unofficial YouTube Music Desktop App with built-in ad blocker, downloader and a lot mmore features being continuously added.",
+    //   iconUrl:
+    //     "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/fdf3365454022eab82c11a692e2dea7c_pwi9IYN1v9.png",
+    //   imageUrl: "/assets/img/articles/macos/app-screenshots/yt-music.png",
+    //   price: "foss",
+    // },
     {
       name: "Latest",
       link: "https://max.codes/latest/",
