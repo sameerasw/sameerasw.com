@@ -93,8 +93,8 @@ table {
 }
 
 #screenshot {
-  max-width: 90vw;
-  max-height: 50vh;
+  max-width: 500px;
+  max-height: 500px;
   border: 0.125em solid var(--primary-color);
   border-radius: 1em;
   transition: all 0.5s ease-in-out;
@@ -107,7 +107,7 @@ table {
     width: 60vw !important;
 
     @media screen and (max-width: 500px) {
-      width: 95vw !important;
+      /* width: 95vw !important; */
       &:hover {
         scale: 1;
         box-shadow: none;
