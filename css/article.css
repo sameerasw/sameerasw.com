@@ -107,7 +107,7 @@ table {
     width: 60vw !important;
 
     @media screen and (max-width: 500px) {
-      /* width: 95vw !important; */
+      /* width: 95vw !important;   */
       &:hover {
         scale: 1;
         box-shadow: none;
