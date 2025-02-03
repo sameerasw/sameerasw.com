@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   const apps = [
     {
-      name: "ARC Browser",
-      link: "https://arc.net/",
+      name: "Zen Browser",
+      link: "https://zen-browser.app/",
       description:
-        "ARC Browser is different approach to the boring web browser to re-imagine the internet. A free product offered by the Browser Company NYC.",
+        "'Welcome to a calmer internet' Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/67138c1169a77e9463b41b67985c5d43_low_res_Arc.png",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/arc-browser.png",
-      price: "free",
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/f47c2154d3afca8f7d81d3788d089800_low_res_Zen_Browser.png",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/zen.png",
+      price: "foss",
     },
     {
       name: "Notion",
@@ -100,16 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl: "/assets/img/articles/macos/app-screenshots/scrcpy.png",
       price: "foss",
     },
-    {
-      name: "LocalSend",
-      link: "https://localsend.org",
-      description:
-        "Share files to nearby devices. Free, open-source, cross-platform.",
-      iconUrl:
-        "https://static.macupdate.com/products/64323/l/phpzoeizw-logo.png?v=1684308099",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/localsend.png",
-      price: "foss",
-    },
+    // {
+    //   name: "LocalSend",
+    //   link: "https://localsend.org",
+    //   description:
+    //     "Share files to nearby devices. Free, open-source, cross-platform.",
+    //   iconUrl:
+    //     "https://static.macupdate.com/products/64323/l/phpzoeizw-logo.png?v=1684308099",
+    //   imageUrl: "/assets/img/articles/macos/app-screenshots/localsend.png",
+    //   price: "foss",
+    // },
     {
       name: "ProtonVPN",
       link: "https://protonvpn.com/",
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "Menubar calendar for macOS with upcoming events",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/11cf7e1246732249b92348ca71e557fc_low_res_Proton_Calendar.png",
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/9af2892bf89c2db582e5e9c8b3420d5b_low_res_Calendar.png",
       imageUrl:
         "https://github.com/pakerwreah/Calendr/raw/master/resources/screenshot.png",
       price: "foss",
