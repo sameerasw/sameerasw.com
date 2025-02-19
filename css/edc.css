@@ -6,6 +6,7 @@
   max-width: 90vw;
   max-height: 80vh;
   aspect-ratio: 1/1;
+  filter: invert(var(--contrast));
 }
 
 .device {
@@ -16,6 +17,13 @@
   width: 100%;
   max-width: 70vw;
   margin: 5em auto 0 auto;
+
+  img{
+    max-width: 25em;
+    max-height: 25em;
+    aspect-ratio: 1/1;
+    filter: invert(var(--contrast));
+  }
 
   div {
     margin: 0 3em;
