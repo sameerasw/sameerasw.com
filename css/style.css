@@ -770,3 +770,26 @@ form {
     }
   }
 }
+
+#coffee {
+  border-radius: 1em;
+  background-color: var(--primary-color);
+  color: var(--background-color-secondary);
+  padding: 0.5em 1em;
+  margin: 1em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--background-color-secondary);
+  &:hover {
+    background-color: var(--background-color-secondary);
+    color: var(--primary-color);
+    border-radius: 10em;
+  }
+  .emoji {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+  }
+}
