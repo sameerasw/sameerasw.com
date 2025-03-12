@@ -117,7 +117,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   let scroll = window.scrollY;
-  if (scroll > 0) {
+  if (scroll > 50) {
     logo.classList.add("scrolled");
   } else {
     logo.classList.remove("scrolled");

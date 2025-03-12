@@ -236,9 +236,9 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* border-radius: 3em; */
+    border-radius: 1em;
       transition: all 0.5s ease-in-out;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     position: fixed;
     top: 0;
@@ -247,11 +247,11 @@ nav {
     @media screen and (max-width: 500px) {
       position: fixed;
       top: 0;
+      margin: 0;
+      right: 0;
       width: 100vw;
       height: 100vw;
       border-radius: 0 0 2em 2em;
-      z-index: -1;
-      margin-top: 0;
     }
 
     &.macos-logo {
@@ -602,17 +602,21 @@ form {
 }
 
 #coffee {
-  border-radius: 1em;
-  background-color: var(--primary-color);
-  color: var(--background-color-secondary);
+  border-radius: 0.75em;
+  background-color: var(--background-color-secondary);
+  color: var(--primary-color);
   padding: 0.5em 1em;
-  margin: 1em;
+  margin: 10px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   align-items: center;
   justify-content: center;
   display: flex;
   text-decoration: none;
   font-size: 1em;
-  color: var(--background-color-secondary);
   &:hover {
     background-color: var(--background-color-secondary);
     color: var(--primary-color);
@@ -663,48 +667,3 @@ form {
     bottom: 90px;
   }
 }
-
-/* #socials {
-  display: flex;
-  width: fit-content;
-  transition: all 0.5s ease-in-out;
-  color: var(--text-color);
-  border: calc(0.08 * var(--m)) solid transparent;
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  .button {
-    background-color: var(--background-color-primary);
-    a {
-      border: var(--text-color) 2px solid;
-      margin: 0.25em;
-      width: 3em;
-      height: 3em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: all 0.5s ease-in-out;
-      .fa {
-        font-size: 1.75rem !important;
-        transition: all 0.5s ease-in-out;
-        color: var(--text-color);
-      }
-      @media screen and (min-width: 500px) {
-        &:hover {
-          border: var(--primary-color) 2px solid;
-          background-color: var(--primary-color);
-          .fa {
-            color: var(--background-color-primary);
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-} */
