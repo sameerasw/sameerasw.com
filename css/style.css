@@ -606,25 +606,23 @@ form {
   background-color: var(--background-color-secondary);
   color: var(--primary-color);
   padding: 0.5em 1em;
-  margin: 10px;
-  height: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  height: 25px;
   align-items: center;
   justify-content: center;
   display: flex;
   text-decoration: none;
   font-size: 1em;
   &:hover {
-    background-color: var(--background-color-secondary);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--background-color-primary) !important;
     border-radius: 10em;
   }
   .emoji {
     font-size: 1.5em;
     margin-right: 0.5em;
+  }
+  @media screen and (max-width: 750px) {
+    width: 100%;
   }
 }
 
@@ -639,7 +637,7 @@ form {
   margin: 20px 0;
   @media screen and (max-width: 750px) {
     justify-content: center;
-    bottom: 90px;
+    /* margin-bottom: -50px; */
   }
   a {
     margin: 0.75em 1.5em;
@@ -669,6 +667,6 @@ form {
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 750px) {
-    bottom: 90px;
+    bottom: 50px;
   }
 }
