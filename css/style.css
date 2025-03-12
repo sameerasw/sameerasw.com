@@ -400,7 +400,7 @@ nav {
   .highlight-item {
     background-size: cover;
     background-position: center;
-    border-radius: 1em;
+    border-radius: 0.8em;
   }
   #edc {
     background-image: url("../assets/img/articles/edc/edc.jpeg");
@@ -428,6 +428,12 @@ nav {
   }
   #menubar {
     background-image: url("../assets/img/articles/menu-bar.png");
+  }
+  #zen-i{
+    background-image: url("../assets/img/articles/zen-i.jpeg");
+  }
+  #zen-t{
+    background-image: url("../assets/img/articles/zen-t.jpeg");
   }
 
   @media screen and (max-width: 1000px) {
@@ -575,7 +581,8 @@ form {
 
 #email-btn {
   margin: 3em 0.5em;
-  margin-top: 100vh;
+  width: fit-content;
+  margin: 4em auto;
   background-color: var(--background-color-primary);
   border-radius: 1em;
   /* border: solid 0.1em var(--primary-color); */
@@ -657,11 +664,11 @@ form {
 }
 
 .container-mini {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   align-items: end;
   justify-content: end;
   display: flex;
