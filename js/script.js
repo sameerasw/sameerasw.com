@@ -75,12 +75,6 @@ try {
       about_nav.classList.remove("active");
       contact_nav.classList.add("active");
     }
-    //only if the window width is lower than 500px
-    if (window.innerWidth < 500) {
-      let value = window.scrollY;
-      // console.log(value);
-      logo.style.opacity = 1 - (value * 1) / 200;
-    }
   });
 } catch (e) {
   console.log(e);
@@ -118,5 +112,14 @@ window.addEventListener("scroll", function () {
       // items[i].style.filter = "none";
       items[i].style.scale = "1";
     }
+  }
+});
+
+window.addEventListener("scroll", function () {
+  let scroll = window.scrollY;
+  if (scroll > 0) {
+    logo.classList.add("scrolled");
+  } else {
+    logo.classList.remove("scrolled");
   }
 });

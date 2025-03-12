@@ -1,12 +1,12 @@
 :root {
   color-scheme: light dark;
-  --primary-color: light-dark(#226655,#4AFFBD);
-  --text-color: light-dark(#000000,#ffffff);
-  --background-color-primary: light-dark(#ffffff,#000000);
-  --background-color-secondary: light-dark(#dbdbdb,#303030);
-  --background-color-tr: light-dark(#c3c3c388,#55555588);
+  --primary-color: light-dark(#226655, #4affbd);
+  --text-color: light-dark(#000000, #ffffff);
+  --background-color-primary: light-dark(#ffffff, #000000);
+  --background-color-secondary: light-dark(#dbdbdb, #303030);
+  --background-color-tr: light-dark(#c3c3c388, #55555588);
   --font-size: 16px;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
   --font-weight: 400;
   --blur: 0.5em;
   --contrast: 0;
@@ -23,10 +23,11 @@
   --orange: #ff6d1b;
 }
 
-  /* use teh font from ../assets/fonts/Harmond-ExtraBoldExpanded.otf */
+/* use teh font from ../assets/fonts/Harmond-ExtraBoldExpanded.otf */
 @font-face {
-  font-family: 'sugar-magic';
-  src: url('../assets/fonts/sugarmagicpersonaluseonly-jemyo.otf') format('opentype');
+  font-family: "sugar-magic";
+  src: url("../assets/fonts/sugarmagicpersonaluseonly-jemyo.otf")
+    format("opentype");
 }
 
 html {
@@ -59,7 +60,7 @@ body {
 }
 
 h1 {
-  font-family: 'sugar-magic', sans-serif;
+  font-family: "sugar-magic", sans-serif;
   width: 100vw;
   height: fit-content;
   transition: all 0.5s ease-in-out;
@@ -76,7 +77,6 @@ h1 {
     color: var(--primary-color);
   }
 }
-
 
 h2 {
   padding: 0.75em;
@@ -231,16 +231,16 @@ nav {
 
   #logo {
     background-color: var(--primary-color);
-    aspect-ratio: 1/1;
-    height: 35vh;
+    width: 250px;
+    height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     /* border-radius: 3em; */
-    transition: all 1s ease-in-out;
+      transition: all 0.5s ease-in-out;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
 
@@ -251,7 +251,6 @@ nav {
       height: 100vw;
       border-radius: 0 0 2em 2em;
       z-index: -1;
-      transition: all 0s ease-in-out;
       margin-top: 0;
     }
 
@@ -264,10 +263,19 @@ nav {
     &.pixel-logo {
       background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
     }
+    &.scrolled {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 10px;
+      transition: all 0.5s ease-in-out;
+      z-index: 1000;
+    }
   }
-  
 }
-
 
 .container p {
   overflow: hidden;
@@ -288,7 +296,6 @@ nav {
     animation: none;
   }
 }
-
 
 #music {
   margin: 2em auto;
@@ -617,8 +624,7 @@ form {
   }
 }
 
-
-#social-list{
+#social-list {
   /* position: sticky; */
   top: 0;
   z-index: 1000;
@@ -641,11 +647,10 @@ form {
       color: var(--primary-color);
     }
   }
-
 }
 
-.container-mini{
-  position: absolute  ;
+.container-mini {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -658,7 +663,6 @@ form {
     bottom: 90px;
   }
 }
-
 
 /* #socials {
   display: flex;
