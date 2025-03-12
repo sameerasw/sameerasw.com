@@ -23,6 +23,12 @@
   --orange: #ff6d1b;
 }
 
+  /* use teh font from ../assets/fonts/Harmond-ExtraBoldExpanded.otf */
+@font-face {
+  font-family: 'sugar-magic';
+  src: url('../assets/fonts/sugarmagicpersonaluseonly-jemyo.otf') format('opentype');
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -53,14 +59,24 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  margin: 1em auto;
+  font-family: 'sugar-magic', sans-serif;
+  width: 100vw;
+  height: fit-content;
   transition: all 0.5s ease-in-out;
   z-index: 1;
+  text-align: right;
+  font-size: calc(100vw / 6);
+  line-height: 1;
+  padding: 0;
+  margin: 0;
   @media screen and (max-width: 500px) {
-    margin-bottom: 1em;
+    text-align: center;
+  }
+  strong {
+    color: var(--primary-color);
   }
 }
+
 
 h2 {
   padding: 0.75em;
@@ -80,80 +96,6 @@ h3 {
   background-color: var(--background-color-tr);
   backdrop-filter: blur(var(--blur));
   transition: all 0.5s ease-in-out;
-}
-
-#sidebar {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  transition: all 0.5s ease-in-out;
-  background-color: var(--background-color-tr);
-  backdrop-filter: blur(var(--blur));
-  border-radius: 10em;
-
-  a {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .sidebar-button {
-    height: 3em;
-    width: 3em;
-    margin: 0.25em;
-    border-radius: 50%;
-    background-color: var(--background-color-primary);
-    color: var(--text-color);
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    i {
-      transition: all 0.5s ease-in-out;
-    }
-    @media screen and (min-width: 500px) {
-      &:hover {
-        background-color: var(--primary-color);
-        color: var(--background-color-primary);
-        i {
-          rotate: 180deg;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 500px) {
-    top: -2.7em;
-    &:hover {
-      top: 0;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    top: -3em;
-    width: 7em;
-    height: 4em;
-    a {
-      display: none;
-      pointer-events: none;
-      .sidebar-button {
-        pointer-events: none;
-      }
-    }
-    &:hover {
-      top: -2.7em;
-      width: 7em;
-      height: 3.5em;
-      top: 0;
-      a {
-        display: flex;
-        pointer-events: all;
-        .sidebar-button {
-          pointer-events: all;
-        }
-      }
-    }
-  }
 }
 
 nav {
@@ -289,13 +231,18 @@ nav {
 
   #logo {
     background-color: var(--primary-color);
-    width: 15em;
-    height: 15em;
+    aspect-ratio: 1/1;
+    height: 35vh;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    border-radius: 3em;
+    /* border-radius: 3em; */
     transition: all 1s ease-in-out;
-    margin-top: 10em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     @media screen and (max-width: 500px) {
       position: fixed;
@@ -318,17 +265,7 @@ nav {
       background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
     }
   }
-
-  #title {
-    margin-top: 1em;
-    transition: all 0.5s ease-in-out;
-  }
-
-  @media screen and (max-width: 500px) {
-    #title {
-      margin-top: 90vw;
-    }
-  }
+  
 }
 
 
@@ -352,70 +289,6 @@ nav {
   }
 }
 
-@keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
-}
-
-#socials {
-  display: flex;
-  width: fit-content;
-  margin: 1em auto;
-  transition: all 0.5s ease-in-out;
-  border-radius: 1.25em;
-  color: var(--text-color);
-  background-color: var(--background-color-primary);
-  border: calc(0.08 * var(--m)) solid transparent;
-  .button {
-    background-color: var(--background-color-primary);
-    border-radius: 1em;
-    a {
-      border: var(--text-color) 2px solid;
-      border-radius: 0.8em;
-      margin: 0.25em;
-      width: 3em;
-      height: 3em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: all 0.5s ease-in-out;
-      .fa {
-        font-size: 1.75rem !important;
-        transition: all 0.5s ease-in-out;
-        color: var(--text-color);
-      }
-      @media screen and (min-width: 500px) {
-        &:hover {
-          border: var(--primary-color) 2px solid;
-          background-color: var(--primary-color);
-          border-radius: 2em;
-          .fa {
-            color: var(--background-color-primary);
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 #music {
   margin: 2em auto;
@@ -695,6 +568,7 @@ form {
 
 #email-btn {
   margin: 3em 0.5em;
+  margin-top: 100vh;
   background-color: var(--background-color-primary);
   border-radius: 1em;
   /* border: solid 0.1em var(--primary-color); */
@@ -742,3 +616,91 @@ form {
     margin-right: 0.5em;
   }
 }
+
+
+#social-list{
+  /* position: sticky; */
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  @media screen and (max-width: 500px) {
+    bottom: 90px;
+  }
+  a {
+    margin: 0.75em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+}
+
+.container-mini{
+  position: absolute  ;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: end;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 750px) {
+    bottom: 90px;
+  }
+}
+
+
+/* #socials {
+  display: flex;
+  width: fit-content;
+  transition: all 0.5s ease-in-out;
+  color: var(--text-color);
+  border: calc(0.08 * var(--m)) solid transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  .button {
+    background-color: var(--background-color-primary);
+    a {
+      border: var(--text-color) 2px solid;
+      margin: 0.25em;
+      width: 3em;
+      height: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+      .fa {
+        font-size: 1.75rem !important;
+        transition: all 0.5s ease-in-out;
+        color: var(--text-color);
+      }
+      @media screen and (min-width: 500px) {
+        &:hover {
+          border: var(--primary-color) 2px solid;
+          background-color: var(--primary-color);
+          .fa {
+            color: var(--background-color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
