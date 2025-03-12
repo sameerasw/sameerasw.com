@@ -1,4 +1,16 @@
 :root {
+  color-scheme: light dark;
+  --primary-color: light-dark(#226655,#4AFFBD);
+  --text-color: light-dark(#000000,#ffffff);
+  --background-color-primary: light-dark(#ffffff,#000000);
+  --background-color-secondary: light-dark(#dbdbdb,#303030);
+  --background-color-tr: light-dark(#c3c3c388,#55555588);
+  --font-size: 16px;
+  --font-family: 'Roboto', sans-serif;
+  --font-weight: 400;
+  --blur: 0.5em;
+  --contrast: 0;
+
   /*  change this for scaling  */
   --m: 4rem;
 
@@ -319,9 +331,6 @@ nav {
   }
 }
 
-#typing-text {
-  transition: all 0.5s ease-in-out;
-}
 
 .container p {
   overflow: hidden;
@@ -405,66 +414,6 @@ nav {
   @media screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-#socials {
-  background: linear-gradient(var(--background-color-primary), #12121300),
-    linear-gradient(
-      var(--background-color-primary) 50%,
-      var(--background-color-tr) 80%,
-      rgba(18, 18, 19, 0)
-    ),
-    linear-gradient(
-      90deg,
-      var(--orange),
-      var(--yellow),
-      var(--green),
-      var(--blue),
-      var(--purple),
-      var(--pink),
-      var(--red)
-    );
-  background-origin: border-box;
-  background-clip: padding-box, border-box, border-box;
-  background-size: 200%;
-  animation: animate 2s infinite linear;
-}
-
-#socials::before {
-  content: "";
-  background: linear-gradient(
-    90deg,
-    var(--orange),
-    var(--yellow),
-    var(--green),
-    var(--blue),
-    var(--purple),
-    var(--pink),
-    var(--red)
-  );
-  height: 30%;
-  width: 110%;
-  position: absolute;
-  bottom: -20%;
-  left: -5%;
-  z-index: -5;
-  background-size: 200%;
-  animation: animate 2s infinite linear;
-  filter: blur(calc(0.4 * var(--m)));
-}
-
-#socials:hover,
-#socials:hover::before {
-  animation: animate 0.5s infinite linear;
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0;
-  }
-  100% {
-    background-position: 200%;
   }
 }
 
