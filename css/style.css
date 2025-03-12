@@ -272,7 +272,7 @@ nav {
       border-radius: 50%;
       margin: 10px;
       transition: all 0.5s ease-in-out;
-      z-index: 1000;
+      z-index: 100;
     }
   }
 }
@@ -631,14 +631,14 @@ form {
 #social-list {
   /* position: sticky; */
   top: 0;
-  z-index: 1000;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin: 20px 0;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
+    justify-content: center;
     bottom: 90px;
   }
   a {
@@ -649,6 +649,11 @@ form {
     transition: all 0.5s ease-in-out;
     &:hover {
       color: var(--primary-color);
+    }
+    i{
+      font-size: 1em !important;
+      margin-right: 0.5em;
+      display: none;
     }
   }
 }
