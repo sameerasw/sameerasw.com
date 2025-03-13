@@ -237,7 +237,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1em;
-      transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     margin: 10px;
     padding: 0;
     position: fixed;
@@ -429,10 +429,10 @@ nav {
   #menubar {
     background-image: url("../assets/img/articles/menu-bar.png");
   }
-  #zen-i{
+  #zen-i {
     background-image: url("../assets/img/articles/zen-i.jpeg");
   }
-  #zen-t{
+  #zen-t {
     background-image: url("../assets/img/articles/zen-t.jpeg");
   }
 
@@ -608,54 +608,58 @@ form {
   }
 }
 
-#coffee {
-  border-radius: 0.75em;
-  background-color: var(--background-color-secondary);
-  color: var(--primary-color);
-  padding: 0.5em 1em;
-  height: 25px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  text-decoration: none;
-  font-size: 1em;
-  &:hover {
-    background-color: var(--primary-color);
-    color: var(--background-color-primary) !important;
-    border-radius: 10em;
-  }
-  .emoji {
-    font-size: 1.5em;
-    margin-right: 0.5em;
-  }
+#coffee-holder {
   @media screen and (max-width: 750px) {
-    width: 100%;
+    width: 100vw;
+  }
+  #coffee {
+    border-radius: 0.75em;
+    background-color: var(--background-color-secondary);
+    color: var(--primary-color);
+    padding: 0.5em 1em;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    font-size: 1em;
+    width: fit-content;
+    margin: 1em auto 0 auto !important;
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--background-color-primary) !important;
+      border-radius: 10em;
+    }
   }
 }
 
 #social-list {
   /* position: sticky; */
   top: 0;
-  width: 100vw;
+  width: 98vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0 100px 0;
   @media screen and (max-width: 750px) {
     justify-content: center;
+    margin: 20px 0 200px 0;
     /* margin-bottom: -50px; */
   }
   a {
-    margin: 0.75em 1.5em;
+    margin: 0 0.25em;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-color);
     transition: all 0.5s ease-in-out;
+    padding: 0.5em 1em;
+    border-radius: 10em;
     &:hover {
-      color: var(--primary-color);
+      color: var(--background-color-primary);
+      background-color: var(--primary-color);
     }
-    i{
+    i {
       font-size: 1em !important;
       margin-right: 0.5em;
       display: none;
@@ -668,7 +672,7 @@ form {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   align-items: end;
   justify-content: end;
   display: flex;
