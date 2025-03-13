@@ -63,10 +63,3 @@
   }
 }
 
-.container {
-  @media screen and (max-width: 500px) {
-    #title {
-      margin-top: 4em;
-    }
-  }
-}

@@ -642,7 +642,6 @@ form {
 
 #social-list {
   /* position: sticky; */
-  top: 0;
   width: 98vw;
   display: flex;
   flex-wrap: wrap;
@@ -651,7 +650,7 @@ form {
   margin: 20px 0 100px 0;
   @media screen and (max-width: 750px) {
     justify-content: center;
-    margin: 20px 0 200px 0;
+    margin: 20px 0 20vw 0;
     /* margin-bottom: -50px; */
   }
   a {
@@ -688,6 +687,14 @@ form {
   flex-direction: column;
   @media screen and (max-width: 750px) {
     bottom: 50px;
+    margin-top: 50vw;
+    height: fit-content;
+    
+    @media screen and (max-width: 500px) {
+      bottom: 0;
+      margin-top: 100vw;
+      /* height: 50vh; */
+    }
   }
 }
 
@@ -706,7 +713,6 @@ form {
   text-align: left;
   padding: 10px;
   z-index: 1000;
-  /* min-width: 350px; */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateX(-120%);
 
