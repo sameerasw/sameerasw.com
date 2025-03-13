@@ -4,7 +4,7 @@
   --text-color: light-dark(#000000, #ffffff);
   --background-color-primary: light-dark(#ffffff, #000000);
   --background-color-secondary: light-dark(#dbdbdb, #303030);
-  --background-color-tr: light-dark(#c3c3c388, #55555588);
+  --background-color-tr: light-dark(#ddddddbb, #55555588);
   --font-size: 16px;
   --font-family: "Roboto", sans-serif;
   --font-weight: 400;
@@ -143,7 +143,7 @@ nav {
         .caption {
           height: 0px;
           scale: 0;
-          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+          transition: all 0.5s ease-in-out;
         }
         @media screen and (min-width: 500px) {
           &:hover {
@@ -249,6 +249,7 @@ nav {
 
     @media screen and (max-height: 850px) {
       height: 50px;
+      width: 50px;
     }
 
     @media screen and (max-width: 500px) {
@@ -706,5 +707,62 @@ form {
   flex-direction: column;
   @media screen and (max-width: 750px) {
     bottom: 50px;
+  }
+}
+
+#last {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  color: var(--text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-in);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  z-index: 1000;
+  height: 70px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  img,
+  a {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    margin-right: 10px;
+    object-fit: cover; /* Ensure the image is fully visible */
+  }
+
+  #track {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    strong {
+      color: var(--primary-color);
+    }
+  }
+
+  #track p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  #track p:first-child {
+    font-weight: bold;
+  }
+
+  #controls {
+    display: flex;
+    align-items: center;
   }
 }
