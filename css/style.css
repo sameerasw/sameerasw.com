@@ -10,6 +10,8 @@
   --font-weight: 400;
   --blur: 0.5em;
   --contrast: 0;
+  --radius-in: 15px;
+  --radius-out: 20px;
 
   /*  change this for scaling  */
   --m: 4rem;
@@ -67,7 +69,7 @@ h1 {
   z-index: 1;
   text-align: right;
   font-size: calc(100vw / 6);
-  line-height: 1;
+  line-height: 0.9;
   padding: 0;
   margin: 0;
   @media screen and (max-width: 500px) {
@@ -81,7 +83,7 @@ h1 {
 h2 {
   padding: 0.75em;
   font-size: 1.25rem;
-  border-radius: 0.5em;
+  border-radius: var(--radius-out);
   color: var(--primary-color);
   background-color: var(--background-color-secondary);
   transition: all 0.5s ease-in-out;
@@ -91,7 +93,7 @@ h3 {
   padding: 0.75em;
   margin: 0;
   font-size: 1.25rem;
-  border-radius: 0.5em;
+  border-radius: var(--radius-out);
   color: var(--text-color);
   background-color: var(--background-color-tr);
   backdrop-filter: blur(var(--blur));
@@ -108,20 +110,21 @@ nav {
   color: var(--background-color-primary);
   width: fit-content;
   height: fit-content;
-  border-radius: 2em;
+  border-radius: var(--radius-out);
   transition: all 0.5s ease-in-out;
   z-index: 100;
+  padding: 40px auto;
 
   ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0.25em;
-    transition: all 0.5s ease-in-out;
+    margin: 0.1em;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
     li {
       margin: 0.25em;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
       a {
         width: 3em;
         height: 3em;
@@ -131,16 +134,16 @@ nav {
         align-items: center;
         color: var(--text-color);
         padding: 1rem;
-        border-radius: 2em;
+        border-radius: var(--radius-in);
         text-decoration: none;
         font-size: 0.75rem;
         text-align: center;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
         opacity: 0.4;
         .caption {
           height: 0px;
           scale: 0;
-          transition: all 0.5s ease-in-out;
+          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
         }
         @media screen and (min-width: 500px) {
           &:hover {
@@ -154,7 +157,7 @@ nav {
         i {
           scale: 1.75;
           padding: 0.5rem;
-          transition: all 0.5s ease-in-out;
+          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
         }
       }
     }
@@ -177,7 +180,7 @@ nav {
   &.mini {
     border-radius: 10em;
     a {
-      border-radius: 5em;
+      border-radius: 10em;
       width: 1em !important;
       height: 1em !important;
       .caption {
@@ -232,11 +235,11 @@ nav {
   #logo {
     background-color: var(--primary-color);
     height: 250px;
-    aspect-ratio: 1/1;
+    width: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 1em;
+    border-radius: var(--radius-out);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     margin: 10px;
     padding: 0;
@@ -246,7 +249,6 @@ nav {
 
     @media screen and (max-height: 850px) {
       height: 50px;
-      
     }
 
     @media screen and (max-width: 500px) {
@@ -256,7 +258,7 @@ nav {
       right: 0;
       width: 100vw;
       height: 100vw;
-      border-radius: 0 0 2em 2em;
+      border-radius: 0 0 var(--radius-out) var(--radius-out);
     }
 
     &.macos-logo {
@@ -309,7 +311,7 @@ nav {
   transition: all 0.5s ease-in-out;
   z-index: 1;
   background-color: var(--primary-color);
-  border-radius: 1em;
+  border-radius: var(--radius-out);
 
   p {
     margin: 0.25em;
@@ -322,7 +324,7 @@ nav {
   padding: 0.5em 1em;
   margin-bottom: 4em;
   border: 0.1em solid var(--text-color);
-  border-radius: 5em;
+  border-radius: var(--radius-out);
   @media screen and (min-width: 500px) {
     &:hover {
       background-color: var(--primary-color);
@@ -340,12 +342,12 @@ nav {
   height: 15em;
   background-size: cover;
   background-position: center;
-  border-radius: 2em;
+  border-radius: var(--radius-out);
   margin: 3em;
 
   &:hover {
     scale: 1.2;
-    border-radius: 0.5em;
+    border-radius: var(--radius-in);
     /* pause the animation */
     animation-play-state: paused;
   }
@@ -423,7 +425,7 @@ nav {
   .highlight-item {
     background-size: cover;
     background-position: center;
-    border-radius: 0.8em;
+    border-radius: var(--radius-out);
   }
   #edc {
     background-image: url("../assets/img/articles/edc/edc.jpeg");
@@ -522,7 +524,7 @@ form {
     border: 0.1em solid var(--text-color);
     background-color: var(--background-color-secondary);
     color: var(--text-color);
-    border-radius: 5em;
+    border-radius: var(--radius-out);
     transition: all 0.5s ease-in-out;
     &:focus {
       border: 0.1em solid var(--primary-color);
@@ -550,7 +552,7 @@ form {
     padding: 1.5em;
     margin: 1em;
     border: 0.1em solid var(--text-color);
-    border-radius: 5em;
+    border-radius: var(--radius-out);
     transition: all 0.5s ease-in-out;
     background-color: var(--background-color-secondary);
     color: var(--text-color);
@@ -607,7 +609,7 @@ form {
   width: fit-content;
   margin: 4em auto;
   background-color: var(--background-color-primary);
-  border-radius: 1em;
+  border-radius: var(--radius-out);
   /* border: solid 0.1em var(--primary-color); */
   a {
     text-decoration: none;
@@ -636,7 +638,7 @@ form {
     width: 100vw;
   }
   #coffee {
-    border-radius: 0.75em;
+    border-radius: var(--radius-out);
     background-color: var(--background-color-secondary);
     color: var(--primary-color);
     padding: 0.5em 1em;
@@ -677,7 +679,7 @@ form {
     color: var(--text-color);
     transition: all 0.5s ease-in-out;
     padding: 0.5em 1em;
-    border-radius: 10em;
+    border-radius: var(--radius-out);
     animation: opacity 4s infinite reverse;
     animation-delay: calc(var(--i) * 0.2s);
     &:hover {
