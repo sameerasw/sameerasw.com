@@ -41,6 +41,7 @@
     <!-- favicon -->
     <link rel="icon" href="assets/img/logo-mini.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -94,6 +95,24 @@
                 <a href="#">
                     <div id="logo" class="home-logo item"></div>
                 </a>
+
+
+                <div id="last">
+                    <div id="music-holder" class="item">
+                    <a href="#music"><img id="artwork" src=""></a>
+                    <div id="track"></div>
+                    <img id="eq" src="./assets/img/eq.gif" alt="">
+                    </div>
+                    <img class="history" src="https://lastfm-recently-played.vercel.app/api?user=S4M33R4&loved=true&header_size=none&footer_style=normal_stats&width=300&bg_color=00000088"
+                        alt="currently playing music from last.fm">
+
+            <div id="coffee-holder" class="history">
+                <a href="https://www.buymeacoffee.com/sameerasw" id="coffee" class="item" target="_blank"
+                    data-title="👏 ❤️" aria-label="Buy me a coffee">
+                    <span class="caption">Show some love</span>
+                </a>
+            </div>
+                </div>
 
                 <div class="container-mini">
                     <h1 id="title" class="item"><strong>Sameera</strong> Sandakelum</h1>
@@ -154,28 +173,10 @@
 
             </div>
 
-            <div id="coffee-holder">
-                <a href="https://www.buymeacoffee.com/sameerasw" id="coffee" class="item" target="_blank"
-                    data-title="👏 ❤️" aria-label="Buy me a coffee">
-                    <span class="caption">Show some love</span>
-                </a>
-            </div>
-
-            <div id="email-btn" class="item button-view">
-                <a href="mailto:sameerasw.com@gmail.com" aria-label="Email me">
-                    <span class="material-symbols-rounded">
-                        email
-                    </span>
-                    <span class="caption">Business? Send an email</span>
-                </a>
-            </div>
 
 
-            <div id="music" class="item">
-                <p>Now Playing</p>
-                <img src="https://lastfm-recently-played.vercel.app/api?user=S4M33R4&loved=true&header_size=none&footer_style=normal_stats&width=300&bg_color=00000088"
-                    alt="currently playing music from last.fm">
-            </div>
+
+            
         </section>
 
         <section id="projects">
@@ -310,12 +311,21 @@
                         </a>
                     </div>
                 </div>
+                <div id="email-btn" class="item button-view">
+                    <a href="mailto:sameerasw.com@gmail.com" aria-label="Email me">
+                        <span class="material-symbols-rounded">
+                            email
+                        </span>
+                        <span class="caption">Business? Send an email</span>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
 
     <script src="js/script.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/last.fm.js"></script>
 </body>
 
 </html>
