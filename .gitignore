@@ -1,7 +1,7 @@
 .DS_Store
-.DS_Store
+*/.DS_Store
 assets/.DS_Store
 assets/img/.DS_Store
 assets/img/photos/.DS_Store
 *.DS_Store
-node_modules
+node_modules=
