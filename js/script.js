@@ -107,7 +107,7 @@ window.addEventListener("scroll", function () {
     let position = items[i].getBoundingClientRect();
     if (position.top > window.innerHeight - 10 || position.bottom < 20) {
       // items[i].style.filter = "blur(5px)";
-      items[i].style.scale = "0.75";
+      items[i].style.scale = "0.85";
     } else {
       // items[i].style.filter = "none";
       items[i].style.scale = "1";
@@ -117,7 +117,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   let scroll = window.scrollY;
-  if (scroll > 50) {
+  if (scroll > 100) {
     logo.classList.add("scrolled");
   } else {
     logo.classList.remove("scrolled");

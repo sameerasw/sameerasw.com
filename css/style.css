@@ -213,9 +213,9 @@ nav {
 }
 
 .item {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
   opacity: 0;
-  transform: translate(0, 2em);
+  transform: translate(0, 100px);
 }
 
 .container {
@@ -237,7 +237,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1em;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     margin: 10px;
     padding: 0;
     position: fixed;
@@ -271,7 +271,7 @@ nav {
       height: 50px;
       border-radius: 50%;
       margin: 10px;
-      transition: all 0.5s ease-in-out;
+      /* transition: all 0.5s ease-in-out; */
       z-index: 100;
     }
   }
@@ -379,6 +379,24 @@ nav {
   }
   100% {
     background-image: url("../assets/img/photos/sameerasw-1.jpeg");
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -516,7 +534,7 @@ form {
       @media screen and (min-width: 500px) {
         &:hover {
           background-color: var(--background-color-secondary);
-          color: var(--primary-color);
+          color: var (--primary-color);
           cursor: pointer;
         }
       }
@@ -648,13 +666,15 @@ form {
     /* margin-bottom: -50px; */
   }
   a {
-    margin: 0 0.25em;
+    margin: 0.25em;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-color);
     transition: all 0.5s ease-in-out;
     padding: 0.5em 1em;
     border-radius: 10em;
+    animation: opacity 4s infinite reverse;
+    animation-delay: calc(var(--i) * 0.2s);
     &:hover {
       color: var(--background-color-primary);
       background-color: var(--primary-color);
