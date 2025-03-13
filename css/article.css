@@ -1,12 +1,8 @@
 .article-text {
-  width: 100%;
-  margin: auto;
-  margin-top: 2em !important;
-  text-wrap: wrap;
-
-  @media screen and (max-width: 500px) {
-    margin-top: 1em !important;
-  }
+  width: 90vw;
+  margin: 2em auto 4em auto;
+  text-wrap: wrap !important;
+  text-align: left;
 }
 
 .spacer {
@@ -121,33 +117,6 @@ footer {
   text-align: center;
 }
 
-#logo {
-  animation: animate 10s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    background-color: var(--orange);
-  }
-  10% {
-    background-color: var(--yellow);
-  }
-  25% {
-    background-color: var(--green);
-  }
-  35% {
-    background-color: var(--blue);
-  }
-  50% {
-    background-color: var(--purple);
-  }
-  75% {
-    background-color: var(--pink);
-  }
-  100% {
-    background-color: var(--red);
-  }
-}
 
 details,
 #article-info,
@@ -157,7 +126,7 @@ details,
   background-color: var(--background-color-primary);
   border: 0.1em solid var(--primary-color);
   width: fit-content;
-  margin: 1em auto;
+  margin: 2em auto;
   transition: all 0.5s ease-in-out;
   a {
     text-decoration: none;
