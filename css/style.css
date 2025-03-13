@@ -619,9 +619,6 @@ form {
 }
 
 #coffee-holder {
-  @media screen and (max-width: 750px) {
-    width: 100vw;
-  }
   #coffee {
     border-radius: var(--radius-out);
     background-color: var(--background-color-secondary);
@@ -634,7 +631,7 @@ form {
     text-decoration: none;
     font-size: 1em;
     width: fit-content;
-    margin: 1em auto 0 auto !important;
+    margin: auto !important;
     &:hover {
       background-color: var(--primary-color);
       color: var(--background-color-primary) !important;
@@ -709,9 +706,9 @@ form {
   text-align: left;
   padding: 10px;
   z-index: 1000;
-  min-width: 350px;
-  transition: all 0.3s ease-in-out;
-  transform: translateY(-100%);
+  /* min-width: 350px; */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(-120%);
 
   #eq{
     width: 30px;
@@ -723,16 +720,17 @@ form {
     }
   }
 
-  #history {
+  .history {
     height: 0;
+    width: 0;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   &:hover {
-    #history {
-      width: 100%;
+    .history {
       height: 100%;
+      width: 100%;
       opacity: 1;
       margin: 1em auto 0 auto;
     }
@@ -746,7 +744,7 @@ form {
   }
 
   &.show {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   img,
