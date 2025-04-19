@@ -31,7 +31,7 @@ li > h2 {
 p.article-text {
   margin: 0 2em;
   padding: 1em 0;
-  width: 100%;
+  width: 90%;
   text-wrap: wrap;
 
   a,
@@ -45,6 +45,23 @@ p.article-text {
     margin: 0 auto;
     width: 90%;
   }
+}
+
+article h2 {
+  font-family: "sugar-magic", sans-serif;
+  font-size: 2em;
+  color: var(--primary-color);
+  background: none;
+  text-align: left;
+  margin: 0 0 2em 0;
+  padding: 0;
+}
+
+article {
+  border: dashed 4px var(--primary-color);
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 2em;
 }
 
 article.sub {
@@ -178,6 +195,8 @@ img.figure {
 #done {
   background-color: var(--background-color-tr);
   color: var(--primary-color);
+  width: 85%;
+  margin: 0 auto;
   padding: 3em 1em;
   font-size: 2em;
   align-items: center;
@@ -189,13 +208,13 @@ img.figure {
   background-position: center;
 }
 
-a#legacy-guide {
+a.redirects {
   text-decoration: none;
-  color: var(--primary-color);
-  font-size: 1.5em;
+  color: var(--background-color-primary);
+  font-size: 1em;
   margin: 0 auto;
-  background-color: var(--background-color-tr);
-  padding: 0 2em;
+  background-color: var(--primary-color);
+  padding: 0 1em;
   border-radius: 1em;
   display: flex;
   justify-content: center;
@@ -205,7 +224,6 @@ a#legacy-guide {
   gap: 1em;
 
   &:hover {
-    background-color: var(--primary-color);
     transform: scale(1.05);
 
     span,
@@ -213,6 +231,15 @@ a#legacy-guide {
       color: var(--background-color-primary) !important;
     }
   }
+}
+
+.redirects-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 .footer {
