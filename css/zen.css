@@ -78,7 +78,7 @@ article.sub {
   margin-left: 2em;
   margin-bottom: 0 !important;
   padding: 0;
-  width: 100%;
+  width: 90%;
   list-style: circle;
 }
 
@@ -235,11 +235,16 @@ a.redirects {
 
 .redirects-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 1em;
   flex-wrap: wrap;
+
+  a{
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 .footer {
