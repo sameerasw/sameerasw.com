@@ -297,9 +297,6 @@ nav {
       &.macos-logo {
         background-image: url("../assets/img/articles/macos/article-icon-macos-dark.png");
       }
-      &.home-logo {
-        background-image: url("../assets/img/notion-dark.png");
-      }
       &.pixel-logo {
         background-image: url("../assets/img/articles/pixel/article-icon-pixel-dark.png");
       }
