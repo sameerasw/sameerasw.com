@@ -5,3 +5,4 @@ assets/img/.DS_Store
 assets/img/photos/.DS_Store
 *.DS_Store
 node_modules=
+assets/.DS_Store
