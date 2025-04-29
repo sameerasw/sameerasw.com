@@ -6,7 +6,7 @@ if (typeof jQuery === "undefined") {
 // Replace with your Last.fm username.
 username = "s4m33r4";
 
-$("#last a").attr("href", "http://www.last.fm/user/" + username);
+$("#last #music").attr("href", "http://www.last.fm/user/" + username);
 
 $.get(
   "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" +
