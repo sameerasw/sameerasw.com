@@ -1,0 +1,203 @@
+.mood-cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  width: 90vw;
+  margin: 0 auto 4em auto;
+}
+
+.mood-card {
+  flex: 0 0 auto;
+  width: 240px;
+  background-color: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius-out);
+  padding: 1rem;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  /* border: 1px solid var(--text-color); */
+  position: relative;
+  overflow: visible;
+  max-height: 330px;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+/* Special styling for the latest (most recent) entry */
+.mood-card.latest-entry {
+  border: 3px solid var(--primary-color);
+}
+
+.mood-card:hover {
+  transform: translateY(-5px);
+}
+
+.mood-card .mood-emoji {
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  font-size: 3.5rem;
+  z-index: 2;
+  transform: rotate(10deg);
+}
+
+.mood-card h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  background: none;
+  color: var(--primary-color);
+  text-align: left;
+  padding: 0;
+}
+
+.mood-card p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.mood-card .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+
+.mood-card .movie-icon {
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.mood-card .chip {
+  background-color: var(--primary-color);
+  color: var(--background-color-primary);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+/* Popup overlay for expanded view */
+.mood-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px); /* Restored the backdrop-filter */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mood-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mood-popup {
+  background-color: var(--background-color-secondary);
+  border-radius: var(--radius-out);
+  padding: 2rem;
+  max-width: 600px;
+  width: 85%;
+  max-height: 80vh;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.mood-popup-overlay.active .mood-popup {
+  transform: scale(1);
+}
+
+/* Move close button outside the card at the top right corner */
+.mood-popup .close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: var(--background-color-primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Make emoji overflow just like in card view */
+.mood-popup .mood-emoji {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 3.5rem;
+  z-index: 2;
+  transform: rotate(10deg);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.mood-popup h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-left: 1.5em;
+  text-align: left;
+  background-color: transparent;
+  padding: 0;
+}
+
+.mood-popup p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.mood-popup .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 1rem 0;
+}
+
+/* Add styling for movie icon and chips in popup view, matching the card view */
+.mood-popup .movie-icon {
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+
+.mood-popup .chip {
+  background-color: var(--primary-color);
+  color: var(--background-color-primary);
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .mood-cards-container {
+    width: 85vw;
+  }
+
+  .mood-card {
+    width: 220px;
+  }
+
+  .mood-popup {
+    width: 90vw;
+    max-width: 90vw;
+    padding: 1.5rem;
+    margin: 1.5em; /* Add border for small screens */
+  }
+}
