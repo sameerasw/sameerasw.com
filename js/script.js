@@ -44,11 +44,13 @@ try {
   //change the active nav to the current scroll position based on sections
   let intro = document.getElementById("intro");
   let projects = document.getElementById("projects");
+  let mood_diary = document.getElementById("mood-diary");
   let about = document.getElementById("about-me");
   let contact = document.getElementById("contact");
 
   let intro_nav = document.getElementById("home-nav");
   let projects_nav = document.getElementById("projects-nav");
+  let journal_nav = document.getElementById("journal-nav");
   let about_nav = document.getElementById("about-nav");
   let contact_nav = document.getElementById("contact-nav");
 
@@ -57,21 +59,31 @@ try {
     if (scroll < projects.offsetTop - 400) {
       intro_nav.classList.add("active");
       projects_nav.classList.remove("active");
+      journal_nav.classList.remove("active");
       about_nav.classList.remove("active");
       contact_nav.classList.remove("active");
-    } else if (scroll < about.offsetTop - 400) {
+    } else if (scroll < mood_diary.offsetTop - 800) {
       intro_nav.classList.remove("active");
       projects_nav.classList.add("active");
+      journal_nav.classList.remove("active");
+      about_nav.classList.remove("active");
+      contact_nav.classList.remove("active");
+    } else if (scroll < about.offsetTop - 200) {
+      intro_nav.classList.remove("active");
+      projects_nav.classList.remove("active");
+      journal_nav.classList.add("active");
       about_nav.classList.remove("active");
       contact_nav.classList.remove("active");
     } else if (scroll < contact.offsetTop - 400) {
       intro_nav.classList.remove("active");
       projects_nav.classList.remove("active");
+      journal_nav.classList.remove("active");
       about_nav.classList.add("active");
       contact_nav.classList.remove("active");
     } else {
       intro_nav.classList.remove("active");
       projects_nav.classList.remove("active");
+      journal_nav.classList.remove("active");
       about_nav.classList.remove("active");
       contact_nav.classList.add("active");
     }
