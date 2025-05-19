@@ -74,7 +74,7 @@ function openPopup(entry) {
     <p>${parseMarkdown(entry.brief || "")}</p>
     ${
       entry.shows
-        ? `<div class="chips"><span class="movie-icon">🎬</span>${entry.shows
+        ? `<div class="chips"><span class="movie-icon">⏯️</span>${entry.shows
             .split(",")
             .map(createChip)
             .join("")}</div>`
@@ -127,7 +127,7 @@ function loadMoodCards() {
           )}</p>
           ${
             entry.shows
-              ? `<div class="chips"><span class="movie-icon">🎬</span>${entry.shows
+              ? `<div class="chips"><span class="movie-icon">⏯️</span>${entry.shows
                   .split(",")
                   .map(createChip)
                   .join("")}</div>`
