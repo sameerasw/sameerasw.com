@@ -28,7 +28,7 @@ li > h2 {
 }
 
 .zen-article p.article-text,
-p.article-text {
+p.article-text, .mini-list li {
   margin: 0 2em;
   padding: 1em 0;
   width: 90%;
@@ -37,8 +37,30 @@ p.article-text {
   a,
   strong {
     color: var(--primary-color);
+    background-color: var(--background-color-primary);
+    padding: 0.2em 0.3em;
+    border-radius: 0.5em;
     text-decoration: none;
     margin: 1em auto !important;
+    transition: all 0.3s ease;
+
+    i{
+      color: var(--primary-color);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      color: var(--background-color-primary);
+      background-color: var(--primary-color);
+      text-decoration: none;
+      transform: scale(1.05);
+
+      i {
+        color: var(--background-color-primary);
+      }
+    }
   }
 
   @media screen and (max-width: 500px) {
