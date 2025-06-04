@@ -17,7 +17,7 @@ li > h2 {
 }
 
 .zen-article li {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 
   &::marker {
     color: var(--primary-color);
@@ -106,13 +106,14 @@ article.sub {
 
 img.figure {
   max-width: 70%;
-  max-height: 70vh;
+  max-height: 50vh;
   height: auto;
   margin: 0 2em;
   display: block;
   border-radius: 1em;
 
   @media screen and (max-width: 500px) {
+    max-height: 70vh;
     max-width: 90%;
     margin: 0 auto;
   }
@@ -228,6 +229,13 @@ img.figure {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media screen and (max-width: 500px) {
+    max-width: 90vw;
+    padding: 1em 1em;
+    margin-right: 3em;
+    font-size: 1.5em;
+  }
 }
 
 a.redirects {
