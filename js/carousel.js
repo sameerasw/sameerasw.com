@@ -19,16 +19,43 @@ function updateCarousel() {
   slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Adjust carousel size to fit images
+// Adjust carousel size to fit content (images or video)
 function adjustCarouselSize() {
   const currentSlide = slides[currentIndex];
   const img = currentSlide.querySelector("img");
+  const video = currentSlide.querySelector("iframe");
 
-  if (img && img.complete) {
+  if (video) {
+    // Handle video iframe
+    updateCarouselDimensionsForVideo();
+  } else if (img && img.complete) {
     updateCarouselDimensions(img);
   } else if (img) {
     img.onload = () => updateCarouselDimensions(img);
   }
+}
+
+function updateCarouselDimensionsForVideo() {
+  const container = document.querySelector(".carousel-container");
+  const aspectRatio = 16 / 9; // Standard YouTube aspect ratio
+
+  // Set max dimensions while preserving 16:9 aspect ratio
+  const maxWidth = Math.min(window.innerWidth * 0.8, 1280);
+  const maxHeight = Math.min(window.innerHeight * 0.7, 720);
+
+  // Determine dimensions based on constraints
+  let width, height;
+  if (maxWidth / aspectRatio <= maxHeight) {
+    width = maxWidth;
+    height = maxWidth / aspectRatio;
+  } else {
+    height = maxHeight;
+    width = height * aspectRatio;
+  }
+
+  // Apply dimensions to container
+  container.style.width = `${width}px`;
+  container.style.height = `${height}px`;
 }
 
 function updateCarouselDimensions(img) {

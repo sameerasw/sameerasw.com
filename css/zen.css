@@ -28,7 +28,8 @@ li > h2 {
 }
 
 .zen-article p.article-text,
-p.article-text, .mini-list li {
+p.article-text,
+.mini-list li {
   margin: 0 2em;
   padding: 1em 0;
   width: 90%;
@@ -44,7 +45,7 @@ p.article-text, .mini-list li {
     margin: 1em auto !important;
     transition: all 0.3s ease;
 
-    i{
+    i {
       color: var(--primary-color);
       font-style: normal;
       font-weight: 600;
@@ -165,6 +166,18 @@ img.figure {
   max-height: 70vh;
 }
 
+/* Video frame styles for carousel */
+.carousel-slide iframe.video-frame {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  border-radius: 1em;
+  display: block;
+  max-height: 70vh;
+  border: none;
+}
+
 /* Updated overlay navigation buttons */
 .carousel-controls {
   position: absolute;
@@ -271,7 +284,7 @@ a.redirects {
   gap: 1em;
   flex-wrap: wrap;
 
-  a{
+  a {
     width: 100%;
     max-width: 250px;
   }
