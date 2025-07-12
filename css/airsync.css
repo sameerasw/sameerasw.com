@@ -1,0 +1,415 @@
+/* AirSync Product Page Styles*/
+
+/* Hero Section */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  padding: 1.5rem;
+}
+
+.hero-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-title {
+  font-family: "sugar-magic", sans-serif;
+  font-size: 3.5rem;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--text-color);
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.5rem;
+  }
+}
+
+.container p{
+    overflow: auto;
+    text-wrap: normal;
+    white-space: wrap;
+    text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-out);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid var(--primary-color);
+  margin-top: 2em;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.cta-button .material-symbols-rounded {
+  font-size: 1.1rem;
+}
+
+/* Progress Section */
+.progress-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--background-color-tr);
+  border-radius: var(--radius-out);
+  border: 1px solid var(--primary-color);
+}
+
+h2{
+    background-color: transparent;
+    margin: 0;
+}
+
+.progress-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.progress-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  position: relative;
+  background: var(--background-color-secondary);
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 3px;
+  width: 28.57%;
+  transition: width 0.8s ease;
+}
+
+.progress-stages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 768px) {
+    flex: 1;
+    min-width: 70px;
+  }
+}
+
+.stage.active {
+  opacity: 1;
+}
+
+.stage.current {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.stage-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--background-color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--background-color-secondary);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.stage.active .stage-icon {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  border-color: var(--primary-color);
+  opacity: 0.6;
+}
+
+.stage.current .stage-icon {
+  animation: pulse 2s infinite;
+  opacity: 1;
+}
+
+.stage-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.7rem;
+  }
+}
+
+/* Features Section */
+.features {
+  margin: 3rem 0;
+}
+
+.features h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.feature-card {
+  background: var(--background-color-tr);
+  border-radius: var(--radius-out);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  color: var(--text-color);
+  opacity: 0.7;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  margin: 3rem 0;
+}
+
+.tech-stack h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  background: var(--background-color-primary);
+  border-radius: var(--radius-out);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary-color);
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.tech-card h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.tech-card p {
+  color: var(--text-color);
+  opacity: 0.7;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  color: var(--text-color);
+  opacity: 0.6;
+  border-top: 1px solid var(--background-color-secondary);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .progress-section,
+  .tech-stack {
+    padding: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+}
+
+/* Container override for AirSync page */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section spacing */
+section {
+  margin: 3rem 0;
+}
+
+section h2 {
+  font-family: "sugar-magic", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.5rem;
+  }
+}
+
+/* Special button states */
+.cta-button.beta {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.cta-button.beta:hover {
+  background: transparent;
+  color: var(--orange);
+}
+
+.cta-button.live {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.cta-button.live:hover {
+  background: transparent;
+  color: var(--green);
+}
