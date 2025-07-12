@@ -1,7 +1,13 @@
 # sameerasw.com
-My portfolio re-design from scratch
+My portfolio website source code
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/599fc819-e77e-4d57-98c3-a65bfe2c064d/deploy-status)](https://app.netlify.com/sites/sameerasw/deploys)
 
-![image](https://github.com/sameerasw/sameerasw.me/assets/68902530/2b2b39cf-ee4a-45d3-8508-ce510a2f595d) 
-![image](https://github.com/sameerasw/sameerasw.me/assets/68902530/c9a42876-4e7a-4a3a-b443-69f860d362a5)
+![CleanShot 2025-07-13 at 12  00 58@2x Large](https://github.com/user-attachments/assets/f50ff464-c2bf-4599-b130-4ec8c92a299f)
+![CleanShot 2025-07-13 at 12  03 20@2x Large](https://github.com/user-attachments/assets/081b0d55-7050-460b-8cdb-77c2653a2811)
+![CleanShot 2025-07-13 at 12  04 08@2x Large](https://github.com/user-attachments/assets/48aa131e-8222-4a2c-a71c-d8873f1ce3eb)
+![CleanShot 2025-07-13 at 12  05 48@2x Large](https://github.com/user-attachments/assets/9b35c053-52e9-4a52-a97c-d5f954d3173b)
+![CleanShot 2025-07-13 at 12  06 55@2x Large](https://github.com/user-attachments/assets/a270e607-3853-4e97-9acc-a97e987ca951)
+
+
+![CleanShot 2025-07-12 at 11  59 58@2x Large](https://github.com/user-attachments/assets/c5d3891e-63a4-414d-82ac-d5d38bf692df)
