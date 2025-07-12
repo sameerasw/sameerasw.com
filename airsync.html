@@ -57,6 +57,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/article.css">
 <link rel="stylesheet" href="css/airsync.css">
+<link rel="stylesheet" href="css/macos-interface.css">
 <link rel="stylesheet" href="css/no-cursor.css">
 <!-- <link rel="stylesheet" href="css/arc.css"> -->
 <link rel="stylesheet"
@@ -80,6 +81,42 @@
 
         gtag('config', 'G-6F3G1NW62X');
     </script>
+
+    <!-- macOS Style Layer -->
+    <div class="macos-layer">
+        <!-- macOS Menubar -->
+        <div class="macos-menubar">
+            <div class="menubar-left">
+                <div class="menu-item apple-logo">
+                    <span class="material-symbols-rounded">phone_android</span>
+                </div>
+                <div class="menu-item">AirSync</div>
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Window</div>
+                <div class="menu-item">Help</div>
+            </div>
+            <div class="menubar-right">
+                <div class="menu-item">
+                    <span class="material-symbols-rounded">wifi</span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-symbols-rounded">bluetooth</span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-symbols-rounded">battery_full</span>
+                </div>
+                <div class="menu-item time-display" id="menubar-time">12:00</div>
+            </div>
+        </div>
+
+        <!-- Notification Container -->
+        <div class="notification-container" id="notification-container">
+            <!-- Notifications will be dynamically added here -->
+        </div>
+    </div>
+
     <div class="cursor rounded move blur cursor-normal" id="cursor">
         <div id="cursor-text"></div>
     </div>
@@ -249,6 +286,7 @@
     <script src="js/script-article.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/airsync.js"></script>
+    <script src="js/macos-interface.js"></script>
 </body>
 
 </html>

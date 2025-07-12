@@ -34,11 +34,11 @@
   }
 }
 
-.container p{
-    overflow: auto;
-    text-wrap: normal;
-    white-space: wrap;
-    text-align: left;
+.container p {
+  overflow: auto;
+  text-wrap: normal;
+  white-space: wrap;
+  text-align: left;
 }
 
 .hero-subtitle {
@@ -93,9 +93,9 @@
   border: 1px solid var(--primary-color);
 }
 
-h2{
-    background-color: transparent;
-    margin: 0;
+h2 {
+  background-color: transparent;
+  margin: 0;
 }
 
 .progress-section h2 {
@@ -369,13 +369,6 @@ footer a:hover {
   }
 }
 
-/* Container override for AirSync page */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 /* Section spacing */
 section {
   margin: 3rem 0;
@@ -412,4 +405,18 @@ section h2 {
 .cta-button.live:hover {
   background: transparent;
   color: var(--green);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Container override for AirSync page */
+.container {
+  max-width: calc(100vw - 2em);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
