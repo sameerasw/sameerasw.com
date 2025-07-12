@@ -312,6 +312,7 @@ footer {
   text-align: center;
   margin-top: 3rem;
   padding: 2rem 0;
+  margin-bottom: 7em;
   color: var(--text-color);
   opacity: 0.6;
   border-top: 1px solid var(--background-color-secondary);
