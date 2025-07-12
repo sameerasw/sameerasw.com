@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const apps = [
     {
       name: "Zen Browser",
-      link: "https://zen-browser.app/",
+      link: "./zen.html",
       description:
         "'Welcome to a calmer internet' Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data.",
       iconUrl:
@@ -41,6 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "foss",
     },
     {
+      name: "Amethyst WM",
+      link: "https://github.com/ianyh/Amethyst",
+      description:
+        "A powerful tiling window manager for macOS along the lines of xmonad.",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/e52a25e434973c8f5f2ba6966ab9b573_low_res_Amethyst.png",
+      imageUrl: "https://camo.githubusercontent.com/f3d8dbdf980ee1867e93b5cfdd8c643e5632c4fb35f850f41e1c03f3518797da/68747470733a2f2f69616e79682e636f6d2f616d6574687973742f696d616765732f77696e646f77732e706e67",
+      price: "foss",
+    },
+    {
+      name: "VSCode",
+      link: "https://code.visualstudio.com/",
+      description:
+        "You know it",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/eb454471770de82ad9e80c8007bb54f6_low_res_VSCode.png",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/vscode.jpeg",
+      price: "free",
+    },
+    {
       name: "Mac Mouse Fix",
       link: "https://macmousefix.com/",
       description: "Make Your $10 Mouse Better Than an Apple Trackpad!",
@@ -60,27 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //   price: "foss",
     // },
     {
-      name: "Latest",
-      link: "https://max.codes/latest/",
-      description:
-        "Latest is a free and open source app for macOS that checks if all your apps are up to date. Get a quick overview of which apps changed and what changed and update them right away.",
-      iconUrl:
-        "https://github.com/mangerlahn/Latest/blob/main/Latest/Resources/Assets.xcassets/AppIcon.appiconset/64.png?raw=true",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/latest.png",
-      price: "foss",
-    },
-    {
-      name: "Elmedia Video Player",
-      link: "https://apps.apple.com/us/app/elmedia-universal-video-player/id937759555?mt=12",
-      description:
-        "ELMEDIA is a Mac video player that offers advanced playback and streaming options. It can handle any conceivable media format. Local files can be streamed to Chromecast, AirPlay, Roku and DLNA devices.",
-      iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/609cbad939b456df49fd7d8b14f511b3_8IBWfjKvFa.png",
-      imageUrl:
-        "/assets/img/articles/macos/app-screenshots/elmedia.png",
-      price: "free",
-    },
-    {
       name: "Raycast",
       link: "https://www.raycast.com/",
       description:
@@ -88,6 +87,24 @@ document.addEventListener("DOMContentLoaded", function () {
       iconUrl:
         "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/ff9688e8751c364dbe41e7ec986e63ec_low_res_Raycast.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/raycast.png",
+      price: "free",
+    },
+    {
+      name: "Blip",
+      link: "https://blip.net/",
+      description:
+        "Send any size file, right from your desktop via internet. A cross platform free to use app.",
+      iconUrl: "/assets/img/articles/macos/app-screenshots/blip-icon.png",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/blip.png",
+      price: "free",
+    },
+    {
+      name: "AirSync (WIP)",
+      link: "./airsync.html",
+      description:
+        "The forbidden Android + macOS continuity with notification and clipboard sync and more.",
+      iconUrl: "https://github.com/sameerasw/AirSyncMac/blob/main/AirSyncMac/Assets.xcassets/AppIcon.appiconset/AirSync%201.png?raw=true",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/airsync.jpeg",
       price: "free",
     },
     {
@@ -110,15 +127,15 @@ document.addEventListener("DOMContentLoaded", function () {
     //   imageUrl: "/assets/img/articles/macos/app-screenshots/localsend.png",
     //   price: "foss",
     // },
-    {
-      name: "ProtonVPN",
-      link: "https://protonvpn.com/",
-      description: "The best VPN for speed and security. Stay safe. Play fast.",
-      iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/8ef87b0fb3b73ced0ee18224baca3293_z7sHQzGa3S.png",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/protonvpn.png",
-      price: "free",
-    },
+    // {
+    //   name: "ProtonVPN",
+    //   link: "https://protonvpn.com/",
+    //   description: "The best VPN for speed and security. Stay safe. Play fast.",
+    //   iconUrl:
+    //     "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/8ef87b0fb3b73ced0ee18224baca3293_z7sHQzGa3S.png",
+    //   imageUrl: "/assets/img/articles/macos/app-screenshots/protonvpn.png",
+    //   price: "free",
+    // },
     {
       name: "Proton Pass",
       link: "https://protonvpn.com/",
@@ -147,25 +164,37 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl: "https://cleanshot.com/_nuxt/bgtool.18b35a89.jpg",
       price: "paid",
     },
+    // {
+    //   name: "Battery Toolkit",
+    //   link: "https://github.com/mhaeuser/Battery-Toolkit",
+    //   description:
+    //     "Control the platform power state of your Apple Silicon Mac.",
+    //   iconUrl:
+    //     "https://raw.githubusercontent.com/mhaeuser/Battery-Toolkit/main/Resources/AppIcon.svg",
+    //   imageUrl:
+    //     "/assets/img/articles/macos/app-screenshots/battery-toolkit.png",
+    //   price: "foss",
+    // },
     {
-      name: "Blip",
-      link: "https://blip.net/",
+      name: "Latest",
+      link: "https://max.codes/latest/",
       description:
-        "Send any size file, right from your desktop via internet. A cross platform free to use app.",
-      iconUrl: "/assets/img/articles/macos/app-screenshots/blip-icon.png",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/blip.png",
-      price: "free",
+        "Latest is a free and open source app for macOS that checks if all your apps are up to date. Get a quick overview of which apps changed and what changed and update them right away.",
+      iconUrl:
+        "https://github.com/mangerlahn/Latest/blob/main/Latest/Resources/Assets.xcassets/AppIcon.appiconset/64.png?raw=true",
+      imageUrl: "/assets/img/articles/macos/app-screenshots/latest.png",
+      price: "foss",
     },
     {
-      name: "Battery Toolkit",
-      link: "https://github.com/mhaeuser/Battery-Toolkit",
+      name: "Elmedia Video Player",
+      link: "https://apps.apple.com/us/app/elmedia-universal-video-player/id937759555?mt=12",
       description:
-        "Control the platform power state of your Apple Silicon Mac.",
+        "ELMEDIA is a Mac video player that offers advanced playback and streaming options. It can handle any conceivable media format. Local files can be streamed to Chromecast, AirPlay, Roku and DLNA devices.",
       iconUrl:
-        "https://raw.githubusercontent.com/mhaeuser/Battery-Toolkit/main/Resources/AppIcon.svg",
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/609cbad939b456df49fd7d8b14f511b3_8IBWfjKvFa.png",
       imageUrl:
-        "/assets/img/articles/macos/app-screenshots/battery-toolkit.png",
-      price: "foss",
+        "/assets/img/articles/macos/app-screenshots/elmedia.png",
+      price: "free",
     },
     {
       name: "Keka",
@@ -199,6 +228,28 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl:
         "https://github.com/pakerwreah/Calendr/raw/master/resources/screenshot.png",
       price: "foss",
+    },
+    {
+      name: "Multiviewer",
+      link: "hhttps://multiviewer.app/",
+      description:
+        "Stream F1 TV with multiple streams and extensive realtime data",
+      iconUrl:
+        "https://multiviewer.app/favicon.ico",
+      imageUrl:
+        "https://multiviewer.app/_next/static/media/feature-multi-view.0259957f.jpg",
+      price: "free",
+    },
+    {
+      name: "Aliento",
+      link: "https://inchman.gumroad.com/l/Aliento",
+      description:
+        "Dismiss notifications with a keyboard shortcut",
+      iconUrl:
+        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/796d09cd67fb0ab16748ed11895cd683_low_res_Google_Alerts.png",
+      imageUrl:
+        "https://public-files.gumroad.com/2l42yxg5lxej2p682csv69iwhev2",
+      price: "free",
     },
   ];
 
