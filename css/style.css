@@ -912,6 +912,6 @@ form {
   }
 }
 
-section{
+section:not(#intro){
   overflow-x: hidden;
 }
