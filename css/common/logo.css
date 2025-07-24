@@ -29,28 +29,28 @@
     }
 
     &.macos-logo {
-      background-image: url("../assets/img/articles/macos/article-icon-macos.png");
+      background-image: url("../../assets/img/articles/macos/article-icon-macos.png");
     }
     &.home-logo {
-      background-image: url("../assets/img/notion.png");
+      background-image: url("../../assets/img/notion.png");
     }
     &.pixel-logo {
-      background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
+      background-image: url("../../assets/img/articles/pixel/article-icon-pixel.png");
     }
     &.zen-logo {
-      background-image: url("../assets/img/articles/zen/article-icon-zen.png");
+      background-image: url("../../assets/img/articles/zen/article-icon-zen.png");
     }
 
     /* dark theme icons */
     @media (prefers-color-scheme: dark) {
       &.macos-logo {
-        background-image: url("../assets/img/articles/macos/article-icon-macos-dark.png");
+        background-image: url("../../assets/img/articles/macos/article-icon-macos-dark.png");
       }
       &.pixel-logo {
-        background-image: url("../assets/img/articles/pixel/article-icon-pixel-dark.png");
+        background-image: url("../../assets/img/articles/pixel/article-icon-pixel-dark.png");
       }
       &.zen-logo {
-        background-image: url("../assets/img/articles/zen/article-icon-zen-dark.png");
+        background-image: url("../../assets/img/articles/zen/article-icon-zen-dark.png");
       }
     }
 
