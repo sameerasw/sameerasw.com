@@ -1,0 +1,99 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0;
+  input {
+    width: 50%;
+    padding: 1.5em;
+    margin: 1em;
+    border: 0.1em solid var(--text-color);
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    border-radius: var(--radius-out);
+    transition: all 0.5s ease-in-out;
+    &:focus {
+      border: 0.1em solid var(--primary-color);
+    }
+    @media screen and (min-width: 500px) {
+      &:hover {
+        border: 0.1em solid var(--primary-color);
+      }
+    }
+    &#btn {
+      background-color: var(--primary-color);
+      color: var(--background-color-secondary);
+      border: 0.1em solid var(--primary-color);
+      @media screen and (min-width: 500px) {
+        &:hover {
+          background-color: var(--background-color-secondary);
+          color: var (--primary-color);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  textarea {
+    width: 50%;
+    padding: 1.5em;
+    margin: 1em;
+    border: 0.1em solid var(--text-color);
+    border-radius: var(--radius-out);
+    transition: all 0.5s ease-in-out;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    @media screen and (min-width: 500px) {
+      &:focus {
+        border: 0.1em solid var(--primary-color);
+      }
+      &:hover {
+        border: 0.1em solid var(--primary-color);
+      }
+    }
+  }
+}
+
+#resume {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  div {
+    width: 50%;
+    margin: 7.5em 25%;
+    padding: 1em 0;
+  }
+}
+
+#email-btn {
+  width: fit-content;
+  margin: 2em auto;
+  background-color: var(--background-color-primary);
+  border-radius: var(--radius-out);
+  /* border: solid 0.1em var(--primary-color); */
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    /* background-color: var(--primary-color); */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    span {
+      margin: 0.1em 0.25em;
+    }
+  }
+
+  &:hover {
+    background-color: var(--primary-color);
+    border-radius: 10em;
+    a {
+      color: var(--background-color-primary);
+    }
+  }
+}
+
+#contact {
+  margin-bottom: 20em;
+}

@@ -1,0 +1,115 @@
+
+nav {
+  position: fixed;
+  left: 1em;
+  top: 50vh;
+  transform: translateY(-50%);
+  background-color: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  color: var(--background-color-primary);
+  width: fit-content;
+  height: fit-content;
+  border-radius: var(--radius-out);
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+  padding: 40px auto;
+
+  ul {
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0.1em;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+    li {
+      margin: 0.25em;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+      a {
+        width: 3em;
+        height: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-color);
+        padding: 1rem;
+        border-radius: var(--radius-in);
+        text-decoration: none;
+        font-size: 0.75rem;
+        text-align: center;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+        opacity: 0.4;
+        .caption {
+          height: 0px;
+          scale: 0;
+          transition: all 0.5s ease-in-out;
+        }
+        @media screen and (min-width: 500px) {
+          &:hover {
+            opacity: 1;
+            .caption {
+              height: 100%;
+              scale: 1;
+            }
+          }
+        }
+        i {
+          scale: 1.75;
+          padding: 0.5rem;
+          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+        }
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      display: flex;
+    }
+  }
+
+  .active {
+    background-color: var(--primary-color);
+    color: var(--background-color-secondary);
+    opacity: 1;
+    .caption {
+      height: 100%;
+      scale: 1;
+    }
+  }
+
+  &.mini {
+    border-radius: 10em;
+    a {
+      border-radius: 10em;
+      width: 1em !important;
+      height: 1em !important;
+      .caption {
+        display: none;
+      }
+      i {
+        scale: 1 !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    bottom: 1em !important;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: 500px) {
+    a {
+      width: 2em !important;
+      height: 2em !important;
+      span {
+        display: none;
+      }
+      i {
+        scale: 1.5 !important;
+      }
+    }
+  }
+}

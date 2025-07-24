@@ -1,0 +1,55 @@
+
+#photo {
+  background-color: var(--background-color-secondary);
+  animation: photos 20s infinite;
+  transition: all 0.5s ease-in-out;
+  width: 15em;
+  height: 15em;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-out);
+  margin: 3em;
+
+  &:hover {
+    scale: 1.2;
+    border-radius: var(--radius-in);
+    /* pause the animation */
+    animation-play-state: paused;
+  }
+}
+
+@keyframes photos {
+  0% {
+    background-image: url("../../assets/img/photos/sameerasw-1.jpeg");
+  }
+  15% {
+    background-image: url("../../assets/img/photos/sameerasw-1.jpeg");
+  }
+  20% {
+    background-image: url("../../assets/img/photos/sameerasw-2.jpeg");
+  }
+  35% {
+    background-image: url("../../assets/img/photos/sameerasw-2.jpeg");
+  }
+  40% {
+    background-image: url("../../assets/img/photos/sameerasw-3.jpeg");
+  }
+  55% {
+    background-image: url("../../assets/img/photos/sameerasw-3.jpeg");
+  }
+  60% {
+    background-image: url("../../assets/img/photos/sameerasw-4.jpeg");
+  }
+  75% {
+    background-image: url("../../assets/img/photos/sameerasw-4.jpeg");
+  }
+  80% {
+    background-image: url("../../assets/img/photos/sameerasw-5.jpeg");
+  }
+  95% {
+    background-image: url("../../assets/img/photos/sameerasw-5.jpeg");
+  }
+  100% {
+    background-image: url("../../assets/img/photos/sameerasw-1.jpeg");
+  }
+}

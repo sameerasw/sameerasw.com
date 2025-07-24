@@ -1,0 +1,68 @@
+#logo {
+    background-color: var(--primary-color);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--radius-out);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    margin: 10px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    @media screen and (max-height: 850px) {
+      height: 50px;
+      width: 50px;
+    }
+
+    @media screen and (max-width: 500px) {
+      position: fixed;
+      top: 0;
+      margin: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vw;
+      border-radius: 0 0 var(--radius-out) var(--radius-out);
+    }
+
+    &.macos-logo {
+      background-image: url("../assets/img/articles/macos/article-icon-macos.png");
+    }
+    &.home-logo {
+      background-image: url("../assets/img/notion.png");
+    }
+    &.pixel-logo {
+      background-image: url("../assets/img/articles/pixel/article-icon-pixel.png");
+    }
+    &.zen-logo {
+      background-image: url("../assets/img/articles/zen/article-icon-zen.png");
+    }
+
+    /* dark theme icons */
+    @media (prefers-color-scheme: dark) {
+      &.macos-logo {
+        background-image: url("../assets/img/articles/macos/article-icon-macos-dark.png");
+      }
+      &.pixel-logo {
+        background-image: url("../assets/img/articles/pixel/article-icon-pixel-dark.png");
+      }
+      &.zen-logo {
+        background-image: url("../assets/img/articles/zen/article-icon-zen-dark.png");
+      }
+    }
+
+    &.scrolled {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 10px;
+      /* transition: all 0.5s ease-in-out; */
+      z-index: 100;
+    }
+  }
