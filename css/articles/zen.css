@@ -105,6 +105,54 @@ article.sub {
   list-style: circle;
 }
 
+/* Expandable details styling */
+.mini-list details {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+
+  p{
+    text-wrap: wrap;
+    word-wrap: normal;
+    font-size: 1em !important;
+  }
+  p > strong{
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+  }
+}
+
+.mini-list details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: normal;
+  color: inherit;
+  outline: none;
+  position: relative;
+  padding-left: 15px;
+}
+
+.mini-list details summary::-webkit-details-marker {
+  display: none;
+}
+
+.mini-list details summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.mini-list details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.mini-list details > div {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
 img.figure {
   max-width: 70%;
   max-height: 50vh;

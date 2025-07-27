@@ -239,14 +239,32 @@
                         <li>Wayland on <strong><a
                                     href="https://www.reddit.com/r/zen_browser/comments/1jd0ggm/comment/miemhvg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">KDE
                                     with Kvin blur <i class="material-symbols-rounded">open_in_new</i></a></strong></li>
-                        <li>Hyprland - missing instructions, but possible</li>
-                        <li>GTK Gnome DE - experimental with <strong><a
-                                    href="https://extensions.gnome.org/extension/3193/blur-my-shell/">blur my shell <i
-                                        class="material-symbols-rounded">open_in_new</i></a></strong>
-                            <span>
-                                <br>Enable blur my shell, go into settings and select zen, set opacity to 100, then open
-                                zen → enable transparency
-                            </span>
+                        <li>
+                            <details>
+                                <summary>Hyprland - instructions</summary>
+                                <div>
+                                    <p><strong>Tested on version 1.14.8b flatpak version</strong></p>
+                                    <p><strong>Step 1: Enable flags in about:config</strong></p>
+                                    <ul>
+                                        <li>widget.transparent-windows</li>
+                                        <li>zen.theme.gradient.show-custom-colors</li>
+                                        <li>zen.theme.acrylic-elements (not sure)</li>
+                                    </ul>
+                                    <p><strong>Step 2: Install Transparent Zen mod</strong> (enable transparency features for linux as well)</p>
+                                    <p><strong>Step 3: Use Nebula configs</strong> (Nebula.uc.js userChrome.css userContent.css Nebula/)</p>
+                                    <p><strong>Step 4: Configure Hyprland transparency</strong> - Set opacity to 0.9 (exact value doesn't matter much)</p>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>GTK Gnome DE - experimental with <strong><a
+                                        href="https://extensions.gnome.org/extension/3193/blur-my-shell/">blur my shell <i
+                                            class="material-symbols-rounded">open_in_new</i></a></strong></summary>
+                                <div>
+                                    <p>Enable blur my shell, go into settings and select zen, set opacity to 100, then open zen → enable transparency</p>
+                                </div>
+                            </details>
                         </li>
                     </ul>
                     </p>
