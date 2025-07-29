@@ -71,7 +71,7 @@ const STAGES = {
 };
 
 // Current stage - Change this to update progress
-const CURRENT_STAGE = "draft";
+const CURRENT_STAGE = "build";
 
 // Initialize progress bar and animations
 function initializeProgress() {
