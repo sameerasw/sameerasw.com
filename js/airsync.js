@@ -57,9 +57,9 @@ const STAGES = {
     label: "Beta",
     icon: "preview",
     cta: {
-      text: "Beta Available - Try It",
+      text: "Beta Available - Try on macOS",
       icon: "preview",
-      link: "https://t.me/tidwib",
+      link: "https://github.com/sameerasw/airsync-mac/releases/latest",
     },
   },
   live: {
@@ -71,7 +71,7 @@ const STAGES = {
 };
 
 // Current stage - Change this to update progress
-const CURRENT_STAGE = "build";
+const CURRENT_STAGE = "beta";
 
 // Initialize progress bar and animations
 function initializeProgress() {

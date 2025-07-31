@@ -118,7 +118,7 @@ class MacOSInterface {
       {
         appName: "AirSync",
         title: "Messages - New Message",
-        body: "Hey! Did you see the new AirSync update?",
+        body: "Hey! Use i-am-a-tester for testing AirSync+ beta",
         icon: "💬",
         actions: [
           { text: "Reply", type: "primary" },
