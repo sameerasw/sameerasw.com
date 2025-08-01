@@ -42,9 +42,10 @@
 }
 
 .hero-subtitle {
+  text-align: center !important;
   font-size: 1.2rem;
   color: var(--primary-color);
-  margin: 1.5rem 0 1rem 0;
+  margin: 1.5rem auto 1rem auto;
   font-weight: 400;
   opacity: 0.9;
 }
@@ -389,8 +390,8 @@ section h2 {
 
 /* Special button states */
 .cta-button.beta {
-  background: var(--orange);
-  border-color: var(--orange);
+  background: light-dark(#3D8EE2, #6fb2ff);
+  border-color: light-dark(#cd78ff, #643eff);
 }
 
 .cta-button.beta:hover {
@@ -420,4 +421,32 @@ section h2 {
   max-width: calc(100vw - 2em);
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+#background-preview{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -80%);
+  max-width: 70vw;
+  max-height: 50vh;
+  object-fit: cover;
+  z-index: -1;
+
+  @media screen and (max-width: 768px) {
+    max-width: 90vw;
+    max-height: 40vh;
+  }
+
+}
+
+.hero{
+  margin-top: 40vh;
+}
+
+.airsync-logo{
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
 }
