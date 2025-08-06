@@ -34,11 +34,10 @@
   font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 
-
-    @media screen and (max-width: 600px) {
-        top: 45%;
-        max-height: 50vh;
-    }
+  @media screen and (max-width: 600px) {
+    top: 45%;
+    max-height: 50vh;
+  }
 }
 
 #app-ui {
@@ -52,7 +51,6 @@
   backdrop-filter: blur(30px);
   display: flex;
   overflow: hidden;
-
 }
 
 /* Sidebar */
@@ -74,7 +72,6 @@
   display: flex;
   flex-direction: column;
 }
-
 
 /*  Header & Toolbar */
 .app-header {
@@ -198,6 +195,24 @@
   justify-content: center;
 }
 
+#phone-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto, "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  line-height: 0.9;
+}
+
+#clock-hours,
+#clock-minutes {
+  font-size: clamp(6rem, 3vw, 2rem);
+  font-weight: 200;
+  letter-spacing: 0.01em;
+}
+
 .app-sidebar-bottom-buttons {
   display: flex;
   align-items: center;
@@ -222,7 +237,6 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-
 }
 
 .app-notifications-tab {
@@ -233,7 +247,6 @@
   padding: 5px;
   height: fit-content;
   overflow-x: hidden;
-
 }
 
 /* Base Notification Styles */
