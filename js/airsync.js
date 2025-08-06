@@ -122,31 +122,6 @@ function updateStageIndicators() {
   });
 }
 
-// Update CTA button based on current stage
-function updateCTAButton() {
-  const ctaButton = document.getElementById("ctaButton");
-  if (!ctaButton) return;
-
-  const currentStageData = STAGES[CURRENT_STAGE];
-  const ctaData = currentStageData.cta;
-
-  // Update button content
-  ctaButton.innerHTML = `
-    <span class="material-symbols-rounded">${ctaData.icon}</span>
-    ${ctaData.text}
-  `;
-
-  // Update button link
-  ctaButton.href = ctaData.link;
-
-  // Add special styling for different stages
-  ctaButton.classList.remove("beta", "live");
-  if (CURRENT_STAGE === "beta") {
-    ctaButton.classList.add("beta");
-  } else if (CURRENT_STAGE === "live") {
-    ctaButton.classList.add("live");
-  }
-}
 
 // Initialize scroll animations
 function initializeScrollAnimations() {
