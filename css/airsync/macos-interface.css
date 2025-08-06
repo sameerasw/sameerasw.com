@@ -91,7 +91,7 @@
 /* Notification System */
 .notification-container {
   position: fixed;
-  top: 45px;
+  top: 15px;
   right: 12px;
   width: 320px;
   z-index: 9998;
@@ -99,14 +99,14 @@
 }
 
 .notification {
-  background: light-dark(rgba(255, 255, 255, 0.85), rgba(50, 50, 50, 0.85));
+  background: light-dark(rgba(255, 255, 255, 0.55), rgba(50, 50, 50, 0.55));
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border: 1px solid light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
-  border-radius: 12px;
+  border: 1px solid light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+  border-radius: 20px;
   padding: 12px 16px;
   margin-bottom: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
   transform: translateX(100%);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);

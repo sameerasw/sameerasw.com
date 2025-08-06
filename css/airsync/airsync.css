@@ -1,7 +1,7 @@
 /* AirSync Product Page Styles*/
 
 body{
-  background-image: url('https://images.unsplash.com/photo-1597423244036-ef5020e83f3c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  /* background-image: url('https://images.unsplash.com/photo-1597423244036-ef5020e83f3c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -23,15 +23,22 @@ body{
 }
 
 .hero-icon {
-  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:3vh;
+  z-index: -1;
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  animation: float 3s ease-in-out infinite;
 }
 
 .hero-title {
   font-family: "sugar-magic", sans-serif;
-  font-size: 3.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15vh;
+  z-index: -1;
+  font-size: 15rem;
   width: fit-content;
   text-align: center;
   margin: 0 auto;
@@ -40,6 +47,14 @@ body{
   @media screen and (max-width: 500px) {
     font-size: 2.5rem;
   }
+}
+
+#hero-sub-section{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2vh;
+  z-index: 1000;
 }
 
 .container p {
@@ -81,6 +96,7 @@ body{
   transition: all 0.2s ease;
   border: 2px solid var(--primary-color);
   margin-top: 2em;
+  z-index: 1000;
 }
 
 .cta-button:hover {

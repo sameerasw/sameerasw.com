@@ -103,7 +103,7 @@
         </a>
     </div>
 
-    <img src="assets/img/articles/airsync/airsync-preview.png" alt="airsync app screenshot" id="background-preview">
+    <!-- <img src="assets/img/articles/airsync/airsync-preview.png" alt="airsync app screenshot" id="background-preview"> -->
 
     <nav id="nav">
         <ul>
@@ -122,11 +122,33 @@
                 <div class="app-header app-sidebar-header">
                     <div id="app-window-controls">
                         <div class="app-window-button close"></div>
-                        <div class="app-window-button maximize"></div>
                         <div class="app-window-button minimize"></div>
+                        <div class="app-window-button maximize"></div>
                     </div>
                     <div id="app-sidebar-button"></div>
+                </div>
 
+                <div class="app-sidebar-content">
+                    <div class="app-sidebar-item app-phone-info">
+                        <span class="material-symbols-rounded">battery_android_5</span>
+                        <span class="caption">78%</span>
+                        <div class="hspacertext"></div>
+                        <span class="material-symbols-rounded">volume_up</span>
+                        <span class="caption">23%</span>
+                    </div>
+
+                    <div id="app-phone" class="app-sidebar-item"></div>
+
+                    <div class="app-sidebar-bottom-buttons">
+                        <div class="app-sidebar-item app-phone-info">
+                            <span class="material-symbols-rounded">mobile</span>
+                            <span class="caption">Mirror</span>
+                        </div>
+                        <div class="app-sidebar-item app-phone-info">
+                            <span class="material-symbols-rounded">close</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div id="app-content">
@@ -134,15 +156,47 @@
                     <div id="app-title">Sameera's Pixel</div>
                     <div id="app-tab-bar">
                         <div class="app-toolbar-button app-notifications">
-
                         </div>
                         <div class="app-toolbar-button app-settings">
-
                         </div>
                     </div>
                     <div class="toolbar-item app-toolbar-group">
                         <div class="app-toolbar-button app-clear-button"></div>
+                    </div>
+                </div>
 
+                <div id="app-main">
+                    <div class="app-notifications-tab">
+                        <!-- notification cards -->
+                        <div class="app-notification">
+                            <div class="notification-icon">
+                                <img src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/f359f897f48a4cfe4e782f9edd11e366_low_res_WhatsApp_Liquid_Glass.png"
+                                    alt="WhatsApp Icon">
+                            </div>
+                            <div class="notification-content">
+                                <span class="notification-title">WhatsApp</span>
+                                <span class="notification-message">New message from John Doe</span>
+                                <div class="notification-actions">
+                                    <button class="notification-action-button">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="app-notification">
+                            <div class="notification-icon">
+                                <img src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/48266ece849675f3025f84efcbebf03c_low_res_Twitter.png"
+                                    alt="Twitter Icon">
+                            </div>
+                            <div class="notification-content">
+                                <div class="app-notif-content">
+                                    <span class="notification-title">Twitter</span>
+                                    <span class="notification-message">New mention from @sameerasw</span>
+                                </div>
+                                <div class="notification-actions">
+                                    <button class="notification-action-button">View</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,20 +212,23 @@
                     <img src="assets/img/articles/airsync/airsync-logo.png" alt="airsync logo" class="airsync-logo">
                 </div>
                 <h1 class="hero-title">AirSync</h1>
-                <p class="hero-subtitle">The forbidden Android + macOS continuity</p>
-                <!-- <p class="hero-description">
+
+                <div id="hero-sub-section">
+                    <p class="hero-subtitle">The forbidden Android + macOS continuity</p>
+                    <!-- <p class="hero-description">
                     Sync notifications, share clipboard, control media, and more across your devices on local network.
                 </p> -->
 
-                <!-- CTA Button -->
-                <a href="https://t.me/tidwib" class="cta-button" id="ctaButton">
-                    <span class="material-symbols-rounded">schedule</span>
-                    Coming Soon - See Progress
-                </a>
-                <a href="https://github.com/sameerasw/airsync-android/releases/latest" class="cta-button">
-                    <span class="material-symbols-rounded">download</span>
-                    Get the Android App
-                </a>
+                    <!-- CTA Button -->
+                    <a href="https://t.me/tidwib" class="cta-button" id="ctaButton">
+                        <span class="material-symbols-rounded">schedule</span>
+                        Coming Soon - See Progress
+                    </a>
+                    <a href="https://github.com/sameerasw/airsync-android/releases/latest" class="cta-button">
+                        <span class="material-symbols-rounded">download</span>
+                        Get the Android App
+                    </a>
+                </div>
             </div>
         </section>
 
