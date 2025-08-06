@@ -549,23 +549,6 @@
       &:hover .notification-dismiss {
         opacity: 1;
       }
-
-      /* Notification type styles */
-      &.notification-message {
-        border-left: 3px solid #4caf50;
-      }
-
-      &.notification-call {
-        border-left: 3px solid #2196f3;
-      }
-
-      &.notification-social {
-        border-left: 3px solid #ff9800;
-      }
-
-      &.notification-system {
-        border-left: 3px solid #9c27b0;
-      }
     }
 
     /* Empty state */
