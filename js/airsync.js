@@ -91,8 +91,8 @@ function initializeProgress() {
   // Update stage indicators
   updateStageIndicators();
 
-  // Update CTA button
-  updateCTAButton();
+  // CTA buttons removed - now using interactive notifications
+  // updateCTAButton();
 
   // Add scroll animations
   initializeScrollAnimations();
