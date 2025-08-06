@@ -6,11 +6,13 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hero Section */
 .hero {
-  min-height: 60vh;
+  /* min-height: 60vh; */
   display: flex;
   align-items: center;
   justify-content: center;
