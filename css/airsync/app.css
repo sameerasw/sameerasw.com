@@ -33,6 +33,12 @@
   outline: 2px solid var(--border);
   font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
+
+
+    @media screen and (max-width: 600px) {
+        top: 45%;
+        max-height: 50vh;
+    }
 }
 
 #app-ui {
@@ -46,6 +52,7 @@
   backdrop-filter: blur(30px);
   display: flex;
   overflow: hidden;
+
 }
 
 /* Sidebar */
@@ -56,6 +63,10 @@
   backdrop-filter: blur(200px);
   border-radius: 15px;
   margin: 8px 0 8px 8px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 #app-content {
@@ -211,6 +222,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+
 }
 
 .app-notifications-tab {
@@ -219,7 +231,9 @@
   gap: 8px;
   overflow-y: auto;
   padding: 5px;
+  height: fit-content;
   overflow-x: hidden;
+
 }
 
 /* Base Notification Styles */
