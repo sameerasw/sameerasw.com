@@ -1,0 +1,147 @@
+#app{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#app-ui{
+    width: 850px;
+    height: 600px;
+    margin: 0 auto;
+    background: rgba(0,0,0, 0.4);
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#app-sidebar{
+    width: 250px;
+    height: calc(100% - 16px);
+    background: rgba(0,0,0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    /* padding: 20px; */
+    margin: 8px;
+    /* box-sizing: border-box;
+    display: flex;
+    flex-direction: column; */
+}
+
+#app-content{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header{
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 14px;
+
+    &.app-sidebar-header{
+        height: 30px;
+    padding: 5px;
+    }
+
+    #app-window-controls{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+
+        .app-window-button{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &.close {
+                background-color: #ff5f56;
+            }
+
+            &.minimize {
+                background-color: #ffbd2e;
+            }
+
+            &.maximize {
+                background-color: #27c93f;
+            }
+        }
+    }
+
+    #app-sidebar-button{
+        background-image: url("https://img.icons8.com/fluency-systems-regular/48/show-left-side-panel.png");
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        filter: invert(1);
+    }
+
+    #app-tab-bar, .app-toolbar-group{
+        background-color: rgba(0,0,0, 0.1);
+        outline: 1px solid rgba(255, 255, 255, 0.1);
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 7px;
+        border-radius: 20px;
+
+        .app-toolbar-button {
+            width: 24px;
+            height: 24px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            filter: invert(1);
+        }
+
+        .app-notifications{
+            background-image: url("https://img.icons8.com/sf-regular/50/appointment-reminders.png");
+        }
+
+        .app-settings{
+            background-image: url("https://img.icons8.com/sf-regular/50/settings.png");
+        }
+
+        .app-clear-button{
+            background-image: url("https://img.icons8.com/sf-regular/50/wind.png");
+        }
+    }
+
+    #app-tab-bar{
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        gap: 10px;
+
+        .app-tab {
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}

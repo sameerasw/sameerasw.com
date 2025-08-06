@@ -58,6 +58,7 @@
 <link rel="stylesheet" href="css/article.css">
 <link rel="stylesheet" href="css/airsync/airsync.css">
 <link rel="stylesheet" href="css/airsync/macos-interface.css">
+<link rel="stylesheet" href="css/airsync/app.css">
 <link rel="stylesheet" href="css/common/no-cursor.css">
 <!-- <link rel="stylesheet" href="css/arc.css"> -->
 <link rel="stylesheet"
@@ -84,36 +85,9 @@
 
     <!-- macOS Style Layer -->
     <div class="macos-layer">
-        <!-- macOS Menubar -->
-        <div class="macos-menubar">
-            <div class="menubar-left">
-                <div class="menu-item apple-logo">
-                    <span class="material-symbols-rounded">phone_android</span>
-                </div>
-                <div class="menu-item">AirSync</div>
-                <div class="menu-item">File</div>
-                <div class="menu-item">Edit</div>
-                <div class="menu-item">View</div>
-                <div class="menu-item">Window</div>
-                <div class="menu-item">Help</div>
-            </div>
-            <div class="menubar-right">
-                <div class="menu-item">
-                    <span class="material-symbols-rounded">wifi</span>
-                </div>
-                <div class="menu-item">
-                    <span class="material-symbols-rounded">bluetooth</span>
-                </div>
-                <div class="menu-item">
-                    <span class="material-symbols-rounded">battery_full</span>
-                </div>
-                <div class="menu-item time-display" id="menubar-time">12:00</div>
-            </div>
-        </div>
 
         <!-- Notification Container -->
         <div class="notification-container" id="notification-container">
-            <!-- Notifications will be dynamically added here -->
         </div>
     </div>
 
@@ -142,6 +116,40 @@
         </ul>
     </nav>
 
+    <div id="app">
+        <div id="app-ui">
+            <div id="app-sidebar">
+                <div class="app-header app-sidebar-header">
+                    <div id="app-window-controls">
+                        <div class="app-window-button close"></div>
+                        <div class="app-window-button maximize"></div>
+                        <div class="app-window-button minimize"></div>
+                    </div>
+                    <div id="app-sidebar-button"></div>
+
+                </div>
+            </div>
+            <div id="app-content">
+                <div class="app-header">
+                    <div id="app-title">Sameera's Pixel</div>
+                    <div id="app-tab-bar">
+                        <div class="app-toolbar-button app-notifications">
+
+                        </div>
+                        <div class="app-toolbar-button app-settings">
+
+                        </div>
+                    </div>
+                    <div class="toolbar-item app-toolbar-group">
+                        <div class="app-toolbar-button app-clear-button"></div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
@@ -167,134 +175,7 @@
             </div>
         </section>
 
-        <!-- Progress Bar Section -->
-        <section class="progress-section">
-            <h2>Development Progress</h2>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="progress-stages">
-                    <div class="stage active" data-stage="research">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">search</span>
-                        </div>
-                        <span class="stage-label">Research</span>
-                    </div>
-                    <div class="stage active current" data-stage="draft">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">edit</span>
-                        </div>
-                        <span class="stage-label">Draft</span>
-                    </div>
-                    <div class="stage" data-stage="learn">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">school</span>
-                        </div>
-                        <span class="stage-label">Learn</span>
-                    </div>
-                    <div class="stage" data-stage="build">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">build</span>
-                        </div>
-                        <span class="stage-label">Build</span>
-                    </div>
-                    <div class="stage" data-stage="test">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">bug_report</span>
-                        </div>
-                        <span class="stage-label">Test</span>
-                    </div>
-                    <div class="stage" data-stage="beta">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">preview</span>
-                        </div>
-                        <span class="stage-label">Beta</span>
-                    </div>
-                    <div class="stage" data-stage="live">
-                        <div class="stage-icon">
-                            <span class="material-symbols-rounded">rocket_launch</span>
-                        </div>
-                        <span class="stage-label">Live</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">notifications</span>
-                    </div>
-                    <h3>Notifications</h3>
-                    <p>Receive Android notifications directly on your macOS device</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">content_copy</span>
-                    </div>
-                    <h3>Clipboard Sync</h3>
-                    <p>Share clipboard content seamlessly between devices</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">play_circle</span>
-                    </div>
-                    <h3>Media Control</h3>
-                    <p>Control media playback from your macOS device</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">info</span>
-                    </div>
-                    <h3>Device Info</h3>
-                    <p>View detailed information about your connected devices</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">share</span>
-                    </div>
-                    <h3>Link Sharing</h3>
-                    <p>Send links and files between devices instantly</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-rounded">security</span>
-                    </div>
-                    <h3>Local Network</h3>
-                    <p>All communication happens on your local network</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack Section -->
-        <section class="tech-stack">
-            <h2>Built With</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <span class="material-symbols-rounded">laptop_mac</span>
-                    </div>
-                    <h3>SwiftUI</h3>
-                    <p>Native macOS app built with SwiftUI</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <span class="material-symbols-rounded">android</span>
-                    </div>
-                    <h3>Jetpack Compose</h3>
-                    <p>Modern Android UI with Jetpack Compose</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>Follow development progress on <a href="https://t.me/tidwib" target="_blank">Telegram</a></p>
-        </footer>
     </div>
 
     <script src="js/script-article.js"></script>
