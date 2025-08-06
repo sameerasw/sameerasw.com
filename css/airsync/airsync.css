@@ -38,9 +38,10 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 15vh;
+  top: 10vh;
   z-index: -1;
-  font-size: 15rem;
+  font-size: 20vw;
+  line-height: 0.9;
   width: fit-content;
   text-align: center;
   margin: 0 auto;
@@ -67,9 +68,10 @@ body {
 }
 
 .hero-subtitle {
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center !important;
   font-size: 1.2rem;
-  color: var(--primary-color);
+  color: var(--blue);
   margin: 1.5rem auto 1rem auto;
   font-weight: 400;
   opacity: 0.9;

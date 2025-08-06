@@ -1,339 +1,27 @@
-/* CSS Custom Properties for Light-Dark Theme Support */
 :root {
-  /* Base Colors */
-  --app-outline: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3));
-  --app-background: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.4));
-  --app-shadow: light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
-  --app-border: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.3));
+  --bg-primary: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.4));
+  --bg-secondary: light-dark(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  --border: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+  --text: light-dark(#000, #fff);
+  --green: light-dark(#4affbd, #6bffd1);
+  --blue: light-dark(#409cff, #7bb3f0);
+  --gray: light-dark(#999, #ccc);
+  --gold: light-dark(#daa520, #f4d03f);
+  --shadow: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  --hover: light-dark(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
 
-  /* Sidebar Colors */
-  --sidebar-background: light-dark(
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.1)
-  );
-  --sidebar-border: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
-  --sidebar-item-background: light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-  --sidebar-item-outline: light-dark(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.2)
-  );
-
-  /* Window Controls */
-  --window-button-hover: light-dark(
-    rgba(0, 0, 0, 0.1),
-    rgba(255, 255, 255, 0.2)
-  );
-
-  /* Toolbar Colors */
-  --toolbar-background: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
-  --toolbar-outline: light-dark(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.2)
-  );
-  --toolbar-icon-filter: light-dark(invert(1), invert(0));
-
-  /* Tab Colors */
-  --tab-text: light-dark(white, rgba(255, 255, 255, 0.9));
-  --tab-hover: light-dark(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.15));
-
-  /* Notification Colors */
-  --notification-background: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  --notification-border: light-dark(
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.2)
-  );
-  --notification-text: light-dark(white, rgba(255, 255, 255, 0.9));
-  --notification-hover-bg: light-dark(
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.1)
-  );
-  --notification-shadow: light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
-
-  /* Notification Icon Colors */
-  --notification-icon-bg: light-dark(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.08)
-  );
-  --notification-icon-color: light-dark(
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.85)
-  );
-
-  /* Notification Content Colors */
-  --notification-title-color: light-dark(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.95)
-  );
-  --notification-message-color: light-dark(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.8)
-  );
-  --notification-time-color: light-dark(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.6)
-  );
-
-  /* Action Button Colors */
-  --action-button-bg: light-dark(
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.1)
-  );
-  --action-button-border: light-dark(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.25)
-  );
-  --action-button-text: light-dark(white, rgba(255, 255, 255, 0.9));
-  --action-button-hover: light-dark(
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.2)
-  );
-
-  /* Dismiss Button Colors */
-  --dismiss-button-bg: light-dark(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.08)
-  );
-  --dismiss-button-hover: light-dark(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.15)
-  );
-  --dismiss-button-icon: light-dark(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.8)
-  );
-
-  /* Empty State */
-  --empty-state-text: light-dark(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.6)
-  );
-
-  /* Scrollbar Colors */
-  --scrollbar-track: light-dark(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  --scrollbar-thumb: light-dark(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.4)
-  );
-  --scrollbar-thumb-hover: light-dark(
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.5)
-  );
-
-  /* CTA Green Colors */
-  --cta-green-bg-1: light-dark(
-    rgba(74, 255, 189, 0.15),
-    rgba(74, 255, 189, 0.12)
-  );
-  --cta-green-bg-2: light-dark(
-    rgba(34, 102, 85, 0.15),
-    rgba(34, 102, 85, 0.12)
-  );
-  --cta-green-border: light-dark(
-    rgba(74, 255, 189, 0.3),
-    rgba(74, 255, 189, 0.4)
-  );
-  --cta-green-shimmer: light-dark(
-    rgba(74, 255, 189, 0.1),
-    rgba(74, 255, 189, 0.08)
-  );
-  --cta-green-hover-bg-1: light-dark(
-    rgba(74, 255, 189, 0.25),
-    rgba(74, 255, 189, 0.2)
-  );
-  --cta-green-hover-bg-2: light-dark(
-    rgba(34, 102, 85, 0.25),
-    rgba(34, 102, 85, 0.2)
-  );
-  --cta-green-hover-border: light-dark(
-    rgba(74, 255, 189, 0.5),
-    rgba(74, 255, 189, 0.6)
-  );
-  --cta-green-shadow: light-dark(
-    rgba(74, 255, 189, 0.2),
-    rgba(74, 255, 189, 0.15)
-  );
-  --cta-green-icon-bg: light-dark(
-    rgba(74, 255, 189, 0.2),
-    rgba(74, 255, 189, 0.15)
-  );
-  --cta-green-icon-hover: light-dark(
-    rgba(74, 255, 189, 0.3),
-    rgba(74, 255, 189, 0.4)
-  );
-  --cta-green-text: light-dark(#4affbd, #6bffd1);
-  --cta-green-button-text: light-dark(white, rgba(255, 255, 255, 0.95));
-  --cta-green-message: light-dark(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.95)
-  );
-
-  /* CTA Blue (Mac) Colors */
-  --cta-blue-bg-1: light-dark(
-    rgba(64, 156, 255, 0.15),
-    rgba(64, 156, 255, 0.12)
-  );
-  --cta-blue-bg-2: light-dark(rgba(30, 90, 200, 0.15), rgba(30, 90, 200, 0.12));
-  --cta-blue-border: light-dark(
-    rgba(64, 156, 255, 0.3),
-    rgba(64, 156, 255, 0.4)
-  );
-  --cta-blue-shimmer: light-dark(
-    rgba(64, 156, 255, 0.1),
-    rgba(64, 156, 255, 0.08)
-  );
-  --cta-blue-hover-bg-1: light-dark(
-    rgba(64, 156, 255, 0.25),
-    rgba(64, 156, 255, 0.2)
-  );
-  --cta-blue-hover-bg-2: light-dark(
-    rgba(30, 90, 200, 0.25),
-    rgba(30, 90, 200, 0.2)
-  );
-  --cta-blue-hover-border: light-dark(
-    rgba(64, 156, 255, 0.5),
-    rgba(64, 156, 255, 0.6)
-  );
-  --cta-blue-shadow: light-dark(
-    rgba(64, 156, 255, 0.2),
-    rgba(64, 156, 255, 0.15)
-  );
-  --cta-blue-icon-bg: light-dark(
-    rgba(64, 156, 255, 0.2),
-    rgba(64, 156, 255, 0.15)
-  );
-  --cta-blue-icon-hover: light-dark(
-    rgba(64, 156, 255, 0.3),
-    rgba(64, 156, 255, 0.4)
-  );
-  --cta-blue-text: light-dark(#409cff, #7bb3f0);
-
-  /* CTA Gray (Development) Colors */
-  --cta-gray-bg-1: light-dark(
-    rgba(180, 180, 180, 0.12),
-    rgba(180, 180, 180, 0.08)
-  );
-  --cta-gray-bg-2: light-dark(
-    rgba(120, 120, 120, 0.12),
-    rgba(120, 120, 120, 0.08)
-  );
-  --cta-gray-border: light-dark(
-    rgba(180, 180, 180, 0.25),
-    rgba(180, 180, 180, 0.3)
-  );
-  --cta-gray-shimmer: light-dark(
-    rgba(180, 180, 180, 0.08),
-    rgba(180, 180, 180, 0.06)
-  );
-  --cta-gray-hover-bg-1: light-dark(
-    rgba(180, 180, 180, 0.18),
-    rgba(180, 180, 180, 0.15)
-  );
-  --cta-gray-hover-bg-2: light-dark(
-    rgba(120, 120, 120, 0.18),
-    rgba(120, 120, 120, 0.15)
-  );
-  --cta-gray-hover-border: light-dark(
-    rgba(180, 180, 180, 0.4),
-    rgba(180, 180, 180, 0.5)
-  );
-  --cta-gray-shadow: light-dark(
-    rgba(180, 180, 180, 0.15),
-    rgba(180, 180, 180, 0.1)
-  );
-  --cta-gray-icon-bg: light-dark(
-    rgba(180, 180, 180, 0.15),
-    rgba(180, 180, 180, 0.12)
-  );
-  --cta-gray-icon-hover: light-dark(
-    rgba(180, 180, 180, 0.25),
-    rgba(180, 180, 180, 0.3)
-  );
-  --cta-gray-text: light-dark(#b4b4b4, #d0d0d0);
-
-  /* CTA Gold (Premium) Colors */
-  --cta-gold-bg-1: light-dark(
-    rgba(218, 165, 32, 0.08),
-    rgba(218, 165, 32, 0.06)
-  );
-  --cta-gold-bg-2: light-dark(
-    rgba(184, 134, 11, 0.08),
-    rgba(184, 134, 11, 0.06)
-  );
-  --cta-gold-border: light-dark(
-    rgba(218, 165, 32, 0.2),
-    rgba(218, 165, 32, 0.3)
-  );
-  --cta-gold-shimmer: light-dark(
-    rgba(218, 165, 32, 0.06),
-    rgba(218, 165, 32, 0.04)
-  );
-  --cta-gold-hover-bg-1: light-dark(
-    rgba(218, 165, 32, 0.12),
-    rgba(218, 165, 32, 0.1)
-  );
-  --cta-gold-hover-bg-2: light-dark(
-    rgba(184, 134, 11, 0.12),
-    rgba(184, 134, 11, 0.1)
-  );
-  --cta-gold-hover-border: light-dark(
-    rgba(218, 165, 32, 0.3),
-    rgba(218, 165, 32, 0.4)
-  );
-  --cta-gold-shadow: light-dark(
-    rgba(218, 165, 32, 0.12),
-    rgba(218, 165, 32, 0.08)
-  );
-  --cta-gold-icon-bg: light-dark(
-    rgba(218, 165, 32, 0.12),
-    rgba(218, 165, 32, 0.1)
-  );
-  --cta-gold-icon-hover: light-dark(
-    rgba(218, 165, 32, 0.2),
-    rgba(218, 165, 32, 0.25)
-  );
-  --cta-gold-text: light-dark(#daa520, #f4d03f);
-  --cta-gold-message: light-dark(
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.9)
-  );
-
-  /* Animation Colors */
-  --animation-shadow: light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
-  --animation-green-glow-strong: light-dark(
-    rgba(74, 255, 189, 0.3),
-    rgba(74, 255, 189, 0.4)
-  );
-  --animation-green-glow-weak: light-dark(
-    rgba(74, 255, 189, 0.1),
-    rgba(74, 255, 189, 0.08)
-  );
-  --animation-blue-glow-strong: light-dark(
-    rgba(64, 156, 255, 0.3),
-    rgba(64, 156, 255, 0.4)
-  );
-  --animation-blue-glow-weak: light-dark(
-    rgba(64, 156, 255, 0.1),
-    rgba(64, 156, 255, 0.08)
-  );
-  --animation-gray-glow-strong: light-dark(
-    rgba(180, 180, 180, 0.25),
-    rgba(180, 180, 180, 0.3)
-  );
-  --animation-gray-glow-weak: light-dark(
-    rgba(180, 180, 180, 0.1),
-    rgba(180, 180, 180, 0.08)
-  );
-  --animation-gold-glow-strong: light-dark(
-    rgba(218, 165, 32, 0.2),
-    rgba(218, 165, 32, 0.25)
-  );
-  --animation-gold-glow-weak: light-dark(
-    rgba(218, 165, 32, 0.08),
-    rgba(218, 165, 32, 0.06)
-  );
+@media (prefers-color-scheme: dark) {
+  .app-toolbar-button,
+  #app-sidebar-button {
+    filter: invert(1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .app-toolbar-button,
+  #app-sidebar-button {
+    filter: invert(0);
+  }
 }
 
 #app {
@@ -342,211 +30,180 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 25px;
-  outline: 2px solid var(--app-outline);
+  outline: 2px solid var(--border);
   font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 }
 
 #app-ui {
   width: 850px;
+  max-width: 95vw;
   height: fit-content;
-  margin: 0 auto;
-  background: var(--app-background);
+  background: var(--bg-primary);
   border-radius: 25px;
-  box-shadow: 0 8px 40px var(--app-shadow);
-  outline: 1px solid var(--app-border);
+  box-shadow: 0 8px 40px var(--shadow);
+  outline: 1px solid var(--border);
   backdrop-filter: blur(30px);
   display: flex;
-  flex-direction: row;
   overflow: hidden;
 }
 
+/* Sidebar */
 #app-sidebar {
   width: 250px;
-  height: fit-content;
-  background: var(--sidebar-background);
-  border: 1px solid var(--sidebar-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   backdrop-filter: blur(200px);
   border-radius: 15px;
-  margin: 8px 0 8px 8px;
-}
-
-#app-sidebar {
-  width: 250px;
-  height: fit-content;
-  background: light-dark(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  border: 1px solid light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
-  backdrop-filter: blur(200px);
-  border-radius: 15px;
-  margin: 8px 0 8px 8px;
   margin: 8px 0 8px 8px;
 }
 
 #app-content {
   flex: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
+
+/*  Header & Toolbar */
 .app-header {
   height: 46px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 14px;
+  padding: 14px;
+}
 
-  &.app-sidebar-header {
-    height: 30px;
-    padding: 5px;
-  }
+.app-sidebar-header {
+  height: 30px;
+  padding: 5px;
+}
 
-  #app-window-controls {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
+/* Window Controls */
+#app-window-controls {
+  display: flex;
+  gap: 4px;
+}
 
-    .app-window-button {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      margin: 0 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+.app-window-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-      &:hover {
-        background-color: var(--window-button-hover);
-      }
+.app-window-button:hover {
+  background-color: var(--hover);
+}
 
-      &.close {
-        background-color: #ff5f56;
-      }
+.close {
+  background-color: #ff5f56;
+}
+.minimize {
+  background-color: #ffbd2e;
+}
+.maximize {
+  background-color: #27c93f;
+}
 
-      &.minimize {
-        background-color: #ffbd2e;
-      }
+/* Toolbar */
+#app-tab-bar,
+.app-toolbar-group {
+  background-color: var(--bg-secondary);
+  outline: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  border-radius: 20px;
+  gap: 10px;
+}
 
-      &.maximize {
-        background-color: #27c93f;
-      }
-    }
-  }
+.app-toolbar-button {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+/* Icons  */
+.app-notifications {
+  background-image: url("https://img.icons8.com/sf-regular/50/appointment-reminders.png");
+}
+.app-settings {
+  background-image: url("https://img.icons8.com/sf-regular/50/settings.png");
+}
+.app-clear-button {
+  background-image: url("https://img.icons8.com/sf-regular/50/wind.png");
+}
+#app-sidebar-button {
+  background-image: url("https://img.icons8.com/fluency-systems-regular/48/show-left-side-panel.png");
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* icon filters for theme */
+@media (prefers-color-scheme: dark) {
+  .app-toolbar-button,
   #app-sidebar-button {
-    background-image: url("https://img.icons8.com/fluency-systems-regular/48/show-left-side-panel.png");
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    filter: invert();
-  }
-
-  #app-tab-bar,
-  .app-toolbar-group {
-    background-color: var(--toolbar-background);
-    outline: 1px solid var(--toolbar-outline);
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    padding: 7px;
-    border-radius: 20px;
-
-    .app-toolbar-button {
-      width: 24px;
-      height: 24px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      filter: invert(1);
-    }
-
-    .app-notifications {
-      background-image: url("https://img.icons8.com/sf-regular/50/appointment-reminders.png");
-    }
-
-    .app-settings {
-      background-image: url("https://img.icons8.com/sf-regular/50/settings.png");
-    }
-
-    .app-clear-button {
-      background-image: url("https://img.icons8.com/sf-regular/50/wind.png");
-    }
-  }
-
-  #app-tab-bar {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    gap: 10px;
-
-    .app-tab {
-      padding: 5px 10px;
-      border-radius: 20px;
-      color: var(--tab-text);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: var(--tab-hover);
-      }
-    }
+    filter: invert(1);
   }
 }
 
-#app-sidebar {
-  .app-sidebar-item {
-    margin: 20px auto;
-    width: fit-content;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    gap: 5px;
-
-    .hspacertext {
-      width: 10px;
-    }
-
-    background-color: var(--sidebar-item-background);
-    outline: 1px solid var(--sidebar-item-outline);
-    border-radius: 12px;
+@media (prefers-color-scheme: light) {
+  .app-toolbar-button,
+  #app-sidebar-button {
+    filter: invert(0);
   }
+}
 
-  #app-phone {
-    background-color: var(--sidebar-item-background);
-    outline: 1px solid var(--sidebar-item-outline);
-    border-radius: 25px;
-    margin: 10%;
-    width: 70%;
-    aspect-ratio: 9/21;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.app-sidebar-item {
+  margin: 20px auto;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--bg-secondary);
+  outline: 1px solid var(--border);
+  border-radius: 12px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
 
-  .app-sidebar-bottom-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    gap: 10px;
+#app-phone {
+  background-color: var(--bg-secondary);
+  outline: 1px solid var(--border);
+  border-radius: 25px;
+  margin: 10%;
+  width: 70%;
+  aspect-ratio: 9/21;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .app-sidebar-item {
-      width: fit-content;
-      height: 25px;
-      border-radius: 25px;
-      padding: 5px;
-      margin: 0;
-      transition: transform 0.3s ease;
-    }
-  }
+.app-sidebar-bottom-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.app-sidebar-bottom-buttons .app-sidebar-item {
+  height: 25px;
+  border-radius: 25px;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.hspacertext {
+  width: 10px;
 }
 
 #app-main {
@@ -554,494 +211,232 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-
-  .app-notifications-tab {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    overflow-y: auto;
-    padding: 5px;
-    overflow-x: hidden;
-
-    .app-notification {
-      background-color: var(--notification-background);
-      border: 1px solid var(--notification-border);
-      backdrop-filter: blur(200px);
-      border-radius: 20px;
-      padding: 12px;
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-      transition: all 0.2s ease;
-      text-align: left;
-      color: var(--notification-text);
-      position: relative;
-      height: fit-content;
-
-      &:hover {
-        background-color: var(--notification-hover-bg);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px var(--notification-shadow);
-      }
-
-      /* CTA Notification Cards */
-      &.cta-notification {
-        background: linear-gradient(
-          135deg,
-          var(--cta-green-bg-1),
-          var(--cta-green-bg-2)
-        );
-        border: 2px solid var(--cta-green-border);
-        text-decoration: none;
-        color: inherit;
-        animation: ctaPulse 3s ease-in-out infinite;
-        position: relative;
-        height: fit-content;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            var(--cta-green-shimmer),
-            transparent
-          );
-          transition: left 0.5s ease;
-        }
-
-        &:hover {
-          background: linear-gradient(
-            135deg,
-            var(--cta-green-hover-bg-1),
-            var(--cta-green-hover-bg-2)
-          );
-          border-color: var(--cta-green-hover-border);
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px var(--cta-green-shadow);
-
-          &::before {
-            left: 100%;
-          }
-
-          .notification-icon {
-            transform: scale(1.1);
-            background: var(--cta-green-icon-hover);
-          }
-
-          .notification-action-button {
-            background: var(--cta-green-icon-hover);
-            color: var(--cta-green-button-text);
-            transform: scale(1.05);
-          }
-        }
-
-        .notification-icon {
-          background: var(--cta-green-icon-bg);
-          border: 1px solid var(--cta-green-border);
-          transition: all 0.3s ease;
-
-          .material-symbols-rounded {
-            color: var(--cta-green-text);
-            font-size: 24px;
-          }
-        }
-
-        .notification-title {
-          color: var(--cta-green-text);
-          font-weight: 700;
-        }
-
-        .notification-message {
-          color: var(--cta-green-message);
-        }
-
-        .notification-action-button {
-          background: var(--cta-green-icon-bg);
-          border: 1px solid var(--cta-green-border);
-          color: var(--cta-green-text);
-          font-weight: 600;
-          transition: all 0.3s ease;
-          pointer-events: none;
-        }
-
-        /* Mac App */
-        &.mac-app {
-          background: linear-gradient(
-            135deg,
-            var(--cta-blue-bg-1),
-            var(--cta-blue-bg-2)
-          );
-          border: 2px solid var(--cta-blue-border);
-          animation: ctaPulseMac 3s ease-in-out infinite;
-
-          &::before {
-            background: linear-gradient(
-              90deg,
-              transparent,
-              var(--cta-blue-shimmer),
-              transparent
-            );
-          }
-
-          &:hover {
-            background: linear-gradient(
-              135deg,
-              var(--cta-blue-hover-bg-1),
-              var(--cta-blue-hover-bg-2)
-            );
-            border-color: var(--cta-blue-hover-border);
-            box-shadow: 0 8px 25px var(--cta-blue-shadow);
-
-            .notification-icon {
-              background: var(--cta-blue-icon-hover);
-            }
-
-            .notification-action-button {
-              background: var(--cta-blue-icon-hover);
-            }
-          }
-
-          .notification-icon {
-            background: var(--cta-blue-icon-bg);
-            border: 1px solid var(--cta-blue-border);
-
-            .material-symbols-rounded {
-              color: var(--cta-blue-text);
-            }
-          }
-
-          .notification-title {
-            color: var(--cta-blue-text);
-          }
-
-          .notification-action-button {
-            background: var(--cta-blue-icon-bg);
-            border: 1px solid var(--cta-blue-border);
-            color: var(--cta-blue-text);
-          }
-        }
-
-        /* Development */
-        &.development {
-          background: linear-gradient(
-            135deg,
-            var(--cta-gray-bg-1),
-            var(--cta-gray-bg-2)
-          );
-          border: 2px solid var(--cta-gray-border);
-          animation: ctaPulseDev 3s ease-in-out infinite;
-
-          &::before {
-            background: linear-gradient(
-              90deg,
-              transparent,
-              var(--cta-gray-shimmer),
-              transparent
-            );
-          }
-
-          &:hover {
-            background: linear-gradient(
-              135deg,
-              var(--cta-gray-hover-bg-1),
-              var(--cta-gray-hover-bg-2)
-            );
-            border-color: var(--cta-gray-hover-border);
-            box-shadow: 0 8px 25px var(--cta-gray-shadow);
-
-            .notification-icon {
-              background: var(--cta-gray-icon-hover);
-            }
-
-            .notification-action-button {
-              background: var(--cta-gray-icon-hover);
-            }
-          }
-
-          .notification-icon {
-            background: var(--cta-gray-icon-bg);
-            border: 1px solid var(--cta-gray-border);
-
-            .material-symbols-rounded {
-              color: var(--cta-gray-text);
-            }
-          }
-
-          .notification-title {
-            color: var(--cta-gray-text);
-          }
-
-          .notification-action-button {
-            background: var(--cta-gray-icon-bg);
-            border: 1px solid var(--cta-gray-border);
-            color: var(--cta-gray-text);
-          }
-        }
-
-        /* Premium */
-        &.premium {
-          background: linear-gradient(
-            135deg,
-            var(--cta-gold-bg-1),
-            var(--cta-gold-bg-2)
-          );
-          border: 2px solid var(--cta-gold-border);
-          animation: ctaPulsePremium 3s ease-in-out infinite;
-
-          &::before {
-            background: linear-gradient(
-              90deg,
-              transparent,
-              var(--cta-gold-shimmer),
-              transparent
-            );
-          }
-
-          &:hover {
-            background: linear-gradient(
-              135deg,
-              var(--cta-gold-hover-bg-1),
-              var(--cta-gold-hover-bg-2)
-            );
-            border-color: var(--cta-gold-hover-border);
-            box-shadow: 0 8px 25px var(--cta-gold-shadow);
-
-            .notification-icon {
-              background: var(--cta-gold-icon-hover);
-            }
-
-            .notification-action-button {
-              background: var(--cta-gold-icon-hover);
-            }
-          }
-
-          .notification-icon {
-            background: var(--cta-gold-icon-bg);
-            border: 1px solid var(--cta-gold-border);
-
-            .material-symbols-rounded {
-              color: var(--cta-gold-text);
-              opacity: 0.8;
-            }
-          }
-
-          .notification-title {
-            color: var(--cta-gold-text);
-            opacity: 0.9;
-          }
-
-          .notification-message {
-            color: var(--cta-gold-message);
-          }
-
-          .notification-action-button {
-            background: var(--cta-gold-icon-bg);
-            border: 1px solid var(--cta-gold-border);
-            color: var(--cta-gold-text);
-            opacity: 0.9;
-          }
-        }
-      }
-
-      .notification-icon {
-        flex-shrink: 0;
-        width: 32px;
-        height: 32px;
-        border-radius: 15px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--notification-icon-bg);
-
-        img {
-          width: 28px;
-          height: 28px;
-          border-radius: 12px;
-          object-fit: cover;
-        }
-
-        .material-symbols-rounded {
-          font-size: 20px;
-          color: var(--notification-icon-color);
-        }
-      }
-
-      .notification-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        min-width: 0;
-        height: fit-content;
-
-        .notification-title {
-          font-weight: 600;
-          font-size: 13px;
-          color: var(--notification-title-color);
-          line-height: 1.2;
-        }
-
-        .notification-message {
-          font-size: 12px;
-          color: var(--notification-message-color);
-          line-height: 1.3;
-          height: fit-content;
-          word-wrap: break-word;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          line-clamp: 2;
-          -webkit-box-orient: vertical;
-        }
-
-        .notification-time {
-          font-size: 10px;
-          color: var(--notification-time-color);
-          margin-top: 2px;
-        }
-
-        .notification-actions {
-          display: flex;
-          gap: 6px;
-          margin-top: 6px;
-          justify-content: flex-end;
-          flex-wrap: wrap-reverse;
-
-          .notification-action-button {
-            background-color: var(--action-button-bg);
-            border: 1px solid var(--action-button-border);
-            color: var(--action-button-text);
-            padding: 4px 8px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 11px;
-            font-weight: 500;
-
-            &:hover {
-              background-color: var(--action-button-hover);
-              transform: scale(1.02);
-            }
-
-            &:active {
-              transform: scale(0.98);
-            }
-          }
-        }
-      }
-
-      .notification-dismiss {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: var(--dismiss-button-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        transition: all 0.2s ease;
-
-        &:hover {
-          background: var(--dismiss-button-hover);
-        }
-
-        .material-symbols-rounded {
-          font-size: 12px;
-          color: var(--dismiss-button-icon);
-        }
-      }
-
-      &:hover .notification-dismiss {
-        opacity: 1;
-      }
-    }
-
-    /* Empty state */
-    &:empty::after {
-      content: "No notifications";
-      display: block;
-      text-align: center;
-      color: var(--empty-state-text);
-      font-size: 14px;
-      padding: 40px 20px;
-    }
-
-    /* Scrollbar styling */
-    &::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: var(--scrollbar-track);
-      border-radius: 2px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: var(--scrollbar-thumb);
-      border-radius: 2px;
-
-      &:hover {
-        background: var(--scrollbar-thumb-hover);
-      }
-    }
-  }
 }
 
-/* CTA Notification Animation */
-@keyframes ctaPulse {
-  0%,
-  100% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 0 var(--animation-green-glow-strong);
-  }
-  50% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 8px var(--animation-green-glow-weak);
-  }
+.app-notifications-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding: 5px;
+  overflow-x: hidden;
 }
 
-@keyframes ctaPulseMac {
-  0%,
-  100% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 0 var(--animation-blue-glow-strong);
-  }
-  50% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 8px var(--animation-blue-glow-weak);
-  }
+/* Base Notification Styles */
+.app-notification {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(200px);
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  transition: all 0.2s ease;
+  text-align: left;
+  color: var(--text);
+  position: relative;
+  text-decoration: none;
 }
 
-@keyframes ctaPulseDev {
-  0%,
-  100% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 0 var(--animation-gray-glow-strong);
-  }
-  50% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 8px var(--animation-gray-glow-weak);
-  }
+.app-notification:hover {
+  background-color: var(--hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
-@keyframes ctaPulsePremium {
+/* CTA Notifications */
+.cta-notification {
+  border: 2px solid;
+  animation: pulse 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-notification::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--hover), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-notification:hover::before {
+  left: 100%;
+}
+
+.cta-notification {
+  border-color: var(--green);
+  background: var(--bg-secondary);
+}
+.cta-notification .notification-title {
+  color: var(--green);
+}
+
+.cta-notification.mac-app {
+  border-color: var(--blue);
+  background: light-dark(rgba(64, 156, 255, 0.1), rgba(123, 179, 240, 0.2));
+}
+.cta-notification.mac-app .notification-title {
+  color: var(--blue);
+}
+
+.cta-notification.android-app {
+  border-color: var(--green);
+  background: light-dark(rgba(74, 255, 189, 0.1), rgba(107, 255, 209, 0.2));
+}
+.cta-notification.android-app .notification-title {
+  color: var(--green);
+}
+
+.cta-notification.development {
+  border-color: var(--gray);
+}
+.cta-notification.development .notification-title {
+  color: var(--gray);
+}
+
+.cta-notification.premium {
+  border-color: var(--gold);
+}
+.cta-notification.premium .notification-title {
+  color: var(--gold);
+}
+
+/* Notification Content */
+.notification-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+}
+
+.notification-icon img {
+  width: 90%;
+  height: 90%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.notification-icon .material-symbols-rounded {
+  font-size: 20px;
+  color: var(--text);
+}
+
+.notification-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.notification-message {
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 1.3;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.notification-time {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+/* Notification Actions */
+.notification-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.notification-action-button {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.notification-action-button:hover {
+  background-color: var(--hover);
+  transform: scale(1.02);
+}
+
+/* Dismiss Button */
+.notification-dismiss {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.notification-dismiss:hover {
+  background: var(--hover);
+}
+
+.app-notification:hover .notification-dismiss {
+  opacity: 1;
+}
+
+/* Scrollbar */
+.app-notifications-tab::-webkit-scrollbar {
+  width: 4px;
+}
+
+.app-notifications-tab::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 2px;
+}
+
+.app-notifications-tab::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.app-notifications-tab::-webkit-scrollbar-thumb:hover {
+  background: var(--hover);
+}
+
+@keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 0 var(--animation-gold-glow-strong);
+    box-shadow: 0 4px 12px var(--shadow), 0 0 0 0 currentColor;
   }
   50% {
-    box-shadow: 0 4px 12px var(--animation-shadow),
-      0 0 0 8px var(--animation-gold-glow-weak);
+    box-shadow: 0 4px 12px var(--shadow), 0 0 0 4px transparent;
   }
 }
