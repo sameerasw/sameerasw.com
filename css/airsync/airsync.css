@@ -1,5 +1,16 @@
 /* AirSync Moodboard Styles */
 
+@keyframes tile-load {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 body {
   background-size: cover;
   background-position: center;
@@ -46,6 +57,13 @@ body {
   cursor: pointer;
   scroll-snap-align: start;
   overflow: hidden;
+
+  /* Initial hidden state before animation */
+  opacity: 0;
+  transform: scale(0);
+
+  /* Animation that brings them to life */
+  animation: tile-load 0.7s linear(0, 0.417 25.5%, 0.867 49.4%, 1 57.7%, 0.925 65.1%, 0.908 68.6%, 0.902 72.2%, 0.916 78.2%, 0.988 92.1%, 1) forwards;
 }
 
 .tile:hover {
@@ -216,6 +234,22 @@ body {
   grid-column-start: 7;
   grid-row-start: 7;
 }
+
+/* Staggered Animation Delays for a more polished effect */
+.div1 { animation-delay: 0s; }
+.div2 { animation-delay: 0.3s; }
+.div3 { animation-delay: 0.6s; }
+.div6 { animation-delay: 0.15s; }
+.div8 { animation-delay: 0.45s; }
+.div9 { animation-delay: 0.3s; }
+.div10 { animation-delay: 0.15s; }
+.div11 { animation-delay: 0.1s; }
+.div12 { animation-delay: 0.25s; }
+.div13 { animation-delay: 0.6s; }
+.div14 { animation-delay: 0.75s; }
+.div15 { animation-delay: 0.12s; }
+.div16 { animation-delay: 0.18s; }
+.div17 { animation-delay: 0.9s; }
 
 /* Download Tile Special Styling */
 .download-tile {
