@@ -33,10 +33,9 @@ body {
 
 /* Tile Base Styles */
 .tile {
-  background: var(--background-color-tr);
+  background: var(--background-color);
   border: 1px solid var(--primary-color);
   border-radius: var(--radius-out);
-  backdrop-filter: blur(var(--blur));
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -232,6 +231,7 @@ body {
 
 .download-buttons {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
   align-self: flex-start;
@@ -251,12 +251,6 @@ body {
 .download-btn:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
-}
-
-/* Privacy Tile */
-.privacy-tile {
-  background: var(--background-color-secondary);
-  border: 1px solid var(--text-color);
 }
 
 .privacy-link {
