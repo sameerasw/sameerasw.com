@@ -57,7 +57,6 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/article.css">
 <link rel="stylesheet" href="css/airsync/airsync.css">
-<link rel="stylesheet" href="css/airsync/app.css">
 <link rel="stylesheet" href="css/common/no-cursor.css">
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -103,160 +102,110 @@
         </ul>
     </nav>
 
-    <div id="app">
-        <div id="app-ui">
-            <div id="app-sidebar">
-                <div class="app-header app-sidebar-header">
-                    <div id="app-window-controls">
-                        <div class="app-window-button close"></div>
-                        <div class="app-window-button minimize"></div>
-                        <div class="app-window-button maximize"></div>
-                    </div>
-                    <div id="app-sidebar-button"></div>
-                </div>
-
-                <div class="app-sidebar-content">
-                    <div class="app-sidebar-item app-phone-info">
-                        <span class="material-symbols-rounded">battery_android_5</span>
-                        <span class="caption">78%</span>
-                        <div class="hspacertext"></div>
-                        <span class="material-symbols-rounded">volume_up</span>
-                        <span class="caption">23%</span>
-                    </div>
-
-                    <div id="app-phone" class="app-sidebar-item">
-                        <div id="phone-clock">
-                            <div id="clock-hours">12</div>
-                            <div id="clock-minutes">00</div>
-                        </div>
-                    </div>
-
-                    <div class="app-sidebar-bottom-buttons">
-                        <div class="app-sidebar-item app-phone-info">
-                            <span class="material-symbols-rounded">mobile</span>
-                            <span class="caption">Mirror</span>
-                        </div>
-                        <div class="app-sidebar-item app-phone-info">
-                            <span class="material-symbols-rounded">close</span>
-                        </div>
-
+    <div class="moodboard-container">
+        <div class="parent">
+            <div class="div1 tile primary-tile">
+                <img src="assets/img/articles/airsync/airsync-logo.png" alt="airsync logo" class="airsync-logo">
+                <h1>AirSync</h1>
+                <p>Android + macOS continuity</p>
+            </div>
+            <div class="div2 tile download-tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">download</span>
+                    <h3>Download</h3>
+                    <p>Get AirSync for your devices</p>
+                    <div class="download-buttons">
+                        <a href="https://github.com/sameerasw/airsync-mac/releases/latest" target="_blank"
+                            class="download-btn">macOS</a>
+                        <a href="https://github.com/sameerasw/airsync-android/releases/latest" target="_blank"
+                            class="download-btn">Android</a>
                     </div>
                 </div>
             </div>
-            <div id="app-content">
-                <div class="app-header">
-                    <div id="app-title">Sameera's Pixel</div>
-                    <div id="app-tab-bar">
-                        <div class="app-toolbar-button app-notifications">
-                        </div>
-                        <div class="app-toolbar-button app-settings">
-                        </div>
-                    </div>
-                    <div class="toolbar-item app-toolbar-group">
-                        <div class="app-toolbar-button app-clear-button"></div>
-                    </div>
-                </div>
-
-                <div id="app-main">
-                    <div class="app-notifications-tab">
-                        <!-- notification cards -->
-                        <a href="https://github.com/sameerasw/airsync-mac/releases/latest"
-                            class="app-notification cta-notification mac-app" target="_blank">
-                            <div class="notification-icon">
-                                <span class="material-symbols-rounded">laptop_mac</span>
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-title">AirSync macOS</span>
-                                <span class="notification-message">Download the latest macOS app from GitHub
-                                    releases</span>
-                                <div class="notification-actions">
-                                    <button class="notification-action-button">Download</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/sameerasw/airsync-android/releases/latest"
-                            class="app-notification cta-notification android-app" target="_blank">
-                            <div class="notification-icon">
-                                <span class="material-symbols-rounded">mobile</span>
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-title">AirSync Android</span>
-                                <span class="notification-message">Download the latest Android app from GitHub
-                                    releases</span>
-                                <div class="notification-actions">
-                                    <button class="notification-action-button">Download</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.reddit.com/r/AirSync/"
-                            class="app-notification cta-notification development" target="_blank">
-                            <div class="notification-icon">
-                                <span class="material-symbols-rounded">schedule</span>
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-title">AirSync is now in BETA</span>
-                                <span class="notification-message">Thank you for trying out early builds and providing
-                                    feedback </span>
-                                <div class="notification-actions">
-                                    <button class="notification-action-button">See Progress at
-                                        r/AirSync</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://airsync.sameerasw.com" class="app-notification cta-notification premium"
-                            target="_blank">
-                            <div class="notification-icon">
-                                <span class="material-symbols-rounded">star</span>
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-title">Get AirSync+ to support development</span>
-                                <span class="notification-message">And enjoy all the extra bits and pieces the app
-                                    offers like Android App mirror, media controls</span>
-                                <div class="notification-actions">
-                                    <button class="notification-action-button">Get AirSync+</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <div class="app-notification">
-                            <div class="notification-icon">
-                                <span class="material-symbols-rounded">phone_android</span>
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-title">AirSync</span>
-                                <span class="notification-message">Sameera's Pixel is now connected and syncing</span>
-                                <div class="notification-time">2 min ago</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="div3 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">content_copy</span>
+                    <h3>Clipboard Sync</h3>
+                    <p>Copy on Android, paste on Mac</p>
                 </div>
             </div>
-
+            <div class="div6 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">play_circle</span>
+                    <h3>Media Control</h3>
+                    <p>Control your music from macOS</p>
+                </div>
+            </div>
+            <div class="div8 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">wifi</span>
+                    <h3>Local Network</h3>
+                    <p>Secure local communication over Wi-Fi</p>
+                </div>
+            </div>
+            <div class="div9 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">notifications</span>
+                    <h3>Notifications</h3>
+                    <p>Mirror your Android notifications to macOS instantly</p>
+                </div>
+            </div>
+            <div class="div10 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">wallpaper</span>
+                    <h3>Wallpaper Sync</h3>
+                    <p>Match your Mac UI with Android wallpaper</p>
+                </div>
+            </div>
+            <div class="div11 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">battery_full</span>
+                    <h3>Battery Status</h3>
+                    <p>Monitor phone battery on Mac</p>
+                </div>
+            </div>
+            <div class="div12 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">apps</span>
+                    <h3>App Integration</h3>
+                    <p>Deep integration with Android apps</p>
+                </div>
+            </div>
+            <div class="div13 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">security</span>
+                    <h3>Privacy First</h3>
+                    <p>No cloud, no tracking, no data collection</p>
+                </div>
+            </div>
+            <div class="div14 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">code</span>
+                    <h3>Open Source</h3>
+                    <p>Free and open source</p>
+                </div>
+            </div>
+            <div class="div15 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">sync</span>
+                    <h3>Real-time</h3>
+                    <p>Instant synchronization</p>
+                </div>
+            </div>
+            <div class="div16 tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">lock</span>
+                    <h3>Encrypted</h3>
+                    <p>AES 256-bit encryption</p>
+                </div>
+            </div>
+            <div class="div17 tile privacy-tile">
+                <div class="placeholder-content">
+                    <span class="material-symbols-rounded">policy</span>
+                    <a href="airsync-privacy.html" class="privacy-link">Privacy Policy</a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-icon">
-                    <img src="assets/img/articles/airsync/airsync-logo.png" alt="airsync logo" class="airsync-logo">
-                </div>
-                <h1 class="hero-title">AirSync</h1>
-
-                <div id="hero-sub-section">
-                    <!-- <p class="hero-subtitle">The forbidden Android + macOS continuity</p> -->
-                </div>
-            </div>
-        </section>
-
-            <div id="privacy-policy">
-                <a href="airsync-privacy.html" class="button">Privacy policy</a>
-            </div>
-
     </div>
 
     <script src="js/script-article.js"></script>

@@ -1,8 +1,7 @@
-// AirSync - Simplified for notification CTA functionality only
+// AirSync Moodboard - Simple interactions
 
-// Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Add smooth scrolling for internal links
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -16,29 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initialize and update clock
-  function updateClock() {
-    const now = new Date();
-    let hours = now.getHours();
-    const minutes = now.getMinutes();
+  // Add click interactions for tiles
+  document.querySelectorAll(".tile").forEach((tile) => {
+    tile.addEventListener("click", function (e) {
+      // Prevent click on links within tiles
+      if (e.target.tagName === "A" || e.target.closest("a")) {
+        return;
+      }
 
-    // Convert to 12-hour format
-    hours = hours % 12;
-    if (hours === 0) hours = 12;
-
-    // Format with leading zeros
-    const formattedHours = hours.toString().padStart(2, "0");
-    const formattedMinutes = minutes.toString().padStart(2, "0");
-
-    // Update clock display
-    const hoursElement = document.getElementById("clock-hours");
-    const minutesElement = document.getElementById("clock-minutes");
-
-    if (hoursElement) hoursElement.textContent = formattedHours;
-    if (minutesElement) minutesElement.textContent = formattedMinutes;
-  }
-
-  // Update clock immediately and then every second
-  updateClock();
-  setInterval(updateClock, 1000);
+      // Add a subtle animation on click
+      this.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        this.style.transform = "";
+      }, 150);
+    });
+  });
 });

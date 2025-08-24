@@ -1,160 +1,457 @@
-/* AirSync Product Page Styles*/
+/* AirSync Moodboard Styles */
 
 body {
-  &:not(:has(.airsync-privacy)){
-    background-image: url('https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  @media (prefers-color-scheme: dark) {
-  background-image: url('https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=3878&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-/* Hero Section */
-.hero {
-  /* min-height: 60vh; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 3rem;
+/* Moodboard Container */
+.moodboard-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.hero-content {
-  padding: 1.5rem;
+/* Desktop Grid Layout */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 12px;
+  width: 100%;
+  height: 100%;
 }
 
-.hero-icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 3vh;
-  z-index: -1;
-  color: var(--primary-color);
-}
-
-.hero-title {
-  font-family: "sugar-magic", sans-serif;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 10vh;
-  z-index: -1;
-  font-size: 20vw;
-  line-height: 0.9;
-  width: fit-content;
-  text-align: center;
-  margin: 0 auto;
-  color: var(--text-color);
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.5rem;
-  }
-}
-
-#hero-sub-section {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 2vh;
-  z-index: 1000;
-}
-
-.container p {
-  overflow: auto;
-  text-wrap: normal;
-  white-space: wrap;
-  text-align: left;
-}
-
-.hero-subtitle {
-  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center !important;
-  font-size: 1.2rem;
-  color: var(--blue);
-  margin: 1.5rem auto 1rem auto;
-  font-weight: 400;
-  opacity: 0.9;
-}
-
-.hero-description {
-  text-align: center !important;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  margin: 1rem auto 2rem auto;
-  opacity: 0.9;
-  font-weight: 500;
+/* Tile Base Styles */
+.tile {
   background: var(--background-color-tr);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-out);
   border: 1px solid var(--primary-color);
-  backdrop-filter: blur(var(--blur));
-}
-
-/* Animations */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .hero-content {
-    padding: 1rem;
-  }
-}
-
-/* Section spacing */
-section {
-  margin: 3rem 0;
-}
-
-/* Container override for AirSync page */
-.container {
-  max-width: calc(100vw - 2em);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.hero {
-  margin-top: 40vh;
-}
-
-.airsync-logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: 1rem;
-  animation: float 3s ease-in-out infinite;
-}
-
-.airsync-privacy h3, .airsync-privacy h2{
-  background-color: transparent !important;
-  padding: 0 !important;
-}
-
-#privacy-policy {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-
-  a{
-  background-color: transparent;
-  color: var(--primary-color);
-  border: var(--primary-color) 1px solid;
   border-radius: var(--radius-out);
+  backdrop-filter: blur(var(--blur));
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--text-color);
+}
+
+.tile h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.tile p {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0 0;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+/* Material Icons in tiles */
+.tile .material-symbols-rounded {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.tile .placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Primary Tile (div1) */
+.primary-tile {
+  background: linear-gradient(135deg, var(--primary-color), var(--blue));
+  color: white;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.primary-tile h1 {
+  font-family: "sugar-magic", sans-serif;
+  font-size: 2.5rem;
+  margin: 0.5rem 0 0 0;
+  color: white;
+  line-height: 1;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+
+.primary-tile p {
+  color: white;
+  opacity: 0.9;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.primary-tile .airsync-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
+}
+
+/* Grid Item Positions for Desktop */
+.div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 8 / span 8;
+}
+
+.div2 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 7;
+}
+
+.div6 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+
+.div8 {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-column-start: 6;
+  grid-row-start: 3;
+}
+
+.div9 {
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+
+.div10 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+
+.div11 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.div12 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.div13 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 6;
+  grid-row-start: 5;
+}
+
+.div14 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 7;
+  grid-row-start: 5;
+}
+
+.div15 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 7;
+  grid-row-start: 1;
+}
+
+.div16 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 8;
+  grid-row-start: 1;
+}
+
+.div17 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 7;
+  grid-row-start: 7;
+}
+
+/* Download Tile Special Styling */
+.download-tile {
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  color: white;
+  border: 2px solid var(--green);
+}
+
+.download-tile h3,
+.download-tile p,
+.download-tile .material-symbols-rounded {
+  color: white;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.download-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.download-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Privacy Tile */
+.privacy-tile {
+  background: var(--background-color-secondary);
+  border: 1px solid var(--text-color);
+}
+
+.privacy-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.privacy-link:hover {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+}
+
+/* Mobile Layout */
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100vh;
   }
+
+  .moodboard-container {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 1rem;
+    scroll-snap-type: y mandatory;
+  }
+
+  .parent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    min-height: 200vh;
+  }
+
+  .primary-tile {
+    position: sticky;
+    top: 1rem;
+    left: 0;
+    z-index: 10;
+  }
+
+  .primary-tile.scrolled {
+    height: 50% !important;
+  }
+
+  .primary-tile h1 {
+    font-size: 2rem;
+  }
+
+  .primary-tile .airsync-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Mobile Grid Positions - Original Pattern */
+  .div1 {
+    grid-column: span 4 / span 4;
+    grid-row: span 4 / span 4;
+  }
+
+  .div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-row-start: 5;
+  }
+
+  .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 5;
+  }
+
+  .div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 3;
+    grid-row-start: 7;
+  }
+
+  .div8 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 9;
+  }
+
+  .div9 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 11;
+  }
+
+  .div10 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 11;
+  }
+
+  .div11 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 13;
+  }
+
+  .div12 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 13;
+  }
+
+  .div13 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 15;
+  }
+
+  .div14 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 15;
+  }
+
+  .div15 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 17;
+  }
+
+  .div16 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 17;
+  }
+
+  .div17 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 19;
+  }
+
+  .tile h3 {
+    font-size: 0.9rem;
+  }
+
+  .tile p {
+    font-size: 0.7rem;
+  }
+
+  .tile .material-symbols-rounded {
+    font-size: 1.5rem;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .download-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Scrollbar Styling */
+.moodboard-container::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.moodboard-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.moodboard-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.moodboard-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
 }
