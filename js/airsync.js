@@ -70,4 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 150);
     });
   });
+
+  // --- Image Preloader for tile backgrounds ---
+  document.querySelectorAll(".tile").forEach((tile) => {
+    if (!tile.querySelector(".tile-bg-preload")) {
+      const preload = document.createElement("div");
+      preload.className = "tile-bg-preload";
+      tile.insertBefore(preload, tile.firstChild);
+    }
+
+    const style = getComputedStyle(tile);
+    const bgImage = style.backgroundImage;
+    if (bgImage && bgImage !== "none") {
+      const urlMatch = bgImage.match(/url\(["']?([^"')]+)["']?\)/);
+      if (urlMatch) {
+        const img = new window.Image();
+        img.src = urlMatch[1];
+        img.onload = () => {
+          tile.classList.add("loaded");
+        };
+      } else {
+        tile.classList.add("loaded");
+      }
+    } else {
+      tile.classList.add("loaded");
+    }
+  });
 });
