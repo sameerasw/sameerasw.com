@@ -11,7 +11,7 @@
   }
 }
 
-body {
+body.airsync-page {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -50,26 +50,51 @@ body {
 }
 
 /* Moodboard Container */
-.moodboard-container {
+/* Horizontal scroll wrapper (desktop) */
+.airsync-page .moodboard-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2rem 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* convert vertical wheel to horizontal (fallback if JS disabled) */
+.airsync-page .moodboard-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Centering: grid has fixed max width; extra space becomes side margins */
+.airsync-page .scroll-inner {
+  height: 100%;
+  display: inline-block;
 }
 
 /* Desktop Grid Layout */
-.parent {
+/* Fixed logical width for grid; wider screens show side margins */
+.airsync-page .parent {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 240px);
   grid-template-rows: repeat(8, 1fr);
   gap: 12px;
-  width: 100%;
   height: 100%;
+  width: 2004px; /* 8 * 240 + 7 * 12 */
+  padding: 0 2rem;
+  box-sizing: content-box;
+}
+
+@media (min-width: 2004px) {
+  .airsync-page .moodboard-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Tile Base Styles */
-.tile {
+.airsync-page .tile {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,13 +133,13 @@ body {
     forwards;
 }
 
-.tile:hover {
+.airsync-page .tile:hover {
   scale: 1.02;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border-color: var(--text-color);
 }
 
-.tile h3 {
+.airsync-page .tile h3 {
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
   color: var(--primary-color);
@@ -124,7 +149,7 @@ body {
   backdrop-filter: none;
 }
 
-.tile p {
+.airsync-page .tile p {
   font-size: 0.8rem;
   color: var(--text-color);
   line-height: 1.3;
@@ -132,7 +157,7 @@ body {
     margin 0.35s ease;
 }
 
-.tile:not(.primary-tile) p {
+.airsync-page .tile:not(.primary-tile) p {
   opacity: 0;
   transform: translateY(8px);
   max-height: 0;
@@ -141,7 +166,7 @@ body {
   pointer-events: none;
 }
 
-.tile:not(.primary-tile):hover p {
+.airsync-page .tile:not(.primary-tile):hover p {
   opacity: 1;
   transform: translateY(0);
   max-height: 200px;
@@ -150,14 +175,14 @@ body {
 }
 
 /* Material Icons in tiles */
-.tile .material-symbols-rounded {
+.airsync-page .tile .material-symbols-rounded {
   font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
   align-self: flex-start;
 }
 
-.tile .tile-content {
+.airsync-page .tile .tile-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -165,7 +190,7 @@ body {
 }
 
 /* Primary Tile (div1) */
-.primary-tile {
+.airsync-page .primary-tile {
   background: linear-gradient(135deg, var(--primary-color), var(--blue));
   color: white;
   border: 2px solid var(--primary-color);
@@ -180,7 +205,7 @@ body {
   padding: 0.5rem;
 }
 
-.primary-tile h1 {
+.airsync-page .primary-tile h1 {
   font-family: "sugar-magic", sans-serif;
   font-size: 2.5rem;
   margin: 0.5rem 0 0 0;
@@ -191,14 +216,14 @@ body {
   height: auto;
 }
 
-.primary-tile p {
+.airsync-page .primary-tile p {
   color: var(--background-color-primary);
   opacity: 0.9;
   font-size: 1rem;
   margin: 0.5rem 0 0 0;
 }
 
-.primary-tile .airsync-logo {
+.airsync-page .primary-tile .airsync-logo {
   width: 80px;
   height: 80px;
   margin-bottom: 0.5rem;
@@ -342,19 +367,19 @@ body {
 }
 
 /* Download Tile Special Styling */
-.download-tile {
+.airsync-page .download-tile {
   background: linear-gradient(135deg, var(--green), var(--blue));
   color: white;
   border: 2px solid var(--green);
 }
 
-.download-tile h3,
-.download-tile p,
-.download-tile .material-symbols-rounded {
+.airsync-page .download-tile h3,
+.airsync-page .download-tile p,
+.airsync-page .download-tile .material-symbols-rounded {
   color: white;
 }
 
-.download-buttons {
+.airsync-page .download-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -362,7 +387,7 @@ body {
   align-self: flex-start;
 }
 
-.download-btn {
+.airsync-page .download-btn {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 0.25rem 0.75rem;
@@ -373,12 +398,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.download-btn:hover {
+.airsync-page .download-btn:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
 }
 
-.privacy-link {
+.airsync-page .privacy-link {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
@@ -391,12 +416,12 @@ body {
   align-self: flex-start;
 }
 
-.privacy-link:hover {
+.airsync-page .privacy-link:hover {
   background: var(--primary-color);
   color: var(--background-color-primary);
 }
 
-.docs-primary-link {
+.airsync-page .docs-primary-link {
   color: var(--background-color-primary);
   text-decoration: none;
   font-weight: 500;
@@ -409,7 +434,7 @@ body {
   align-self: flex-start;
 }
 
-.docs-primary-link:hover {
+.airsync-page .docs-primary-link:hover {
   color: var(--primary-color);
   background: var(--background-color-primary);
   border: 1px solid var(--primary-color);
@@ -417,31 +442,41 @@ body {
 
 /* Mobile Layout */
 @media screen and (max-width: 768px) {
-  body {
+  body.airsync-page {
     overflow: auto;
     height: auto;
     min-height: 100vh;
+    overflow-x: hidden !important;
   }
 
-  .moodboard-container {
+  .airsync-page .moodboard-container {
     width: 100vw;
     height: auto;
     min-height: 100vh;
     overflow: visible;
     padding: 1rem;
     scroll-snap-type: y mandatory;
+    overflow-x: hidden !important;
   }
 
-  .parent {
+  .airsync-page .parent {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(20, 1fr);
     gap: 8px;
     width: 100%;
     height: auto;
     min-height: 200vh;
+    padding: 0 !important;
+    box-sizing: border-box;
   }
 
-  .primary-tile {
+  .airsync-page .tile {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .airsync-page .primary-tile {
     position: sticky;
     top: 1rem;
     left: 0;
@@ -575,22 +610,22 @@ body {
 }
 
 /* Scrollbar Styling */
-.moodboard-container::-webkit-scrollbar {
+.airsync-page .moodboard-container::-webkit-scrollbar {
   height: 8px;
   width: 8px;
 }
 
-.moodboard-container::-webkit-scrollbar-track {
+.airsync-page .moodboard-container::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
-.moodboard-container::-webkit-scrollbar-thumb {
+.airsync-page .moodboard-container::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 4px;
 }
 
-.moodboard-container::-webkit-scrollbar-thumb:hover {
+.airsync-page .moodboard-container::-webkit-scrollbar-thumb:hover {
   background: var(--text-color);
 }
 

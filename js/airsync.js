@@ -1,6 +1,46 @@
 // AirSync Moodboard - Simple interactions
 
 document.addEventListener("DOMContentLoaded", () => {
+  const isAirSync = document.body.classList.contains("airsync-page");
+  const scrollContainer = document.getElementById("airsync-scroll");
+
+  if (isAirSync && scrollContainer) {
+    const enableHorizontal = () => window.innerWidth > 768; // desktop only
+    // Wheel -> horizontal scroll
+    scrollContainer.addEventListener(
+      "wheel",
+      (e) => {
+        if (!enableHorizontal()) return; // allow normal on mobile
+        // allow pinch zoom (ctrlKey) default
+        if (e.ctrlKey) return;
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          scrollContainer.scrollLeft += e.deltaY * 1.1;
+        }
+      },
+      { passive: false }
+    );
+
+    // Keyboard arrows for accessibility
+    window.addEventListener("keydown", (e) => {
+      if (!enableHorizontal()) return;
+      const step = 120;
+      if (["ArrowDown", "PageDown"].includes(e.key)) {
+        e.preventDefault();
+        scrollContainer.scrollLeft += step;
+      } else if (["ArrowUp", "PageUp"].includes(e.key)) {
+        e.preventDefault();
+        scrollContainer.scrollLeft -= step;
+      } else if (e.key === "Home") {
+        scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+      } else if (e.key === "End") {
+        scrollContainer.scrollTo({
+          left: scrollContainer.scrollWidth,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
