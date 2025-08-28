@@ -145,7 +145,7 @@ body.airsync-page {
 }
 
 /* Bottom gradient shadow overlay (fades up to half height) */
-.airsync-page .tile::after {
+.airsync-page .tile:not(.primary-tile)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -232,6 +232,13 @@ body.airsync-page {
   align-items: center;
   text-align: center;
   padding: 0.5rem;
+
+
+    h3,
+    p,
+    span {
+      color: var(--background-color-primary) !important;
+    }
 }
 
 .airsync-page .primary-tile h1 {
@@ -265,6 +272,7 @@ body.airsync-page {
   background-size: cover;
   background-position: center;
   width: 100%;
+  height: 300px;
   border-radius: var(--radius-in);
 }
 
@@ -440,29 +448,56 @@ body.airsync-page {
 .airsync-page .download-btn {
   background: var(--background-color-primary);
   color: var(--text-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
+  padding: 0.45rem 1rem;
+  border-radius: 28px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   border: 1px solid var(--text-color);
   margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  line-height: 1;
+  font-weight: 500;
 
   &.macos-download {
     background: rgba(80, 197, 255, 0.463);
-    font-size: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--background-color-primary);
+    border: 1px solid var(--background-color-primary);
   }
 
   &.android-download {
     background: rgba(80, 255, 109, 0.463);
-    font-size: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--background-color-primary);
+    border: 1px solid var(--background-color-primary);
   }
+}
+
+.airsync-page .download-btn .os-icons {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 
 .airsync-page .download-btn:hover {
   background: var(--text-color);
   color: var(--background-color-primary);
   transform: scale(1.05);
+}
+
+/* Specific lighter hover states for platform buttons */
+.airsync-page .download-btn.macos-download:hover {
+  background: rgba(80, 197, 255, 0.75);
+  color: var(--text-color);
+}
+
+.airsync-page .download-btn.android-download:hover {
+  background: rgba(80, 255, 109, 0.75);
+  color: var(--text-color);
 }
 
 .airsync-page .privacy-link {
@@ -544,6 +579,7 @@ body.airsync-page {
     left: 0;
     z-index: 10;
     height: 95%;
+
   }
 
   .primary-tile.scrolled {
@@ -734,7 +770,7 @@ span.material-symbols-rounded {
   backdrop-filter: blur(5px);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .os-icons {
     filter: invert(1);
   }
