@@ -492,12 +492,17 @@ body.airsync-page {
 /* Specific lighter hover states for platform buttons */
 .airsync-page .download-btn.macos-download:hover {
   background: rgba(80, 197, 255, 0.75);
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 
 .airsync-page .download-btn.android-download:hover {
   background: rgba(80, 255, 109, 0.75);
-  color: var(--text-color);
+  /* color: var(--text-color); */
+}
+
+.app-description{
+  text-align: left;
+  margin: 2rem !important;
 }
 
 .airsync-page .privacy-link {
