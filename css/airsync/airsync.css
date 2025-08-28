@@ -1,3 +1,7 @@
+:root{
+  --primary-color: light-dark(#000, #fff);
+}
+
 /* AirSync Moodboard Styles */
 
 @keyframes tile-load {
@@ -191,7 +195,8 @@ body.airsync-page {
 
 /* Primary Tile (div1) */
 .airsync-page .primary-tile {
-  background: linear-gradient(135deg, var(--primary-color), var(--blue));
+  background: linear-gradient(135deg, #ffffff, var(--red));
+  background-position: left;
   color: white;
   border: 2px solid var(--primary-color);
   transition: all 0.5s ease;
@@ -231,19 +236,30 @@ body.airsync-page {
   border-radius: 25%;
 }
 
+.app-preview-spacer{
+  background-image: url("../../assets/img/articles/airsync/app.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-radius: var(--radius-in)
+}
+
 /* Grid Item Positions for Desktop */
 .div1 {
+  /* background-image: url("../../assets/img/articles/airsync/app.jpg"); */
   grid-column: span 2 / span 2;
   grid-row: span 8 / span 8;
 }
 
 .div2 {
+  background-image: url("../../assets/img/articles/airsync/mirror.jpg");
   grid-row: span 4 / span 4;
   grid-column-start: 3;
   grid-row-start: 5;
 }
 
 .div3 {
+  background-image: url("../../assets/img/articles/airsync/reply.jpg");
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 4;
@@ -265,6 +281,7 @@ body.airsync-page {
 }
 
 .div9 {
+  background-image: url("../../assets/img/articles/airsync/notif.jpg");
   grid-column: span 2 / span 2;
   grid-row: span 4 / span 4;
   grid-column-start: 4;
@@ -272,6 +289,7 @@ body.airsync-page {
 }
 
 .div10 {
+  background-image: url("../../assets/img/articles/airsync/wallpaper.jpg");
   grid-row: span 2 / span 2;
   grid-column-start: 4;
   grid-row-start: 1;
@@ -285,6 +303,7 @@ body.airsync-page {
 }
 
 .div12 {
+  background-image: url("../../assets/img/articles/airsync/clipboard.jpg");
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 3;
@@ -642,6 +661,8 @@ ul li {
   display: flex;
   flex-direction: column;
   background: var(--background-color-primary);
+  backdrop-filter: blur(10px);
+  /* background-color: var(--background-color-tr); */
   border-radius: calc(var(--radius-out) - 5px);
   padding: 10px;
   width: calc(100% - 20px) !important;
@@ -650,7 +671,7 @@ ul li {
   span {
     margin: 0.25rem 0;
     font-size: 0.7rem;
-    color: var(--text-color);
+    color: var(--text-color) !important;
   }
 }
 
