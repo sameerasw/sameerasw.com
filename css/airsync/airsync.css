@@ -44,7 +44,10 @@ body {
 
 /* Tile Base Styles */
 .tile {
-  background: var(--background-color);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--background-color-primary);
   border: 1px solid var(--primary-color);
   border-radius: var(--radius-out);
   padding: 0.75rem;
@@ -206,6 +209,7 @@ body {
 }
 
 .div11 {
+  background-image: url("../../assets/img/articles/airsync/media-player.jpeg");
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 1;
