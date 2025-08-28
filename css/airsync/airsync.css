@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary-color: light-dark(#000, #fff);
 }
 
@@ -260,13 +260,12 @@ body.airsync-page {
   border-radius: 25%;
 }
 
-.app-preview-spacer{
+.app-preview-spacer {
   background-image: url("../../assets/img/articles/airsync/app.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
-  border-radius: var(--radius-in)
-
+  border-radius: var(--radius-in);
 }
 
 /* Grid Item Positions for Desktop */
@@ -447,6 +446,17 @@ body.airsync-page {
   font-size: 0.8rem;
   transition: all 0.3s ease;
   border: 1px solid var(--text-color);
+  margin-top: 0.5rem;
+
+  &.macos-download {
+    background: rgba(80, 197, 255, 0.463);
+    font-size: 1.5rem;
+  }
+
+  &.android-download {
+    background: rgba(80, 255, 109, 0.463);
+    font-size: 1.5rem;
+  }
 }
 
 .airsync-page .download-btn:hover {
@@ -661,7 +671,7 @@ body.airsync-page {
     padding: 0.2rem 0.5rem;
   }
 
-  .app-preview-spacer{
+  .app-preview-spacer {
     height: 300px !important;
   }
 }
@@ -717,9 +727,15 @@ ul li {
   flex-grow: 1;
 }
 
-span.material-symbols-rounded{
+span.material-symbols-rounded {
   background-color: light-dark(#fff2, #0002);
   padding: 6px;
   border-radius: 100vw;
   backdrop-filter: blur(5px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .os-icons {
+    filter: invert(1);
+  }
 }
