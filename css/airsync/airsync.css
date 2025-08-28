@@ -47,7 +47,7 @@ body {
   background: var(--background-color);
   border: 1px solid var(--primary-color);
   border-radius: var(--radius-out);
-  padding: 1rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -63,11 +63,24 @@ body {
   transform: scale(0);
 
   /* Animation that brings them to life */
-  animation: tile-load 0.7s linear(0, 0.417 25.5%, 0.867 49.4%, 1 57.7%, 0.925 65.1%, 0.908 68.6%, 0.902 72.2%, 0.916 78.2%, 0.988 92.1%, 1) forwards;
+  animation: tile-load 0.7s
+    linear(
+      0,
+      0.417 25.5%,
+      0.867 49.4%,
+      1 57.7%,
+      0.925 65.1%,
+      0.908 68.6%,
+      0.902 72.2%,
+      0.916 78.2%,
+      0.988 92.1%,
+      1
+    )
+    forwards;
 }
 
 .tile:hover {
-  transform: translateY(-4px);
+  scale: 1.02;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border-color: var(--text-color);
 }
@@ -97,7 +110,7 @@ body {
   align-self: flex-start;
 }
 
-.tile .placeholder-content {
+.tile .tile-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -117,6 +130,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0.5rem;
 }
 
 .primary-tile h1 {
@@ -130,7 +144,7 @@ body {
   height: auto;
 }
 
-  .primary-tile p {
+.primary-tile p {
   color: var(--background-color-primary);
   opacity: 0.9;
   font-size: 1rem;
@@ -138,11 +152,11 @@ body {
 }
 
 .primary-tile .airsync-logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 0.5rem;
-  outline: var(--text-color) solid 2px;
-  border-radius: 15px;
+  outline: var(--background-color-primary) solid 4px;
+  border-radius: 25%;
 }
 
 /* Grid Item Positions for Desktop */
@@ -236,20 +250,48 @@ body {
 }
 
 /* Staggered Animation Delays for a more polished effect */
-.div1 { animation-delay: 0s; }
-.div2 { animation-delay: 0.3s; }
-.div3 { animation-delay: 0.6s; }
-.div6 { animation-delay: 0.15s; }
-.div8 { animation-delay: 0.45s; }
-.div9 { animation-delay: 0.3s; }
-.div10 { animation-delay: 0.15s; }
-.div11 { animation-delay: 0.1s; }
-.div12 { animation-delay: 0.25s; }
-.div13 { animation-delay: 0.6s; }
-.div14 { animation-delay: 0.75s; }
-.div15 { animation-delay: 0.12s; }
-.div16 { animation-delay: 0.18s; }
-.div17 { animation-delay: 0.9s; }
+.div1 {
+  animation-delay: 0s;
+}
+.div2 {
+  animation-delay: 0.3s;
+}
+.div3 {
+  animation-delay: 0.6s;
+}
+.div6 {
+  animation-delay: 0.15s;
+}
+.div8 {
+  animation-delay: 0.45s;
+}
+.div9 {
+  animation-delay: 0.3s;
+}
+.div10 {
+  animation-delay: 0.15s;
+}
+.div11 {
+  animation-delay: 0.1s;
+}
+.div12 {
+  animation-delay: 0.25s;
+}
+.div13 {
+  animation-delay: 0.6s;
+}
+.div14 {
+  animation-delay: 0.75s;
+}
+.div15 {
+  animation-delay: 0.12s;
+}
+.div16 {
+  animation-delay: 0.18s;
+}
+.div17 {
+  animation-delay: 0.9s;
+}
 
 /* Download Tile Special Styling */
 .download-tile {
@@ -266,7 +308,7 @@ body {
 
 .download-buttons {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.5rem;
   align-self: flex-start;
@@ -511,4 +553,24 @@ ul {
 ul li {
   margin-bottom: 0.1rem;
   font-size: 0.7rem;
+}
+
+.downloads-section {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color-primary);
+  border-radius: calc(var(--radius-out) - 5px);
+  padding: 10px;
+  width: calc(100% - 20px) !important;
+
+  p,
+  span {
+    margin: 0.25rem 0;
+    font-size: 0.7rem;
+    color: var(--text-color);
+  }
+}
+
+.spacer {
+  flex-grow: 1;
 }
