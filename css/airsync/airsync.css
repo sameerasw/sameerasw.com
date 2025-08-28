@@ -54,7 +54,7 @@ body {
   align-items: flex-start;
   text-align: left;
   transition: all 0.3s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
   scroll-snap-align: start;
   overflow: hidden;
 
@@ -123,15 +123,15 @@ body {
   font-family: "sugar-magic", sans-serif;
   font-size: 2.5rem;
   margin: 0.5rem 0 0 0;
-  color: white;
+  color: var(--background-color-primary);
   line-height: 1;
   text-align: center;
   width: auto;
   height: auto;
 }
 
-.primary-tile p {
-  color: white;
+  .primary-tile p {
+  color: var(--background-color-primary);
   opacity: 0.9;
   font-size: 1rem;
   margin: 0.5rem 0 0 0;
@@ -304,6 +304,25 @@ body {
 .privacy-link:hover {
   background: var(--primary-color);
   color: var(--background-color-primary);
+}
+
+.docs-primary-link {
+  color: var(--background-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.docs-primary-link:hover {
+  color: var(--primary-color);
+  background: var(--background-color-primary);
+  border: 1px solid var(--primary-color);
 }
 
 /* Mobile Layout */
@@ -483,4 +502,13 @@ body {
 
 .moodboard-container::-webkit-scrollbar-thumb:hover {
   background: var(--text-color);
+}
+
+ul {
+  padding: 0 10px;
+}
+
+ul li {
+  margin-bottom: 0.1rem;
+  font-size: 0.7rem;
 }
