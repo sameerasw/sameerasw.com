@@ -103,7 +103,7 @@ body.airsync-page {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--background-color-primary);
-  /* border: 1px solid var(--primary-color); */
+  border: 2px solid var(--primary-color);
   border-radius: var(--radius-out);
   padding: 0.75rem;
   display: flex;
@@ -157,6 +157,7 @@ body.airsync-page {
   scale: 1.02;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border-color: var(--text-color);
+  border: 5px solid var(--primary-color);
 }
 
 /* Bottom gradient shadow overlay (fades up to half height) */
@@ -170,8 +171,8 @@ body.airsync-page {
   pointer-events: none;
   background: linear-gradient(
     to top,
-    var(--background-color-primary) 0%,
-    rgba(255, 255, 255, 0) 100%
+    color-mix(in srgb, var(--background-color-primary) 90%, transparent) 0%,
+    transparent 100%
   );
   z-index: 0;
   transition: height 0.45s ease;
@@ -388,6 +389,7 @@ body.airsync-page {
 }
 
 .div17 {
+  background-color: var(--background-color-tr) !important;
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 7;
