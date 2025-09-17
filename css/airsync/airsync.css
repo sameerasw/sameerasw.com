@@ -103,7 +103,7 @@ body.airsync-page {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--background-color-primary);
-  border: 1px solid var(--primary-color);
+  /* border: 1px solid var(--primary-color); */
   border-radius: var(--radius-out);
   padding: 0.75rem;
   display: flex;
@@ -365,7 +365,7 @@ body.airsync-page {
 }
 
 .div14 {
-  background-image: url("../../assets/img/logo-mini.png");
+  background-image: url("../../assets/img/notion-512.jpeg");
   background-position: center !important;
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
