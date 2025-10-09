@@ -364,6 +364,16 @@ img.article-img {
   display: block;
 }
 
+/* Videos */
+video.step-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
 .step-action {
   margin: 1.5rem 0;
 }
