@@ -47,6 +47,8 @@ p,
   margin: 1rem 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
 }
 
 h1,
@@ -67,6 +69,7 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
+  border-radius: 0.3rem;
 }
 h4 {
   font-size: 1.25rem;
@@ -87,6 +90,10 @@ h4 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
+  .container-mini.item.content, #title{
+    width: 98% !important;
+  }
 }
 
 /* Device Info */
@@ -175,6 +182,8 @@ table td {
   border-radius: 0.5rem;
   text-align: left;
   border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .carrier-header {
@@ -183,27 +192,35 @@ table td {
   align-items: center;
   margin-bottom: 1rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .carrier-header h4 {
   margin: 0;
   font-size: 1.2rem;
   text-align: left;
+  flex: 1;
+  min-width: 0;
 }
 
 .carrier-logo {
   max-width: 70px;
   max-height: 35px;
   object-fit: contain;
-  /* Add white background for dark logos */
-  background: white;
+  /* Add semi-transparent white background for dark logos */
+  background: rgba(255, 255, 255, 0.9);
   padding: 0.25rem;
   border-radius: 0.25rem;
+  flex-shrink: 0;
 }
 
 .carrier-body p {
   margin: 0.75rem 0;
   font-size: 0.95rem;
+  p{
+  word-wrap: break-word;
+  overflow-wrap: break-word !important;
+  }
 }
 
 .carrier-code {
@@ -215,6 +232,9 @@ table td {
   font-family: "Courier New", monospace;
   font-weight: bold;
   margin: 0.5rem 0;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .carrier-note {
@@ -237,6 +257,8 @@ table td {
 .carrier-contact-list a {
   color: var(--primary-color);
   text-decoration: none;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .carrier-contact-list a:hover {
@@ -248,7 +270,7 @@ table td {
   background: color-mix(in srgb, var(--red) 10%, transparent);
   padding: 1.5rem;
   border-radius: 0.5rem;
-  margin: 2rem 0;
+  margin: 0.5rem;
   border-left: 4px solid var(--red);
 }
 
@@ -422,6 +444,8 @@ code,
   border-radius: 0.3rem;
   font-family: "Courier New", monospace;
   font-size: 0.9rem;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 /* Charging Section */
@@ -567,6 +591,8 @@ footer {
     max-width: 60px;
     max-height: 30px;
     padding: 0.2rem;
+    background: rgba(255, 255, 255, 0.95);
+    flex-shrink: 0;
   }
 
   table td {
@@ -639,5 +665,23 @@ footer {
   .carrier-logo {
     max-width: 50px;
     max-height: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    flex-shrink: 0;
+  }
+}
+
+p{
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+
+h1#title:not(p){
+  font-size: 5rem !important ;
+}
+
+.article-summary{
+  li{
+    text-align: left;
   }
 }

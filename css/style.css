@@ -148,8 +148,8 @@ h3 {
   }
 
   p {
-    overflow: hidden;
-    white-space: nowrap;
+    /* overflow: hidden;
+    white-space: nowrap; */
     font-size: 1.2em;
 
     span.typed-text {
