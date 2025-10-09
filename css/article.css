@@ -238,6 +238,30 @@ details,
   &:hover {
     scale: 1.05;
   }
+
+  }
+
+/* Highlighted notice / callout used in some articles */
+.notice-callout {
+  border: 0.18em solid var(--primary-color);
+  border-radius: 1em;
+  background-color: rgba(255,255,255,0.02);
+  padding: 1em;
+  margin: 1em 0;
+  max-width: 70vw;
+}
+.notice-callout h4 {
+  margin: 0 0 0.5em 0;
+}
+.notice-callout p,
+.notice-callout ol {
+  margin: 0.5em 0;
+}
+
+.notice-callout .button {
+  display: inline-block;
+  margin: 0.5em 0 0 0;
+  vertical-align: middle;
 }
 
 #charging {

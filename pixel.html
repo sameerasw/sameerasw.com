@@ -154,64 +154,9 @@
                             which include connecting Voice over LTE (VoLTE), Video Calling and VoWiFi. Some carriers
                             like Dialog are reported to add voLTE support for some recent models like 7 and 8 series so
                             let’s hope Dialog and other carriers will continue improving support.</p>
-                        <p class="item article-text warn">Follow these methods on your own risk. No responsibilities
-                            will be taken by us if you F up.</p>
-                        <details class="item" open>
-                            <summary><a><b>Google Tensor Devices (Shizuku permissions - No root) voLTE only
-                                    </b></a></summary>
-                            <div class="container">
-                                <p class="item article-text">Supported devices:
-                                <ul class="list-left">
-                                    <li>Google Pixel 6</li>
-                                    <li>Google Pixel 6a</li>
-                                    <li>Google Pixel 6 Pro</li>
-                                    <li>Google Pixel 7</li>
-                                    <li>Google Pixel 7a</li>
-                                    <li>Google Pixel 7 Pro</li>
-                                    <li>Google Pixel 8</li>
-                                    <li>Google Pixel 8 Pro</li>
-                                    <li>Google Pixel Fold</li>
-                                </ul>
-                                </p>
-                                <a href="https://github.com/kyujin-cho/pixel-volte-patch/blob/main/README.en.md"
-                                    class="button"
-                                    aria-label="Initial guide on Github by kyujin-cho on force enabling voLTE on Tensor devices">Follow
-                                    this initial guide by kyujin-cho on GitHub</a>
-                                <p class="item article-text">Now continue with the carrier side activaion steps. <i
-                                        class="warn">You can safely turn off Developer Options after enabling with this
-                                        method but it may need to be repeated after OTA updates.</i></p>
-                            </div>
-                        </details>
 
-                        <details class="item">
-                            <summary><a><b>Snapdragon Devices (Root required) voLTE + 5G support
-                                    </b></a></summary>
-                            <div class="container">
-                                <p class="item article-text">Supported devices:
-                                <ul class="list-left">
-                                    <li>Google Pixel 5</li>
-                                    <li>Google Pixel 5a</li>
-                                    <li>Google Pixel 4a 5G</li>
-                                    <li>Other devices untested</li>
-                                </ul>
-                                </p>
-                                <a href="https://github.com/stanislawrogasik/Pixel5-VoLTE-VoWiFi" class="button"
-                                    aria-label="Magisk (root) module by stanislawrogasik on Github to force enable voLTE and 5G on Pixel 5 series devices with Snapdragon.">Flash
-                                    this module via your root solution</a>
 
-                                <p class="item article-text">If you are using KSU or APatch as your root solution:</p>
-                                <ol>
-                                    <li class="list-left">You may need to flash magisk by allowing the magisk app root
-                                        permission from KSU, reboot</li>
-                                    <li class="list-left">Flash the voLTE/5G module in magisk, reboot</li>
-                                    <li class="list-left">Uninstall magisk, will automatically reboot</li>
-                                    <li class="list-left">Flash the voLTE/5G module in KSU, reboot</li>
-                                </ol>
-                                <p class="item article-text">Now continue with the carrier side activaion steps.</p>
-                            </div>
-                        </details>
-
-                        <h3>Enable voLTE from carrier's end</h3>
+                        <h3 id="carrier-specific">Enable voLTE from carrier's end</h3>
                         <p class="item article-text">Since we are still in the stone age, voLTE might not be enabled by
                             default for your connection by the carrier. So you may need to request to activate from
                             them. There is not much of a direct method for this.</p>
@@ -271,6 +216,80 @@
                                 </a>
                             </details>
                         </div>
+
+                        <hr>
+
+
+                        <p class="item article-text warn">Follow these below workaround methods at your own risk. No responsibilities
+                            will be taken by us if you F up.</p>
+                        <details class="item" open>
+                            <summary><a><b>Google Tensor Devices (Shizuku permissions - No root) voLTE only
+                                    </b></a></summary>
+                            <div class="container">
+                                <p class="item article-text">Pixel 6 and later are supported.
+                                </p>
+                                <p class="item article-text">Keep in mind that Sri Lankan networks like Mobitel, Dialog and Airtel are working on adding native voLTE support now. So before you begin, Check if you already got voLTE and if not, double check with the <a href="#carrier-specific">carrier specific settings</a> too and only continue if all that fails.</p>
+                                                                <div class="notice-callout" role="note" aria-label="Important VoLTE note">
+                                                                    <h4>Important: </h4>
+                                                                    <p class="item article-text warn">The guide linked earlier (on GitHub) will not work anymore after the October feature drop.</p>
+
+                                                                    <p class="item article-text"><strong>Working fix:</strong></p>
+                                                                    <ol style="list-style-type: decimal; padding-left: 20px; text-align: left;">
+                                                                        <li>Install the "ims" app from Telegram.</li>
+                                                                    </ol>
+                                                                    <p class="item article-text">
+                                                                        <a href="https://t.me/vvb2060Channel/1065" class="button" target="_blank" rel="noopener" aria-label="Download ims apk via telegram link">Download IMS APK (Telegram link)</a>
+                                                                    </p>
+
+                                                                    <ol start="2" style="list-style-type: decimal; padding-left: 20px; text-align: left;">
+                                                                        <li>Grant Shizuku to that app.</li>
+                                                                        <li>Restart Shizuku (stop and start it).</li>
+                                                                        <br>
+                                                                        <img src="./assets/img/articles/pixel/restart-shizuku.jpeg" alt="restart shizuku" class="article-img item">
+                                                                        <li>Enable the VoLTE toggle under Settings → Network &amp; SIM cards → {your SIM}.</li>
+                                                                        <br>
+                                                                        <img src="./assets/img/articles/pixel/enable-volte.jpeg" alt="enable volte" class="item">
+                                                                        <li>Restart your phone <i class="warn">(do not start Shizuku after that)</i>.</li>
+                                                                        <li>Enable that toggle in Settings again.</li>
+                                                                        <br>
+                                                                        <img src="./assets/img/articles/pixel/enable-volte-mini.jpeg" alt="enable volte" class="article-img item">
+                                                                    </ol>
+
+                                                                    <p class="item article-text">That's basically it. Now it works and survives restarts. <br><strong>YOU DO NOT HAVE TO USE THE OLD PIXEL IMS APP AT ALL!</strong></p>
+
+
+                                                                    <p class="item article-text">Now continue with the carrier side activation steps. <br><i class="warn">You can safely turn off Developer Options after enabling with this method but it may need to be repeated after OTA updates.</i></p>
+                                                                </div>
+                            </div>
+                        </details>
+
+                        <details class="item">
+                            <summary><a><b>Snapdragon Devices (Root required) voLTE + 5G support
+                                    </b></a></summary>
+                            <div class="container">
+                                <p class="item article-text">Supported devices:
+                                <ul class="list-left">
+                                    <li>Google Pixel 5</li>
+                                    <li>Google Pixel 5a</li>
+                                    <li>Google Pixel 4a 5G</li>
+                                    <li>Other devices untested</li>
+                                </ul>
+                                </p>
+                                <a href="https://github.com/stanislawrogasik/Pixel5-VoLTE-VoWiFi" class="button"
+                                    aria-label="Magisk (root) module by stanislawrogasik on Github to force enable voLTE and 5G on Pixel 5 series devices with Snapdragon.">Flash
+                                    this module via your root solution</a>
+
+                                <p class="item article-text">If you are using KSU or APatch as your root solution:</p>
+                                <ol>
+                                    <li class="list-left">You may need to flash magisk by allowing the magisk app root
+                                        permission from KSU, reboot</li>
+                                    <li class="list-left">Flash the voLTE/5G module in magisk, reboot</li>
+                                    <li class="list-left">Uninstall magisk, will automatically reboot</li>
+                                    <li class="list-left">Flash the voLTE/5G module in KSU, reboot</li>
+                                </ol>
+                                <p class="item article-text">Now continue with the carrier side activaion steps.</p>
+                            </div>
+                        </details>
 
                         <p class="item article-text">Ensure the activation of voLTE in below steps:</p>
                         <ol>
