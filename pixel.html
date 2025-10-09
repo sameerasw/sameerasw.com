@@ -44,7 +44,7 @@
     <link rel=”canonical” href=”https://www.sameerasw.com/pixel/” />
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/articles/pixel.css">
     <link rel="stylesheet" href="css/common/no-cursor.css">
     <!-- <link rel="stylesheet" href="css/arc.css"> -->
     <link rel="stylesheet"
@@ -102,7 +102,7 @@
                     <div id="logo" class="pixel-logo item"></div>
                 </a>
                 <div class="container-mini item content">
-                    <h1 id="title" class="item">My <strong>Pixel</strong> Notes</h1>
+                    <h1 id="title" class="item">Enable <strong>Pixel</strong> voLTE</h1>
                     <p class="item article-text">A collection of notes and information on my Pixel devices and some
                         other articles about getting some advanced features of them. Also instructions and steps for
                         basic modifications are included but all risk is up to you.</p>
@@ -110,354 +110,218 @@
             </div>
         </section>
 
-        <section id="article-info">
-            <h4>My Google Pixel 6A</h4>
-            <img src="./assets/img/articles/pixel/Setup-mobile.jpeg" alt="Mobile setup screenshot preview"
-                id="screenshot">
-            <div class="container" id="specs-table">
-                <table>
-                    <tr>
-                        <td class="table-left"><b class="accent">Model</b></td>
-                        <td class="table-right">: GB17L - in Sage color</td>
-                    </tr>
-                    <tr>
-                        <td class="table-left"><b class="accent">Android</b></td>
-                        <td class="table-right">: Android 16 - BETA program</td>
-                    </tr>
-                    <tr>
-                        <td class="table-left"><b class="accent">Chipset</b></td>
-                        <td class="table-right">: Google Tensor G1</td>
-                    </tr>
-                    <tr>
-                        <td class="table-left"><b class="accent">Memory</b></td>
-                        <td class="table-right">: 6GB RAM + 128GB UFS3.1</td>
-                    </tr>
-                    <tr>
-                        <td class="table-left"><b class="accent">Camera</b></td>
-                        <td class="table-right">: 12.2(w) + 12.2(uw) + 8MP(s)</td>
-                    </tr>
-                    <tr>
-                        <td class="table-left"><b class="accent">Display</b></td>
-                        <td class="table-right">: 6.1" HDR OLED, (1080x2400)</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
         <section id="volte" class="article-summary">
-            <details>
-                <a>
-                    <summary><b><a>Force enable voLTE for Pixels</a></b></summary>
-                    <div class="container">
-                        <p class="item article-text">Since Sri Lankan carriers not supporting Pixel natively, you may
-                            experience network difficulties. To counter that, we need to have a registered IMS status
-                            which include connecting Voice over LTE (VoLTE), Video Calling and VoWiFi. Some carriers
-                            like Dialog are reported to add voLTE support for some recent models like 7 and 8 series so
-                            let’s hope Dialog and other carriers will continue improving support.</p>
+                <div class="volte-content">
+                    <p class="item article-text">Since Sri Lankan carriers not supporting Pixel natively, you may
+                        experience network difficulties. To counter that, we need to have a registered IMS status
+                        which include connecting Voice over LTE (VoLTE), Video Calling and VoWiFi. Some carriers
+                        like Dialog are reported to add voLTE support for some recent models like 7 and 8 series so
+                        let's hope Dialog and other carriers will continue improving support.</p>
 
-
-                        <h3 id="carrier-specific">Enable voLTE from carrier's end</h3>
+                    <div class="volte-section">
+                        <h3 id="carrier-specific">Enable voLTE from Carrier's End</h3>
                         <p class="item article-text">Since we are still in the stone age, voLTE might not be enabled by
                             default for your connection by the carrier. So you may need to request to activate from
                             them. There is not much of a direct method for this.</p>
-                        <div id="carrier-list">
-                            <details class="item">
-                                <a>
-                                    <summary><b><a>Dialog <img
-                                                    src="https://www.axiata.com/brandkit/img/img-3prism-01-01.png"
-                                                    class="details-favicon" alt="Dialog network logo"></a></b></summary>
-                                    <p class="item article-text">Request to activate the service by sending a SMS to 678
-                                        with
-                                        <br><i class="warn copy">ACT 4GV</i>
-                                        <br>(This will activate both VoLTE & VoWiFi)
-                                    </p>
-                                </a>
-                            </details>
-                            <details class="item">
-                                <a>
-                                    <summary><b><a>Mobitel <img
-                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SLTMobitel_Logo.svg/2560px-SLTMobitel_Logo.svg.png"
-                                                    class="details-favicon" alt="SLT Mobitel network logo"></a></b>
-                                    </summary>
-                                    <p class="item article-text">You need to contact Mobitel customer support. Use any
-                                        of their preferred methods.
-                                        <ul class="list-left">
-                                            <li><a href="mailto:info@mobitel.lk"
-                                                    aria-label="Mobitel customer support email">info@mobitel.lk</a></li>
-                                            <li>24 Hour Customer Service Hotline +94 (0) 712755777 or dial 1717</li>
-                                        </ul>
-                                    </p>
-                                </a>
-                            </details>
-                            <details class="item">
-                                <a>
-                                    <summary><b><a>Hutch <img
-                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hutch_Logo.svg/1200px-Hutch_Logo.svg.png"
-                                                    class="details-favicon" alt="Hutch network logo"></a></b></summary>
-                                    <p class="item article-text">You need to contact Mobitel customer support. But Hutch
-                                        doesn’t let other devices opt-in to the voLTE technology. *shame*
-                                        You may need to lie about what’s your device or get lucky with the agent you are
-                                        matching with.
-                                        <ul class="list-left">
-                                            <li><a href="mailto:cs@hutchison.lk"
-                                                    aria-label="Hutch customer support email">cs@hutchison.lk</a></li>
-                                            <li>Hotline (24Hr) : 1788 (Any Network)</li>
-                                            <li>WhatsApp : 0788 777 111 - Chat Only</li>
-                                        </ul>
-                                    </p>
-                                </a>
-                            </details>
-                            <details class="item">
-                                <a>
-                                    <summary><b><a>Airtel <img
-                                                    src="https://1000logos.net/wp-content/uploads/2023/06/Airtel-logo.png"
-                                                    class="details-favicon" alt="Airtel network logo"></a></b></summary>
-                                    <p class="item article-text">IDK</p>
-                                </a>
-                            </details>
+
+                        <div class="carrier-grid">
+                            <div class="carrier-card">
+                                <div class="carrier-header">
+                                    <h4>Dialog</h4>
+                                    <img src="https://www.axiata.com/brandkit/img/img-3prism-01-01.png"
+                                        class="carrier-logo" alt="Dialog network logo">
+                                </div>
+                                <div class="carrier-body">
+                                    <p>Request to activate the service by sending a SMS to <strong>678</strong> with</p>
+                                    <code class="carrier-code">ACT 4GV</code>
+                                    <p class="carrier-note">(This will activate both VoLTE & VoWiFi)</p>
+                                </div>
+                            </div>
+
+                            <div class="carrier-card">
+                                <div class="carrier-header">
+                                    <h4>Mobitel</h4>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SLTMobitel_Logo.svg/2560px-SLTMobitel_Logo.svg.png"
+                                        class="carrier-logo" alt="SLT Mobitel network logo">
+                                </div>
+                                <div class="carrier-body">
+                                    <p>Contact Mobitel customer support using any of these methods:</p>
+                                    <ul class="carrier-contact-list">
+                                        <li><a href="mailto:info@mobitel.lk">info@mobitel.lk</a></li>
+                                        <li>24 Hour Hotline: +94 (0) 712755777 or dial 1717</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="carrier-card">
+                                <div class="carrier-header">
+                                    <h4>Hutch</h4>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hutch_Logo.svg/1200px-Hutch_Logo.svg.png"
+                                        class="carrier-logo" alt="Hutch network logo">
+                                </div>
+                                <div class="carrier-body">
+                                    <p>Contact Hutch customer support. Note: Hutch doesn't officially let other devices
+                                        opt-in to voLTE. You may need to specify your device or get lucky with the
+                                        agent.</p>
+                                    <ul class="carrier-contact-list">
+                                        <li><a href="mailto:cs@hutchison.lk">cs@hutchison.lk</a></li>
+                                        <li>Hotline (24Hr): 1788 (Any Network)</li>
+                                        <li>WhatsApp: 0788 777 111 (Chat Only)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="carrier-card">
+                                <div class="carrier-header">
+                                    <h4>Airtel</h4>
+                                    <img src="https://1000logos.net/wp-content/uploads/2023/06/Airtel-logo.png"
+                                        class="carrier-logo" alt="Airtel network logo">
+                                </div>
+                                <div class="carrier-body">
+                                    <p>Information not available at this time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="volte-section">
+                        <div class="warning-box">
+                            <p class="warn"><strong>⚠️ Disclaimer:</strong> Follow these workaround methods at your own
+                                risk. No responsibilities will be taken by us if you encounter any issues.</p>
                         </div>
 
-                        <hr>
+                        <h3>Device-Specific Workarounds</h3>
 
-
-                        <p class="item article-text warn">Follow these below workaround methods at your own risk. No responsibilities
-                            will be taken by us if you F up.</p>
-                        <details class="item" open>
-                            <summary><a><b>Google Tensor Devices (Shizuku permissions - No root) voLTE only
-                                    </b></a></summary>
-                            <div class="container">
-                                <p class="item article-text">Pixel 6 and later are supported.
-                                </p>
-                                <p class="item article-text">Keep in mind that Sri Lankan networks like Mobitel, Dialog and Airtel are working on adding native voLTE support now. So before you begin, Check if you already got voLTE and if not, double check with the <a href="#carrier-specific">carrier specific settings</a> too and only continue if all that fails.</p>
-                                                                <div class="notice-callout" role="note" aria-label="Important VoLTE note">
-                                                                    <h4>Important: </h4>
-                                                                    <p class="item article-text warn">The guide linked earlier (on GitHub) will not work anymore after the October feature drop.</p>
-
-                                                                    <p class="item article-text"><strong>Working fix:</strong></p>
-                                                                    <ol style="list-style-type: decimal; padding-left: 20px; text-align: left;">
-                                                                        <li>Install the "ims" app from Telegram.</li>
-                                                                    </ol>
-                                                                    <p class="item article-text">
-                                                                        <a href="https://t.me/vvb2060Channel/1065" class="button" target="_blank" rel="noopener" aria-label="Download ims apk via telegram link">Download IMS APK (Telegram link)</a>
-                                                                    </p>
-
-                                                                    <ol start="2" style="list-style-type: decimal; padding-left: 20px; text-align: left;">
-                                                                        <li>Grant Shizuku to that app.</li>
-                                                                        <li>Restart Shizuku (stop and start it).</li>
-                                                                        <br>
-                                                                        <img src="./assets/img/articles/pixel/restart-shizuku.jpeg" alt="restart shizuku" class="article-img item">
-                                                                        <li>Enable the VoLTE toggle under Settings → Network &amp; SIM cards → {your SIM}.</li>
-                                                                        <br>
-                                                                        <img src="./assets/img/articles/pixel/enable-volte.jpeg" alt="enable volte" class="item">
-                                                                        <li>Restart your phone <i class="warn">(do not start Shizuku after that)</i>.</li>
-                                                                        <li>Enable that toggle in Settings again.</li>
-                                                                        <br>
-                                                                        <img src="./assets/img/articles/pixel/enable-volte-mini.jpeg" alt="enable volte" class="article-img item">
-                                                                    </ol>
-
-                                                                    <p class="item article-text">That's basically it. Now it works and survives restarts. <br><strong>YOU DO NOT HAVE TO USE THE OLD PIXEL IMS APP AT ALL!</strong></p>
-
-
-                                                                    <p class="item article-text">Now continue with the carrier side activation steps. <br><i class="warn">You can safely turn off Developer Options after enabling with this method but it may need to be repeated after OTA updates.</i></p>
-                                                                </div>
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h4>Google Tensor Devices (Shizuku - No Root)</h4>
+                                <span class="method-badge">voLTE Only</span>
                             </div>
-                        </details>
+                            <div class="method-body">
+                                <p class="item article-text"><strong>Supported:</strong> Pixel 6 and later</p>
+                                <p class="item article-text">Keep in mind that Sri Lankan networks like Mobitel, Dialog
+                                    and Airtel are working on adding native voLTE support now. Before you begin, check
+                                    if you already have voLTE and if not, double check with the <a
+                                        href="#carrier-specific">carrier specific settings</a> too and only continue if
+                                    all that fails.</p>
 
-                        <details class="item">
-                            <summary><a><b>Snapdragon Devices (Root required) voLTE + 5G support
-                                    </b></a></summary>
-                            <div class="container">
-                                <p class="item article-text">Supported devices:
-                                <ul class="list-left">
-                                    <li>Google Pixel 5</li>
-                                    <li>Google Pixel 5a</li>
-                                    <li>Google Pixel 4a 5G</li>
-                                    <li>Other devices untested</li>
-                                </ul>
-                                </p>
-                                <a href="https://github.com/stanislawrogasik/Pixel5-VoLTE-VoWiFi" class="button"
-                                    aria-label="Magisk (root) module by stanislawrogasik on Github to force enable voLTE and 5G on Pixel 5 series devices with Snapdragon.">Flash
-                                    this module via your root solution</a>
+                                <h4>Important:</h4>
+                                <p class="warn">The guide linked earlier (on GitHub) will not work anymore after the
+                                    October feature drop.</p>
 
-                                <p class="item article-text">If you are using KSU or APatch as your root solution:</p>
-                                <ol>
-                                    <li class="list-left">You may need to flash magisk by allowing the magisk app root
-                                        permission from KSU, reboot</li>
-                                    <li class="list-left">Flash the voLTE/5G module in magisk, reboot</li>
-                                    <li class="list-left">Uninstall magisk, will automatically reboot</li>
-                                    <li class="list-left">Flash the voLTE/5G module in KSU, reboot</li>
-                                </ol>
-                                <p class="item article-text">Now continue with the carrier side activaion steps.</p>
+                                <div class="steps-section">
+                                    <p><strong>Working fix:</strong></p>
+                                    <ol class="method-steps">
+                                        <li>Install the "ims" app from Telegram.
+                                            <div class="step-action">
+                                                <a href="https://t.me/vvb2060Channel/1065" class="button"
+                                                    target="_blank" rel="noopener">Download IMS APK</a>
+                                            </div>
+                                        </li>
+                                        <li>Grant Shizuku to that app.</li>
+                                        <li>Restart Shizuku (stop and start it).
+                                            <img src="./assets/img/articles/pixel/restart-shizuku.jpeg"
+                                                alt="restart shizuku" class="step-image">
+                                        </li>
+                                        <li>Enable the VoLTE toggle under Settings → Network & SIM cards → {your SIM}.
+                                            <img src="./assets/img/articles/pixel/enable-volte.jpeg" alt="enable volte"
+                                                class="step-image">
+                                        </li>
+                                        <li>Restart your phone <span class="warn">(do not start Shizuku after
+                                                that)</span>.</li>
+                                        <li>Enable that toggle in Settings again.
+                                            <img src="./assets/img/articles/pixel/enable-volte-mini.jpeg"
+                                                alt="enable volte" class="step-image">
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <p class="item article-text"><strong>That's it!</strong> It now works and survives
+                                    restarts. <strong>YOU DO NOT HAVE TO USE THE OLD PIXEL IMS APP AT ALL!</strong></p>
+                                <p class="item article-text">Now continue with the carrier side activation steps. <span
+                                        class="warn">You can safely turn off Developer Options after enabling with this
+                                        method but it may need to be repeated after OTA updates.</span></p>
+
                             </div>
-                        </details>
+                        </div>
 
-                        <p class="item article-text">Ensure the activation of voLTE in below steps:</p>
-                        <ol>
-                            <li class="list-left">Dial <i class="warn">*#*#4636#*#*</i> in dialer</li>
-                            <li class="list-left">Phone information</li>
-                            <li class="list-left">Select the SIM (Select phone index option)</li>
-                            <li class="list-left">Open the 3 dot menu</li>
-                            <li class="list-left">Open IMS Service Status</li>
-                            <li class="list-left">Check if your services are registered and available similar to below
-                            </li>
+                    </div>
+
+                    <div class="volte-section">
+                        <h3>Verify voLTE Activation</h3>
+                        <p class="item article-text">Ensure the activation of voLTE with the following steps:</p>
+                        <ol class="method-steps">
+                            <li>Dial <code class="inline-code">*#*#4636#*#*</code> in dialer</li>
+                            <li>Select "Phone information"</li>
+                            <li>Select the SIM (Select phone index option)</li>
+                            <li>Open the 3 dot menu</li>
+                            <li>Open "IMS Service Status"</li>
+                            <li>Check if your services are registered and available similar to below:</li>
                         </ol>
-                        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb420cf1b-b5de-455a-bc03-3990ae2d77ba%2Ff5ca4427-e602-4d05-ba88-17760cab1109%2FUntitled.png?table=block&id=f44ff9e7-d0c2-4434-bf6a-6bbedc9857eb&cache=v2"
-                            alt="IMS status" id="ims-img">
+                        <div class="verification-image">
+                            <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb420cf1b-b5de-455a-bc03-3990ae2d77ba%2Ff5ca4427-e602-4d05-ba88-17760cab1109%2FUntitled.png?table=block&id=f44ff9e7-d0c2-4434-bf6a-6bbedc9857eb&cache=v2"
+                                alt="IMS status verification" class="article-img">
+                        </div>
                     </div>
-                </a>
-            </details>
+
+                    <section id="intro">
+            <h1>Pixel Root Methods</h1>
+            <p class="article-text">Advanced methods for enabling voLTE and 5G on rooted Pixel devices with Snapdragon
+                chipsets.</p>
         </section>
 
+            <section id="root-methods">
+                <div class="warning-box">
+                    <p><strong>⚠️ Warning:</strong> These methods require root access. Rooting your device will void
+                        your warranty and may cause security risks. Proceed at your own risk. No responsibilities will
+                        be taken by us if you encounter any issues.</p>
+                </div>
 
-        <section id="charging" class="article-summary">
-            <details>
-                <a>
-                    <summary><b><a>Picking a charger for your Pixel</a></b></summary>
-                    <div class="container">
-                        <p class="item article-text">Google Pixels use the new standard of charging, <b
-                                class="accent">USB PD (Power Delivery) technology</b>
-                            which is also used by many of the common devices such as iPhones, MacBooks, Samsung, many
-                            laptops etc.
-                            This means the device only draws the necessary amount of power from the adapter
-                            thanks to the communication between the device and the adapter.</p>
+                <h2>Snapdragon Devices (Root Required)</h2>
 
-                        <h3 class="item">SHOULD I GET A GOOGLE POWER ADAPTER?</h3>
-                        <p class="item article-text">No. <b class="accent">Not in Sri Lanka.</b> Almost every Google
-                            branded adapter available in Sri Lanka are fake clones. I’ve heard stories of some shops
-                            even recommending using them or otherwise the device may face issues which is a complete
-                            marketing myth to sell the product. Stay away from them unless you are importing one from
-                            overseas Google Store or from a trusted Amazon seller.</p>
-                        <img src="https://9to5toys.com/wp-content/uploads/sites/5/2023/03/pixel_6_chargers_3-5.jpg"
-                            alt="Google power adapter" class="article-img item">
-
-                        <h3 class="item">WHAT SHOULD I GET?</h3>
-                        <p class="item article-text">Any PD compatible adapter from a reputed 3rd party brand like <b
-                                class="accent">Anker, Baseus, Ugreen etc.</b> should be just fine and there could be
-                            more brands too that I’m unaware of. Or go for an OEM charger adapter from Samsung or Apple
-                            form a trustworthy place. If the adapter is PD compatible, most likely the packaging will
-                            mention it or their website. Some brands like Anker uses their own technologies which are
-                            compatible with both PD and QC which is much easier. Stay away from old obsolete Qualcomm QC
-                            (Quick Charge) only adapters since they might cause problems with modern devices.</p>
-                        <div class="article-img-carousel item">
-                            <img src="https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A2147111_TD01.png?v=1712893433"
-                                alt="Anker power adapter" class="article-img">
-                            <img src="https://www.ugreen.com/cdn/shop/products/ugreen-nexode-45w-usb-c-gan-charger-2-ports-wall-charger-621875.png?v=1692790970&width=600"
-                                alt="Ugreen pwoer adapter" class="article-img">
-                            <img src="https://baseusindiaofficial.com/cdn/shop/files/13_1200x.png?v=1712596370"
-                                alt="Baseus pwoer adapter" class="article-img">
-                        </div>
-
-                        <h3 class="item">DO YOU NEED FAST CHARGING?</h3>
-                        <p class="item article-text">Do you? Fast charging heats up the device, will drain the battery
-                            fast and high temps leads to battery wear. Even if you pick up a fast charger, try to use it
-                            only, when necessary, especially since Sri Lankan temperature is quite high added with bad
-                            network receptions for the device.
-                            <br><br><code
-                                class="accent">Fast charging ⇒ more heat ⇒ more battery wear + less screen on time</code>
-                        </p>
-
-                        <div class="article-img-carousel item">
-                            <img src="https://9to5google.com/wp-content/uploads/sites/4/2018/11/pixel_3_wireless_charging_indicator_fix_3.jpg?quality=82&strip=all"
-                                alt="Charging slowly indication" class="article-img">
-                        </div>
-
-                        <h3 class="item">WHAT WATTAGE SHOULD I GET?</h3>
-                        <p class="item article-text"><b class="accent">It’s your preference.</b> If you need the fastest
-                            charging, get one at least matches the maximum supported Wattage or over. (mostly around
-                            25W) Going below that Wattage only makes it healthier for the device as long as the device
-                            doesn’t heat up or show any other issues with non-PD chargers.
-                            Pick Wattage based on what other devices you do/will have. As an example, you can just rely
-                            on a 30W adapter if you own a MacBook (comes with an adapter) along with the Pixel since
-                            they both share the PD technology. Maybe your laptop needs 60W… or 100W… Get an enough
-                            powerful adapter for both, then you only need to carry one. (Also helps reducing e-waste 🍀)
-                        </p>
-                        <img src="https://www.xtorm.eu/cdn/shop/files/100w-gan2-ultra-charger-908241_1280x.png?v=1719489743"
-                            alt="Chargign adpaters with different wattages" class="article-img item">
-
-                        <h3 class="item">WHAT CHARGING HABITS TO FOLLOW?</h3>
-                        <p class="item article-text">Nothing important other than <b class="accent">staying away from
-                                0%.</b> but it’s usually a good practice to keep the device around 50% which is a good
-                            middle ground which can help long term battery health without stressing it often. Since
-                            that’s not practical, try 20-80% or somewhere around ONLY if possible. I never charge above
-                            80% unless I travel, and always keep the device plugged in and front of a fan when using
-                            hotspot.
-                            Also feel free to charge overnight with Adaptive charging on which will conveniently charge
-                            your device to full when your wake-up time closes.
-                            Don’t think about it, just have a habit and get used to.</p>
-                        <img src="https://media-ecn.s3.amazonaws.com/embedded_image/2015/11/AppleBattery.png"
-                            alt="Fast chargign and trickle charging" class="article-img item">
-
-                        <h3 class="item">USING POWER SAVER ALWAYS?</h3>
-                        <p class="item article-text"><b class="accent">DO NOT KEEP POWER SAVING ON.</b> It’s a waste of
-                            your money since you paid for the smarted phone and keeps it limited with the smart features
-                            turned off to save a little of battery. Unless it’s a necessary situation, stay away from
-                            power saving. I only use it during emergencies.</p>
-                        <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/010924_BatterySaver_SocialShare.jpg"
-                            alt="Pixel battery saver quick settings tile" class="article-img item">
-
-                        <h3 class="item">DOES THE CABLE MATTER?</h3>
-                        <p class="item article-text">Of course. You won’t get any fast charging if you use an
-                            incompatible or damaged cable. Just make sure it’s also well reputed. Type-C port is
-                            universal, but some cheap cables may deform the port on the device so be careful with it. If
-                            there’s an issue, you’ll prolly won’t see the <b class="accent">“Charging rapidly”</b>
-                            notice and sometimes may not even charge at all like some users reported here.</p>
-                        <img src="https://lh3.googleusercontent.com/7BWcrAb42HFmF69leobyeFCIhtsv65BCD9BwawMz3NXdngaBn_xBqc-Gcmp0Vq8EgcHI"
-                            alt="Typical USB-C cable" class="article-img item">
-
-                        <h3 class="item">TEST IT IF YOU CAN</h3>
-                        <p class="item article-text">If you can, try it out before buying it. Even after buying, test it
-                            for few hours before using overnight.
-                            If you are using a non-PD charger, especially be careful and test it.</p>
-
-                        <h3 class="item">TEMPERATURE MATTERS?</h3>
-                        <p class="item article-text">Your device temperature highly affects the charging speed since
-                            Pixels cut down the power and slow it down to avoid damage to the battery and the device.
-                            So, even if you picked every premium item, your device may not charge efficiently due to
-                            being boiled alive. You can use the ABattery or such app to monitor the battery temperature.
-                            Keep in mind that, fast charging = more heat.
-                            <code class="accent"><br><br>>37°C will cause the device to lightly throttle
-
-                            <br>>41°C will cause high throttle and possible the charging to pause
-
-                            <br>>45°C is dangerous</p> </code>
-
-                        <div class="article-img-carousel item">
-                            <img src="https://media.tech-latest.com/wp-content/uploads/2023/01/04145411/Pixel-7-Heating-1-1024x597.jpg"
-                                alt="Device overheating alert" class="article-img">
-                            <img src="https://play-lh.googleusercontent.com/sZy6loMmHzKccc3uJSKjSTklQ1zRkuapi-0wj2ErtNF1nX8ZworxXeIQIdtITqf1v58"
-                                alt="aBattery app icon" class="article-img">
-                        </div>
-
-                        <h3 class="item">POWER QUALITY MATTERS?</h3>
-                        <p class="item article-text">This is rare but as best practice; just avoid sketchy connections
-                            such as loose wall plugs or extensions.</p>
-
-                        <div id="tldr" class="item">
-                            <h2>TL;DR</h2>
-                            <p class="item article-text">
-                            <ul>
-                                <li>Avoid Google branded chargers in Sri Lanka</li>
-                                <li>Choose a reputed 3rd party adapter from brands like Anker, Baseus and UGreen …</li>
-                                <li>Avoid fast charging unless necessary</li>
-                                <li>Don’t keep power saving on unless you really need to</li>
-                                <li>Pick a good cable</li>
-                                <li>Test it before using overnight for temperature, touch issues and such.</li>
-                                <li>Don’t let the device to overheat</li>
-                            </ul>
-                            </p>
-                        </div>
-
-
+                <div class="method-card">
+                    <div class="method-header">
+                        <h4>VoLTE + 5G Support</h4>
+                        <span class="method-badge root">Root Required</span>
                     </div>
-                </a>
-            </details>
-        </section>
+                    <div class="method-body">
+                        <p class="item article-text"><strong>Supported devices:</strong></p>
+                        <ul class="device-list">
+                            <li>Google Pixel 5</li>
+                            <li>Google Pixel 5a</li>
+                            <li>Google Pixel 4a 5G</li>
+                            <li>Other devices untested</li>
+                        </ul>
 
-        <section id="photos" class="article-summary">
-            <a href="https://photos.app.goo.gl/jEyFxhKmfQAiyT878"
-                aria-label="Google photos album link for sharing your Google Pixel captures">
-                <p>Captured with Pixels Google Photos album</p>
-            </a>
+                        <h3>Installation Steps</h3>
+
+                        <div class="step-action">
+                            <a href="https://github.com/stanislawrogasik/Pixel5-VoLTE-VoWiFi" class="button"
+                                target="_blank" rel="noopener">Download Module from GitHub</a>
+                        </div>
+
+                        <p class="item article-text">Flash this module via your root solution (Magisk, KernelSU, or
+                            APatch).</p>
+
+                        <div class="ksu-section">
+                            <h4>For KSU or APatch Users:</h4>
+                            <p class="item article-text">If you are using KernelSU or APatch as your root solution,
+                                follow these additional steps:</p>
+                            <ol class="method-steps">
+                                <li>Flash Magisk by allowing the Magisk app root permission from KSU/APatch, then reboot
+                                </li>
+                                <li>Flash the voLTE/5G module in Magisk, then reboot</li>
+                                <li>Uninstall Magisk (will automatically reboot)</li>
+                                <li>Flash the voLTE/5G module in KSU/APatch, then reboot</li>
+                            </ol>
+                        </div>
+
+                        <p class="item article-text">After completing these steps, continue with the <a
+                                href="./pixel.html#carrier-specific">carrier side activation</a> from the main Pixel
+                            notes page.</p>
+                    </div>
+                </div>
+                </div>
         </section>
 
         <footer></footer>
