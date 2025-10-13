@@ -44,47 +44,37 @@ try {
   //change the active nav to the current scroll position based on sections
   let intro = document.getElementById("intro");
   let projects = document.getElementById("projects");
-  let mood_diary = document.getElementById("mood-diary");
   let about = document.getElementById("about-me");
   let contact = document.getElementById("contact");
 
   let intro_nav = document.getElementById("home-nav");
   let projects_nav = document.getElementById("projects-nav");
+  // journal_nav may not exist if the mood diary was removed
   let journal_nav = document.getElementById("journal-nav");
   let about_nav = document.getElementById("about-nav");
   let contact_nav = document.getElementById("contact-nav");
 
   window.addEventListener("scroll", function () {
     let scroll = window.scrollY;
-    if (scroll < projects.offsetTop - 400) {
+    // Guard: ensure target sections exist before using offsetTop
+    const projectsTop = projects ? projects.offsetTop : Infinity;
+    const aboutTop = about ? about.offsetTop : Infinity;
+    const contactTop = contact ? contact.offsetTop : Infinity;
+
+    // Clear all first
+    intro_nav.classList.remove("active");
+    projects_nav.classList.remove("active");
+    journal_nav && journal_nav.classList.remove("active");
+    about_nav.classList.remove("active");
+    contact_nav.classList.remove("active");
+
+    if (scroll < projectsTop - 400) {
       intro_nav.classList.add("active");
-      projects_nav.classList.remove("active");
-      journal_nav.classList.remove("active");
-      about_nav.classList.remove("active");
-      contact_nav.classList.remove("active");
-    } else if (scroll < mood_diary.offsetTop - 800) {
-      intro_nav.classList.remove("active");
+    } else if (scroll < aboutTop - 200) {
       projects_nav.classList.add("active");
-      journal_nav.classList.remove("active");
-      about_nav.classList.remove("active");
-      contact_nav.classList.remove("active");
-    } else if (scroll < about.offsetTop - 200) {
-      intro_nav.classList.remove("active");
-      projects_nav.classList.remove("active");
-      journal_nav.classList.add("active");
-      about_nav.classList.remove("active");
-      contact_nav.classList.remove("active");
-    } else if (scroll < contact.offsetTop - 400) {
-      intro_nav.classList.remove("active");
-      projects_nav.classList.remove("active");
-      journal_nav.classList.remove("active");
+    } else if (scroll < contactTop - 400) {
       about_nav.classList.add("active");
-      contact_nav.classList.remove("active");
     } else {
-      intro_nav.classList.remove("active");
-      projects_nav.classList.remove("active");
-      journal_nav.classList.remove("active");
-      about_nav.classList.remove("active");
       contact_nav.classList.add("active");
     }
   });
