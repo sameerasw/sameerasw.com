@@ -34,7 +34,7 @@ export default async (req, context) => {
   }
 
   // const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
-  const expiresAt = Date.now() + 60 * 1000; // 1 minute for testing
+  const expiresAt = Date.now() + 60 * 5000; // 1 minute for testing
 
   const secret = process.env.HMAC_SECRET ?? "CHANGE_ME_SECRET";
   const token = crypto.createHmac("sha256", secret).update(`${deviceId}.${expiresAt}`).digest("hex");
