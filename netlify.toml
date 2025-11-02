@@ -5,11 +5,11 @@
   node_bundler = "esbuild"
 
 [functions.trial]
-  included_files = ["netlify/functions/trial.mjs"]
+  included_files = ["netlify/functions/trial.js"]
   kv_namespaces = ["TRIAL_DEVICES"]
 
 [functions.trial-admin]
-  included_files = ["netlify/functions/trial-admin.mjs"]
+  included_files = ["netlify/functions/trial-admin.js"]
   kv_namespaces = ["TRIAL_DEVICES"]
 
 [[kv_namespaces]]
