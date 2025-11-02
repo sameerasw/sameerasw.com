@@ -1,104 +1,98 @@
+import { Client } from "pg";
 import crypto from "crypto";
 
 export default async (req, context) => {
   const url = new URL(req.url);
-  const kv = context.env?.TRIAL_DEVICES;
+  const db = new Client({ connectionString: process.env.DATABASE_URL });
 
-  // --- Ensure KV binding exists ---
-  if (!kv) {
-    console.error("❌ KV binding missing — check netlify.toml and ensure namespace 'trial-devices' is linked.");
-    return new Response(
-      JSON.stringify({ error: "Server misconfigured: missing KV binding" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
-    );
-  }
+  await db.connect();
 
   const adminKey = process.env.TRIAL_ADMIN_KEY;
   const hmacSecret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
 
-  // --- Handle Admin Actions ---
+  // ensure table exists (auto-create)
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS trials (
+      device_id TEXT PRIMARY KEY,
+      expires_at BIGINT NOT NULL,
+      token TEXT NOT NULL
+    );
+  `);
+
   const action = url.searchParams.get("action");
   const providedAdminKey = url.searchParams.get("adminKey");
   const deviceId = url.searchParams.get("deviceId");
 
+  // --- Admin actions ---
   if (providedAdminKey && providedAdminKey === adminKey) {
-    if (!action)
-      return new Response(JSON.stringify({ error: "Missing action" }), { status: 400 });
-
     switch (action) {
-      case "reset": {
+      case "reset":
         if (!deviceId)
-          return new Response(JSON.stringify({ error: "Missing deviceId" }), { status: 400 });
+          return json({ error: "Missing deviceId" }, 400);
+        await db.query("DELETE FROM trials WHERE device_id = $1", [deviceId]);
+        await db.end();
+        return json({ success: true, message: `Reset ${deviceId}` });
 
-        await kv.delete(deviceId);
-        console.log(`✅ Reset trial for ${deviceId}`);
-        return new Response(JSON.stringify({ success: true, message: `Reset ${deviceId}` }), {
-          headers: { "Content-Type": "application/json" },
-        });
-      }
-
-      case "get": {
+      case "get":
         if (!deviceId)
-          return new Response(JSON.stringify({ error: "Missing deviceId" }), { status: 400 });
+          return json({ error: "Missing deviceId" }, 400);
+        const result = await db.query("SELECT * FROM trials WHERE device_id = $1", [deviceId]);
+        await db.end();
+        return json(result.rows[0] || { error: "Not found" });
 
-        const data = await kv.get(deviceId, { type: "json" });
-        return new Response(JSON.stringify(data || { error: "Not found" }), {
-          headers: { "Content-Type": "application/json" },
-        });
-      }
+      case "list":
+        const list = await db.query("SELECT * FROM trials ORDER BY expires_at DESC");
+        await db.end();
+        return json(list.rows);
 
       default:
-        return new Response(JSON.stringify({ error: "Unknown admin action" }), { status: 400 });
+        await db.end();
+        return json({ error: "Unknown admin action" }, 400);
     }
   }
 
-  // --- Normal Trial Request ---
+  // --- Normal trial request ---
   let body = {};
-  if (req.method === "POST") {
-    try {
+  try {
+    if (req.method === "POST") {
       body = await req.json();
-    } catch {
-      body = {};
     }
-  }
+  } catch {}
 
   const id = body.deviceId || deviceId;
   if (!id) {
-    return new Response(JSON.stringify({ error: "Missing deviceId" }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" },
-    });
+    await db.end();
+    return json({ error: "Missing deviceId" }, 400);
   }
 
-  // --- Check for existing trial ---
-  const existing = await kv.get(id, { type: "json" });
-  if (existing) {
-    // If expired, reset automatically
-    if (existing.expiresAt && Date.now() > existing.expiresAt) {
-      await kv.delete(id);
-      console.log(`⏳ Expired trial removed for ${id}`);
+  const existing = await db.query("SELECT * FROM trials WHERE device_id = $1", [id]);
+  if (existing.rows.length > 0) {
+    const trial = existing.rows[0];
+    if (Date.now() < trial.expires_at) {
+      await db.end();
+      return json({ error: "Trial already used", record: trial }, 403);
     } else {
-      return new Response(JSON.stringify({ error: "Trial already used", record: existing }), {
-        status: 403,
-        headers: { "Content-Type": "application/json" },
-      });
+      // expired → delete and continue
+      await db.query("DELETE FROM trials WHERE device_id = $1", [id]);
     }
   }
 
-  // --- Create new trial ---
-  const expiresAt = Date.now() + 24 * 60 * 60 * 1000; // 24h
+  // Issue new trial (24h)
+  const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
   const token = crypto.createHmac("sha256", hmacSecret)
     .update(`${id}.${expiresAt}`)
     .digest("hex");
 
-  const trialData = { deviceId: id, expiresAt, token };
-  await kv.put(id, JSON.stringify(trialData));
+  await db.query("INSERT INTO trials (device_id, expires_at, token) VALUES ($1, $2, $3)", [id, expiresAt, token]);
+  await db.end();
 
-  console.log(`🎟️ Created new trial for ${id}`);
-  return new Response(JSON.stringify(trialData), {
+  return json({ deviceId: id, expiresAt, token });
+};
+
+// helper
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
     headers: { "Content-Type": "application/json" },
   });
-};
+}
