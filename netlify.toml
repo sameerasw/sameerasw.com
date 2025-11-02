@@ -6,7 +6,3 @@
 
 [functions.trial]
   included_files = ["netlify/functions/trial.js"]
-
-[[kv_namespaces]]
-binding = "TRIAL_DEVICES"
-name = "trial-devices"
