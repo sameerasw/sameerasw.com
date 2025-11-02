@@ -1,5 +1,24 @@
 {
   "name": "airsync-licensing",
   "version": "1.0.0",
-  "type": "module"
+  "type": "module",
+  "description": "My portfolio website source code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sameerasw/sameerasw.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sameerasw/sameerasw.com/issues"
+  },
+  "homepage": "https://github.com/sameerasw/sameerasw.com#readme",
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
 }
