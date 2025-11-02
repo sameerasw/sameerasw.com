@@ -1,17 +1,15 @@
 import { Client } from "pg";
 import crypto from "crypto";
 
-export default async (req, context) => {
-  const url = new URL(req.url);
-  const db = new Client({ connectionString: process.env.DATABASE_URL });
+async function getDb() {
+  const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+  });
+  await client.connect();
 
-  await db.connect();
-
-  const adminKey = process.env.TRIAL_ADMIN_KEY;
-  const hmacSecret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
-
-  // ensure table exists (auto-create)
-  await db.query(`
+  // Create table if it doesn't exist
+  await client.query(`
     CREATE TABLE IF NOT EXISTS trials (
       device_id TEXT PRIMARY KEY,
       expires_at BIGINT NOT NULL,
@@ -19,80 +17,83 @@ export default async (req, context) => {
     );
   `);
 
-  const action = url.searchParams.get("action");
-  const providedAdminKey = url.searchParams.get("adminKey");
+  return client;
+}
+
+export default async (req) => {
+  const url = new URL(req.url);
+  const adminKey = process.env.TRIAL_ADMIN_KEY;
+  const secret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
   const deviceId = url.searchParams.get("deviceId");
 
+  const client = await getDb();
+
   // --- Admin actions ---
-  if (providedAdminKey && providedAdminKey === adminKey) {
-    switch (action) {
-      case "reset":
-        if (!deviceId)
-          return json({ error: "Missing deviceId" }, 400);
-        await db.query("DELETE FROM trials WHERE device_id = $1", [deviceId]);
-        await db.end();
-        return json({ success: true, message: `Reset ${deviceId}` });
-
-      case "get":
-        if (!deviceId)
-          return json({ error: "Missing deviceId" }, 400);
-        const result = await db.query("SELECT * FROM trials WHERE device_id = $1", [deviceId]);
-        await db.end();
-        return json(result.rows[0] || { error: "Not found" });
-
-      case "list":
-        const list = await db.query("SELECT * FROM trials ORDER BY expires_at DESC");
-        await db.end();
-        return json(list.rows);
-
-      default:
-        await db.end();
-        return json({ error: "Unknown admin action" }, 400);
+  const action = url.searchParams.get("action");
+  const providedKey = url.searchParams.get("adminKey");
+  if (providedKey && providedKey === adminKey) {
+    if (action === "reset" && deviceId) {
+      await client.query("DELETE FROM trials WHERE device_id = $1", [deviceId]);
+      await client.end();
+      return new Response(
+        JSON.stringify({ success: true, message: `Trial reset for ${deviceId}` }),
+        { headers: { "Content-Type": "application/json" } }
+      );
+    } else if (action === "get" && deviceId) {
+      const res = await client.query("SELECT * FROM trials WHERE device_id = $1", [deviceId]);
+      await client.end();
+      return new Response(JSON.stringify(res.rows[0] || { error: "Not found" }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    } else {
+      await client.end();
+      return new Response(JSON.stringify({ error: "Invalid admin action" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      });
     }
   }
 
-  // --- Normal trial request ---
+  // --- User flow ---
   let body = {};
   try {
-    if (req.method === "POST") {
-      body = await req.json();
-    }
-  } catch {}
+    if (req.method === "POST") body = await req.json().catch(() => ({}));
+  } catch {
+    body = {};
+  }
 
   const id = body.deviceId || deviceId;
   if (!id) {
-    await db.end();
-    return json({ error: "Missing deviceId" }, 400);
+    await client.end();
+    return new Response(JSON.stringify({ error: "Missing deviceId" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
-  const existing = await db.query("SELECT * FROM trials WHERE device_id = $1", [id]);
+  // --- Check existing record ---
+  const existing = await client.query("SELECT * FROM trials WHERE device_id = $1", [id]);
   if (existing.rows.length > 0) {
-    const trial = existing.rows[0];
-    if (Date.now() < trial.expires_at) {
-      await db.end();
-      return json({ error: "Trial already used", record: trial }, 403);
-    } else {
-      // expired → delete and continue
-      await db.query("DELETE FROM trials WHERE device_id = $1", [id]);
-    }
+    await client.end();
+    return new Response(
+      JSON.stringify({ error: "Trial already used", record: existing.rows[0] }),
+      { status: 403, headers: { "Content-Type": "application/json" } }
+    );
   }
 
-  // Issue new trial (24h)
-  const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
-  const token = crypto.createHmac("sha256", hmacSecret)
-    .update(`${id}.${expiresAt}`)
-    .digest("hex");
+  // --- Issue new trial ---
+  const expiresAt = Date.now() + 24 * 60 * 60 * 1000; // 24 hours
+  const token = crypto.createHmac("sha256", secret).update(`${id}.${expiresAt}`).digest("hex");
+  const trialData = { device_id: id, expires_at: expiresAt, token };
 
-  await db.query("INSERT INTO trials (device_id, expires_at, token) VALUES ($1, $2, $3)", [id, expiresAt, token]);
-  await db.end();
+  await client.query(
+    "INSERT INTO trials (device_id, expires_at, token) VALUES ($1, $2, $3)",
+    [trialData.device_id, trialData.expires_at, trialData.token]
+  );
 
-  return json({ deviceId: id, expiresAt, token });
-};
+  await client.end();
 
-// helper
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
+  return new Response(JSON.stringify(trialData), {
     headers: { "Content-Type": "application/json" },
   });
-}
+};
