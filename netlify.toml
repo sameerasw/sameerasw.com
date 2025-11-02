@@ -3,6 +3,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  external_node_modules = ["pg"]
 
 [functions.trial]
   included_files = ["netlify/functions/trial.js"]
