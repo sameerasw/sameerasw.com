@@ -6,7 +6,6 @@
 
 [functions.trial]
   included_files = ["netlify/functions/trial.js"]
-  kv_namespaces = ["TRIAL_DEVICES"]
 
 [[kv_namespaces]]
 binding = "TRIAL_DEVICES"
