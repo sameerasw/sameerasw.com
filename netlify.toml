@@ -6,11 +6,11 @@
 
 [functions.trial]
   included_files = ["netlify/functions/trial.mjs"]
-  kv_namespaces = ["trial-devices"]
+  kv_namespaces = ["TRIAL_DEVICES"]
 
 [functions.trial-admin]
   included_files = ["netlify/functions/trial-admin.mjs"]
-  kv_namespaces = ["trial-devices"]
+  kv_namespaces = ["TRIAL_DEVICES"]
 
 [[kv_namespaces]]
 binding = "TRIAL_DEVICES"
