@@ -1,10 +1,20 @@
 import crypto from "crypto";
 
+const getKV = (context) => {
+  // Try a few possible places where Netlify may expose the KV binding
+  // 1) context.env.TRIAL_DEVICES (preferred)
+  // 2) globalThis.TRIAL_DEVICES
+  // 3) globalThis.NETLIFY?.env?.TRIAL_DEVICES (older / alternate)
+  return (context?.env && context.env.TRIAL_DEVICES) ??
+         globalThis?.TRIAL_DEVICES ??
+         globalThis?.NETLIFY?.env?.TRIAL_DEVICES;
+};
+
 export default async (req, context) => {
   let deviceId;
 
+  // accept GET ?deviceId=... or POST { deviceId: "..." }
   try {
-    // Support both POST (with JSON body) and GET (?deviceId=...)
     if (req.method === "POST") {
       const body = await req.json().catch(() => ({}));
       deviceId = body.deviceId;
@@ -23,24 +33,51 @@ export default async (req, context) => {
     });
   }
 
-  // Access the KV namespace
-  const kv = context.env?.TRIAL_DEVICES ?? globalThis.NETLIFY?.env?.TRIAL_DEVICES;
-  const existing = await kv?.get(deviceId, { type: "json" });
+  const kv = getKV(context);
+  if (!kv) {
+    console.error("KV binding not found - ensure TRIAL_DEVICES KV namespace is configured in netlify.toml");
+    return new Response(JSON.stringify({ error: "Server configuration error" }), { status: 500 });
+  }
 
-  if (existing) {
-    return new Response(JSON.stringify(existing), {
+  // --- Check existing record ---
+  // Use kv.get without assuming it returns parsed JSON, and treat any non-null value as "exists".
+  let existingRaw;
+  try {
+    // try getting JSON parsed value first; fallback to raw string if that fails
+    existingRaw = await kv.get(deviceId, { type: "json" });
+    if (existingRaw === null) {
+      // as fallback, try plain get (some runtimes return string)
+      existingRaw = await kv.get(deviceId);
+    }
+  } catch (err) {
+    console.warn("KV get returned error, trying fallback:", err);
+    existingRaw = await kv.get(deviceId).catch(() => null);
+  }
+
+  if (existingRaw !== null && existingRaw !== undefined) {
+    // present the saved record and refuse to issue a new token
+    // standardize the response to JSON
+    const resp = typeof existingRaw === "string" ? (() => {
+      try { return JSON.parse(existingRaw); } catch { return { deviceId, raw: existingRaw }; }
+    })() : existingRaw;
+
+    return new Response(JSON.stringify({ error: "Trial already used", record: resp }), {
+      status: 403,
       headers: { "Content-Type": "application/json" },
     });
   }
 
-  // const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
-  const expiresAt = Date.now() + 60 * 5000; // 1 minute for testing
-
-  const secret = process.env.HMAC_SECRET ?? "CHANGE_ME_SECRET";
+  // --- Issue new trial ---
+  // 24-hour trial (ms); for testing you can reduce this
+  const expiresAt = Date.now() + 24 * 60 * 60 * 1000; // 24 hours
+  // NOTE: use TRIAL_SECRET (as you named it)
+  const secret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
   const token = crypto.createHmac("sha256", secret).update(`${deviceId}.${expiresAt}`).digest("hex");
 
   const trialData = { deviceId, expiresAt, token };
-  await kv?.put(deviceId, JSON.stringify(trialData));
+
+  // store as JSON string
+  await kv.put(deviceId, JSON.stringify(trialData));
 
   return new Response(JSON.stringify(trialData), {
     headers: { "Content-Type": "application/json" },
