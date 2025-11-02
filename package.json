@@ -1,8 +1,5 @@
 {
   "name": "airsync-licensing",
   "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "@netlify/kv": "^1.0.0"
-  }
+  "type": "module"
 }

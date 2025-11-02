@@ -1,45 +1,37 @@
 import crypto from "crypto";
-import { kv } from "@netlify/kv";
 
-export default async (req, res) => {
-  try {
-    if (req.method !== "POST") {
-      return res.status(405).json({ error: "Method not allowed" });
-    }
+/**
+ * Netlify KV is globally available — no import needed.
+ * This function issues a 24-hour trial token per deviceId.
+ */
+export default async (req, context) => {
+  const { deviceId } = await req.json();
 
-    const { deviceId } = JSON.parse(req.body || "{}");
-    if (!deviceId) {
-      return res.status(400).json({ error: "Missing deviceId" });
-    }
-
-    // Check if this device already used a trial
-    const existing = await kv.get(deviceId);
-    if (existing) {
-      return res.status(403).json({ error: "Trial already used" });
-    }
-
-    const now = Math.floor(Date.now() / 1000);
-    const expiresAt = now + 24 * 60 * 60; // 24-hour validity
-    const trialId = crypto.randomUUID();
-
-    const payload = `${deviceId}.${trialId}.${expiresAt}`;
-    const signature = crypto
-      .createHmac("sha256", process.env.TRIAL_SECRET)
-      .update(payload)
-      .digest("hex");
-
-    // Store device record permanently
-    await kv.set(deviceId, JSON.stringify({ trialId, issuedAt: now }), {
-      expirationTtl: 60 * 60 * 24 * 365 * 5 // 5 years (or adjust)
-    });
-
-    return res.status(200).json({
-      trialId,
-      expiresAt,
-      signature
-    });
-  } catch (err) {
-    console.error("Trial error:", err);
-    return res.status(500).json({ error: "Internal server error" });
+  if (!deviceId) {
+    return new Response(JSON.stringify({ error: "Missing deviceId" }), { status: 400 });
   }
+
+  const kv = context.env?.TRIAL_DEVICES ?? globalThis.NETLIFY?.env?.TRIAL_DEVICES;
+  const existing = await kv?.get(deviceId, { type: "json" });
+
+  // If already exists, return the same token
+  if (existing) {
+    return new Response(JSON.stringify(existing), { headers: { "Content-Type": "application/json" } });
+  }
+
+  // Otherwise, issue a new one
+  const expiresAt = Date.now() + 24 * 60 * 60 * 1000;
+  const secret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
+  const token = crypto
+    .createHmac("sha256", secret)
+    .update(`${deviceId}.${expiresAt}`)
+    .digest("hex");
+
+  const trialData = { deviceId, expiresAt, token };
+
+  await kv?.put(deviceId, JSON.stringify(trialData));
+
+  return new Response(JSON.stringify(trialData), {
+    headers: { "Content-Type": "application/json" },
+  });
 };
