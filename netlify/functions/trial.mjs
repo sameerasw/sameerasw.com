@@ -55,17 +55,22 @@ export default async (req, context) => {
   }
 
   if (existingRaw !== null && existingRaw !== undefined) {
-    // present the saved record and refuse to issue a new token
-    // standardize the response to JSON
-    const resp = typeof existingRaw === "string" ? (() => {
-      try { return JSON.parse(existingRaw); } catch { return { deviceId, raw: existingRaw }; }
-    })() : existingRaw;
+  const record = typeof existingRaw === "string"
+    ? (() => { try { return JSON.parse(existingRaw); } catch { return null; } })()
+    : existingRaw;
 
-    return new Response(JSON.stringify({ error: "Trial already used", record: resp }), {
+  // if record exists but not expired, reject
+  if (record && record.expiresAt && Date.now() < record.expiresAt) {
+    return new Response(JSON.stringify({ error: "Trial already active", record }), {
       status: 403,
       headers: { "Content-Type": "application/json" },
     });
   }
+
+  // otherwise, expired — delete old record and issue a new one
+  await kv.delete(deviceId);
+}
+
 
   // --- Issue new trial ---
   // 24-hour trial (ms); for testing you can reduce this
