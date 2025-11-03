@@ -76,13 +76,13 @@ export default async (req) => {
   if (existing.rows.length > 0) {
     await client.end();
     return new Response(
-      JSON.stringify({ error: "Trial already used", record: existing.rows[0] }),
+      JSON.stringify({ error: "Trial redeemed, Upgrade to AirSync+", record: existing.rows[0] }),
       { status: 403, headers: { "Content-Type": "application/json" } }
     );
   }
 
   // --- Issue new trial ---
-  const expiresAt = Date.now() + 48 * 60 * 60 * 1000; // 24 hours
+  const expiresAt = Date.now() + 48 * 60 * 60 * 1000; // 48 hours
   // const expiresAt = Date.now() + 60 * 5000; // 5 mins for testing
   const token = crypto.createHmac("sha256", secret).update(`${id}.${expiresAt}`).digest("hex");
   const trialData = { device_id: id, expires_at: expiresAt, token };
