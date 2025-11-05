@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const apps = [
     {
+      name: "AirSync",
+      link: "./airsync.html",
+      description:
+        "The forbidden Android + macOS continuity with notification and clipboard sync and more.",
+      iconUrl: "/assets/img/articles/airsync/airsync-logo.png",
+      imageUrl: "https://github.com/user-attachments/assets/1b59fa22-780b-455d-87b1-6bb028c69d37",
+      price: "foss",
+    },
+    {
       name: "Zen Browser",
       link: "./zen.html",
       description:
         "'Welcome to a calmer internet' Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/f47c2154d3afca8f7d81d3788d089800_low_res_Zen_Browser.png",
+        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zen-browser.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/zen.png",
       price: "foss",
     },
@@ -16,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "Notion is an all-in-one workspace for your notes, tasks, wikis, and databases. It is a powerful tool that can be used for personal and professional use.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/edd1187d9ca7d2ff5f126ff0f8945563_kbvNfoXHXp.png",
+        "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/notion.png",
       price: "free",
     },
@@ -26,9 +35,29 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "Warp is the terminal reimagined with AI and collaborative tools for better productivity. ",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/c5f52463c3cdb7ed0c67f6f9b53bcc23_low_res_Warp.png",
+        "https://cdn.terminaltrove.com/m/b1c31938-6e80-4f28-a2cd-d2047eddcdb2.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/warp.png",
       price: "free",
+    },
+    {
+      name: "Google Tasks",
+      link: "https://github.com/sameerasw/tasks",
+      description:
+        "A native Swift macOS app for Google Tasks by me.",
+      iconUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Tasks_2021.svg/1200px-Google_Tasks_2021.svg.png",
+      imageUrl: "https://github.com/user-attachments/assets/2ba5ca6e-078d-4328-96a5-e8b9455062b8",
+      price: "foss",
+    },
+    {
+      name: "Zero",
+      link: "https://github.com/sameerasw/Browser",
+      description:
+        "A browser by me. With transparency and minimal liquid glass UI",
+      iconUrl:
+        "https://github.com/sameerasw/Browser/blob/main/AppIcon.icon/Assets/Frame%201.png?raw=true",
+      imageUrl: "https://github.com/user-attachments/assets/0053365a-76c3-478b-aea5-ec8754e95c22",
+      price: "foss",
     },
     {
       name: "Karabiner Elements",
@@ -36,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "A powerful and stable keyboard customizer for macOS. Used for adding macros, remapping keys, and more on the magic keyboard as well as on my 60% keyboard.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/be53e2eac5e33c9ce8fa864f211c84d7_low_res_Karabiner%20Elements.png",
+        "https://karabiner-elements.pqrs.org/images/logo.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/karabiner.png",
       price: "foss",
     },
@@ -46,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "A powerful tiling window manager for macOS along the lines of xmonad.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/e52a25e434973c8f5f2ba6966ab9b573_low_res_Amethyst.png",
+        "https://imagedelivery.net/-IT6z0z0Ec5yEiYj3DvVjg/40cafb867e75a445d9ec0e0a1a3157950bcda0c4/public",
       imageUrl: "https://camo.githubusercontent.com/f3d8dbdf980ee1867e93b5cfdd8c643e5632c4fb35f850f41e1c03f3518797da/68747470733a2f2f69616e79682e636f6d2f616d6574687973742f696d616765732f77696e646f77732e706e67",
       price: "foss",
     },
@@ -56,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "You know it",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/eb454471770de82ad9e80c8007bb54f6_low_res_VSCode.png",
+        "https://code.visualstudio.com/assets/images/code-stable.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/vscode.jpeg",
       price: "free",
     },
@@ -65,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "https://macmousefix.com/",
       description: "Make Your $10 Mouse Better Than an Apple Trackpad!",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/dd0669d44c519797bb7548025bbceff3_BeqbQpVaSy.png",
+        "https://macmousefix.com/_ipx/w_450&q_100/mmf-icon.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/mac-mouse-fix.png",
       price: "paid",
     },
@@ -85,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "A collection of powerful productivity tools all within an extendable launcher. Fast, ergonomic and reliable.",
       iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/ff9688e8751c364dbe41e7ec986e63ec_low_res_Raycast.png",
+        "https://upload.wikimedia.org/wikipedia/en/f/f4/Raycast_App_Icon.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/raycast.png",
       price: "free",
     },
@@ -96,15 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Send any size file, right from your desktop via internet. A cross platform free to use app.",
       iconUrl: "/assets/img/articles/macos/app-screenshots/blip-icon.png",
       imageUrl: "/assets/img/articles/macos/app-screenshots/blip.png",
-      price: "free",
-    },
-    {
-      name: "AirSync (WIP)",
-      link: "./airsync.html",
-      description:
-        "The forbidden Android + macOS continuity with notification and clipboard sync and more.",
-      iconUrl: "https://github.com/sameerasw/AirSyncMac/blob/main/AirSyncMac/Assets.xcassets/AppIcon.appiconset/AirSync%201.png?raw=true",
-      imageUrl: "/assets/img/articles/macos/app-screenshots/airsync.jpeg",
       price: "free",
     },
     {
@@ -238,17 +258,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://multiviewer.app/favicon.ico",
       imageUrl:
         "https://multiviewer.app/_next/static/media/feature-multi-view.0259957f.jpg",
-      price: "free",
-    },
-    {
-      name: "Aliento",
-      link: "https://inchman.gumroad.com/l/Aliento",
-      description:
-        "Dismiss notifications with a keyboard shortcut",
-      iconUrl:
-        "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/796d09cd67fb0ab16748ed11895cd683_low_res_Google_Alerts.png",
-      imageUrl:
-        "https://public-files.gumroad.com/2l42yxg5lxej2p682csv69iwhev2",
       price: "free",
     },
   ];
