@@ -5,11 +5,11 @@
   --cw-radius: 8px;
 }
 .contact-widget {
-  display: inline-block;
+  display: block;
   font-family: inherit;
   --cw-gap: 1rem;
   --cw-scale: 2;
-  margin: 4em auto;
+  text-align: center;
 }
 
 /* Email line - use inline-flex so we control precise spacing */
@@ -53,14 +53,20 @@
   content: "dot";
   font-size: calc(1.05rem * var(--cw-scale));
 }
-.cw-mode-twitter .cw-dot-char, .cw-mode-instagram .cw-dot-char { opacity: 0 }
-.cw-mode-twitter .cw-dot-text, .cw-mode-instagram .cw-dot-text { opacity: 1 }
+.cw-mode-twitter .cw-dot-char,
+.cw-mode-instagram .cw-dot-char {
+  opacity: 0;
+}
+.cw-mode-twitter .cw-dot-text,
+.cw-mode-instagram .cw-dot-text {
+  opacity: 1;
+}
 
 /* Controls */
 .cw-controls {
   display: flex;
   gap: 0;
-  margin: 0.6rem auto;
+  margin: 1rem auto 0;
   justify-content: center;
   border: 1px solid var(--cw-muted);
   border-radius: 20px;
@@ -73,12 +79,13 @@
   border: none;
   border-right: 1px solid var(--cw-muted);
   color: var(--cw-muted);
-  padding: 0.38rem 0.75rem;
+  padding: 0.5rem 1rem;
   border-radius: 0;
   cursor: pointer;
-  font-size: calc(0.5rem * var(--cw-scale));
-  transition: transform 0.12s ease, background-color 0.18s ease,
-    color 0.18s ease, box-shadow 0.12s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.18s ease, color 0.18s ease,
+    box-shadow 0.12s ease;
   -webkit-tap-highlight-color: transparent;
 }
 .cw-btn:last-child {
@@ -95,6 +102,7 @@
   .cw-btn:hover {
     color: var(--cw-accent);
     border-color: var(--cw-accent);
+    background-color: transparent;
   }
 }
 .cw-btn:focus {
