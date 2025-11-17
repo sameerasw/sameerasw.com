@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("mouseenter", () => {
           makeActiveTemporarily();
           setMode(target);
-          // Show hint only for non-Website buttons
-          if (target !== "domain" && hint) {
+          // Show hint only for buttons other than Website and Name
+          if (target !== "domain" && target !== "local" && hint) {
             hint.textContent = "Click to visit >";
             hint.classList.add("visible");
           }
@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("focus", () => {
         makeActiveTemporarily();
         setMode(target);
-        // Show hint on focus for non-Website buttons
-        if (hasHover && target !== "domain" && hint) {
+        // Show hint on focus for buttons other than Website and Name
+        if (hasHover && target !== "domain" && target !== "local" && hint) {
           hint.textContent = "Click to visit";
           hint.classList.add("visible");
         }
@@ -126,9 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
           buttons.forEach((b) => b.classList.remove("cw-active"));
           _prevPinned = null;
           setMode(target);
-          // Show hint for non-Website buttons, hide for Website button
+          // Show hint for buttons other than Website and Name, hide for those
           if (hint) {
-            if (target !== "domain") {
+            if (target !== "domain" && target !== "local") {
               hint.textContent = "Tap here to visit >";
               hint.classList.add("visible");
             } else {
