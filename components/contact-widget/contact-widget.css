@@ -10,6 +10,7 @@
   --cw-gap: 1rem;
   --cw-scale: 2;
   text-align: center;
+  margin: 4em 0;
 }
 
 /* Email line - use inline-flex so we control precise spacing */
@@ -79,14 +80,42 @@
   border: none;
   border-right: 1px solid var(--cw-muted);
   color: var(--cw-muted);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: background-color 0.18s ease, color 0.18s ease,
     box-shadow 0.12s ease;
   -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 2.5rem;
+}
+.cw-btn i {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.cw-btn span {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-width 0.3s ease, margin-left 0.3s ease;
+  white-space: nowrap;
+  margin-left: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cw-btn:hover {
+    color: var(--cw-accent);
+    border-color: var(--cw-accent);
+    background-color: transparent;
+  }
+  .cw-btn:hover span {
+    opacity: 1;
+    max-width: 100px;
+    margin-left: 0.5rem;
+  }
 }
 .cw-btn:last-child {
   border-right: none;
@@ -96,14 +125,6 @@
 }
 .cw-btn:last-child {
   border-radius: 0 20px 20px 0;
-}
-/* Hover/hover-lift only on devices that support hover */
-@media (hover: hover) and (pointer: fine) {
-  .cw-btn:hover {
-    color: var(--cw-accent);
-    border-color: var(--cw-accent);
-    background-color: transparent;
-  }
 }
 .cw-btn:focus {
   outline: none;
