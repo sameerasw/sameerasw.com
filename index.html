@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="css/index/highlights.css">
     <link rel="stylesheet" href="css/index/form.css">
     <link rel="stylesheet" href="css/index/lastfm.css">
+    <link rel="stylesheet" href="/components/contact-widget/contact-widget.css">
     <!-- <link rel="stylesheet" href="css/arc.css"> -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,200" />
@@ -305,6 +306,26 @@
                 <h2>Contact</h2>
             </div>
             <div class="content">
+                                <div class="contact-widget-wrapper item">
+                                    <div class="contact-widget" aria-hidden="false">
+                                        <div class="cw-email" aria-label="Contact email: mail at sameerasw dot com">
+                                            <span class="cw-part cw-local">mail</span>
+                                            <span class="cw-part cw-at">@</span>
+                                            <span class="cw-domain-label" aria-hidden="false">
+                                                <span class="cw-part cw-domain-first">sameera</span>
+                                                <span class="cw-part cw-domain-rest">sw</span>
+                                            </span>
+                                            <span class="cw-part cw-domain-dot">.com</span>
+                                        </div>
+
+                                        <div class="cw-controls" role="tablist" aria-label="contact shortcuts">
+                                            <button class="cw-btn cw-selected" data-target="all" role="tab" aria-selected="true">Email</button>
+                                            <button class="cw-btn" data-target="domain" role="tab">Website</button>
+                                            <button class="cw-btn" data-target="handle" role="tab">GitHub</button>
+                                            <button class="cw-btn" data-target="local" role="tab">Name</button>
+                                        </div>
+                                    </div>
+                                </div>
                 <p class="item">
                     If you have any questions or want to work with me, feel free to contact me via email or any of my
                     social media profiles.
@@ -327,7 +348,7 @@
                     </div>
                 </div>
                 <div id="email-btn" class="item button-view">
-                    <a href="mailto:sameerasw.com@gmail.com" aria-label="Email me">
+                    <a href="mailto:mail@sameerasw.com" aria-label="Email me">
                         <span class="material-symbols-rounded">
                             email
                         </span>
@@ -341,6 +362,7 @@
     <script src="js/cursor.js"></script>
     <script src="js/last.fm.js"></script>
     <script src="js/last.fm.js"></script>
+    <script src="/components/contact-widget/contact-widget.js" defer></script>
 </body>
 </body>
 

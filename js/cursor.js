@@ -1,6 +1,6 @@
 const cursor = document.getElementById("cursor");
-//select all the links on the page
-const links = document.querySelectorAll("a");
+//select all the links and buttons on the page
+const links = document.querySelectorAll("a, button");
 const hoverables = document.querySelectorAll(".hover-state");
 const cursorText = document.getElementById("cursor-text");
 
