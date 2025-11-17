@@ -26,11 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.matchMedia &&
       window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-    // Set initial hint based on device type
-    if (!hasHover && hint) {
-      hint.textContent = "Tap here to visit >";
-      hint.classList.add("visible");
-    }
+    // Hint starts invisible
 
     // we'll temporarily remove the pinned (selected) button while hovering/focusing
     let _prevPinned = null;
@@ -70,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("mouseenter", () => {
           makeActiveTemporarily();
           setMode(target);
-          // Show hint on hover for desktop
-          if (hint) {
+          // Show hint only for non-Website buttons
+          if (target !== "domain" && hint) {
             hint.textContent = "Click to visit >";
             hint.classList.add("visible");
           }
@@ -93,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("focus", () => {
         makeActiveTemporarily();
         setMode(target);
-        // Show hint on focus for desktop
-        if (hasHover && hint) {
+        // Show hint on focus for non-Website buttons
+        if (hasHover && target !== "domain" && hint) {
           hint.textContent = "Click to visit";
           hint.classList.add("visible");
         }
@@ -130,6 +126,15 @@ document.addEventListener("DOMContentLoaded", () => {
           buttons.forEach((b) => b.classList.remove("cw-active"));
           _prevPinned = null;
           setMode(target);
+          // Show hint for non-Website buttons, hide for Website button
+          if (hint) {
+            if (target !== "domain") {
+              hint.textContent = "Tap here to visit >";
+              hint.classList.add("visible");
+            } else {
+              hint.classList.remove("visible");
+            }
+          }
         }
       });
     });
