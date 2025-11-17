@@ -138,5 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
+    // Mobile: add click handler to email widget to navigate to selected button's URL
+    const emailWidget = widget.querySelector(".cw-email");
+    if (emailWidget) {
+      emailWidget.addEventListener("click", (e) => {
+        e.preventDefault && e.preventDefault();
+        const selected = widget.querySelector(".cw-btn.cw-selected");
+        if (selected) {
+          const url = selected.dataset.url;
+          if (url && url !== "javascript:void(0)") {
+            if (url.startsWith("mailto:")) {
+              window.location.href = url;
+            } else {
+              window.open(url, "_blank");
+            }
+          }
+        }
+      });
+    }
   });
 });
