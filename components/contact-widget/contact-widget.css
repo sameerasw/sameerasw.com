@@ -11,8 +11,6 @@
   --cw-scale: 2;
   text-align: center;
 }
-
-/* Hint text for desktop/mobile guidance */
 .cw-hint {
   font-size: 0.95rem;
   color: var(--cw-muted);
@@ -298,4 +296,78 @@
 
 .contact-widget-wrapper {
   margin: 4em 0;
+}
+
+/* Mobile touch device styles */
+@media (hover: none) and (pointer: coarse) {
+  /* Make email widget interactive on mobile */
+  .cw-email {
+    cursor: pointer;
+    padding: 0.35rem 0;
+    transition: all 0.2s ease;
+    font-size: calc(0.9rem * var(--cw-scale));
+  }
+
+  .cw-email:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
+  /* Scale down dot text to match the reduced email widget font size */
+  .cw-mode-twitter .cw-domain-dot::after,
+  .cw-mode-instagram .cw-domain-dot::after {
+    font-size: calc(1.05rem * var(--cw-scale) * 0.9);
+  }
+
+  /* Style controls - no gaps, match web layout */
+  .cw-controls {
+    gap: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    width: fit-content;
+  }
+
+  .cw-btn {
+    border-radius: 0;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.2s ease;
+    flex: initial;
+  }
+
+  /* Only edge buttons have rounded corners */
+  .cw-btn:first-child {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .cw-btn:last-child {
+    border-radius: 0 20px 20px 0;
+  }
+
+  /* Selected button and its neighbors get rounded corners */
+  .cw-btn.cw-selected {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Next button after selected - round its left corners */
+  .cw-btn.cw-selected + .cw-btn {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  /* Previous button before selected - round its right corners */
+  .cw-btn:has(+ .cw-btn.cw-selected) {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .cw-btn:active {
+    transform: scale(0.98);
+  }
+
+  .cw-btn.cw-selected:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
 }
