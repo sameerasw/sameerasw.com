@@ -10,7 +10,20 @@
   --cw-gap: 1rem;
   --cw-scale: 2;
   text-align: center;
-  margin: 4em 0;
+}
+
+/* Hint text for desktop/mobile guidance */
+.cw-hint {
+  font-size: 0.95rem;
+  color: var(--cw-muted);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-bottom: 0.5rem;
+  min-height: 1.2rem;
+  display: block;
+}
+.cw-hint.visible {
+  opacity: 1;
 }
 
 /* Email line - use inline-flex so we control precise spacing */
@@ -282,4 +295,8 @@
   background: var(--cw-accent);
   color: var(--background-color-primary, white);
   border-color: var(--cw-accent);
+}
+
+.contact-widget-wrapper{
+  margin: 4em 0;
 }
