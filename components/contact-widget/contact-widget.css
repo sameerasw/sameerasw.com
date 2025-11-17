@@ -40,6 +40,22 @@
   align-items: center;
 }
 
+/* dot morphing: replace . with 'dot' text when twitter/instagram active */
+.cw-domain-dot {
+  transition: opacity 0.3s ease;
+}
+.cw-mode-twitter .cw-domain-dot,
+.cw-mode-instagram .cw-domain-dot {
+  font-size: 0;
+}
+.cw-mode-twitter .cw-domain-dot::after,
+.cw-mode-instagram .cw-domain-dot::after {
+  content: "dot";
+  font-size: calc(1.05rem * var(--cw-scale));
+}
+.cw-mode-twitter .cw-dot-char, .cw-mode-instagram .cw-dot-char { opacity: 0 }
+.cw-mode-twitter .cw-dot-text, .cw-mode-instagram .cw-dot-text { opacity: 1 }
+
 /* Controls */
 .cw-controls {
   display: flex;
@@ -108,7 +124,8 @@
 }
 .cw-mode-domain .cw-domain-first,
 .cw-mode-domain .cw-domain-rest,
-.cw-mode-domain .cw-domain-dot {
+.cw-mode-domain .cw-domain-dot,
+.cw-mode-domain .cw-tld {
   opacity: 1;
   color: var(--cw-accent);
   transform: translateY(-2px);
@@ -117,7 +134,8 @@
 /* Handle (github) - highlight the @ and domain label */
 /* Fade unrelated small parts and highlight @ + full domain pieces */
 .cw-mode-handle .cw-local,
-.cw-mode-handle .cw-domain-dot {
+.cw-mode-handle .cw-domain-dot,
+.cw-mode-handle .cw-tld {
   opacity: 0.25;
   color: var(--cw-muted);
   transform: none;
@@ -130,17 +148,82 @@
   transform: translateY(-2px);
 }
 
+/* LinkedIn - highlight @sameerasw (same as github) */
+.cw-mode-linkedin .cw-local,
+.cw-mode-linkedin .cw-domain-dot,
+.cw-mode-linkedin .cw-tld {
+  opacity: 0.25;
+  color: var(--cw-muted);
+  transform: none;
+}
+.cw-mode-linkedin .cw-at,
+.cw-mode-linkedin .cw-domain-first,
+.cw-mode-linkedin .cw-domain-rest {
+  opacity: 1;
+  color: var(--cw-accent);
+  transform: translateY(-2px);
+}
+
+/* Telegram - highlight @sameerasw (same as github) */
+.cw-mode-telegram .cw-local,
+.cw-mode-telegram .cw-domain-dot,
+.cw-mode-telegram .cw-tld {
+  opacity: 0.25;
+  color: var(--cw-muted);
+  transform: none;
+}
+.cw-mode-telegram .cw-at,
+.cw-mode-telegram .cw-domain-first,
+.cw-mode-telegram .cw-domain-rest {
+  opacity: 1;
+  color: var(--cw-accent);
+  transform: translateY(-2px);
+}
+
 /* Local (name) - highlight the name (first part of domain) */
 /* Fade everything except the domain-first */
 .cw-mode-local .cw-local,
 .cw-mode-local .cw-at,
 .cw-mode-local .cw-domain-rest,
-.cw-mode-local .cw-domain-dot {
+.cw-mode-local .cw-domain-dot,
+.cw-mode-local .cw-tld {
   opacity: 0.25;
   color: var(--cw-muted);
   transform: none;
 }
 .cw-mode-local .cw-domain-first {
+  opacity: 1;
+  color: var(--cw-accent);
+  transform: translateY(-2px);
+}
+
+/* Twitter - highlight @sameeraswdotcom (at + domain + dot + tld) */
+.cw-mode-twitter .cw-local {
+  opacity: 0.25;
+  color: var(--cw-muted);
+  transform: none;
+}
+.cw-mode-twitter .cw-at,
+.cw-mode-twitter .cw-domain-first,
+.cw-mode-twitter .cw-domain-rest,
+.cw-mode-twitter .cw-domain-dot,
+.cw-mode-twitter .cw-tld {
+  opacity: 1;
+  color: var(--cw-accent);
+  transform: translateY(-2px);
+}
+
+/* Instagram - highlight @sameeraswdotcom (at + domain + dot + tld) */
+.cw-mode-instagram .cw-local {
+  opacity: 0.25;
+  color: var(--cw-muted);
+  transform: none;
+}
+.cw-mode-instagram .cw-at,
+.cw-mode-instagram .cw-domain-first,
+.cw-mode-instagram .cw-domain-rest,
+.cw-mode-instagram .cw-domain-dot,
+.cw-mode-instagram .cw-tld {
   opacity: 1;
   color: var(--cw-accent);
   transform: translateY(-2px);

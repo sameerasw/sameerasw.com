@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "cw-mode-all",
         "cw-mode-domain",
         "cw-mode-handle",
-        "cw-mode-local"
+        "cw-mode-local",
+        "cw-mode-linkedin",
+        "cw-mode-telegram",
+        "cw-mode-twitter",
+        "cw-mode-instagram"
       );
       widget.classList.add("cw-mode-" + mode);
     };
