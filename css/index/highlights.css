@@ -18,6 +18,12 @@
   position: relative;
   overflow: hidden;
   transition: all 0.35s ease-in-out;
+
+  /* dark theme */
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1);
+  border: 0.15em solid var(--background-color-tr);
+  }
 }
 
 .highlight-item h3 {
@@ -25,34 +31,37 @@
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0;
-  padding: 0.9em 1em;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  color: white;
+  margin: 10px;
+  padding: 1.2em 1em;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+  background-color: transparent;
+  color: black;
   font-size: 1.05rem;
   line-height: 1.1;
+
+
 }
 
 #airsync {
-  background-image: url("../../assets/img/articles/airsync/airsync-preview.jpeg");
+  background-image: url("../../assets/img/articles/airsync/airsync.jpeg");
 }
 #zen-t {
-  background-image: url("../../assets/img/articles/zen-t-preview.jpeg");
+  background-image: url("../../assets/img/articles/zen/zenzero.jpeg");
 }
 #edc {
   background-image: url("../../assets/img/articles/edc/edc.jpeg");
 }
 #macos {
-  background-image: url("../../assets/img/articles/macos/web-preview-macos.jpeg");
+  background-image: url("../../assets/img/articles/macos/macos.jpeg");
 }
 #pixel {
-  background-image: url("../../assets/img/articles/pixel/web-preview-pixel.jpeg");
+  background-image: url("../../assets/img/articles/pixel/pixel.jpeg");
 }
 #foldericons {
-  background-image: url("../../assets/img/articles/folder-icons-preview.jpeg");
+  background-image: url("../../assets/img/articles/folder.jpeg");
 }
 #tidwib {
-  background-image: url("../../assets/img/articles/telegram-tidwib-preview.jpeg");
+  background-image: url("../../assets/img/articles/tidwib.jpeg");
 }
 #more-github {
   background-image: url("../../assets/img/articles/github.jpeg");
@@ -61,7 +70,7 @@
   background-image: url("../../assets/img/articles/website-source.jpeg");
 }
 #macro {
-  background-image: url("../../assets/img/articles/numpad-macros.jpeg");
+  background-image: url("../../assets/img/articles/keeb.jpeg");
 }
 #menubar {
   background-image: url("../../assets/img/articles/menu-bar.jpeg");
@@ -70,6 +79,7 @@
 .highlight-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  scale: 1.03 !important;
 }
 
 @media screen and (max-width: 1200px) {
