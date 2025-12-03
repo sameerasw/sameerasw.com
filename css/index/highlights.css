@@ -1,63 +1,93 @@
-
+/* Clean 3-column grid showcase */
 #highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  width: 90vw;
+  gap: 0.5em;
+  width: 70vw;
+  max-width: 1200px;
   margin: 2em auto;
-  transition: all 0.5s ease-in-out;
-  a {
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-    border: 0.15em solid var(--text-color);
-    /* overflow: hidden; */
-    height: 15em;
-  }
+}
 
-  .highlight-item {
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--radius-out);
-  }
-  #edc {
-    background-image: url("../../assets/img/articles/edc/edc.jpeg");
-  }
-  #macos {
-    background-image: url("../../assets/img/articles/macos.jpeg");
-  }
-  #foldericons {
-    background-image: url("../../assets/img/articles/folder-icons.jpeg");
-  }
-  #tidwib {
-    background-image: url("../../assets/img/articles/telegram-tidwib.jpeg");
-  }
-  #macro {
-    background-image: url("../../assets/img/articles/numpad-macros.jpeg");
-  }
-  #more-github {
-    background-image: url("../../assets/img/articles/github.jpeg");
-  }
-  #pixel {
-    background-image: url("../../assets/img/articles/pixel-notes.jpeg");
-  }
-  #website {
-    background-image: url("../../assets/img/articles/website-source.jpeg");
-  }
-  #menubar {
-    background-image: url("../../assets/img/articles/menu-bar.jpeg");
-  }
-  #airsync {
-    background-image: url("../../assets/img/articles/airsync/airsync.jpeg");
-  }
-  #zen-t {
-    background-image: url("../../assets/img/articles/zen-t.jpeg");
-  }
+.highlight-item {
+  aspect-ratio: 1 / 1;
+  text-decoration: none;
+  border: 0.15em solid var(--text-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-out);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
 
-  @media screen and (max-width: 1000px) {
+.highlight-item h3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.9em 1em;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+
+#airsync {
+  background-image: url("../../assets/img/articles/airsync/airsync-preview.jpeg");
+}
+#zen-t {
+  background-image: url("../../assets/img/articles/zen-t-preview.jpeg");
+}
+#edc {
+  background-image: url("../../assets/img/articles/edc/edc.jpeg");
+}
+#macos {
+  background-image: url("../../assets/img/articles/macos/web-preview-macos.jpeg");
+}
+#pixel {
+  background-image: url("../../assets/img/articles/pixel/web-preview-pixel.jpeg");
+}
+#foldericons {
+  background-image: url("../../assets/img/articles/folder-icons-preview.jpeg");
+}
+#tidwib {
+  background-image: url("../../assets/img/articles/telegram-tidwib-preview.jpeg");
+}
+#more-github {
+  background-image: url("../../assets/img/articles/github.jpeg");
+}
+#website {
+  background-image: url("../../assets/img/articles/website-source.jpeg");
+}
+#macro {
+  background-image: url("../../assets/img/articles/numpad-macros.jpeg");
+}
+#menubar {
+  background-image: url("../../assets/img/articles/menu-bar.jpeg");
+}
+
+.highlight-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width: 1200px) {
+  #highlights {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #highlights {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
-    @media screen and (max-width: 500px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #highlights {
+    grid-template-columns: 1fr;
+    width: 90vw;
   }
 }

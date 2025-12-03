@@ -82,27 +82,6 @@ try {
   console.log(e);
 }
 
-try {
-  //expand more projects by letting elements show as block if it has the hidden class
-  let more_projects = document.getElementById("more-projects-button");
-
-  more_projects.addEventListener("click", function () {
-    //get all the hidden projects and display or hide with button toggle
-    let hidden_projects = document.querySelectorAll(".hidden");
-    for (let i = 0; i < hidden_projects.length; i++) {
-      if (hidden_projects[i].style.display === "block") {
-        hidden_projects[i].style.display = "none";
-        more_projects.innerHTML = "Show more";
-      } else {
-        hidden_projects[i].style.display = "block";
-        more_projects.innerHTML = "Show less";
-      }
-    }
-  });
-} catch (e) {
-  console.log(e);
-}
-
 //if an item goes outside the screen, depth effect will be applied
 window.addEventListener("scroll", function () {
   for (let i = 0; i < items.length; i++) {
