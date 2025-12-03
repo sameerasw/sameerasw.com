@@ -27,19 +27,38 @@
 }
 
 .highlight-item h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  color: black;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.highlight-description {
+  position: relative;
+  margin: 0;
+  margin-top: 0.5em !important;
+  padding: 0;
+  background-color: transparent !important;
+  color: #333;
+  font-size: 0.85rem !important;
+  line-height: 1.2;
+  /* text-align: left; */
+}
+
+.highlight-content {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   margin: 10px;
-  padding: 1.2em 1em;
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
-  background-color: transparent;
-  color: black;
-  font-size: 1.05rem;
-  line-height: 1.1;
-
-
+  padding: 0.7em 1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-out);
 }
 
 #airsync {
@@ -82,22 +101,22 @@
   scale: 1.03 !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   #highlights {
-    width: 75vw;
+    width: 80vw;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   #highlights {
     grid-template-columns: repeat(2, 1fr);
     width: 85vw;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   #highlights {
     grid-template-columns: 1fr;
-    width: 90vw;
+    width: 80vw;
   }
 }
