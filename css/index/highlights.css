@@ -22,7 +22,7 @@
   /* dark theme */
   @media (prefers-color-scheme: dark) {
     filter: invert(1);
-  border: 0.15em solid var(--background-color-tr);
+    border: 0.15em solid var(--background-color-tr);
   }
 }
 
