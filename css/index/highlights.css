@@ -76,6 +76,12 @@
 #canvas {
     background-image: url("../../assets/img/articles/canvas.jpeg");
 }
+#tasks {
+    background-image: url("../../assets/img/articles/tasks.jpeg");
+}
+#zero {
+    background-image: url("../../assets/img/articles/zero.jpeg");
+}
 #pixel {
     background-image: url("../../assets/img/articles/pixel/pixel.jpeg");
 }
