@@ -1,122 +1,125 @@
 /* Clean 3-column grid showcase */
 #highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5em;
-  width: 70vw;
-  max-width: 1200px;
-  margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    width: 70vw;
+    max-width: 1200px;
+    margin: 2em auto;
 }
 
 .highlight-item {
-  aspect-ratio: 1 / 1;
-  text-decoration: none;
-  border: 0.15em solid var(--text-color);
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--radius-out);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease-in-out;
+    aspect-ratio: 1 / 1;
+    text-decoration: none;
+    border: 0.15em solid var(--text-color);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-out);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
 
-  /* dark theme */
-  @media (prefers-color-scheme: dark) {
-    filter: invert(1);
-    border: 0.15em solid var(--background-color-tr);
-  }
+    /* dark theme */
+    @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+        border: 0.15em solid var(--background-color-tr);
+    }
 }
 
 .highlight-item h3 {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  color: black;
-  font-size: 1.15rem;
-  line-height: 1.1;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    color: black;
+    font-size: 1.15rem;
+    line-height: 1.1;
 }
 
 .highlight-description {
-  position: relative;
-  margin: 0;
-  margin-top: 0.5em !important;
-  padding: 0;
-  background-color: transparent !important;
-  color: #333;
-  font-size: 0.85rem !important;
-  line-height: 1.2;
-  /* text-align: left; */
+    position: relative;
+    margin: 0;
+    margin-top: 0.5em !important;
+    padding: 0;
+    background-color: transparent !important;
+    color: #333;
+    font-size: 0.85rem !important;
+    line-height: 1.2;
+    /* text-align: left; */
 }
 
 .highlight-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 10px;
-  padding: 0.7em 1em;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-out);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    padding: 0.7em 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-out);
 }
 
 #airsync {
-  background-image: url("../../assets/img/articles/airsync/airsync.jpeg");
+    background-image: url("../../assets/img/articles/airsync/airsync.jpeg");
 }
 #zen-t {
-  background-image: url("../../assets/img/articles/zen/zenzero.jpeg");
+    background-image: url("../../assets/img/articles/zen/zenzero.jpeg");
 }
 #edc {
-  background-image: url("../../assets/img/articles/edc/edc.jpeg");
+    background-image: url("../../assets/img/articles/edc/edc.jpeg");
 }
 #macos {
-  background-image: url("../../assets/img/articles/macos/macos.jpeg");
+    background-image: url("../../assets/img/articles/macos/macos.jpeg");
+}
+#canvas {
+    background-image: url("../../assets/img/articles/canvas.jpeg");
 }
 #pixel {
-  background-image: url("../../assets/img/articles/pixel/pixel.jpeg");
+    background-image: url("../../assets/img/articles/pixel/pixel.jpeg");
 }
 #foldericons {
-  background-image: url("../../assets/img/articles/folder.jpeg");
+    background-image: url("../../assets/img/articles/folder.jpeg");
 }
 #tidwib {
-  background-image: url("../../assets/img/articles/tidwib.jpeg");
+    background-image: url("../../assets/img/articles/tidwib.jpeg");
 }
 #more-github {
-  background-image: url("../../assets/img/articles/github.jpeg");
+    background-image: url("../../assets/img/articles/github.jpeg");
 }
 #website {
-  background-image: url("../../assets/img/articles/website-source.jpeg");
+    background-image: url("../../assets/img/articles/website-source.jpeg");
 }
 #macro {
-  background-image: url("../../assets/img/articles/keeb.jpeg");
+    background-image: url("../../assets/img/articles/keeb.jpeg");
 }
 #menubar {
-  background-image: url("../../assets/img/articles/menu-bar.jpeg");
+    background-image: url("../../assets/img/articles/menu-bar.jpeg");
 }
 
 .highlight-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-  scale: 1.03 !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    scale: 1.03 !important;
 }
 
 @media screen and (max-width: 1500px) {
-  #highlights {
-    width: 80vw;
-  }
+    #highlights {
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 1300px) {
-  #highlights {
-    grid-template-columns: repeat(2, 1fr);
-    width: 85vw;
-  }
+    #highlights {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85vw;
+    }
 }
 
 @media screen and (max-width: 800px) {
-  #highlights {
-    grid-template-columns: 1fr;
-    width: 80vw;
-  }
+    #highlights {
+        grid-template-columns: 1fr;
+        width: 80vw;
+    }
 }
