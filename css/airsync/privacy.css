@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #4affbd;
+  --text-color: #d1d1d1;
+  --bg-color: #0d1117; /* GitHub-like dark bg */
+  --secondary-bg: #161b22;
+  --accent-bg: #21262d;
+  --border-color: #30363d;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --max-width: 800px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #0969da; /* GitHub-like blue */
+    --text-color: #24292f;
+    --bg-color: #ffffff;
+    --secondary-bg: #f6f8fa;
+    --accent-bg: #eff2f5;
+    --border-color: #d0d7de;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 16px; /* standard markdown size, slightly smaller but clean */
+  line-height: 1.6;
+  padding: 2rem 1.5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color); /* headers are usually text-colored in markdown */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p,
+ul,
+ol,
+table,
+.note {
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--border-color);
+  border: 0;
+}
+
+/* Table Styling */
+table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 6px 13px;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--secondary-bg);
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-bg);
+}
+
+code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--secondary-bg);
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+}
+
+/* Note/Alert Styling - more like a blockquote/callout */
+.note {
+  padding: 0 1em;
+  color: #8b949e;
+  border-left: 0.25em solid var(--primary-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .note {
+    color: #57606a;
+  }
+}
+
+.note p {
+  font-style: italic;
+}
+
+/* Buttons - simplified generic look */
+.button {
+  display: inline-block;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  appearance: none;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--border-color);
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.material-symbols-rounded {
+  display: none; /* remove icons as per text-based request */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+}
