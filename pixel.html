@@ -211,10 +211,10 @@
                                     <strong>Prerequisites:</strong> Before starting, make sure you remove any other previous IMS and Shizuku apps from your device. <u>Reset mobile networks from settings</u> and do a restart.
                                 </p>
                                 <ol class="method-steps">
-                                    <li>Install the "IMS" latest app from GitHub releases and the same for "Shizuku". Not the Pixel IMS app. and not from Play Store. There is not UI in this application. <br><strong>I made an app! Try out the Essentials app which also includes Pixel IMS now. It has included instructions for your ease.</strong>
+                                    <li>Install the "IMS" latest app from GitHub releases and the same for "Shizuku". Not the Pixel IMS app. and not from Play Store. There is not UI in this application.
                                         <div class="step-action">
-                                            <a href="https://github.com/sameerasw/essentials/releases/latest"
-                                                class="button" target="_blank" rel="noopener">Download Essentials APK</a>
+                                            <a href="https://github.com/vvb2060/Ims/releases/latest"
+                                                class="button" target="_blank" rel="noopener">Download IMS APK</a>
 
                                             <a href="https://github.com/RikkaApps/Shizuku/releases/latest"
                                                 class="button" target="_blank" rel="noopener">Download Shizuku APK</a>
@@ -223,20 +223,14 @@
                                             <strong>Note:</strong> Make sure you have Advanced Protection and 2G Protection features are disabled on the device and installing these APK files might need the Play Protect to be disabled temporarily as well.
                                         </p>
                                     </li>
-                                    <li>Setup Shizuku and grant permissions to Essentials app from the Shizuku app.
+                                    <li>Grant permissions to that app from the Shizuku app. (Video might be outdated but granting permission will be similar)
                                         <br>
-                                            <video src="./assets/img/articles/pixel/shizuku.mp4" class="step-video" controls
-                                                playsinline muted loop>
-                                                Your browser does not support the video tag.
-                                            </video>
+                                        <video src="./assets/img/articles/pixel/shizuku.mp4" class="step-video" controls
+                                            playsinline muted loop>
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </li>
-                                    <!-- <li><s>Enable features inside the Pixel IMS app for each SIM.</s> There is not UI with the new IMS app. It will handle everything. -->
-                                        <li>Go to Pixel IMS in the Essentials app and enable the toggle after reading instructions.
-                                            <video src="./assets/img/articles/pixel/essentials.mp4" class="step-video" controls
-                                                playsinline muted loop>
-                                                Your browser does not support the video tag.
-                                            </video>
-                                            </li>
+                                    <li><s>Enable features inside the Pixel IMS app for each SIM.</s> There is not UI with the new IMS app. It will handle everything.
                                     </li>
                                     <li>Enable the VoLTE toggle under Settings → Network & SIM cards → {your SIM} if not
                                         enabled already.
@@ -246,38 +240,41 @@
                                     <li>Restart your phone <span class="warn">(mandatory)</span>.</li>
                                     <li>Verify carrier speciifc settings and check if voLTE is now enabled.
                                     </li>
-                                    <li>Ensure the activation of voLTE with the <span class="warn">Open Phone Information</span> option in Essentials > Pixel IMS.</li>
 
-                                    <!-- <p class="item article-text"><strong>Full guide:</strong> <a
+                                    <p class="item article-text"><strong>Full guide:</strong> <a
                                             href="https://github.com/kyujin-cho/pixel-volte-patch/blob/main/README.en.md"
-                                            target="_blank" rel="noopener">GitHub README ()</a></p> -->
+                                            target="_blank" rel="noopener">GitHub README ()</a></p>
 
                                 </ol>
 
                             </div>
 
                             <p class="item article-text"><strong>That's it!</strong> Enjoy clear calling! </p>
-                            <p class="item article-text">Now continue with the carrier side activation steps if needed. <br>
-                                <!-- <span
+                            <p class="item article-text">Now continue with the carrier side activation steps. <br> <span
                                     class="warn">You can safely turn off Developer Options after enabling with this
-                                    method but it may need to be repeated after OTA updates.</span> -->
-                                    </p>
+                                    method but it may need to be repeated after OTA updates.</span></p>
 
                         </div>
                     </div>
 
                 </div>
 
-                <!-- <div class="volte-section">
+                <div class="volte-section">
                     <h3>Verify voLTE Activation</h3>
+                    <p class="item article-text">Ensure the activation of voLTE with the following steps:</p>
                     <ol class="method-steps">
+                        <li>Dial <code class="inline-code">*#*#4636#*#*</code> in dialer</li>
+                        <li>Select "Phone information"</li>
+                        <li>Select the SIM (Select phone index option)</li>
+                        <li>Open the 3 dot menu</li>
+                        <li>Open "IMS Service Status"</li>
                         <li>Check if your services are registered and available similar to below:</li>
                     </ol>
                     <div class="verification-image">
                         <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb420cf1b-b5de-455a-bc03-3990ae2d77ba%2Ff5ca4427-e602-4d05-ba88-17760cab1109%2FUntitled.png?table=block&id=f44ff9e7-d0c2-4434-bf6a-6bbedc9857eb&cache=v2"
                             alt="IMS status verification" class="article-img">
                     </div>
-                </div> -->
+                </div>
 
         </section>
 
