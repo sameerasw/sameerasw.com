@@ -26,7 +26,7 @@ body{
 
   .blur{
     backdrop-filter: blur(5px);
-    transition: backdrop-filter 0.5s ease-in-out !;
+    transition: backdrop-filter 0.5s ease-in-out;
   }
 
   .cursor-normal{

@@ -1,24 +1,24 @@
 {
-  "name": "airsync-licensing",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "My portfolio website source code",
-  "main": "index.js",
+  "name": "next-temp",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sameerasw/sameerasw.com.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sameerasw/sameerasw.com/issues"
-  },
-  "homepage": "https://github.com/sameerasw/sameerasw.com#readme",
   "dependencies": {
-    "pg": "^8.16.3"
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "typescript": "^5"
   }
 }
