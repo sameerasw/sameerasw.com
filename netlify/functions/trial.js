@@ -8,12 +8,15 @@ async function getDb() {
   });
   await client.connect();
 
-  // Create table if it doesn't exist
+  // Updated table creation with additional fields
   await client.query(`
     CREATE TABLE IF NOT EXISTS trials (
       device_id TEXT PRIMARY KEY,
       expires_at BIGINT NOT NULL,
-      token TEXT NOT NULL
+      token TEXT NOT NULL,
+      device_name TEXT,
+      model_name TEXT,
+      os_version TEXT
     );
   `);
 
@@ -83,13 +86,21 @@ export default async (req) => {
 
   // --- Issue new trial ---
   const expiresAt = Date.now() + 48 * 60 * 60 * 1000; // 48 hours
-  // const expiresAt = Date.now() + 60 * 5000; // 5 mins for testing
   const token = crypto.createHmac("sha256", secret).update(`${id}.${expiresAt}`).digest("hex");
-  const trialData = { device_id: id, expires_at: expiresAt, token };
+  
+  // Extract extra details from body
+  const trialData = { 
+    device_id: id, 
+    expires_at: expiresAt, 
+    token,
+    device_name: body.deviceName || "Unknown",
+    model_name: body.modelName || "Unknown",
+    os_version: body.osVersion || "Unknown"
+  };
 
   await client.query(
-    "INSERT INTO trials (device_id, expires_at, token) VALUES ($1, $2, $3)",
-    [trialData.device_id, trialData.expires_at, trialData.token]
+    "INSERT INTO trials (device_id, expires_at, token, device_name, model_name, os_version) VALUES ($1, $2, $3, $4, $5, $6)",
+    [trialData.device_id, trialData.expires_at, trialData.token, trialData.device_name, trialData.model_name, trialData.os_version]
   );
 
   await client.end();
