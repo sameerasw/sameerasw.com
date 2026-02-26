@@ -19,11 +19,6 @@
     overflow: hidden;
     transition: all 0.35s ease-in-out;
 
-    /* dark theme */
-    @media (prefers-color-scheme: dark) {
-        filter: invert(1);
-        border: 0.15em solid var(--background-color-tr);
-    }
 }
 
 .highlight-item h3 {
@@ -62,46 +57,52 @@
 }
 
 #airsync {
-    background-image: url("../../assets/img/articles/airsync/airsync.jpeg");
+    background-image: url("../../assets/img/project-cards/airsync.jpeg");
+}
+#essentials {
+    background-image: url("../../assets/img/project-cards/essentials.jpeg");
 }
 #zen-t {
-    background-image: url("../../assets/img/articles/zen/zenzero.jpeg");
+    background-image: url("../../assets/img/project-cards/zen.jpeg");
 }
 #edc {
-    background-image: url("../../assets/img/articles/edc/edc.jpeg");
+    background-image: url("../../assets/img/project-cards/edc.jpeg");
 }
 #macos {
-    background-image: url("../../assets/img/articles/macos/macos.jpeg");
+    background-image: url("../../assets/img/project-cards/mac.jpeg");
 }
 #canvas {
-    background-image: url("../../assets/img/articles/canvas.jpeg");
+    background-image: url("../../assets/img/project-cards/canvas.jpeg");
 }
 #tasks {
-    background-image: url("../../assets/img/articles/tasks.jpeg");
+    background-image: url("../../assets/img/project-cards/tasks.jpeg");
 }
 #zero {
-    background-image: url("../../assets/img/articles/zero.jpeg");
+    background-image: url("../../assets/img/project-cards/zero.jpeg");
 }
 #pixel {
-    background-image: url("../../assets/img/articles/pixel/pixel.jpeg");
+    background-image: url("../../assets/img/project-cards/pixel.jpeg");
+}
+#watchfaces {
+    background-image: url("../../assets/img/project-cards/watchfaces.jpeg");
 }
 #foldericons {
-    background-image: url("../../assets/img/articles/folder.jpeg");
+    background-image: url("../../assets/img/project-cards/folder.jpeg");
 }
 #tidwib {
-    background-image: url("../../assets/img/articles/tidwib.jpeg");
+    background-image: url("../../assets/img/project-cards/tidwib.jpeg");
 }
 #more-github {
-    background-image: url("../../assets/img/articles/github.jpeg");
+    background-image: url("../../assets/img/project-cards/github.jpeg");
 }
 #website {
-    background-image: url("../../assets/img/articles/website-source.jpeg");
+    background-image: url("../../assets/img/project-cards/website.jpeg");
 }
 #macro {
-    background-image: url("../../assets/img/articles/keeb.jpeg");
+    background-image: url("../../assets/img/project-cards/keyboard.jpeg");
 }
 #menubar {
-    background-image: url("../../assets/img/articles/menu-bar.jpeg");
+    background-image: url("../../assets/img/project-cards/menubar.jpeg");
 }
 
 .highlight-item:hover {
