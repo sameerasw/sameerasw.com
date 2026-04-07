@@ -144,6 +144,11 @@ details,
   .container {
     width: 100%;
     text-wrap: wrap;
+    margin: -4.5rem auto 0 auto;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 0;
+    }
   }
 
   .article-text {
