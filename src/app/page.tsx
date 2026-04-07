@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import LastFmWidget from "@/components/LastFmWidget";
 import ContactWidget from "@/components/ContactWidget";
@@ -11,6 +11,8 @@ import "@/styles/index/form.css";
 import "@/styles/index/lastfm.css";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const items = document.querySelectorAll(".item") as NodeListOf<HTMLElement>;
     let i = 0;
@@ -28,8 +30,10 @@ export default function Home() {
     items.forEach((item) => {
       item.style.opacity = "0";
       item.style.transform = "translateY(20px)";
-      item.style.transition =
-        "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      if (item.id !== "logo") {
+        item.style.transition =
+          "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      }
     });
 
     // small delay to let mount finish
@@ -37,16 +41,10 @@ export default function Home() {
 
     const handleScroll = () => {
       const scroll = window.scrollY;
-      const logo = document.getElementById("logo");
-      if (logo) {
-        if (scroll > 100) {
-          logo.classList.add("scrolled");
-        } else {
-          logo.classList.remove("scrolled");
-        }
-      }
+      setIsScrolled(scroll > 100);
 
       items.forEach((item) => {
+        if (item.id === "logo") return; // Skip logo, handled by state
         const position = item.getBoundingClientRect();
         if (position.top > window.innerHeight - 10 || position.bottom < 20) {
           item.style.scale = "0.85";
@@ -62,14 +60,22 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleScrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <Navbar />
       <div className="container">
         <section id="intro">
           <div className="heading">
-            <a href="#">
-              <div id="logo" className="home-logo item"></div>
+            <a href="#" onClick={handleScrollToTop} aria-label="Back to top">
+              <div
+                id="logo"
+                className={`home-logo item ${isScrolled ? "scrolled" : ""}`}
+              ></div>
             </a>
 
             <LastFmWidget />
