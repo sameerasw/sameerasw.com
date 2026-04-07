@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import "@/styles/article.css";
 import "@/styles/articles/pixel.css";
 
 export default function PixelNotes() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const items = document.querySelectorAll(".item") as NodeListOf<HTMLElement>;
     let i = 0;
@@ -23,14 +25,20 @@ export default function PixelNotes() {
     items.forEach((item) => {
       item.style.opacity = "0";
       item.style.transform = "translateY(20px)";
-      item.style.transition =
-        "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      if (item.id !== "logo") {
+        item.style.transition =
+          "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      }
     });
 
     setTimeout(animate, 100);
 
     const handleScroll = () => {
+      const value = window.scrollY || document.documentElement.scrollTop;
+      setIsScrolled(value > 100);
+
       items.forEach((item) => {
+        if (item.id === "logo") return;
         const position = item.getBoundingClientRect();
         if (position.top > window.innerHeight - 10 || position.bottom < 20) {
           item.style.scale = "0.75";
@@ -38,12 +46,6 @@ export default function PixelNotes() {
           item.style.scale = "1";
         }
       });
-
-      const logo = document.getElementById("logo");
-      if (logo && window.innerWidth < 500) {
-        const value = window.scrollY;
-        logo.style.opacity = String(1 - (value * 1) / 200);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -51,6 +53,11 @@ export default function PixelNotes() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -68,8 +75,11 @@ export default function PixelNotes() {
       <div className="container">
         <section id="intro">
           <div className="heading">
-            <a href="#">
-              <div id="logo" className="pixel-logo item"></div>
+            <a href="#" onClick={handleScrollToTop} aria-label="Back to top">
+              <div
+                id="logo"
+                className={`pixel-logo item ${isScrolled ? "scrolled" : ""}`}
+              ></div>
             </a>
             <div className="container-mini item content">
               <h1 id="title" className="item">

@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import "@/styles/article.css";
 import "@/styles/articles/zen.css";
 
 export default function WifiPassword() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const items = document.querySelectorAll(".item") as NodeListOf<HTMLElement>;
     let i = 0;
@@ -22,14 +24,20 @@ export default function WifiPassword() {
     items.forEach((item) => {
       item.style.opacity = "0";
       item.style.transform = "translateY(20px)";
-      item.style.transition =
-        "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      if (item.id !== "logo") {
+        item.style.transition =
+          "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
+      }
     });
 
     setTimeout(animate, 100);
 
     const handleScroll = () => {
+      const value = window.scrollY || document.documentElement.scrollTop;
+      setIsScrolled(value > 100);
+
       items.forEach((item) => {
+        if (item.id === "logo") return;
         const position = item.getBoundingClientRect();
         if (position.top > window.innerHeight - 10 || position.bottom < 20) {
           item.style.scale = "0.75";
@@ -44,6 +52,11 @@ export default function WifiPassword() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -61,8 +74,11 @@ export default function WifiPassword() {
       <div className="container">
         <section id="intro">
           <div className="heading">
-            <a href="#">
-              <div id="logo" className="home-logo item"></div>
+            <a href="#" onClick={handleScrollToTop} aria-label="Back to top">
+              <div
+                id="logo"
+                className={`home-logo item ${isScrolled ? "scrolled" : ""}`}
+              ></div>
             </a>
             <div className="container-mini item content">
               <h1 id="title">
