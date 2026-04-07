@@ -76,7 +76,8 @@ export default function Home() {
 
             <div className="container-mini">
               <h1 id="title" className="item">
-                <strong>Sameera</strong> Wijerathna
+                <span className="name-primary">Sameera</span><br />
+                <span className="name-secondary">Wijerathna</span>
               </h1>
               <ContactWidget />
             </div>
