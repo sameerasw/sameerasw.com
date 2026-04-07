@@ -119,6 +119,13 @@ footer {
   text-align: center;
 }
 
+@media screen and (min-width: 751px) {
+  .container-mini, .container-mini.item.content {
+    height: 50vh !important;
+    min-height: 0 !important;
+    width: auto !important;
+  }
+}
 
 details,
 #article-info,

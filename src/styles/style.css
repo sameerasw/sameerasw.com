@@ -63,7 +63,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 4em 0 0 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   font-variation-settings: "ROND" 100;
   transition: all 0.5s ease-in-out;
