@@ -1,7 +1,10 @@
 .article-text {
-  width: 90vw;
-  margin: 2em auto 4em auto;
-  text-wrap: wrap !important;
+  max-width: 800px;
+  width: 90%;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-wrap: wrap;
   text-align: left;
 }
 
@@ -89,15 +92,14 @@ table {
 }
 
 #screenshot {
-  max-width: 500px;
-  max-height: 500px;
-  border: 0.125em solid var(--primary-color);
-  border-radius: 1em;
-  transition: all 0.5s ease-in-out;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--background-color-secondary);
+  border-radius: var(--radius-out);
+  transition: transform 0.3s ease;
 
   &:hover {
-    scale: 1.05;
-    box-shadow: 0 0 1em var(--primary-color);
+    transform: translateY(-5px);
   }
   @media screen and (max-width: 800px) {
     width: 60vw !important;
@@ -121,21 +123,22 @@ footer {
 details,
 #article-info,
 .card {
-  padding: 0.5em;
-  border-radius: 1em;
-  background-color: var(--background-color-primary);
-  border: 0.1em solid var(--primary-color);
-  width: fit-content;
-  margin: 2em auto;
-  transition: all 0.5s ease-in-out;
+  padding: 1.5rem;
+  border-radius: var(--radius-out);
+  background-color: var(--background-color-secondary);
+  border: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease;
+  
   a {
     text-decoration: none;
-    /* color: var(--primary-color); */
   }
-  max-width: 70vw;
 
   @media screen and (max-width: 500px) {
     max-width: 95vw;
+    padding: 1rem;
   }
 
   .container {
@@ -223,20 +226,21 @@ details,
 }
 
 .button {
-  background-color: var(--primary-color);
-  width: fit-content;
-  border-radius: 1em;
-  border: 0.1em solid var(--background-color-primary);
-  padding: 1em 2em;
-  margin: 1em;
-  transition: all 0.5s ease-in-out;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
   color: var(--background-color-primary);
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    scale: 1.05;
+    transform: translateY(-2px);
+    opacity: 0.9;
   }
 
   }
@@ -287,13 +291,13 @@ details,
 
 .article-img {
   display: block;
-  max-height: 25vh;
   max-width: 100%;
-  margin: 1em;
-  border-radius: 1em;
-  transition: all 0.5s ease-in-out;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: var(--radius-out);
+  transition: transform 0.3s ease;
   &:hover {
-    scale: 1.05;
+    transform: translateY(-5px);
   }
 }
 

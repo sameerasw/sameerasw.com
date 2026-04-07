@@ -172,17 +172,13 @@ export default function ZenBrowser() {
               ></div>
             </a>
             <div className="container-mini item content">
-              <h1 id="title">
-                <strong>Zen</strong> Zero
-              </h1>
-              <h2 id="subtitle">
-                <strong>Zen</strong> Browser
-              </h2>
-              <p id="sub-text" className="item article-text">
-                The most minimal a browser can be. Zen Zero is a customized{" "}
-                <b className="accent">Zen browser</b> which aim to keep away the
-                distractions and focus on the web and make it look pretty with
-                transparency.
+              <h1 id="title">Zen Zero</h1>
+              <h2 id="subtitle">Zen Browser</h2>
+              <p className="item article-text">
+                The most minimal a browser can be. Zen Zero is a customized
+                <b className="accent"> Zen browser</b> which aim to keep away
+                the distractions and focus on the web and make it look pretty
+                with transparency.
               </p>
             </div>
           </div>
@@ -193,10 +189,7 @@ export default function ZenBrowser() {
             <div
               id="preview-grid"
               className="carousel-slides"
-              style={{
-                transform: `translateX(-${slide * 100}%)`,
-                transition: "transform 0.5s ease",
-              }}
+              style={{ transform: `translateX(-${slide * 100}%)` }}
             >
               <div className="carousel-slide" style={{ minWidth: "100%" }}>
                 <iframe
@@ -350,22 +343,22 @@ export default function ZenBrowser() {
                 alt=""
               />
             </li>
-            <h2 id="done">
+            <div id="done" className="item">
               Congratulations <br />
               Your browser is now transparent <br />
-              At least I hope so{" "}
-            </h2>
+              At least I hope so
+            </div>
             <p className="item article-text">
               You can now enjoy the zen browser with a transparent background.
-              You can also change adjust various features provided for each
-              website when you opent he pop-up in that webpage.
+              You can also adjust various features provided for each website
+              when you open the pop-up in that webpage.
             </p>
           </ol>
         </article>
 
         <article className="page sub">
           <h2 id="trouble">Troubleshooting</h2>
-          <ol className="zen-article">
+          <ul className="trouble-list">
             <li>
               <p className="item article-text">
                 At the moment, only some of the operating systems are known to
@@ -509,7 +502,7 @@ export default function ZenBrowser() {
                 alt="Darkreader"
               />
             </li>
-          </ol>
+          </ul>
         </article>
 
         <article className="page sub">
@@ -527,7 +520,7 @@ export default function ZenBrowser() {
 
         <article className="page">
           <h2 id="theme-request">Theme request and issues</h2>
-          <ul className="zen-article">
+          <ul className="theme-request-list">
             <li>
               <p className="item article-text">
                 Don’t see transparency for your favorite website? Request a
@@ -591,8 +584,8 @@ export default function ZenBrowser() {
         <footer>
           <div className="footer">
             <p className="footer-text">
-              Work in progress.... Last updated on{" "}
-              <b className="accent">12th July 2025</b>
+              Work in progress.... Last updated on
+              <b className="accent"> 12th July 2025</b>
             </p>
             <br />
             <p>

@@ -91,7 +91,7 @@ h1 {
     text-align: center;
     width: 100vw;
     padding-left: 0;
-    font-size: calc(100vw / 7);
+    font-size: calc(100vw / 11);
   }
   strong {
     color: var(--primary-color);
