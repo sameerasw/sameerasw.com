@@ -65,7 +65,7 @@ export default function MacOsSetup() {
     <>
       <Navbar isArticle />
 
-      <div className="container">
+      <div className="container article-body">
         <section id="intro">
           <div className="heading">
             <a href="#" onClick={handleScrollToTop} aria-label="Back to top">

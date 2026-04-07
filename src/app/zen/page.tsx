@@ -107,7 +107,7 @@ export default function ZenBrowser() {
           { href: "#more-links", id: "resources-nav", icon: "link", caption: "Resources", ariaLabel: "Resources" },
         ]} 
       />
-      <div className="container">
+      <div className="container article-body">
         <section id="intro">
           <div className="heading">
             <a href="#" onClick={handleScrollToTop} aria-label="Back to top">
