@@ -94,7 +94,7 @@ export default function Home() {
                 id="airsync"
                 className="highlight-item item"
                 href="/airsync"
-                data-title="/assets/img/project-cards/airsync.jpeg"
+                data-title="/assets/img/articles/airsync/airsync-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>AirSync</h3>
@@ -107,7 +107,7 @@ export default function Home() {
                 id="essentials"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/essentials"
-                data-title="/assets/img/project-cards/essentials.jpeg"
+                data-title="/assets/img/articles/essentials-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Essentials</h3>
@@ -120,7 +120,7 @@ export default function Home() {
                 id="zen-t"
                 className="highlight-item item"
                 href="/zen"
-                data-title="/assets/img/project-cards/zen.jpeg"
+                data-title="/assets/img/articles/zen-t-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>ZenZero</h3>
@@ -133,7 +133,7 @@ export default function Home() {
                 id="edc"
                 className="highlight-item item"
                 href="/edc-setup"
-                data-title="/assets/img/project-cards/edc.jpeg"
+                data-title="/assets/img/articles/edc-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>My Every Day Carry</h3>
@@ -146,7 +146,7 @@ export default function Home() {
                 id="macos"
                 className="highlight-item item"
                 href="/macos"
-                data-title="/assets/img/project-cards/mac.jpeg"
+                data-title="/assets/img/articles/macos/web-preview-macos.jpeg"
               >
                 <div className="highlight-content">
                   <h3>My MacBook Setup</h3>
@@ -157,7 +157,7 @@ export default function Home() {
                 id="canvas"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/Canvas"
-                data-title="/assets/img/project-cards/canvas.jpeg"
+                data-title="/assets/img/articles/canvas-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Canvas</h3>
@@ -170,7 +170,7 @@ export default function Home() {
                 id="tasks"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/tasks"
-                data-title="/assets/img/project-cards/tasks.jpeg"
+                data-title="/assets/img/articles/tasks-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Tasks</h3>
@@ -183,7 +183,7 @@ export default function Home() {
                 id="zero"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/browser"
-                data-title="/assets/img/project-cards/zero.jpeg"
+                data-title="/assets/img/articles/zero-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Zero</h3>
@@ -196,7 +196,7 @@ export default function Home() {
                 id="pixel"
                 className="highlight-item item"
                 href="/pixel"
-                data-title="/assets/img/project-cards/pixel.jpeg"
+                data-title="/assets/img/articles/pixel/web-preview-pixel.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Pixel Notes</h3>
@@ -209,7 +209,7 @@ export default function Home() {
                 id="watchfaces"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/watchfaces"
-                data-title="/assets/img/project-cards/watchfaces.jpeg"
+                data-title="/assets/img/articles/watchfaces-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Watchfaces</h3>
@@ -222,7 +222,7 @@ export default function Home() {
                 id="foldericons"
                 className="highlight-item item"
                 href="/icons/categories.html"
-                data-title="/assets/img/project-cards/folder.jpeg"
+                data-title="/assets/img/articles/folder-icons-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Folder Icons</h3>
@@ -235,7 +235,7 @@ export default function Home() {
                 id="macro"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/REDRAGON-FIZZ-K617-macro"
-                data-title="/assets/img/project-cards/keyboard.jpeg"
+                data-title="/assets/img/articles/keeb-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>Keymappings</h3>
@@ -249,7 +249,7 @@ export default function Home() {
                 id="tidwib"
                 className="highlight-item item"
                 href="https://t.me/tidwib"
-                data-title="/assets/img/project-cards/tidwib.jpeg"
+                data-title="/assets/img/articles/tidwib-preview.jpeg"
               >
                 <div className="highlight-content">
                   <h3>My Community</h3>
