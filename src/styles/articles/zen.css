@@ -3,7 +3,7 @@
 article {
   max-width: 800px;
   width: 90%;
-  margin: 0 auto 4rem auto;
+  margin: -3rem auto 4rem auto;
   border: none;
   padding: 0;
   text-align: left;
@@ -38,13 +38,18 @@ p.article-text {
   color: var(--text-color);
 }
 
+ol.zen-article {
+  list-style: decimal;
+  padding-left: 3.5rem;
+
+  @media screen and (max-width: 500px) {
+    padding-left: 2.5rem;
+  }
+}
+
 .zen-article {
   padding: 0;
   margin: 4rem 0;
-}
-
-ol.zen-article {
-  list-style: decimal;
 }
 
 ul.zen-article,
@@ -78,6 +83,11 @@ ol.zen-article li {
     font-size: 2rem;
     font-family: var(--font-family);
     font-variation-settings: "wdth" 150;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.4rem;
+      font-variation-settings: "wdth" 100;
+    }
   }
 }
 
@@ -223,7 +233,7 @@ img.figure,
 
 /* Troubleshooting / sub sections */
 article.sub {
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 .mini-list {
