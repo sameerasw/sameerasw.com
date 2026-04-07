@@ -127,7 +127,6 @@ footer {
   }
 }
 
-details,
 #article-info,
 .card {
   padding: 1.5rem;
@@ -322,7 +321,6 @@ details,
   flex-direction: row;
 }
 
-details,
 section {
   width: 80%;
   @media screen and (max-width: 500px) {

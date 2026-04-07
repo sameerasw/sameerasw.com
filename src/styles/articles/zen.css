@@ -237,23 +237,44 @@ article.sub {
 }
 
 .mini-list {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .mini-list li {
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--background-color-secondary);
+  padding: 0.2rem 0;
   font-size: 1.1rem;
-}
-
-.mini-list li:last-child {
-  border-bottom: none;
 }
 
 .mini-list a {
   color: var(--primary-color);
   font-weight: 500;
+  text-decoration: underline;
+}
+
+.mini-list details {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.mini-list summary {
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 500;
+  display: list-item;
+}
+
+.mini-list summary::-webkit-details-marker {
+  color: var(--primary-color);
+}
+
+.mini-list .details-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color-secondary);
+  border-radius: var(--radius-out);
 }
 
 .redirects-container {

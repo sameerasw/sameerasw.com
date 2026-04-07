@@ -365,7 +365,7 @@ export default function ZenBrowser() {
                 <li>
                   <details>
                     <summary>Hyprland - instructions</summary>
-                    <div>
+                    <div className="details-content">
                       <p>
                         <strong>
                           Tested on version 1.14.8b flatpak version
