@@ -97,7 +97,7 @@ export default function AirSync() {
   }, []);
 
   return (
-    <div className="airsync-page">
+    <div className="airsync-page article-body">
       <div className="moodboard-container" id="airsync-scroll">
         <div className="parent">
           <div className="div1 tile primary-tile">

@@ -23,7 +23,7 @@ export default function AirSyncPrivacy() {
         </ul>
       </nav>
 
-      <div className="container airsync-privacy">
+      <div className="container airsync-privacy article-body">
         <section id="intro">
           <div className="heading">
             <div className="container-mini content">
