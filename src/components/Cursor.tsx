@@ -6,7 +6,10 @@ export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const cursorTextRef = useRef<HTMLDivElement>(null);
 
+  const isTouchDevice = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+
   useEffect(() => {
+    if (isTouchDevice) return;
     const cursor = cursorRef.current;
     const cursorText = cursorTextRef.current;
     if (!cursor || !cursorText) return;
@@ -127,6 +130,8 @@ export default function Cursor() {
       observer.disconnect();
     };
   }, []);
+
+  if (isTouchDevice) return null;
 
   return (
     <div
