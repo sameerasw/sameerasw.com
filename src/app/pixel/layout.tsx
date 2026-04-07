@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "A collection of notes and information on my Pixel devices and some other articles about getting some advanced features of them.",
   metadataBase: new URL("https://sameerasw.com/pixel/"),
   keywords:
-    "Pixel, google Pixel, Google, MadebyGoole, Android, voLTE, Sri Lanka, sameerasw, Sameera Sandakleum",
+    "Pixel, google Pixel, Google, MadebyGoole, Android, voLTE, Sri Lanka, sameerasw, Sameera Wijerathna",
   openGraph: {
     type: "article",
     title: "Sameera's Pixel Notes",

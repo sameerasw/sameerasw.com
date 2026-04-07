@@ -8,15 +8,15 @@ import Cursor from "@/components/Cursor";
 import StickyLoveTab from "@/components/StickyLoveTab";
 
 export const metadata: Metadata = {
-  title: "Sameera Sandakelum",
+  title: "Sameera Wijerathna",
   description:
     "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
   metadataBase: new URL("https://sameerasw.com/"),
   keywords:
-    "Sameera Sandakelum, sameerasw, sameera, portfolio, sameerasw, sameeraswdotcom, sameera_s_w",
+    "Sameera Wijerathna, sameerasw, sameera, portfolio, sameerasw, sameeraswdotcom, sameera_s_w",
   openGraph: {
     type: "article",
-    title: "Sameera Sandakelum - My personal space in the internet.",
+    title: "Sameera Wijerathna - My personal space in the internet.",
     description:
       "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
     url: "https://sameerasw.com/",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@sameeraswdotcom",
     creator: "@sameeraswdotcom",
-    title: "Sameera Sandakelum",
+    title: "Sameera Wijerathna",
     description:
       "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
     images:
@@ -43,13 +43,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preload"
-          href="/assets/fonts/sugarmagicpersonaluseonly-jemyo.otf"
-          as="font"
-          type="font/otf"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+          rel="stylesheet"
         />
         <link
           rel="preload"
@@ -57,12 +59,6 @@ export default function RootLayout({
           as="style"
         />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"

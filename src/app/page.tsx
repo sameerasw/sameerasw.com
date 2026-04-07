@@ -76,7 +76,7 @@ export default function Home() {
 
             <div className="container-mini">
               <h1 id="title" className="item">
-                <strong>Sameera</strong> Sandakelum
+                <strong>Sameera</strong> Wijerathna
               </h1>
               <ContactWidget />
             </div>
@@ -292,7 +292,7 @@ export default function Home() {
                   <td>
                     <b className="accent">Name</b>
                   </td>
-                  <td>Sameera Sandakelum Wijerathna</td>
+                  <td>Sameera Wijerathna</td>
                 </tr>
                 <tr className="item" style={{ opacity: 0 }}>
                   <td>

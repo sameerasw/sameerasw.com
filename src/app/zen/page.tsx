@@ -588,7 +588,7 @@ export default function ZenBrowser() {
             </p>
             <br />
             <p>
-              © 2025 <a href="/">Sameera Sandakleum</a>
+              © 2025 <a href="/">Sameera Wijerathna</a>
             </p>
             <p>Made with ❤️ from Sri Lanka</p>
           </div>

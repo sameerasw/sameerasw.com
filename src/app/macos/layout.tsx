@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "A complete lookaround of my personal macOS productivity setup on the MacBook Air.",
   metadataBase: new URL("https://sameerasw.com/macos/"),
   keywords:
-    "macos, macbook, macbook air, apple silicon, apple m1, macbook m1, Sri Lanka, sameerasw, Sameera Sandakleum",
+    "macos, macbook, macbook air, apple silicon, apple m1, macbook m1, Sri Lanka, sameerasw, Sameera Wijerathna",
   openGraph: {
     type: "article",
     title: "Sameera's MacBook Setup",

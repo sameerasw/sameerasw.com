@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "AirSync - Seamlessly connect your Android device with macOS. Receive notifications, share clipboard, control media, and more across your devices on local network.",
   metadataBase: new URL("https://sameerasw.com/airsync/"),
   keywords:
-    "airsync, android, macos, notifications, clipboard, media control, device sync, local network, swiftui, jetpack compose, Sri Lanka, sameerasw, Sameera Sandakelum",
+    "airsync, android, macos, notifications, clipboard, media control, device sync, local network, swiftui, jetpack compose, Sri Lanka, sameerasw, Sameera Wijerathna",
   openGraph: {
     type: "article",
     title: "AirSync - Android + macOS companion",
