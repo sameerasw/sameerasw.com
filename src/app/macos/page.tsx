@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apps } from "./apps";
+import Navbar from "@/components/Navbar";
 import "@/styles/article.css";
 import "@/styles/articles/app-list.css";
 
@@ -62,16 +63,7 @@ export default function MacOsSetup() {
 
   return (
     <>
-      <nav id="nav">
-        <ul>
-          <li>
-            <Link href="/" id="home-nav" aria-label="back to home page">
-              <span className="material-symbols-rounded">arrow_back</span>
-              <span className="caption">Back</span>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar isArticle />
 
       <div className="container">
         <section id="intro">

@@ -1,94 +1,135 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
-export default function Navbar() {
+interface NavLink {
+  href: string;
+  id: string;
+  icon: string;
+  caption: string;
+  ariaLabel: string;
+}
+
+interface NavbarProps {
+  isArticle?: boolean;
+  extraLinks?: NavLink[];
+}
+
+export default function Navbar({ isArticle = false, extraLinks = [] }: NavbarProps) {
   const [isMini, setIsMini] = useState(false);
   const [activeSegment, setActiveSegment] = useState("home");
 
   useEffect(() => {
     let lastScrollTop = 0;
+
+    // Scroll-based mini-nav logic
     const handleScroll = () => {
       let currentScroll = window.scrollY || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
+      if (currentScroll > lastScrollTop && currentScroll > 50) {
         setIsMini(true);
       } else {
         setIsMini(false);
       }
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
-      const intro = document.getElementById("intro");
-      const projects = document.getElementById("projects");
-      const about = document.getElementById("about-me");
-      const contact = document.getElementById("contact");
-
-      const projectsTop = projects ? projects.offsetTop : Infinity;
-      const aboutTop = about ? about.offsetTop : Infinity;
-      const contactTop = contact ? contact.offsetTop : Infinity;
-
-      if (currentScroll < projectsTop - 400) {
-        setActiveSegment("home");
-      } else if (currentScroll < aboutTop - 200) {
-        setActiveSegment("projects");
-      } else if (currentScroll < contactTop - 400) {
-        setActiveSegment("about");
-      } else {
-        setActiveSegment("contact");
-      }
     };
+
+    // IntersectionObserver for active segment logic
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px", // Focus on the top-ish part of the screen
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSegment(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Elements to observe
+    const idsToObserve = isArticle 
+      ? extraLinks.map(l => l.href.replace("#", "")) 
+      : ["intro", "projects", "about-me", "contact"];
+
+    idsToObserve.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
+  }, [isArticle, extraLinks]);
+
+  const renderLink = (link: NavLink | any, isNextLink = false) => {
+    const Component = isNextLink ? Link : "a";
+    const segmentId = link.href.replace("#", "");
+    
+    return (
+      <li key={link.id}>
+        <Component
+          href={link.href}
+          id={link.id}
+          className={activeSegment === segmentId ? "active" : ""}
+          aria-label={link.ariaLabel}
+        >
+          <span className="material-symbols-rounded">{link.icon}</span>
+          <span className="caption">{link.caption}</span>
+        </Component>
+      </li>
+    );
+  };
 
   return (
     <nav id="nav" className={isMini ? "mini" : ""}>
       <ul>
-        <li>
-          <a
-            href="#"
-            id="home-nav"
-            className={activeSegment === "home" ? "active" : ""}
-            aria-label="Home - navigation bar"
-          >
-            <span className="material-symbols-rounded">home</span>
-            <span className="caption">Home</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            id="projects-nav"
-            className={activeSegment === "projects" ? "active" : ""}
-            aria-label="Projects - Navigation bar"
-          >
-            <span className="material-symbols-rounded">data_object</span>
-            <span className="caption">Projects</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about-me"
-            id="about-nav"
-            className={activeSegment === "about" ? "active" : ""}
-            aria-label="About me - Navigation bar"
-          >
-            <span className="material-symbols-rounded">face</span>
-            <span className="caption">About</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            id="contact-nav"
-            className={activeSegment === "contact" ? "active" : ""}
-            aria-label="Contact me - Navigation bar"
-          >
-            <span className="material-symbols-rounded">chat_bubble</span>
-            <span className="caption">Contact</span>
-          </a>
-        </li>
+        {isArticle ? (
+          <>
+            <li>
+              <Link href="/" id="home-nav" aria-label="Back to home page">
+                <span className="material-symbols-rounded">arrow_back</span>
+                <span className="caption">Back</span>
+              </Link>
+            </li>
+            {extraLinks.map((link) => renderLink(link))}
+          </>
+        ) : (
+          <>
+            <li>
+              <a href="#" id="home-nav" className={activeSegment === "intro" ? "active" : ""} aria-label="Home">
+                <span className="material-symbols-rounded">home</span>
+                <span className="caption">Home</span>
+              </a>
+            </li>
+            <li key="projects-nav">
+              <a href="#projects" id="projects-nav" className={activeSegment === "projects" ? "active" : ""} aria-label="Projects">
+                <span className="material-symbols-rounded">data_object</span>
+                <span className="caption">Projects</span>
+              </a>
+            </li>
+            <li key="about-nav">
+              <a href="#about-me" id="about-nav" className={activeSegment === "about-me" ? "active" : ""} aria-label="About">
+                <span className="material-symbols-rounded">face</span>
+                <span className="caption">About</span>
+              </a>
+            </li>
+            <li key="contact-nav">
+              <a href="#contact" id="contact-nav" className={activeSegment === "contact" ? "active" : ""} aria-label="Contact">
+                <span className="material-symbols-rounded">chat_bubble</span>
+                <span className="caption">Contact</span>
+              </a>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

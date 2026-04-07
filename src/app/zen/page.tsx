@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import "@/styles/article.css";
 import "@/styles/articles/zen.css";
 
@@ -96,72 +97,16 @@ export default function ZenBrowser() {
 
   return (
     <>
-      <nav id="nav">
-        <ul>
-          <li>
-            <Link href="/" id="home-nav" aria-label="back to home page">
-              <span className="material-symbols-rounded">arrow_back</span>
-              <span className="caption">Back</span>
-            </Link>
-          </li>
-          <li>
-            <a
-              href="#intro"
-              id="intro-nav"
-              className={activeSegment === "intro" ? "active" : ""}
-              aria-label="Introduction - Navigation bar"
-            >
-              <span className="material-symbols-rounded">home</span>
-              <span className="caption">Intro</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#mod-install"
-              id="install-nav"
-              className={activeSegment === "install" ? "active" : ""}
-              aria-label="Installation - Navigation bar"
-            >
-              <span className="material-symbols-rounded">download</span>
-              <span className="caption">Install</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#trouble"
-              id="trouble-nav"
-              className={activeSegment === "trouble" ? "active" : ""}
-              aria-label="Troubleshooting - Navigation bar"
-            >
-              <span className="material-symbols-rounded">build</span>
-              <span className="caption">Trouble</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#addon-features"
-              id="features-nav"
-              className={activeSegment === "features" ? "active" : ""}
-              aria-label="Features - Navigation bar"
-            >
-              <span className="material-symbols-rounded">star</span>
-              <span className="caption">Features</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#more-links"
-              id="resources-nav"
-              className={activeSegment === "resources" ? "active" : ""}
-              aria-label="Resources - Navigation bar"
-            >
-              <span className="material-symbols-rounded">link</span>
-              <span className="caption">Resources</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
+      <Navbar 
+        isArticle 
+        extraLinks={[
+          { href: "#intro", id: "intro-nav", icon: "home", caption: "Intro", ariaLabel: "Introduction" },
+          { href: "#mod-install", id: "install-nav", icon: "download", caption: "Install", ariaLabel: "Installation" },
+          { href: "#trouble", id: "trouble-nav", icon: "build", caption: "Trouble", ariaLabel: "Troubleshooting" },
+          { href: "#addon-features", id: "features-nav", icon: "star", caption: "Features", ariaLabel: "Features" },
+          { href: "#more-links", id: "resources-nav", icon: "link", caption: "Resources", ariaLabel: "Resources" },
+        ]} 
+      />
       <div className="container">
         <section id="intro">
           <div className="heading">
