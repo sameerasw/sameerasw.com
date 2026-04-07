@@ -63,7 +63,9 @@ ul.zen-article,
   margin-bottom: 2rem;
 }
 
-.zen-article h2 {
+.zen-article h2,
+.page.sub h2,
+.page h2 {
   font-family: var(--font-family);
   font-variation-settings: "wght" 500, "wdth" 110, "ROND" 100;
   font-size: 1.8rem;
