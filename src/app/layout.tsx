@@ -33,11 +33,6 @@ export const metadata: Metadata = {
     images:
       "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/web-preview.png",
   },
-  icons: {
-    icon: "/assets/img/logo-mini.png",
-    shortcut: "/assets/img/logo-mini.png",
-    apple: "/assets/img/logo-mini.png",
-  },
 };
 
 export default function RootLayout({
