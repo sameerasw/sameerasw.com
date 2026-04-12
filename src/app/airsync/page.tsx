@@ -669,6 +669,22 @@ export default function AirSync() {
           </div>
         </section>
 
+        {/* ── RETURN HOME ── */}
+        <section className="as-wrap" style={{ paddingBottom: '2rem' }}>
+          <a href="/" className="as-back-card">
+            <img 
+              src="/assets/img/logo-mini.png" 
+              alt="sameerasw.com" 
+              className="as-back-avatar" 
+            />
+            <div className="as-back-content">
+              <span className="as-back-title">More Made by sameerasw.com</span>
+              <span className="as-back-subtitle">Explore other apps and projects</span>
+            </div>
+            <span className="material-symbols-rounded as-back-arrow">arrow_forward</span>
+          </a>
+        </section>
+
         {/* ── FOOTER ── */}
         <footer className="as-footer">
           <div className="as-wrap">

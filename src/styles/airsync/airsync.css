@@ -1220,6 +1220,62 @@
   }
 }
 
+/* ─── Back to main site ──────────────────────────────────── */
+.as-back-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--as-card-bg);
+  border: 1px solid var(--as-border);
+  border-radius: var(--radius-out);
+  padding: 1.25rem 2rem;
+  margin: 3rem auto 0;
+  max-width: 600px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.as-back-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--as-border-accent);
+}
+
+.as-back-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--as-border);
+}
+
+.as-back-content {
+  flex: 1;
+}
+
+.as-back-title {
+  color: var(--as-text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.as-back-subtitle {
+  color: var(--as-text-soft);
+  font-size: 0.9rem;
+}
+
+.as-back-arrow {
+  color: var(--as-text-soft);
+  font-size: 1.4rem !important;
+  transition: transform 0.3s ease;
+}
+
+.as-back-card:hover .as-back-arrow {
+  transform: translateX(4px);
+  color: var(--as-accent);
+}
+
 /* ─── OS icon light fix ──────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   .as-os-icon-dynamic {

@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     images:
       "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/articles/airsync/airsync-preview.jpeg",
   },
+  icons: {
+    icon: "/assets/img/articles/airsync/airsync-logo.png",
+    shortcut: "/assets/img/articles/airsync/airsync-logo.png",
+    apple: "/assets/img/articles/airsync/airsync-logo.png",
+  },
 };
 
 export { default } from "./page";
