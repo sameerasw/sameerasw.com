@@ -13,8 +13,13 @@ export const metadata: Metadata = {
     description:
       "AirSync - Seamlessly connect your Android device with macOS. Receive notifications, share clipboard, control media, and more across your devices on local network.",
     url: "https://sameerasw.com/airsync/",
-    images:
-      "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/articles/airsync/airsync-preview.jpeg",
+    images: [
+      {
+        url: "/assets/img/articles/airsync/airsync-preview.jpeg",
+        width: 1000,
+        height: 563,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -23,8 +28,7 @@ export const metadata: Metadata = {
     title: "AirSync - Android + macOS companion",
     description:
       "AirSync - Seamlessly connect your Android device with macOS. Receive notifications, share clipboard, control media, and more across your devices on local network.",
-    images:
-      "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/articles/airsync/airsync-preview.jpeg",
+    images: ["/assets/img/articles/airsync/airsync-preview.jpeg"],
   },
 };
 

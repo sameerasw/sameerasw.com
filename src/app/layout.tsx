@@ -10,7 +10,7 @@ import StickyLoveTab from "@/components/StickyLoveTab";
 export const metadata: Metadata = {
   title: "Sameera Wijerathna",
   description:
-    "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
+    "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things. Currently working on AirSync, Essentials, ZenZero and many other community projects.",
   metadataBase: new URL("https://sameerasw.com/"),
   keywords:
     "Sameera Wijerathna, sameerasw, sameera, portfolio, sameerasw, sameeraswdotcom, sameera_s_w",
@@ -18,10 +18,15 @@ export const metadata: Metadata = {
     type: "article",
     title: "Sameera Wijerathna - My personal space in the internet.",
     description:
-      "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
+      "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things. Currently working on AirSync, Essentials, ZenZero and many other community projects.",
     url: "https://sameerasw.com/",
-    images:
-      "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/web-preview.png",
+    images: [
+      {
+        url: "/assets/img/web-preview.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -29,9 +34,8 @@ export const metadata: Metadata = {
     creator: "@sameeraswdotcom",
     title: "Sameera Wijerathna",
     description:
-      "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things.",
-    images:
-      "https://raw.githubusercontent.com/sameerasw/sameerasw.com/main/assets/img/web-preview.png",
+      "A passionate developer, designer and a student from Sri Lanka who is always ready to learn new things. Currently working on AirSync, Essentials, ZenZero and many other community projects.",
+    images: ["/assets/img/web-preview.png"],
   },
 };
 
