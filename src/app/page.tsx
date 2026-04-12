@@ -365,7 +365,8 @@ export default function Home() {
               contact me via email or any of my social media profiles.
             </p>
             <div id="contact-form">
-              <form name="contact" data-netlify="true">
+              <form name="contact" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
                 <input
                   type="text"
                   name="name"
