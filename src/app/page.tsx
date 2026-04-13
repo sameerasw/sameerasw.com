@@ -197,6 +197,10 @@ export default function Home() {
                     weekStart={1}
                     blockSize={10}
                     transformData={transformData}
+                    theme={{
+                      light: ["#ffffff", "#217d66ff"],
+                      dark: ["#000000", "#4affbd"],
+                    }}
                   />
                 )}
               </div>
