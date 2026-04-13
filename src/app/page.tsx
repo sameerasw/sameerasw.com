@@ -19,10 +19,17 @@ interface Activity {
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showRandom, setShowRandom] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [tick, setTick] = useState(0);
   const calendarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     setIsMounted(true);
@@ -33,15 +40,7 @@ export default function Home() {
       setTick((t) => t + 1);
     }, 50);
 
-    const timer = setTimeout(() => {
-      clearInterval(interval);
-      setShowRandom(false);
-    }, 2000);
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timer);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -120,10 +119,32 @@ export default function Home() {
   }, []);
 
   const transformData = (data: Array<Activity>) => {
-    if (showRandom && isMounted) {
-      const rows = 7;
-      const cols = Math.ceil(data.length / rows);
+    if (!isMounted || data.length === 0) return data;
 
+    const rows = 7;
+    const firstDate = new Date(data[0].date);
+    const firstDayOffset = (firstDate.getUTCDay() + 6) % 7;
+
+    const CYCLE_TICKS = 200; // 10s cycle
+    const currentTick = tick % CYCLE_TICKS;
+    const SWEEP_DURATION_TICKS = 60; // 3s
+
+    const activitiesWithPos = data.map((activity) => {
+      const date = new Date(activity.date);
+      const diffInDays = Math.round(
+        (date.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24)
+      );
+      const correctedIndex = diffInDays + firstDayOffset;
+      return {
+        ...activity,
+        x: Math.floor(correctedIndex / rows),
+        y: correctedIndex % rows,
+      };
+    });
+
+    const maxCol = activitiesWithPos[activitiesWithPos.length - 1].x;
+
+    if (isInitialLoading) {
       const fadeStartTick = 30;
       const fadeDurationTicks = 10;
       let alpha = 1;
@@ -132,30 +153,49 @@ export default function Home() {
         alpha = Math.max(0, 1 - (tick - fadeStartTick) / fadeDurationTicks);
       }
 
-      return data.map((activity, index) => {
-        const x = Math.floor(index / rows);
-        const y = index % rows;
-
-        // Ripples starting from the right end
-        const dx = cols - x;
+      return activitiesWithPos.map((activity) => {
+        const { x, y } = activity;
+        const dx = maxCol - x;
         const dy = y - rows / 2;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // Ripple formula
         const rippleValue = Math.sin(distance * 0.5 - tick * 0.3);
         const rippleLevel = Math.floor(((rippleValue + 1) / 2) * 5);
-
-        // Blend ripple with actual data for smooth transition
         const realLevel = activity.level;
-        const blendedLevel = Math.round(rippleLevel * alpha + realLevel * (1 - alpha));
+        const blendedLevel = Math.round(
+          rippleLevel * alpha + realLevel * (1 - alpha)
+        );
 
         return {
-          ...activity,
+          date: activity.date,
           count: activity.count,
           level: Math.min(4, Math.max(0, blendedLevel)) as 0 | 1 | 2 | 3 | 4,
         };
       });
     }
+
+    // Recurring Radar Sweep
+    if (currentTick < SWEEP_DURATION_TICKS) {
+      const progress = currentTick / SWEEP_DURATION_TICKS;
+      const sweepX = maxCol - progress * (maxCol + 10);
+
+      return activitiesWithPos.map((activity) => {
+        const { x } = activity;
+        const realLevel = activity.level;
+
+        const distance = Math.abs(x - sweepX);
+        const intensity = Math.max(0, 1 - distance / 3);
+        const boost = Math.round(intensity * 2);
+        const newLevel = Math.min(4, realLevel + boost);
+
+        return {
+          date: activity.date,
+          count: activity.count,
+          level: newLevel as 0 | 1 | 2 | 3 | 4,
+        };
+      });
+    }
+
     return data;
   };
 
