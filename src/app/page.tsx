@@ -217,7 +217,7 @@ export default function Home() {
               ></div>
             </a>
 
-            <LastFmWidget />
+
 
             <div className="container-mini">
               <h1 id="title" className="item">
@@ -244,6 +244,7 @@ export default function Home() {
                   />
                 )}
               </div>
+              <LastFmWidget />
               <ContactWidget />
             </div>
           </div>

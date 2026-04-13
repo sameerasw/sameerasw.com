@@ -4,22 +4,23 @@
 }
 
 #last {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: relative;
   background-color: var(--background-color-tr);
   backdrop-filter: blur(var(--blur));
   color: var(--text-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-in);
+  border-radius: var(--radius-out);
   display: flex;
   flex-direction: column;
   align-items: start;
   text-align: left;
   padding: 10px;
-  z-index: 1000;
+  z-index: 10;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: translateX(-120%);
+  opacity: 0;
+  visibility: hidden;
+  margin: 10px 0 20px 0;
+  width: fit-content;
 
   #playback-bars {
     display: flex;
@@ -52,7 +53,8 @@
   }
 
   &.show {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   img,
