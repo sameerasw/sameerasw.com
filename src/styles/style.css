@@ -325,7 +325,7 @@ h3 {
   bottom: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding-top: 400px;
   box-sizing: border-box;
   align-items: center;

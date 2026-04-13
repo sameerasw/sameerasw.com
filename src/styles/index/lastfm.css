@@ -5,11 +5,9 @@
 
 #last {
   position: relative;
-  background-color: var(--background-color-tr);
-  backdrop-filter: blur(var(--blur));
   color: var(--text-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius-out);
+  border: 1px solid var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -19,7 +17,7 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
   visibility: hidden;
-  margin: 10px 0 20px 0;
+  margin: 40px 0 0 0;
   width: fit-content;
 
   #playback-bars {
@@ -27,7 +25,7 @@
     align-items: center;
     gap: 2px;
     height: 30px;
-    margin: 0 10px;
+    margin: 0 30px;
 
     .bar {
       width: 3px;

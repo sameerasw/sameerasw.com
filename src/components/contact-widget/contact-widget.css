@@ -10,7 +10,6 @@
   --cw-gap: 1rem;
   --cw-scale: 2;
   text-align: center;
-  margin-bottom: 2em;
 }
 .cw-hint {
   font-size: 0.95rem;
@@ -295,7 +294,7 @@
 }
 
 .contact-widget-wrapper {
-  margin: 4em 0;
+  margin: 40px 0;
   width: 100%;
   align-items: center;
   justify-content: center;
