@@ -1,3 +1,8 @@
+@keyframes bar-pulse {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
 #last {
   position: absolute;
   top: 10px;
@@ -16,29 +21,26 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateX(-120%);
 
-  #eq {
-    width: 30px;
+  #playback-bars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
     height: 30px;
-    margin: 1em;
-    filter: saturate(0);
-    @media (prefers-color-scheme: light) {
-      filter: saturate(0) invert(1);
-    }
-  }
+    margin: 0 10px;
 
-  .history {
-    height: 0;
-    width: 0;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
+    .bar {
+      width: 3px;
+      height: 4px;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+      animation: bar-pulse 0.8s ease-in-out infinite;
 
-  &:hover {
-    .history {
-      height: 100%;
-      width: 100%;
-      opacity: 1;
-      margin: 1em auto 0 auto;
+      &:nth-child(2) {
+        animation-delay: -0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.4s;
+      }
     }
   }
 
@@ -59,7 +61,7 @@
     width: 60px;
     border-radius: 4px;
     margin-right: 10px;
-    object-fit: cover; /* Ensure the image is fully visible */
+    object-fit: cover;
   }
 
   #track {
@@ -79,10 +81,5 @@
 
   #track p:first-child {
     font-weight: bold;
-  }
-
-  #controls {
-    display: flex;
-    align-items: center;
   }
 }

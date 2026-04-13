@@ -57,13 +57,12 @@ export default function LastFmWidget() {
             </>
           )}
         </div>
-        <img id="eq" src="/assets/img/eq.gif" alt="eq" />
+        <div id="playback-bars">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
-      <img
-        className="history"
-        src="https://lastfm-recently-played.vercel.app/api?user=s4m33r4&loved=true&header_size=none&footer_style=normal_stats&width=300&bg_color=00000088"
-        alt="currently playing music from last.fm"
-      />
     </div>
   );
 }
