@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import LastFmWidget from "@/components/LastFmWidget";
 import ContactWidget from "@/components/ContactWidget";
@@ -15,6 +15,7 @@ import { GitHubCalendar } from "react-github-calendar";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const calendarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const items = document.querySelectorAll(".item") as NodeListOf<HTMLElement>;
@@ -39,10 +40,35 @@ export default function Home() {
       }
     });
 
+    const scrollToEnd = () => {
+      if (calendarRef.current) {
+        calendarRef.current.scrollLeft = calendarRef.current.scrollWidth;
+        const inner = calendarRef.current.querySelector("div");
+        if (inner) {
+          inner.scrollLeft = inner.scrollWidth;
+        }
+      }
+    };
+
+    const observer = new ResizeObserver(() => {
+      scrollToEnd();
+    });
+
+    if (calendarRef.current) {
+      observer.observe(calendarRef.current);
+    }
+
     // small delay to let mount finish
-    setTimeout(animate, 100);
+    setTimeout(() => {
+      animate();
+      scrollToEnd();
+    }, 100);
+
+    setTimeout(scrollToEnd, 1000);
+    setTimeout(scrollToEnd, 3000);
 
     const handleScroll = () => {
+
       const scroll = window.scrollY;
       setIsScrolled(scroll > 100);
 
@@ -60,7 +86,10 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const handleScrollToTop = (e: React.MouseEvent) => {
@@ -89,7 +118,7 @@ export default function Home() {
                 <br />
                 <span className="name-secondary">Wijerathna</span>
               </h1>
-              <div className="item github-calendar">
+              <div className="item github-calendar" ref={calendarRef}>
                 <GitHubCalendar
                   username="sameerasw"
                   blockMargin={2}

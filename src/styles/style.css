@@ -351,9 +351,15 @@ section:not(#intro, #apps) {
   margin-top: 20px;
   margin-right: 20px;
   margin-left: 20px;
-    max-width: 90vw;
-  GitHubCalendar{
-    max-width: 90vw;
-    height: auto;
-  }
+  max-width: 90vw;
+}
+
+.github-calendar, .github-calendar div {
+  overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.github-calendar::-webkit-scrollbar, .github-calendar div::-webkit-scrollbar {
+  display: none !important;
 }
