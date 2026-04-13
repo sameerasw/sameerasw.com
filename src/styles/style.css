@@ -236,10 +236,32 @@ h3 {
     text-align: justify;
   }
 
-  .details {
-    margin: 2em 2em;
-    text-align: left;
-    line-height: 2;
+  .details-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    margin: 2em 0;
+    border-radius: var(--radius-out);
+    overflow: hidden;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--background-color-tr);
+    backdrop-filter: blur(var(--blur));
+    border-radius: 5px;
+    border: 1px solid var(--background-color-secondary);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.95rem;
+
+    .material-symbols-rounded {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
   }
 }
 

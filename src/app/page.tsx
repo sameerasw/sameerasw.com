@@ -453,40 +453,28 @@ export default function Home() {
               dealing with either a customization mod for a browser, a website,
               watching F1.
             </p>
-            <table className="details">
-              <tbody>
-                <tr className="item" style={{ opacity: 0 }}>
-                  <td>
-                    <b className="accent">Name</b>
-                  </td>
-                  <td>Sameera Wijerathna</td>
-                </tr>
-                <tr className="item" style={{ opacity: 0 }}>
-                  <td>
-                    <b className="accent">Age</b>
-                  </td>
-                  <td>24</td>
-                </tr>
-                <tr className="item" style={{ opacity: 0 }}>
-                  <td>
-                    <b className="accent">Location</b>
-                  </td>
-                  <td>Balangoda/ Colombo, Sri Lanka</td>
-                </tr>
-                <tr className="item" style={{ opacity: 0 }}>
-                  <td>
-                    <b className="accent">Education</b>
-                  </td>
-                  <td>Undergraduate at University of Westminster via IIT</td>
-                </tr>
-                <tr className="item" style={{ opacity: 0 }}>
-                  <td>
-                    <b className="accent">Work</b>
-                  </td>
-                  <td>Trainee Associate UI Engineer at Zone24x7 Pvt. LTD</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="details-pills">
+              <div className="pill item" style={{ opacity: 0 }}>
+                <span className="material-symbols-rounded">person</span>
+                <span>Sameera Wijerathna</span>
+              </div>
+              <div className="pill item" style={{ opacity: 0 }}>
+                <span className="material-symbols-rounded">cake</span>
+                <span>24</span>
+              </div>
+              <div className="pill item" style={{ opacity: 0 }}>
+                <span className="material-symbols-rounded">location_on</span>
+                <span>Balangoda/ Colombo, Sri Lanka</span>
+              </div>
+              <div className="pill item" style={{ opacity: 0 }}>
+                <span className="material-symbols-rounded">school</span>
+                <span>Undergraduate at University of Westminster via IIT</span>
+              </div>
+              <div className="pill item" style={{ opacity: 0 }}>
+                <span className="material-symbols-rounded">work</span>
+                <span>Trainee Associate UI Engineer at Zone24x7 Pvt. LTD</span>
+              </div>
+            </div>
             <div className="skills">
               <a
                 href="https://github.com/sameerasw"
