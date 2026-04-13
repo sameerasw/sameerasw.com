@@ -80,9 +80,9 @@ h1 {
   transition: all 0.5s ease-in-out;
   padding-left: 4.5rem;
   z-index: 1;
-  text-align: right;
+  text-align: center;
   font-size: clamp(3rem, 11vw, 15rem);
-  line-height: 0.85;
+  line-height: 0.5;
   padding-top: 0;
   margin: 0;
   display: block;
@@ -106,6 +106,7 @@ h1 {
 
 .name-secondary {
   font-weight: 200;
+  font-size: calc(100vw / 24);
   font-variation-settings: "wdth" 100, "ROND" 100;
 }
 
@@ -326,8 +327,8 @@ h3 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  align-items: end;
-  justify-content: end;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 750px) {
@@ -348,10 +349,11 @@ section:not(#intro, #apps) {
 }
 
 .github-calendar {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-right: 20px;
   margin-left: 20px;
   max-width: 90vw;
+  width: fit-content;
 }
 
 .github-calendar, .github-calendar div {
