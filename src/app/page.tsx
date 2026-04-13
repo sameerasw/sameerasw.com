@@ -16,7 +16,6 @@ interface Activity {
   level: 0 | 1 | 2 | 3 | 4;
 }
 
-
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -94,7 +93,6 @@ export default function Home() {
     setTimeout(scrollToEnd, 3000);
 
     const handleScroll = () => {
-
       const scroll = window.scrollY;
       setIsScrolled(scroll > 100);
 
@@ -132,7 +130,7 @@ export default function Home() {
     const activitiesWithPos = data.map((activity) => {
       const date = new Date(activity.date);
       const diffInDays = Math.round(
-        (date.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24)
+        (date.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24),
       );
       const correctedIndex = diffInDays + firstDayOffset;
       return {
@@ -163,7 +161,7 @@ export default function Home() {
         const rippleLevel = Math.floor(((rippleValue + 1) / 2) * 5);
         const realLevel = activity.level;
         const blendedLevel = Math.round(
-          rippleLevel * alpha + realLevel * (1 - alpha)
+          rippleLevel * alpha + realLevel * (1 - alpha),
         );
 
         return {
@@ -264,7 +262,9 @@ export default function Home() {
                 <div className="highlight-content">
                   <h3>AirSync</h3>
                   <p className="highlight-description">
-                    Seamless continuity between Android & macOS — notifications, clipboard, media, mirroring and more, all over your secure network
+                    Seamless continuity between Android & macOS — notifications,
+                    clipboard, media, mirroring and more, all over your secure
+                    network
                   </p>
                 </div>
               </a>
@@ -278,7 +278,8 @@ export default function Home() {
                 <div className="highlight-content">
                   <h3>Essentials</h3>
                   <p className="highlight-description">
-                    Tools for Android nerds. Customize your Android experience with visual, functional and utility tools
+                    Tools for Android nerds. Customize your Android experience
+                    with visual, functional and utility tools
                   </p>
                 </div>
               </a>
@@ -292,7 +293,8 @@ export default function Home() {
                 <div className="highlight-content">
                   <h3>ZenZero</h3>
                   <p className="highlight-description">
-                    Transparent minimal Zen Browser setup for a distraction free browsing experience
+                    Transparent minimal Zen Browser setup for a distraction free
+                    browsing experience
                   </p>
                 </div>
               </a>
@@ -332,7 +334,8 @@ export default function Home() {
                 <div className="highlight-content">
                   <h3>Canvas</h3>
                   <p className="highlight-description">
-                    Draw on Android with a minimal free and open source Jetpack Compose app
+                    Draw on Android with a minimal free and open source Jetpack
+                    Compose app
                   </p>
                 </div>
               </a>
@@ -553,36 +556,58 @@ export default function Home() {
                   className="hover-state item"
                   style={{ opacity: 0 }}
                 ></textarea>
-                <input
+                <button
                   type="submit"
-                  value="Send"
                   id="btn"
                   className="hover-state item"
-                  style={{ opacity: 0 }}
-                />
-              </form>
-              <div>
-                <a
-                  href="/assets/resume.pdf"
-                  target="_blank"
-                  id="resume"
-                  aria-label="Download my resume"
+                  style={{
+                    opacity: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "8px",
+                  }}
                 >
-                  <div className="button-view item" style={{ opacity: 0 }}>
-                    View My Resume
-                  </div>
-                </a>
+                  <span className="material-symbols-rounded">send</span>
+                  Send
+                </button>
+              </form>
+              <div className="contact-actions">
+                <div>
+                  <a
+                    href="/assets/resume.pdf"
+                    target="_blank"
+                    id="resume"
+                    aria-label="Download my resume"
+                  >
+                    <div
+                      className="button-view item"
+                      style={{
+                        opacity: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      <span className="material-symbols-rounded">
+                        description
+                      </span>
+                      View My Resume
+                    </div>
+                  </a>
+                </div>
+                <div
+                  id="email-btn"
+                  className="item button-view"
+                  style={{ opacity: 0 }}
+                >
+                  <a href="mailto:mail@sameerasw.com" aria-label="Email me">
+                    <span className="material-symbols-rounded">email</span>
+                    <span className="caption">Business? Send an email</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div
-              id="email-btn"
-              className="item button-view"
-              style={{ opacity: 0 }}
-            >
-              <a href="mailto:mail@sameerasw.com" aria-label="Email me">
-                <span className="material-symbols-rounded">email</span>
-                <span className="caption">Business? Send an email</span>
-              </a>
             </div>
           </div>
         </section>
