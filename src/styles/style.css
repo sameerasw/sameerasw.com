@@ -346,3 +346,14 @@ h3 {
 section:not(#intro, #apps) {
   overflow-x: hidden;
 }
+
+.github-calendar {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+    max-width: 90vw;
+  GitHubCalendar{
+    max-width: 90vw;
+    height: auto;
+  }
+}

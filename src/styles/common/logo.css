@@ -12,6 +12,7 @@
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 100;
 
     @media screen and (max-height: 850px) {
       height: 150px;

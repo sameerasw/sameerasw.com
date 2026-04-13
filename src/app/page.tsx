@@ -9,6 +9,9 @@ import "@/styles/index/photos-switcher.css";
 import "@/styles/index/highlights.css";
 import "@/styles/index/form.css";
 import "@/styles/index/lastfm.css";
+import { GitHubCalendar } from "react-github-calendar";
+
+
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,9 +85,22 @@ export default function Home() {
 
             <div className="container-mini">
               <h1 id="title" className="item">
-                <span className="name-primary">Sameera</span><br />
+                <span className="name-primary">Sameera</span>
+                <br />
                 <span className="name-secondary">Wijerathna</span>
               </h1>
+              <div className="item github-calendar">
+                <GitHubCalendar
+                  username="sameerasw"
+                  blockMargin={2}
+                  blockRadius={10}
+                  showColorLegend={false}
+                  showMonthLabels={false}
+                  showTotalCount={false}
+                  weekStart={1}
+                  blockSize={10}
+                />
+              </div>
               <ContactWidget />
             </div>
           </div>
