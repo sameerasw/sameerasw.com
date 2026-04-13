@@ -217,8 +217,6 @@ export default function Home() {
               ></div>
             </a>
 
-
-
             <div className="container-mini">
               <h1 id="title" className="item">
                 <span className="name-primary">Sameera</span>
@@ -262,10 +260,11 @@ export default function Home() {
                 href="/airsync"
                 data-title="/assets/img/articles/airsync/airsync-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>AirSync</h3>
                   <p className="highlight-description">
-                    macOS + Android forbidden continuity
+                    Seamless continuity between Android & macOS — notifications, clipboard, media, mirroring and more, all over your secure network
                   </p>
                 </div>
               </a>
@@ -275,10 +274,11 @@ export default function Home() {
                 href="https://github.com/sameerasw/essentials"
                 data-title="/assets/img/articles/essentials-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Essentials</h3>
                   <p className="highlight-description">
-                    Tools for Android nerds
+                    Tools for Android nerds. Customize your Android experience with visual, functional and utility tools
                   </p>
                 </div>
               </a>
@@ -288,10 +288,11 @@ export default function Home() {
                 href="/zen"
                 data-title="/assets/img/articles/zen-t-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>ZenZero</h3>
                   <p className="highlight-description">
-                    Transparent minimal Zen Browser setup
+                    Transparent minimal Zen Browser setup for a distraction free browsing experience
                   </p>
                 </div>
               </a>
@@ -301,10 +302,11 @@ export default function Home() {
                 href="/edc-setup"
                 data-title="/assets/img/articles/edc-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
-                  <h3>My Every Day Carry</h3>
+                  <h3>Every Day Carry</h3>
                   <p className="highlight-description">
-                    Essentials I carry daily
+                    Essentials I use and comes with me when travelling
                   </p>
                 </div>
               </a>
@@ -314,6 +316,7 @@ export default function Home() {
                 href="/macos"
                 data-title="/assets/img/articles/macos/web-preview-macos.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>My MacBook Setup</h3>
                   <p className="highlight-description">What's on my mac?</p>
@@ -325,10 +328,11 @@ export default function Home() {
                 href="https://github.com/sameerasw/Canvas"
                 data-title="/assets/img/articles/canvas-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Canvas</h3>
                   <p className="highlight-description">
-                    Draw on Android with a minimal Jetpack Compose app.
+                    Draw on Android with a minimal free and open source Jetpack Compose app
                   </p>
                 </div>
               </a>
@@ -338,10 +342,11 @@ export default function Home() {
                 href="https://github.com/sameerasw/tasks"
                 data-title="/assets/img/articles/tasks-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Tasks</h3>
                   <p className="highlight-description">
-                    Google tasks for macOS unofficial native app with SwiftUI.
+                    Google tasks for macOS unofficial native app with SwiftUI
                   </p>
                 </div>
               </a>
@@ -351,10 +356,11 @@ export default function Home() {
                 href="https://github.com/sameerasw/browser"
                 data-title="/assets/img/articles/zero-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Zero</h3>
                   <p className="highlight-description">
-                    Minimal liquid glass browser with SwiftUI.
+                    Minimal liquid glass browser with SwiftUI
                   </p>
                 </div>
               </a>
@@ -364,6 +370,7 @@ export default function Home() {
                 href="/pixel"
                 data-title="/assets/img/articles/pixel/web-preview-pixel.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Pixel Notes</h3>
                   <p className="highlight-description">
@@ -377,6 +384,7 @@ export default function Home() {
                 href="https://github.com/sameerasw/watchfaces"
                 data-title="/assets/img/articles/watchfaces-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Watchfaces</h3>
                   <p className="highlight-description">
@@ -390,6 +398,7 @@ export default function Home() {
                 href="/icons/categories.html"
                 data-title="/assets/img/articles/folder-icons-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Folder Icons</h3>
                   <p className="highlight-description">
@@ -403,6 +412,7 @@ export default function Home() {
                 href="https://github.com/sameerasw/REDRAGON-FIZZ-K617-macro"
                 data-title="/assets/img/articles/keeb-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>Keymappings</h3>
                   <p className="highlight-description">
@@ -417,6 +427,7 @@ export default function Home() {
                 href="https://t.me/tidwib"
                 data-title="/assets/img/articles/tidwib-preview.jpeg"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>My Community</h3>
                   <p className="highlight-description">
@@ -430,6 +441,7 @@ export default function Home() {
                 href="https://github.com/sameerasw/"
                 data-title="Visit my profile"
               >
+                <div className="highlight-thumbnail"></div>
                 <div className="highlight-content">
                   <h3>More on GitHub</h3>
                   <p className="highlight-description">

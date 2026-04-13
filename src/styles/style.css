@@ -257,6 +257,7 @@ h3 {
     border: 1px solid var(--background-color-secondary);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     font-size: 0.95rem;
+    text-align: left;
 
     .material-symbols-rounded {
       color: var(--primary-color);
