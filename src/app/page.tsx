@@ -10,12 +10,39 @@ import "@/styles/index/highlights.css";
 import "@/styles/index/form.css";
 import "@/styles/index/lastfm.css";
 import { GitHubCalendar } from "react-github-calendar";
-
+interface Activity {
+  date: string;
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
+}
 
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showRandom, setShowRandom] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
+  const [tick, setTick] = useState(0);
   const calendarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTick((t) => t + 1);
+    }, 50);
+
+    const timer = setTimeout(() => {
+      clearInterval(interval);
+      setShowRandom(false);
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const items = document.querySelectorAll(".item") as NodeListOf<HTMLElement>;
@@ -92,6 +119,46 @@ export default function Home() {
     };
   }, []);
 
+  const transformData = (data: Array<Activity>) => {
+    if (showRandom && isMounted) {
+      const rows = 7;
+      const cols = Math.ceil(data.length / rows);
+
+      const fadeStartTick = 30;
+      const fadeDurationTicks = 10;
+      let alpha = 1;
+
+      if (tick > fadeStartTick) {
+        alpha = Math.max(0, 1 - (tick - fadeStartTick) / fadeDurationTicks);
+      }
+
+      return data.map((activity, index) => {
+        const x = Math.floor(index / rows);
+        const y = index % rows;
+
+        // Ripples starting from the right end
+        const dx = cols - x;
+        const dy = y - rows / 2;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // Ripple formula
+        const rippleValue = Math.sin(distance * 0.5 - tick * 0.3);
+        const rippleLevel = Math.floor(((rippleValue + 1) / 2) * 5);
+
+        // Blend ripple with actual data for smooth transition
+        const realLevel = activity.level;
+        const blendedLevel = Math.round(rippleLevel * alpha + realLevel * (1 - alpha));
+
+        return {
+          ...activity,
+          count: activity.count,
+          level: Math.min(4, Math.max(0, blendedLevel)) as 0 | 1 | 2 | 3 | 4,
+        };
+      });
+    }
+    return data;
+  };
+
   const handleScrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -119,16 +186,19 @@ export default function Home() {
                 <span className="name-secondary">Wijerathna</span>
               </h1>
               <div className="item github-calendar" ref={calendarRef}>
-                <GitHubCalendar
-                  username="sameerasw"
-                  blockMargin={2}
-                  blockRadius={10}
-                  showColorLegend={false}
-                  showMonthLabels={false}
-                  showTotalCount={false}
-                  weekStart={1}
-                  blockSize={10}
-                />
+                {isMounted && (
+                  <GitHubCalendar
+                    username="sameerasw"
+                    blockMargin={2}
+                    blockRadius={10}
+                    showColorLegend={false}
+                    showMonthLabels={false}
+                    showTotalCount={false}
+                    weekStart={1}
+                    blockSize={10}
+                    transformData={transformData}
+                  />
+                )}
               </div>
               <ContactWidget />
             </div>
