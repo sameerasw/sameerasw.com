@@ -93,7 +93,7 @@
 .release-card {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: 280px;
+  width: fit-content;
   background: var(--background-color-tr);
   backdrop-filter: blur(var(--blur));
   border-radius: var(--radius-out);
@@ -172,9 +172,9 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  opacity: 0.5;
   margin-bottom: 0.5rem;
   display: block;
+  color: var(--primary-color);
 }
 
 .release-card-title {
@@ -199,7 +199,7 @@
   opacity: 0.7;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

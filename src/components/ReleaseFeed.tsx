@@ -14,6 +14,7 @@ const LOGO_MAP: Record<string, string> = {
   airsync: "/assets/img/project-logos/airsync-logo.svg",
   essentials: "/assets/img/project-logos/essentials-logo.svg",
   tasks: "/assets/img/project-logos/tasks-logo.svg.png",
+  blog: "/assets/img/notion.png",
 };
 
 export default function ReleaseFeed({ 
@@ -141,6 +142,7 @@ export default function ReleaseFeed({
                       src={LOGO_MAP[note.app]} 
                       alt="" 
                       className="release-card-logo"
+                      style={note.app === "blog" ? { borderRadius: "50%", objectFit: "cover", backgroundColor: "var(--primary-color)" } : {}}
                     />
                   )
                 )}
@@ -174,6 +176,7 @@ export default function ReleaseFeed({
                       src={LOGO_MAP[selectedNote.app]} 
                       alt={selectedNote.app} 
                       className="release-modal-logo"
+                      style={selectedNote.app === "blog" ? { borderRadius: "50%", objectFit: "cover", backgroundColor: "var(--primary-color)" } : {}}
                     />
                   )
                 )}
