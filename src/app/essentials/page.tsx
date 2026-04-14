@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import Navbar from "@/components/Navbar";
@@ -7,6 +8,43 @@ import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
 import FeatureChips from "@/components/essentials/FeatureChips";
 import MadeByChip from "@/components/MadeByChip";
 import "@/styles/essentials/essentials.css";
+
+export const metadata: Metadata = {
+  title: "Essentials - Tools for Android Nerds",
+  description: "Customize your Android experience with visual, functional, and utility tools. Built for power users and Android enthusiasts.",
+  openGraph: {
+    title: "Essentials - Tools for Android Nerds",
+    description: "The ultimate Android utility suite for power users.",
+    url: "https://sameerasw.com/essentials",
+    images: [
+      {
+        url: "/assets/img/articles/essentials/essentials-web-preview.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Essentials Web Preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Essentials - Tools for Android Nerds",
+    description: "The ultimate Android utility suite for power users.",
+    images: ["/assets/img/articles/essentials/essentials-web-preview.jpeg"],
+  },
+  icons: {
+    icon: [
+      {
+        url: "/assets/img/articles/essentials/essentials-fav.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/assets/img/articles/essentials/essentials-fav-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+    ],
+  },
+};
 
 export default async function Essentials() {
   const allNotes = await getAllReleaseNotes();
