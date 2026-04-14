@@ -1,38 +1,14 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import { getAllReleaseNotes } from "@/lib/releaseNotes";
+import ReleaseFeed from "@/components/ReleaseFeed";
+import AirSyncClient from "@/components/airsync/AirSyncClient";
 import "@/styles/airsync/airsync.css";
 
-export default function AirSync() {
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    // Animate cards on scroll
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            (entry.target as HTMLElement).style.opacity = "1";
-            (entry.target as HTMLElement).style.transform = "translateY(0)";
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
-    );
-
-    document.querySelectorAll(".as-observe").forEach((el) => {
-      (el as HTMLElement).style.opacity = "0";
-      (el as HTMLElement).style.transform = "translateY(28px)";
-      (el as HTMLElement).style.transition =
-        "opacity 0.55s ease, transform 0.55s ease";
-      observerRef.current?.observe(el);
-    });
-
-    return () => observerRef.current?.disconnect();
-  }, []);
+export default async function AirSync() {
+  const allNotes = await getAllReleaseNotes();
+  const notes = allNotes.filter(n => n.app === "airsync");
 
   return (
-    <>
+    <AirSyncClient>
       <div className="airsync-page">
         {/* ── HERO ── */}
         <section className="as-hero" id="intro">
@@ -108,6 +84,24 @@ export default function AirSync() {
             Open Source ・ Built with the community
           </span>
         </section>
+
+        {/* ── UPDATES ── */}
+        {notes.length > 0 && (
+          <section className="as-section as-observe" id="updates" style={{ paddingBottom: 0 }}>
+            <div className="as-wrap">
+              <span className="as-section-label">
+                <span className="material-symbols-rounded">history</span>
+                Updates
+              </span>
+              <p className="as-section-desc">
+                Check out what's new!
+              </p>
+            </div>
+            <div style={{ marginTop: '2rem' }}>
+              <ReleaseFeed notes={notes} filter="airsync" hideGradient={true} />
+            </div>
+          </section>
+        )}
 
         {/* ── FEATURES ── */}
         <section className="as-section as-features" id="features">
@@ -704,6 +698,6 @@ export default function AirSync() {
           </div>
         </footer>
       </div>
-    </>
+    </AirSyncClient>
   );
 }

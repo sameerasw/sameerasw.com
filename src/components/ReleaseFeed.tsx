@@ -7,6 +7,7 @@ import "@/styles/index/release-feed.css";
 interface ReleaseFeedProps {
   notes: ReleaseNote[];
   filter?: AppTag | "all";
+  hideGradient?: boolean;
 }
 
 const LOGO_MAP: Record<string, string> = {
@@ -15,7 +16,11 @@ const LOGO_MAP: Record<string, string> = {
   tasks: "/assets/img/project-logos/tasks-logo.svg.png",
 };
 
-export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps) {
+export default function ReleaseFeed({ 
+  notes, 
+  filter = "all", 
+  hideGradient = false 
+}: ReleaseFeedProps) {
   const [selectedNote, setSelectedNote] = useState<ReleaseNote | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -123,7 +128,7 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
             </button>
           ))}
         </div>
-        <div className="release-feed-fade-right" />
+        {!hideGradient && <div className="release-feed-fade-right" />}
       </div>
 
       {selectedNote && (
