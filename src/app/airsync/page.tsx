@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import AirSyncClient from "@/components/airsync/AirSyncClient";
+import MadeByChip from "@/components/MadeByChip";
 import "@/styles/airsync/airsync.css";
 
 export default async function AirSync() {
@@ -24,6 +25,7 @@ export default async function AirSync() {
           <h1 className="as-hero-title">
             Air<span className="as-accent-word">Sync</span>
           </h1>
+          <MadeByChip />
 
           <p className="as-hero-tagline">
             Seamless continuity between Android&nbsp;&amp;&nbsp;macOS —

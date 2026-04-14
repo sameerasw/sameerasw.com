@@ -1,0 +1,44 @@
+
+.made-by-chip-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  animation: es-fade-up 0.7s ease both 0.4s;
+}
+
+.made-by-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.2rem;
+  background: var(--es-accent, var(--primary-color));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--es-border-accent);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: light-dark(#fff, #0a0a0a);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.made-by-chip:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 25px var(--es-accent-glow);
+}
+
+.made-by-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid light-dark(#fff, #0a0a0a);
+}
+
+.made-by-domain {
+  font-weight: 800;
+  text-underline-offset: 2px;
+}

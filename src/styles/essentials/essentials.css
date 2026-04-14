@@ -9,8 +9,8 @@ body:has(.essentials-page) {
 }
 
 :root {
-  --es-accent-l: #2e7d32;
-  --es-accent-d: #3ddc84;
+  --es-accent-l: #265;
+  --es-accent-d: #48FEBD;
   --es-accent: light-dark(var(--es-accent-l), var(--es-accent-d));
   --es-accent-glow: light-dark(rgba(46, 125, 50, 0.25), rgba(61, 220, 132, 0.18));
   --es-accent-subtle: light-dark(rgba(46, 125, 50, 0.08), rgba(61, 220, 132, 0.08));

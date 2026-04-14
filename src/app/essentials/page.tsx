@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import EssentialsClient from "@/components/essentials/EssentialsClient";
 import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
 import FeatureChips from "@/components/essentials/FeatureChips";
+import MadeByChip from "@/components/MadeByChip";
 import "@/styles/essentials/essentials.css";
 
 export default async function Essentials() {
@@ -26,6 +27,7 @@ export default async function Essentials() {
           </div>
 
           <h1 className="es-hero-title">Essentials</h1>
+          <MadeByChip />
 
           <p className="es-hero-tagline">
             Tools for Android nerds. Customize your Android experience with
