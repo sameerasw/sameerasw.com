@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import type { ReleaseNote, AppTag } from "@/lib/releaseNotes";
 import "@/styles/index/release-feed.css";
 
@@ -26,9 +27,31 @@ export default function ReleaseFeed({
   const [isModalVisible, setIsModalVisible] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());
+  
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const filteredNotes =
     filter === "all" ? notes : notes.filter((n) => n.app === filter);
+
+  // Handle deep linking on mount
+  useEffect(() => {
+    const updateSlug = searchParams.get("update");
+    if (updateSlug) {
+      const note = notes.find((n) => n.slug === updateSlug);
+      if (note) {
+        setSelectedNote(note);
+        setIsModalVisible(true);
+        
+        // Scroll to updates section if opened via deep link
+        const updatesSection = document.getElementById("updates");
+        if (updatesSection) {
+          updatesSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  }, []); // Only run on mount
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -81,12 +104,23 @@ export default function ReleaseFeed({
   const openNote = (note: ReleaseNote) => {
     setSelectedNote(note);
     setTimeout(() => setIsModalVisible(true), 10);
+    
+    // Update URL without scrolling
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("update", note.slug);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const closeNote = () => {
     setIsModalVisible(false);
     setTimeout(() => {
       setSelectedNote(null);
+      
+      // Remove update param from URL
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete("update");
+      const queryString = params.toString();
+      router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
     }, 300);
   };
 

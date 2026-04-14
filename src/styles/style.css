@@ -12,7 +12,8 @@
   --background-color-secondary: light-dark(#dbdbdb, #303030);
   --background-color-tr: light-dark(#ddddddbb, #55555588);
   --font-size: 16px;
-  --font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-family:
+    "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
     system-ui, sans-serif;
   --font-weight: 400;
   --blur: 0.5em;
@@ -74,7 +75,12 @@ body {
   }
 }
 
-a, button, .release-card, .highlight-item, .nav-link, .material-symbols-rounded {
+a,
+button,
+.release-card,
+.highlight-item,
+.nav-link,
+.material-symbols-rounded {
   cursor: none !important;
 }
 
@@ -105,13 +111,17 @@ h1 {
 .name-primary {
   color: var(--primary-color);
   font-weight: 400;
-  font-variation-settings: "wdth" 150, "ROND" 100;
+  font-variation-settings:
+    "wdth" 150,
+    "ROND" 100;
 }
 
 .name-secondary {
   font-weight: 200;
   font-size: calc(100vw / 24);
-  font-variation-settings: "wdth" 100, "ROND" 100;
+  font-variation-settings:
+    "wdth" 100,
+    "ROND" 100;
 }
 
 #subtitle {
@@ -135,12 +145,15 @@ h1 {
 }
 
 h2 {
-  padding: 0.75em;
-  font-size: 1.25rem;
+  padding: 0.25em;
+  font-size: 2rem;
   border-radius: var(--radius-out);
   color: var(--primary-color);
-  background-color: var(--background-color-secondary);
+  text-transform: uppercase;
   transition: all 0.5s ease-in-out;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-variation-settings: "wdth" 600, "ROND" 100
 }
 
 h3 {
@@ -300,8 +313,6 @@ h3 {
   transform: translate(-50%, 50%);
 }
 
-
-
 .new-article {
   position: absolute;
   /* filter: invert(1); */
@@ -363,7 +374,7 @@ h3 {
   @media screen and (max-width: 750px) {
     bottom: 50px;
     margin-top: 50vw;
-  padding-top: 100px;
+    padding-top: 100px;
     height: fit-content;
 
     @media screen and (max-width: 600px) {
@@ -387,12 +398,14 @@ section:not(#intro, #apps) {
   width: fit-content;
 }
 
-.github-calendar, .github-calendar div {
+.github-calendar,
+.github-calendar div {
   overflow-x: auto;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
 }
 
-.github-calendar::-webkit-scrollbar, .github-calendar div::-webkit-scrollbar {
+.github-calendar::-webkit-scrollbar,
+.github-calendar div::-webkit-scrollbar {
   display: none !important;
 }
