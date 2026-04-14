@@ -1,0 +1,84 @@
+.socials-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  justify-content: center;
+  padding: 2.5rem 1rem 0rem;
+  border-radius: var(--radius-out);
+  max-width: 80vw;
+}
+
+.socials-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-out);
+  border: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  transition: all 0.2s ease, font-variation-settings 0.4s ease;
+  white-space: nowrap;
+}
+
+.socials-chip i {
+  font-size: 1.15rem;
+  width: 1.15rem;
+  text-align: center
+}
+
+.socials-chip[data-social="github"],
+.socials-chip[data-social="twitter"] {
+  background: light-dark(#000000, #ffffff);
+  color: light-dark(#ffffff, #000000);
+}
+
+.socials-chip[data-social="email"] {
+  background: light-dark(#b91c1c, #ffb3ae);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="linkedin"] {
+  background: light-dark(#1d4ed8, #a3c4f3);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="instagram"] {
+  background: light-dark(#9d174d, #f7b8d1);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="telegram"] {
+  background: light-dark(#0369a1, #a9def9);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="facebook"] {
+  background: light-dark(#0866ff, #a8c7fa);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="reddit"] {
+  background: light-dark(#ff4500, #ffd0b6);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="discord"] {
+  background: light-dark(#5865f2, #b4bcf9);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip[data-social="youtube"] {
+  background: light-dark(#ff0000, #ffb2b2);
+  color: light-dark(#ffffff, #1a1a1a);
+}
+
+.socials-chip:hover {
+  @media (min-width: 769px) {
+    filter: brightness(0.88);
+    font-weight: 900;
+    padding: 0.6rem 1rem;
+  }
+}

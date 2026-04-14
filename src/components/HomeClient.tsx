@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import LastFmWidget from "@/components/LastFmWidget";
-import ContactWidget from "@/components/ContactWidget";
+import SocialsChips from "@/components/SocialsChips";
 import { GitHubCalendar } from "react-github-calendar";
 
 import "@/styles/index/photos-switcher.css";
@@ -216,6 +216,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 <br />
                 <span className="name-secondary">Wijerathna</span>
               </h1>
+              <SocialsChips />
               <div className="item github-calendar" ref={calendarRef}>
                 {isMounted && (
                   <GitHubCalendar
@@ -236,7 +237,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 )}
               </div>
               <LastFmWidget />
-              <ContactWidget />
             </div>
           </div>
         </section>
