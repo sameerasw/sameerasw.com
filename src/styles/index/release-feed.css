@@ -45,9 +45,9 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  pointer-events: none;
+  padding: 0 80px;
   z-index: 20;
+  pointer-events: none;
 }
 
 .release-nav-btn {
@@ -61,9 +61,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  pointer-events: auto;
   transition: all 0.2s ease;
+  pointer-events: auto;
 }
 
 .release-nav-btn:hover {
@@ -86,9 +85,9 @@
   right: 0;
   bottom: 0;
   width: 15vw;
-  pointer-events: none;
   background: linear-gradient(to left, var(--background-color-primary), transparent);
   z-index: 10; 
+  pointer-events: none;
 }
 
 .release-card {
@@ -99,7 +98,6 @@
   backdrop-filter: blur(var(--blur));
   border-radius: var(--radius-out);
   border: 1px solid var(--background-color-secondary);
-  cursor: pointer;
   text-align: left;
   padding: 1.5rem;
   display: flex;
@@ -108,6 +106,11 @@
   box-sizing: border-box;
   opacity: 0; 
   transform: translateY(20px);
+  cursor: none !important;
+}
+
+.release-card > * {
+  pointer-events: none;
 }
 
 .release-card:hover {
@@ -118,6 +121,12 @@
 .release-card:hover * {
   color: var(--background-color-primary) !important;
   opacity: 1 !important;
+}
+
+.release-nav-btn,
+.release-modal-close,
+.release-visit-btn {
+  cursor: none !important;
 }
 
 .release-card-logo,
@@ -169,11 +178,13 @@
   background-color: transparent !important;
   backdrop-filter: none !important;
   color: var(--text-color);
+  font-family: var(--font-family);
   font-size: 1.45rem;
   line-height: 1.2;
   font-weight: 600;
   font-variation-settings: "wdth" 350;
   border-radius: 0 !important;
+  transition: none;
 }
 
 .release-card-desc {
@@ -204,7 +215,6 @@
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s ease;
   padding: 20px;
   touch-action: none; /* Prevent touch scroll propagation */
@@ -212,7 +222,6 @@
 
 .release-modal-backdrop.visible {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .release-modal {
@@ -297,7 +306,6 @@
   background: none;
   border: none;
   color: var(--text-color);
-  cursor: pointer;
   padding: 5px;
   display: flex;
 }

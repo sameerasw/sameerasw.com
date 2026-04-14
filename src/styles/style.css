@@ -67,10 +67,15 @@ body {
   width: 100vw;
   font-variation-settings: "ROND" 100;
   transition: all 0.5s ease-in-out;
+  cursor: none; /* Site-wide custom cursor */
 
   @media screen and (max-width: 300px) {
     opacity: 0.5;
   }
+}
+
+a, button, .release-card, .highlight-item, .nav-link, .material-symbols-rounded {
+  cursor: none !important;
 }
 
 h1 {
