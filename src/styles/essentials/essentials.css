@@ -43,9 +43,8 @@
   overflow-x: hidden;
   padding: 0;
   margin: -4rem 0 0 0;
-  height: auto !important;
-  overflow: auto !important;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .essentials-page::before {
@@ -292,7 +291,7 @@
   transform: translateX(4px);
 }
 
-/* ─── FOOTER ─── *//* ─── SCREENSHOTS CAROUSEL ────────────────────────────────── */
+/* ─── SCREENSHOTS CAROUSEL ────────────────────────────────── */
 .es-screenshots-wrapper {
   padding: 4rem 0;
   overflow: hidden;
@@ -310,7 +309,7 @@
   overflow-x: auto;
   padding: 20px 150px 40px;
   scroll-padding: 2rem;
-  scroll-snap-type: x向;
+  scroll-snap-type: x mandatory;
 }
 
 .es-screenshot-card {
@@ -328,6 +327,7 @@
   box-shadow: 
     0 10px 30px rgba(0,0,0,0.1),
     0 0 0 1px var(--es-border);
+  scroll-snap-align: start;
 }
 
 .es-screenshot-card.revealed {
