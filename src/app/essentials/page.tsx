@@ -62,7 +62,44 @@ export default async function Essentials() {
             </a>
           </div>
         </section>
-        
+
+        {/* ── FEATURES ── */}
+        <section className="es-features-section item" id="features">
+          <div className="es-features-grid">
+            {[
+              "Google Maps power saving mode",
+              "Button remap",
+              "Your Android",
+              "App freezing",
+              "App updater",
+              "Statusbar icon customization",
+              "Animation and scale customization",
+              "Notifcation & Edge lighting",
+              "Custom quick settings tiles",
+              "Material 3 Expressive UI",
+              "Are we there yet?",
+              "Camera watermark",
+              "Battery widget",
+              "Sound mode tile",
+              "Music glance",
+              "Call accept, decline vibrations",
+              "App lock",
+              "Flashlight pulse",
+              "Link Actions",
+              "Keyboard",
+              "Empty screen off widget",
+              "Caffeinate",
+              "Dynamic night light",
+              "WearOS calendar sync",
+              "Private DNS QS tile",
+              "DIY - Automations"
+            ].map((feature, i) => (
+              <div key={i} className="es-feature-chip">
+                {feature}
+              </div>
+            ))}
+          </div>
+        </section>
         {/* ── UPDATES ── */}
         {notes.length > 0 && (
           <section className="es-section es-observe" id="updates">

@@ -197,6 +197,46 @@
   line-height: 1.6;
 }
 
+/* ─── UTILITIES ─── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── FEATURE CHIPS ───────────────────────────────────────── */
+.es-features-section {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.es-features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.es-feature-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 1.2rem;
+  background: var(--es-card-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1.5px solid var(--es-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--es-text-soft);
+  transition: all var(--transition);
+}
+
 .es-back-card {
   display: flex;
   align-items: center;
