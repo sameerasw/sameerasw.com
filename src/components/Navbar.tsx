@@ -54,7 +54,7 @@ export default function Navbar({ isArticle = false, extraLinks = [] }: NavbarPro
     // Elements to observe
     const idsToObserve = isArticle 
       ? extraLinks.map(l => l.href.replace("#", "")) 
-      : ["intro", "projects", "about-me", "contact"];
+      : ["intro", "updates", "projects", "about-me", "contact"];
 
     idsToObserve.forEach((id) => {
       const el = document.getElementById(id);
@@ -108,6 +108,12 @@ export default function Navbar({ isArticle = false, extraLinks = [] }: NavbarPro
               <a href="#" id="home-nav" className={activeSegment === "intro" ? "active" : ""} aria-label="Home">
                 <span className="material-symbols-rounded">home</span>
                 <span className="caption">Home</span>
+              </a>
+            </li>
+            <li key="updates-nav">
+              <a href="#updates" id="updates-nav" className={activeSegment === "updates" ? "active" : ""} aria-label="Updates">
+                <span className="material-symbols-rounded">inbox</span>
+                <span className="caption">Updates</span>
               </a>
             </li>
             <li key="projects-nav">
