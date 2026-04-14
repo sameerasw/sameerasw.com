@@ -4,6 +4,7 @@ import ReleaseFeed from "@/components/ReleaseFeed";
 import Navbar from "@/components/Navbar";
 import EssentialsClient from "@/components/essentials/EssentialsClient";
 import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
+import FeatureChips from "@/components/essentials/FeatureChips";
 import "@/styles/essentials/essentials.css";
 
 export default async function Essentials() {
@@ -65,8 +66,14 @@ export default async function Essentials() {
 
         {/* ── FEATURES ── */}
         <section className="es-features-section item" id="features">
-          <div className="es-features-grid">
-            {[
+          <div className="es-wrap" style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <span className="es-section-label">
+              <span className="material-symbols-rounded">auto_awesome</span>
+              Features
+            </span>
+          </div>
+          <FeatureChips 
+            features={[
               "Google Maps power saving mode",
               "Button remap",
               "Your Android",
@@ -93,12 +100,8 @@ export default async function Essentials() {
               "WearOS calendar sync",
               "Private DNS QS tile",
               "DIY - Automations"
-            ].map((feature, i) => (
-              <div key={i} className="es-feature-chip">
-                {feature}
-              </div>
-            ))}
-          </div>
+            ]} 
+          />
         </section>
         {/* ── UPDATES ── */}
         {notes.length > 0 && (

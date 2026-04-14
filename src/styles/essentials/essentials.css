@@ -95,6 +95,7 @@
   display: block;
   position: relative;
   z-index: 2;
+  scale: 1.3;
   filter: drop-shadow(0 10px 30px var(--es-accent-glow));
 }
 
@@ -234,6 +235,96 @@
   font-weight: 600;
   color: var(--es-text-soft);
   transition: all var(--transition);
+}
+
+/* ─── COLLAPSIBLE CHIPS ─────────────────────────────────── */
+.es-features-grid-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.es-features-grid-container {
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  width: 100%;
+}
+
+.es-features-grid-container.collapsed {
+  max-height: 140px; /* Roughly 3 lines */
+}
+
+.es-features-grid-container.collapsed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 20%, var(--es-bg) 95%);
+  pointer-events: none;
+  animation: es-fade-in 0.4s ease both;
+}
+
+.es-toggle-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.es-toggle-btn {
+  background: var(--es-card-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1.5px solid var(--es-border-accent);
+  color: var(--es-text);
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all var(--transition);
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.es-toggle-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--es-accent);
+  box-shadow: 0 12px 40px var(--es-accent-glow);
+}
+
+.es-toggle-btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.es-toggle-btn-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--es-accent);
+  letter-spacing: -0.01em;
+}
+
+.es-toggle-btn-desc {
+  font-size: 0.8rem;
+  color: var(--es-text-soft);
+  font-weight: 500;
+}
+
+.es-toggle-icon {
+  font-size: 1.8rem !important;
+  color: var(--es-accent);
+  transition: transform 0.4s ease;
+}
+
+.es-toggle-btn:hover .es-toggle-icon {
+  transform: translateY(2px);
 }
 
 .es-back-card {
