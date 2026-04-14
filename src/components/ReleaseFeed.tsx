@@ -9,6 +9,12 @@ interface ReleaseFeedProps {
   filter?: AppTag | "all";
 }
 
+const LOGO_MAP: Record<string, string> = {
+  airsync: "/assets/img/project-logos/airsync-logo.svg",
+  essentials: "/assets/img/project-logos/essentials-logo.svg",
+  tasks: "/assets/img/project-logos/tasks-logo.svg.png",
+};
+
 export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps) {
   const [selectedNote, setSelectedNote] = useState<ReleaseNote | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -17,7 +23,6 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
   const filteredNotes =
     filter === "all" ? notes : notes.filter((n) => n.app === filter);
 
-  // Handle scroll lock when modal is open
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
@@ -96,8 +101,16 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
               key={note.slug}
               className="release-card item"
               onClick={() => openNote(note)}
+              data-app={note.app}
             >
               <div className="release-card-body">
+                {LOGO_MAP[note.app] && (
+                  <img 
+                    src={LOGO_MAP[note.app]} 
+                    alt="" 
+                    className="release-card-logo"
+                  />
+                )}
                 <span className="release-app-tag">{note.app}</span>
                 <h3 className="release-card-title">{note.title}</h3>
                 <p className="release-card-desc">{note.description}</p>
@@ -114,9 +127,21 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
           className={`release-modal-backdrop ${isModalVisible ? "visible" : ""}`}
           onClick={(e) => e.target === e.currentTarget && closeNote()}
         >
-          <div className={`release-modal ${isModalVisible ? "visible" : ""}`}>
+          <div 
+            className={`release-modal ${isModalVisible ? "visible" : ""}`}
+            data-app={selectedNote.app}
+          >
             <div className="release-modal-header">
-              <span className="release-modal-app">{selectedNote.app}</span>
+              <div className="release-modal-brand">
+                {LOGO_MAP[selectedNote.app] && (
+                  <img 
+                    src={LOGO_MAP[selectedNote.app]} 
+                    alt={selectedNote.app} 
+                    className="release-modal-logo"
+                  />
+                )}
+                <span className="release-modal-app">{selectedNote.app}</span>
+              </div>
               <button className="release-modal-close" onClick={closeNote}>
                 <span className="material-symbols-rounded">close</span>
               </button>

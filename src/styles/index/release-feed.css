@@ -120,6 +120,24 @@
   opacity: 1 !important;
 }
 
+.release-card-logo,
+.release-modal-logo {
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.release-card-logo {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+}
+
+.release-modal-logo {
+  width: 24px;
+  height: 24px;
+}
+
 .release-app-tag {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -205,6 +223,18 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+}
+
+.release-modal-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.release-modal-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .release-modal-tag-row {
