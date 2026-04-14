@@ -1,10 +1,10 @@
 ---
-title: "Essentials v12.4"
+title: "Essentials v12.3"
 description: "App Suspension, Kaomoji, Language picker, Accented Characters in keyboard, Custom DNS, Low Power Mode Automations and more"
 app: "essentials"
-version: "v12.4"
+version: "v12.3"
 date: "2026-03-24"
-link: "https://github.com/sameerasw/essentials/releases/tag/v12.4"
+link: "https://github.com/sameerasw/essentials/releases/tag/v12.3"
 ---
 
 # What's New?
