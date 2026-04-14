@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import AirSyncClient from "@/components/airsync/AirSyncClient";
@@ -98,7 +99,9 @@ export default async function AirSync() {
               </p>
             </div>
             <div style={{ marginTop: '2rem' }}>
-              <ReleaseFeed notes={notes} filter="airsync" hideGradient={true} />
+              <Suspense fallback={null}>
+                <ReleaseFeed notes={notes} filter="airsync" hideGradient={true} />
+              </Suspense>
             </div>
           </section>
         )}
