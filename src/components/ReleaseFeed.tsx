@@ -24,9 +24,32 @@ export default function ReleaseFeed({
   const [selectedNote, setSelectedNote] = useState<ReleaseNote | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());
 
   const filteredNotes =
     filter === "all" ? notes : notes.filter((n) => n.app === filter);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-index"));
+            setTimeout(() => {
+              setVisibleIndices((prev) => new Set(prev).add(index));
+            }, (index % 10) * 100); // Stagger
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = document.querySelectorAll(".release-card-trigger");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, [filteredNotes]);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -101,12 +124,13 @@ export default function ReleaseFeed({
         </div>
 
         <div className="release-feed-scroll no-scrollbar" ref={scrollRef}>
-          {filteredNotes.map((note) => (
+          {filteredNotes.map((note, index) => (
             <button
               key={note.slug}
-              className="release-card item"
+              className={`release-card release-card-trigger ${visibleIndices.has(index) ? "revealed" : ""}`}
               onClick={() => openNote(note)}
               data-app={note.app}
+              data-index={index}
             >
               <div className="release-card-body">
                 {LOGO_MAP[note.app] && (

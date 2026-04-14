@@ -60,16 +60,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
       }
     };
 
-    // reset styles first
-    items.forEach((item) => {
-      item.style.opacity = "0";
-      item.style.transform = "translateY(20px)";
-      if (item.id !== "logo") {
-        item.style.transition =
-          "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
-      }
-    });
-
     const scrollToEnd = () => {
       if (calendarRef.current) {
         calendarRef.current.scrollLeft = calendarRef.current.scrollWidth;
@@ -469,30 +459,30 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
             <div id="photo"></div>
           </div>
           <div className="content">
-            <p className="item" style={{ opacity: 0 }}>
+            <p className="item">
               A passionate developer, designer and a student from Sri Lanka who
               is always ready to learn new things. Outside work, will be mostly
               dealing with either a customization mod for a browser, a website,
               watching F1.
             </p>
             <div className="details-pills">
-              <div className="pill item" style={{ opacity: 0 }}>
+              <div className="pill item">
                 <span className="material-symbols-rounded">person</span>
                 <span>Sameera Wijerathna</span>
               </div>
-              <div className="pill item" style={{ opacity: 0 }}>
+              <div className="pill item">
                 <span className="material-symbols-rounded">cake</span>
                 <span>24</span>
               </div>
-              <div className="pill item" style={{ opacity: 0 }}>
+              <div className="pill item">
                 <span className="material-symbols-rounded">location_on</span>
                 <span>Balangoda/ Colombo, Sri Lanka</span>
               </div>
-              <div className="pill item" style={{ opacity: 0 }}>
+              <div className="pill item">
                 <span className="material-symbols-rounded">school</span>
                 <span>Undergraduate at University of Westminster via IIT</span>
               </div>
-              <div className="pill item" style={{ opacity: 0 }}>
+              <div className="pill item">
                 <span className="material-symbols-rounded">work</span>
                 <span>Trainee Associate UI Engineer at Zone24x7 Pvt. LTD</span>
               </div>
@@ -504,7 +494,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
               >
                 <img
                   className="item"
-                  style={{ opacity: 0 }}
                   src="https://skillicons.dev/icons?i=swift,kotlin,html,css,js,ts,react,mui,figma,apple&theme=light&perline=10"
                   alt="My skills"
                 />
@@ -518,7 +507,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   src="https://github-readme-stats.vercel.app/api?username=sameerasw&show_icons=true&count_private=true&border_radius=20"
                   alt="sameerasw's github stats"
                   className="stats item"
-                  style={{ opacity: 0 }}
                 />
               </a>
             </div>
@@ -526,11 +514,11 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
         </section>
 
         <section id="contact">
-          <div className="heading item" style={{ opacity: 0 }}>
+          <div className="heading item">
             <h2>Contact</h2>
           </div>
           <div className="content">
-            <p className="item" style={{ opacity: 0 }}>
+            <p className="item">
               If you have any questions or want to work with me, feel free to
               contact me via email or any of my social media profiles.
             </p>
@@ -544,7 +532,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   placeholder="Name"
                   required
                   className="hover-state item"
-                  style={{ opacity: 0 }}
                 />
                 <input
                   type="email"
@@ -553,7 +540,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   placeholder="Email"
                   required
                   className="hover-state item"
-                  style={{ opacity: 0 }}
                 />
                 <textarea
                   name="message"
@@ -561,14 +547,12 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   placeholder="Message"
                   required
                   className="hover-state item"
-                  style={{ opacity: 0 }}
                 ></textarea>
                 <button
                   type="submit"
                   id="btn"
                   className="hover-state item"
                   style={{
-                    opacity: 0,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -590,7 +574,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                     <div
                       className="button-view item"
                       style={{
-                        opacity: 0,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -607,7 +590,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 <div
                   id="email-btn"
                   className="item button-view"
-                  style={{ opacity: 0 }}
                 >
                   <a href="mailto:mail@sameerasw.com" aria-label="Email me">
                     <span className="material-symbols-rounded">email</span>

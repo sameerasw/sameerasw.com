@@ -41,12 +41,6 @@ export default function AirSyncClient({ children }: { children: React.ReactNode 
       }
     };
 
-    items.forEach((item) => {
-      item.style.opacity = "0";
-      item.style.transform = "translateY(20px)";
-      item.style.transition = "opacity 0.5s ease-out, transform 0.5s ease-out, scale 0.3s ease-out";
-    });
-
     // Small delay before starting items animation
     setTimeout(animateItems, 300);
 
