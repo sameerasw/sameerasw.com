@@ -14,7 +14,6 @@ export default async function Essentials() {
 
   return (
     <EssentialsClient>
-      <Navbar isArticle />
       <div className="essentials-page">
         {/* ── HERO ── */}
         <section className="es-hero" id="intro">
