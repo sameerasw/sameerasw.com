@@ -4,7 +4,7 @@ description: "Essentials is now verified? Usage access alt, ambient music update
 app: "essentials"
 version: "v12.6"
 date: "2026-04-12"
-link: "https://github.com/sameerasw/essentials/releases/latest"
+link: "https://github.com/sameerasw/essentials/releases/tag/v12.6"
 ---
 
 # What's New

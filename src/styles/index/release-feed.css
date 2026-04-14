@@ -127,6 +127,22 @@
   object-fit: contain;
 }
 
+.essentials-mask {
+  background-color: var(--primary-color);
+  -webkit-mask-image: url("/assets/img/project-logos/essentials-logo.svg");
+  mask-image: url("/assets/img/project-logos/essentials-logo.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.release-card:hover .essentials-mask {
+  background-color: var(--background-color-primary) !important;
+}
+
 .release-card-logo {
   width: 44px;
   height: 44px;

@@ -105,11 +105,15 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
             >
               <div className="release-card-body">
                 {LOGO_MAP[note.app] && (
-                  <img 
-                    src={LOGO_MAP[note.app]} 
-                    alt="" 
-                    className="release-card-logo"
-                  />
+                  note.app === "essentials" ? (
+                    <div className="release-card-logo essentials-mask" />
+                  ) : (
+                    <img 
+                      src={LOGO_MAP[note.app]} 
+                      alt="" 
+                      className="release-card-logo"
+                    />
+                  )
                 )}
                 <span className="release-app-tag">{note.app}</span>
                 <h3 className="release-card-title">{note.title}</h3>
@@ -134,11 +138,15 @@ export default function ReleaseFeed({ notes, filter = "all" }: ReleaseFeedProps)
             <div className="release-modal-header">
               <div className="release-modal-brand">
                 {LOGO_MAP[selectedNote.app] && (
-                  <img 
-                    src={LOGO_MAP[selectedNote.app]} 
-                    alt={selectedNote.app} 
-                    className="release-modal-logo"
-                  />
+                  selectedNote.app === "essentials" ? (
+                    <div className="release-modal-logo essentials-mask" />
+                  ) : (
+                    <img 
+                      src={LOGO_MAP[selectedNote.app]} 
+                      alt={selectedNote.app} 
+                      className="release-modal-logo"
+                    />
+                  )
                 )}
                 <span className="release-modal-app">{selectedNote.app}</span>
               </div>
