@@ -3,6 +3,14 @@
   50% { height: 16px; }
 }
 
+#music {
+  text-decoration: none;
+}
+
+#music {
+  text-decoration: none;
+}
+
 #last {
   position: relative;
   color: var(--text-color);
@@ -12,7 +20,7 @@
   flex-direction: column;
   align-items: start;
   text-align: left;
-  padding: 10px;
+  padding: 6px;
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
@@ -57,9 +65,9 @@
 
   img,
   a {
-    height: 60px;
-    width: 60px;
-    border-radius: 4px;
+    height: 80px;
+    width: 80px;
+    border-radius: 12px;
     margin-right: 10px;
     object-fit: cover;
   }

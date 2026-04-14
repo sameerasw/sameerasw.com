@@ -36,16 +36,16 @@ export default function LastFmWidget() {
   }, []);
 
   return (
-    <div id="last" className={track ? "show" : ""}>
-      <div id="music-holder" className="item">
         <a
           href="https://www.last.fm/user/s4m33r4"
           target="_blank"
           id="music"
           rel="noreferrer"
+          data-title="Visit last.fm"
         >
+    <div id="last" className={track ? "show" : ""}>
+      <div id="music-holder" className="item">
           <img id="artwork" src={track?.artwork || "null"} alt="artwork" />
-        </a>
         <div id="track">
           {track && (
             <>
@@ -64,5 +64,6 @@ export default function LastFmWidget() {
         </div>
       </div>
     </div>
+        </a>
   );
 }
