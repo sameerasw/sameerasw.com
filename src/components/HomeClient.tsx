@@ -268,7 +268,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
               <a
                 id="essentials"
                 className="highlight-item item"
-                href="https://github.com/sameerasw/essentials"
+                href="/essentials"
                 data-title="/assets/img/articles/essentials-preview.jpeg"
               >
                 <div className="highlight-thumbnail"></div>
