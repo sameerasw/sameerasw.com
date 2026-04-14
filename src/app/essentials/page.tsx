@@ -3,6 +3,7 @@ import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import Navbar from "@/components/Navbar";
 import EssentialsClient from "@/components/essentials/EssentialsClient";
+import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
 import "@/styles/essentials/essentials.css";
 
 export default async function Essentials() {
@@ -61,7 +62,7 @@ export default async function Essentials() {
             </a>
           </div>
         </section>
-
+        
         {/* ── UPDATES ── */}
         {notes.length > 0 && (
           <section className="es-section es-observe" id="updates">
@@ -74,27 +75,43 @@ export default async function Essentials() {
                 Latest improvements and features added to Essentials.
               </p>
             </div>
-            <div style={{ marginTop: '2rem' }}>
+            <div style={{ marginTop: "2rem" }}>
               <Suspense fallback={null}>
-                <ReleaseFeed notes={notes} filter="essentials" hideGradient={true} />
+                <ReleaseFeed
+                  notes={notes}
+                  filter="essentials"
+                  hideGradient={true}
+                />
               </Suspense>
             </div>
           </section>
         )}
 
+        {/* ── SCREENSHOTS ── */}
+        <section id="showcase">
+          <ScreenshotsCarousel />
+        </section>
+
         {/* ── RETURN HOME ── */}
-        <section className="es-wrap es-observe" style={{ paddingBottom: '2rem' }}>
+        <section
+          className="es-wrap es-observe"
+          style={{ paddingBottom: "2rem" }}
+        >
           <a href="/" className="es-back-card">
-            <img 
-              src="/assets/img/logo-mini.png" 
-              alt="sameerasw.com" 
-              className="es-back-avatar" 
+            <img
+              src="/assets/img/logo-mini.png"
+              alt="sameerasw.com"
+              className="es-back-avatar"
             />
             <div className="es-back-content">
               <span className="es-back-title">More Made by sameerasw.com</span>
-              <span className="es-back-subtitle">Explore other apps and projects</span>
+              <span className="es-back-subtitle">
+                Explore other apps and projects
+              </span>
             </div>
-            <span className="material-symbols-rounded es-back-arrow">arrow_forward</span>
+            <span className="material-symbols-rounded es-back-arrow">
+              arrow_forward
+            </span>
           </a>
         </section>
 
