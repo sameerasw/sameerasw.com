@@ -1,3 +1,12 @@
+/* NUCLEAR FIX: Force single scrollbar for the essentials route */
+html:has(.essentials-page),
+body:has(.essentials-page) {
+  overflow: hidden !important;
+  height: 100dvh !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 :root {
   --es-accent-l: #2e7d32;
@@ -38,13 +47,17 @@
   background-color: var(--es-bg);
   color: var(--es-text);
   font-family: var(--font-family, "Google Sans Flex", system-ui, sans-serif);
-  min-height: 100vh;
+  height: 100dvh;
   width: 100%;
+  overflow-y: auto !important;
   overflow-x: hidden;
-  padding: 0;
-  margin: -4rem 0 0 0;
+  padding: 6rem 0 0 0;
+  margin: 0;
   text-align: left;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .essentials-page::before {
@@ -504,6 +517,9 @@
   padding: 4rem 2rem;
   border-top: 1px solid var(--es-border);
   margin-top: 4rem;
+  @media (max-width: 768px) {
+    margin-bottom: 4em;
+  }
 }
 
 .es-footer-inner {
