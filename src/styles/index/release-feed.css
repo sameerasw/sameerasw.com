@@ -237,15 +237,18 @@
   max-width: 600px;
   max-height: 80vh;
   overflow-y: auto;
-  padding: 2rem;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
+  padding: 2.5rem;
+  /* Animate from the captured origin coordinates */
+  transform: translate(calc(var(--origin-x) - 50vw), calc(var(--origin-y) - 50vh)) scale(0);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
   box-sizing: border-box;
-  overscroll-behavior: contain; /* Control scroll within modal */
+  overscroll-behavior: contain;
 }
 
 .release-modal-backdrop.visible .release-modal {
-  transform: translateY(0);
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
 }
 
 .release-modal-header {

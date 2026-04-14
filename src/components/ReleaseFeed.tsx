@@ -25,6 +25,7 @@ export default function ReleaseFeed({
 }: ReleaseFeedProps) {
   const [selectedNote, setSelectedNote] = useState<ReleaseNote | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalOrigin, setModalOrigin] = useState<{ x: string, y: string } | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());
   
@@ -101,7 +102,18 @@ export default function ReleaseFeed({
     }
   };
 
-  const openNote = (note: ReleaseNote) => {
+  const openNote = (note: ReleaseNote, e?: React.MouseEvent | React.FocusEvent) => {
+    if (e) {
+      const target = e.currentTarget as HTMLElement;
+      const rect = target.getBoundingClientRect();
+      setModalOrigin({
+        x: `${rect.left + rect.width / 2}px`,
+        y: `${rect.top + rect.height / 2}px`
+      });
+    } else {
+      setModalOrigin({ x: "50%", y: "50%" });
+    }
+
     setSelectedNote(note);
     setTimeout(() => setIsModalVisible(true), 10);
     
@@ -163,7 +175,7 @@ export default function ReleaseFeed({
             <button
               key={note.slug}
               className={`release-card release-card-trigger ${visibleIndices.has(index) ? "revealed" : ""}`}
-              onClick={() => openNote(note)}
+              onClick={(e) => openNote(note, e)}
               data-app={note.app}
               data-index={index}
             >
@@ -195,6 +207,10 @@ export default function ReleaseFeed({
         <div
           className={`release-modal-backdrop ${isModalVisible ? "visible" : ""}`}
           onClick={(e) => e.target === e.currentTarget && closeNote()}
+          style={{
+            "--origin-x": modalOrigin?.x ?? "50%",
+            "--origin-y": modalOrigin?.y ?? "50%",
+          } as React.CSSProperties}
         >
           <div 
             className={`release-modal ${isModalVisible ? "visible" : ""}`}
