@@ -25,6 +25,7 @@ interface HomeClientProps {
 
 export default function HomeClient({ updatesSection }: HomeClientProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [tick, setTick] = useState(0);
@@ -299,20 +300,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 </div>
               </a>
               <a
-                id="edc"
-                className="highlight-item item"
-                href="/edc-setup"
-                data-title="/assets/img/articles/edc-preview.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Every Day Carry</h3>
-                  <p className="highlight-description">
-                    Essentials I use and comes with me when travelling
-                  </p>
-                </div>
-              </a>
-              <a
                 id="macos"
                 className="highlight-item item"
                 href="/macos"
@@ -354,20 +341,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 </div>
               </a>
               <a
-                id="zero"
-                className="highlight-item item"
-                href="https://github.com/sameerasw/browser"
-                data-title="/assets/img/articles/zero-preview.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Zero</h3>
-                  <p className="highlight-description">
-                    Minimal liquid glass browser with SwiftUI
-                  </p>
-                </div>
-              </a>
-              <a
                 id="pixel"
                 className="highlight-item item"
                 href="/pixel"
@@ -381,77 +354,108 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   </p>
                 </div>
               </a>
-              <a
-                id="watchfaces"
-                className="highlight-item item"
-                href="https://github.com/sameerasw/watchfaces"
-                data-title="/assets/img/articles/watchfaces-preview.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Watchfaces</h3>
-                  <p className="highlight-description">
-                    Custom watchfaces for WearOS
-                  </p>
+
+              {/* ── collapsible extras ── */}
+              <div className={`highlight-extras ${showAllProjects ? "expanded" : ""}`}>
+                <div className="highlight-extras-inner">
+                  <a
+                    id="edc"
+                    className="highlight-item"
+                    href="/edc-setup"
+                    data-title="/assets/img/articles/edc-preview.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Every Day Carry</h3>
+                      <p className="highlight-description">
+                        Essentials I use and comes with me when travelling
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    id="zero"
+                    className="highlight-item"
+                    href="https://github.com/sameerasw/browser"
+                    data-title="/assets/img/articles/zero-preview.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Zero</h3>
+                      <p className="highlight-description">
+                        Minimal liquid glass browser with SwiftUI
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    id="watchfaces"
+                    className="highlight-item"
+                    href="https://github.com/sameerasw/watchfaces"
+                    data-title="/assets/img/articles/watchfaces-preview.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Watchfaces</h3>
+                      <p className="highlight-description">
+                        Custom watchfaces for WearOS
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    id="foldericons"
+                    className="highlight-item"
+                    href="/icons/categories.html"
+                    data-title="/assets/img/articles/folder-icons-preview.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Folder Icons</h3>
+                      <p className="highlight-description">
+                        Custom folder icons for Windows and macOS
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    id="macro"
+                    className="highlight-item"
+                    href="https://github.com/sameerasw/REDRAGON-FIZZ-K617-macro"
+                    data-title="/assets/img/articles/keeb-preview.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Keymappings</h3>
+                      <p className="highlight-description">
+                        Custom keyboard macros and remapping for my REDRAGON FIZZ K617
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    id="more-github"
+                    className="highlight-item"
+                    href="https://github.com/sameerasw/"
+                    data-title="Visit my profile"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>More on GitHub</h3>
+                      <p className="highlight-description">
+                        Explore all my projects
+                      </p>
+                    </div>
+                  </a>
                 </div>
-              </a>
-              <a
-                id="foldericons"
-                className="highlight-item item"
-                href="/icons/categories.html"
-                data-title="/assets/img/articles/folder-icons-preview.jpeg"
+              </div>
+
+              {/* ── toggle button ── */}
+              <button
+                className="highlight-toggle item"
+                onClick={() => setShowAllProjects((p) => !p)}
+                aria-label={showAllProjects ? "Show less projects" : "Show more projects"}
               >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Folder Icons</h3>
-                  <p className="highlight-description">
-                    Custom folder icons for Windows and macOS
-                  </p>
-                </div>
-              </a>
-              <a
-                id="macro"
-                className="highlight-item item"
-                href="https://github.com/sameerasw/REDRAGON-FIZZ-K617-macro"
-                data-title="/assets/img/articles/keeb-preview.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Keymappings</h3>
-                  <p className="highlight-description">
-                    Custom keyboard macros and remapping for my REDRAGON FIZZ
-                    K617
-                  </p>
-                </div>
-              </a>
-              <a
-                id="tidwib"
-                className="highlight-item item"
-                href="https://t.me/tidwib"
-                data-title="/assets/img/articles/tidwib-preview.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>My Community</h3>
-                  <p className="highlight-description">
-                    Join the Telegram group
-                  </p>
-                </div>
-              </a>
-              <a
-                id="more-github"
-                className="highlight-item item"
-                href="https://github.com/sameerasw/"
-                data-title="Visit my profile"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>More on GitHub</h3>
-                  <p className="highlight-description">
-                    Explore all my projects
-                  </p>
-                </div>
-              </a>
+                <span className={`material-symbols-rounded highlight-toggle-icon ${showAllProjects ? "rotated" : ""}`}>
+                  expand_more
+                </span>
+                <span>{showAllProjects ? "Show less" : "Show more"}</span>
+              </button>
             </div>
           </div>
         </section>

@@ -117,3 +117,64 @@
         font-size: 1rem;
     }
 }
+
+/* ── collapsible extras ──────────────────────────────────── */
+.highlight-extras {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.highlight-extras > * {
+  overflow: hidden;
+}
+
+.highlight-extras.expanded {
+  grid-template-rows: 1fr;
+}
+
+.highlight-extras-inner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── toggle button ───────────────────────────────────────── */
+.highlight-toggle {
+  display: flex;
+  align-items: left;
+  justify-content: start;
+  gap: 6px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-variation-settings: "ROND" 100;
+  cursor: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (min-width: 500px) {
+  .highlight-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color-primary);
+    transform: scale(1.02);
+    border-radius: 15px;
+  }
+}
+
+.highlight-toggle-icon {
+  font-size: 1.4rem !important;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight-toggle-icon.rotated {
+  transform: rotate(180deg);
+}
