@@ -572,7 +572,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 aria-label="Join my Reddit community"
               >
                 <img
-                  src="/assets/img/%20reddit-banner.png"
+                  src="/assets/img/reddit-banner.png"
                   alt="Reddit community — r/MadebySameerasw"
                   className="social-banner-img"
                 />
