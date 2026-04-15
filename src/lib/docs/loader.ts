@@ -25,7 +25,7 @@ export async function getDocSections(productId: string): Promise<DocSection[]> {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
     
     return entries
-      .map((entry) => {
+      .map((entry): DocSection | null => {
         const fullPath = path.join(dir, entry.name);
         
         if (entry.isDirectory()) {
