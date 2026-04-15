@@ -5,11 +5,13 @@ import Navbar from "@/components/Navbar";
 import LastFmWidget from "@/components/LastFmWidget";
 import SocialsChips from "@/components/SocialsChips";
 import { GitHubCalendar } from "react-github-calendar";
+import GitHubStatsCard from "@/components/GitHubStatsCard";
 
 import "@/styles/index/photos-switcher.css";
 import "@/styles/index/highlights.css";
 import "@/styles/index/form.css";
 import "@/styles/index/lastfm.css";
+import "@/styles/index/github-stats.css";
 
 interface Activity {
   date: string;
@@ -498,17 +500,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   alt="My skills"
                 />
               </a>
-              <a
-                href="https://github.com/sameerasw"
-                className="github"
-                aria-label="Sameera's github link"
-              >
-                <img
-                  src="https://github-readme-stats.vercel.app/api?username=sameerasw&show_icons=true&count_private=true&border_radius=20"
-                  alt="sameerasw's github stats"
-                  className="stats item"
-                />
-              </a>
+              <GitHubStatsCard />
             </div>
           </div>
         </section>
