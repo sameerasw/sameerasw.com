@@ -33,7 +33,7 @@ const SOCIALS = [
   },
   {
     label: "Telegram",
-    url: "https://t.me/sameerasw",
+    url: "https://t.me/tidwib",
     icon: <i className="fa-brands fa-telegram" />,
     social: "telegram",
   },

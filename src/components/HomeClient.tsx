@@ -563,6 +563,34 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
             <h2>Contact</h2>
           </div>
           <div className="content">
+            <div className="social-banners item">
+              <a
+                href="https://www.reddit.com/r/MadebySameerasw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-banner-link"
+                aria-label="Join my Reddit community"
+              >
+                <img
+                  src="/assets/img/%20reddit-banner.png"
+                  alt="Reddit community — r/MadebySameerasw"
+                  className="social-banner-img"
+                />
+              </a>
+              <a
+                href="https://t.me/tidwib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-banner-link"
+                aria-label="Join my Telegram channel"
+              >
+                <img
+                  src="/assets/img/telegram-banner.png"
+                  alt="Telegram channel — tidwib"
+                  className="social-banner-img"
+                />
+              </a>
+            </div>
             <p className="item">
               If you have any questions or want to work with me, feel free to
               contact me via email or any of my social media profiles.

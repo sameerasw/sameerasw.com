@@ -49,7 +49,7 @@ form button#btn {
     color: var(--background-color-secondary);
     border: 0.1em solid var(--primary-color);
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer !important;
     width: 100%;
     padding: 1.2em 1.5em;
     border-radius: var(--radius-in);
@@ -86,6 +86,7 @@ form button#btn {
     width: 100%;
     text-decoration: none;
     box-sizing: border-box;
+    cursor: none !important;
 }
 
 #resume .button-view,
@@ -105,6 +106,7 @@ form button#btn {
     font-size: 1rem;
     cursor: pointer;
     margin: 0; /* Override previous margins */
+    cursor: none !important;
 }
 
 #email-btn a {
@@ -133,4 +135,41 @@ form button#btn {
 
 #contact {
     margin-bottom: 0; /* Handled by .contact-actions margin-bottom */
+}
+
+/* ── social banner buttons ──────────────────────────────── */
+.social-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 1.5em auto;
+}
+
+.social-banner-link {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-in);
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.3s ease,
+                opacity 0.3s ease;
+}
+
+@media screen and (min-width: 500px) {
+    .social-banner-link:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+        opacity: 0.92;
+    }
+}
+
+.social-banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-in);
+    object-fit: cover;
 }
