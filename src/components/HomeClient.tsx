@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import LastFmWidget from "@/components/LastFmWidget";
 import SocialsChips from "@/components/SocialsChips";
 import { GitHubCalendar } from "react-github-calendar";
-import GitHubStatsCard from "@/components/GitHubStatsCard";
+import GitHubChips from "@/components/GitHubChips";
 
 import "@/styles/index/photos-switcher.css";
 import "@/styles/index/highlights.css";
@@ -120,9 +120,9 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
     const firstDate = new Date(data[0].date);
     const firstDayOffset = (firstDate.getUTCDay() + 6) % 7;
 
-    const CYCLE_TICKS = 200; // 10s cycle
+    const CYCLE_TICKS = 100; // 10s cycle
     const currentTick = tick % CYCLE_TICKS;
-    const SWEEP_DURATION_TICKS = 60; // 3s
+    const SWEEP_DURATION_TICKS = 75; // 3s
 
     const activitiesWithPos = data.map((activity) => {
       const date = new Date(activity.date);
@@ -238,6 +238,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   />
                 )}
               </div>
+              <GitHubChips />
               <LastFmWidget />
             </div>
           </div>
@@ -500,7 +501,6 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   alt="My skills"
                 />
               </a>
-              <GitHubStatsCard />
             </div>
           </div>
         </section>

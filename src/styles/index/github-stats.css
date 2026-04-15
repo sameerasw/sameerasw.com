@@ -1,161 +1,112 @@
-.github-window {
+/* ── chip row ──────────────────────────────────────────── */
+.github-chips-row {
   display: flex;
-  flex-direction: column;
-  margin: 40px auto;
-  width: fit-content;
-  min-width: 280px;
-  max-width: 90vw;
-  border: 1px solid var(--text-color);
-  border-radius: var(--radius-out);
-  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--text-color);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 12px 20px 8px;
+  max-width: 90vw;
+  width: fit-content;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width: 500px) {
-  .github-window:hover {
-    border-color: var(--primary-color);
-  }
-
-  .github-window:hover .github-window-bar {
-    border-color: var(--primary-color);
-  }
-}
-
-.github-window-bar {
-  display: flex;
+/* ── base chip ─────────────────────────────────────────── */
+.gh-chip {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--text-color);
-  transition: border-color 0.3s ease;
+  gap: 5px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 30%, transparent);
+  /* background: var(--background-color-secondary); */
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.22s ease, background 0.22s ease, padding 0.22s ease;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.github-window-dots {
-  display: flex;
-  gap: 5px;
+.gh-chip:hover {
+  border-color: var(--primary-color);
+  background: color-mix(in srgb, var(--primary-color) 10%, var(--background-color-secondary));
+}
+
+/* ── icon ──────────────────────────────────────────────── */
+.gh-chip-icon {
+  font-size: 15px !important;
+  color: var(--primary-color);
   flex-shrink: 0;
 }
 
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+/* ── value + label: shown/hidden on hover ──────────────── */
+.gh-chip-value {
+  font-weight: 600;
+  font-size: 13px;
 }
 
-.dot-red {
-  background-color: #ff5f57;
+.gh-chip-label {
+  font-size: 11px;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.22s ease, max-width 0.22s ease, margin-left 0.22s ease;
+  color: var(--primary-color);
+  margin-left: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.dot-yellow {
-  background-color: #febc2e;
+.gh-chip:hover .gh-chip-label {
+  opacity: 0.75;
+  max-width: 80px;
+  margin-left: 2px;
 }
 
-.dot-green {
-  background-color: #28c840;
-}
-
-.github-window-url {
+/* ── streak chip ───────────────────────────────────────── */
+.gh-chip-streak .gh-chip-streak-text {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
-  opacity: 0.6;
-  background-color: var(--background-color-secondary);
-  padding: 3px 10px;
-  border-radius: 999px;
-  flex: 1;
-  justify-content: center;
 }
 
-.github-window-body {
-  padding: 14px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.gh-streak-current {
+  font-weight: 600;
+  font-size: 13px;
 }
 
-.github-stats-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  padding: 4px 0;
-}
-
-.github-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  flex: 1;
-}
-
-.github-stat-icon {
-  font-size: 1rem !important;
-  color: var(--primary-color);
-}
-
-.github-stat-value {
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 1.1;
-}
-
-.github-stat-label {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--primary-color);
-  opacity: 0.7;
-}
-
-.github-langs {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 8px;
-}
-
-.github-lang-chip {
+.gh-streak-best {
   font-size: 11px;
-  padding: 2px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--text-color);
-  opacity: 0.7;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  color: var(--primary-color);
+  transition: opacity 0.22s ease, max-width 0.22s ease;
 }
 
-.github-skeleton {
+.gh-chip-streak:hover .gh-streak-best {
+  opacity: 0.75;
+  max-width: 80px;
+}
+
+/* ── languages chip ────────────────────────────────────── */
+.gh-chip-langs {
+  gap: 6px;
+}
+
+.gh-langs-inner {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 4px 0;
+  gap: 4px;
+  align-items: center;
 }
 
-.github-skeleton-bar {
-  height: 12px;
-  border-radius: 8px;
-  background: linear-gradient(90deg,
-      var(--background-color-secondary) 25%,
-      color-mix(in srgb, var(--background-color-secondary) 50%, transparent) 50%,
-      var(--background-color-secondary) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  width: 100%;
-}
-
-.github-skeleton-bar.short {
-  width: 55%;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-
-  100% {
-    background-position: -200% 0;
-  }
+.gh-lang-tag {
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+  background: color-mix(in srgb, var(--primary-color) 16%, transparent);
+  white-space: nowrap;
 }
