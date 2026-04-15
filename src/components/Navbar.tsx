@@ -14,9 +14,10 @@ interface NavLink {
 interface NavbarProps {
   isArticle?: boolean;
   extraLinks?: NavLink[];
+  backHref?: string;
 }
 
-export default function Navbar({ isArticle = false, extraLinks = [] }: NavbarProps) {
+export default function Navbar({ isArticle = false, extraLinks = [], backHref = "/" }: NavbarProps) {
   const [isMini, setIsMini] = useState(false);
   const [activeSegment, setActiveSegment] = useState("home");
 
@@ -95,7 +96,7 @@ export default function Navbar({ isArticle = false, extraLinks = [] }: NavbarPro
         {isArticle ? (
           <>
             <li>
-              <Link href="/" id="home-nav" aria-label="Back to home page">
+              <Link href={backHref} id="home-nav" aria-label="Back">
                 <span className="material-symbols-rounded">arrow_back</span>
                 <span className="caption">Back</span>
               </Link>

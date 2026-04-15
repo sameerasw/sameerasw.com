@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import AirSyncClient from "@/components/airsync/AirSyncClient";
@@ -62,15 +63,13 @@ export default async function AirSync() {
               />
               Download for macOS
             </a>
-            <a
-              href="https://airsync.notion.site"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/docs/airsync"
               className="as-btn as-btn-ghost"
             >
               <span className="material-symbols-rounded">book_2</span>
               Docs
-            </a>
+            </Link>
           </div>
 
           <div className="as-hero-preview">

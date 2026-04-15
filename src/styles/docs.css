@@ -1,0 +1,352 @@
+/* Brutalist/Standard Documentation Framework */
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.docs-wrapper {
+  background-color: var(--background-color-primary);
+  min-height: 100vh;
+  text-align: left !important;
+  color: var(--text-color);
+  font-family: var(--font-family) !important;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 100 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.docs-wrapper,
+.docs-md-content,
+.docs-md-content p,
+.docs-md-content h1,
+.docs-md-content h2,
+.docs-md-content h3,
+.docs-md-content h4,
+.docs-md-content h5,
+.docs-md-content h6,
+.docs-md-content a,
+.docs-md-content li,
+.docs-md-content u,
+.docs-md-content b,
+.docs-md-content i,
+.docs-md-content strong,
+.docs-md-content em,
+.docs-md-content td,
+.docs-md-content th,
+.docs-md-content span,
+.docs-sidebar-link,
+.docs-sidebar-section,
+.docs-brand-header span,
+.docs-nav-button .title,
+.docs-nav-button .label {
+  font-family: var(--font-family) !important;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 100 !important;
+}
+
+.docs-layout {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top Back Button / Header for Mobile mostly */
+.docs-back-header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--background-color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.docs-back-button-nice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--background-color-secondary);
+  color: var(--text-color);
+  border-radius: var(--radius-out) !important;
+  text-decoration: none;
+  transition: all 0.2s ease !important;
+}
+
+.docs-back-button-nice:hover {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+}
+
+.docs-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.docs-brand-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+}
+
+/* Sidebar */
+.docs-sidebar {
+  flex: 0 0 250px;
+  padding: 1rem;
+  border-right: 1px solid var(--background-color-secondary);
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100vh - 3rem);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.docs-sidebar-section {
+  display: block;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--background-color-secondary);
+}
+
+.docs-sidebar-link {
+  display: block;
+  padding: 0.4rem 0;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.docs-sidebar-link:hover, .docs-sidebar-link.active {
+  color: var(--primary-color);
+  /* font-weight: bold; */
+}
+
+.docs-sidebar-sublink {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile Nav Toggles */
+.docs-mobile-nav-wrap {
+  display: none;
+  padding: 1rem;
+  background: var(--background-color-secondary);
+}
+
+.docs-mobile-nav-details {
+  width: 100%;
+}
+
+.docs-mobile-nav-summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+/* Main Content Area */
+.docs-main {
+  flex: 1;
+  padding: 2rem 4rem;
+  min-width: 0;
+}
+
+/* Native Markdown Elements - Pure, Flat, No AI Slop */
+/* Native Markdown Elements - Pure, Flat, No AI Slop */
+.docs-md-content {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+/* Headings */
+.docs-md-content h1,
+.docs-md-content h2,
+.docs-md-content h3,
+.docs-md-content h4,
+.docs-md-content h5,
+.docs-md-content h6 {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  color: var(--text-color) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-radius: 0 !important;
+  text-transform: none !important;
+  padding: 0 !important;
+  text-align: left !important;
+  transition: none !important;
+  font-variation-settings: normal !important;
+}
+
+.docs-md-content h1 { font-size: 2.5rem !important; border-bottom: 1px solid var(--background-color-secondary) !important; padding-bottom: 0.5rem !important; }
+.docs-md-content h2 { font-size: 1.75rem !important; border-bottom: 1px solid var(--background-color-secondary) !important; padding-bottom: 0.4rem !important; margin-top: 2.5rem !important; }
+.docs-md-content h3 { font-size: 1.25rem !important; }
+.docs-md-content h4 { font-size: 1.1rem !important; }
+
+/* Paragraphs & Lists */
+.docs-md-content p,
+.docs-md-content ul,
+.docs-md-content ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+  background: transparent;
+}
+
+.docs-md-content ul,
+.docs-md-content ol {
+  padding-left: 2rem;
+}
+
+.docs-md-content li {
+  margin-bottom: 0.25rem;
+}
+
+/* Links */
+.docs-md-content a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  background: transparent;
+}
+
+/* Code - 100% flat, NO background, NO shadow */
+.docs-md-content code {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Pre block - flat structural border only */
+.docs-md-content pre {
+  font-family: monospace;
+  font-size: 0.9em;
+  background: transparent;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--background-color-secondary);
+  border-radius: 0;
+  box-shadow: none;
+  overflow-x: auto;
+  color: var(--text-color);
+}
+
+.docs-md-content pre code {
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+/* Blockquotes - Flat line */
+.docs-md-content blockquote {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  color: inherit;
+  background: transparent;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Tables - Flat */
+.docs-md-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.docs-md-content th,
+.docs-md-content td {
+  padding: 0.5rem;
+  border: 1px solid var(--background-color-secondary);
+  text-align: left;
+  background: transparent;
+}
+
+/* Images - Flat bounds */
+.docs-md-content img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Pagination Footer */
+.docs-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--background-color-secondary);
+  gap: 1rem;
+}
+
+.docs-nav-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid var(--background-color-secondary);
+  text-decoration: none;
+  color: var(--text-color);
+  background: transparent;
+}
+
+.docs-nav-button.next {
+  text-align: right;
+}
+
+.docs-nav-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.docs-nav-button .label {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.docs-nav-button .title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
+  .docs-layout {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  
+  .docs-sidebar {
+    display: none;
+  }
+
+  .docs-mobile-nav-wrap {
+    display: block;
+  }
+  
+  .docs-main {
+    padding: 1rem;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}
