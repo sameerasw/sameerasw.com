@@ -4,8 +4,5 @@ order: 2
 slug: "installation"
 ---
 
-~~Apps are not yet notarized or verified as I am still pending on getting developer accounts.~~ Both Android and macOS apps are now notarized, verified to be safe for direct install! 
-
-Now you can install the apps easily from their published places easily with no hassle.
-
-- Android app is available on Google Play Store or in Github releases.
+- Android app is available on [Google Play Store](https://play.google.com/store/apps/details?id=com.sameerasw.airsync) or in [Github releases](https://github.com/sameerasw/airsync-android/releases/latest).
+- Mac app can be installed from [GitHub releases](https://github.com/sameerasw/airsync-mac/releases/latest)

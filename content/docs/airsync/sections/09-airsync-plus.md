@@ -13,23 +13,10 @@ The source code is available on GitHub, and you're more than welcome to build wi
 
 As a thank-you for supporting the app, AirSync+ unlocks some nice extras: media controls, synced widgets, low battery alerts, wireless ADB, and more to come as I keep adding new features. 
 
-Currently AirSync+ is available for just $50 as a one-time purchase option or, for only $2.49 per month or at even more beneficial price at $24.99 per year with 2 months on me.
+Currently AirSync+ is available for just $50 as a one-time purchase option or, for only $2.49 per month.
 
-<aside>
-<img src="/icons/add_green.svg" alt="/icons/add_green.svg" width="40px" /> Grab AirSync+ and support the project!
-
-[Subscribe to Sameera Wijerathna on Gumroad](https://store.sameerasw.com/)
-
-</aside>
+[Subscribe to AirSync+a on Gumroad](https://store.sameerasw.com/)
 
 Thanks for the support!
 
 Keep syncing … (っ◕‿◕)っ
-
----
-
-Last updated on 25th September 2025 - by @Sameera Sandakelum 
-
-[](https://www.sameerasw.com/)
-
-![Footer](attachment:8898c754-32a5-4979-b510-feec5cced685:image.png)

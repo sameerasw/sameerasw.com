@@ -6,29 +6,11 @@ slug: "reporting-issues"
 
 # 5. Reporting Issues and Feature Requests
 
-<aside>
-<img src="/icons/bug_green.svg" alt="/icons/bug_green.svg" width="40px" />
 
-## Mac App repository on GitHub
+-  [Mac App repository on GitHub](https://github.com/sameerasw/airsync-mac/issues/new/choose)
 
-[](https://github.com/sameerasw/airsync-mac/issues/new/choose)
+- [Android App repository on GitHub](https://github.com/sameerasw/airsync-android/issues/new/choose)
 
-</aside>
+- In [r/AirSync](https://www.reddit.com/r/AirSync/)
 
-<aside>
-<img src="/icons/bug_green.svg" alt="/icons/bug_green.svg" width="40px" />
-
-## Android App repository on GitHub
-
-[](https://github.com/sameerasw/airsync-android/issues/new/choose)
-
-</aside>
-
-<aside>
-👉🏻
-
-## In r/AirSync
-
-[r/AirSync](https://www.reddit.com/r/AirSync/)
-
-</aside>
+Or contact the developer from [sameerasw.com](https://sameerasw.com)

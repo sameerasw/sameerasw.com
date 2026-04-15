@@ -9,12 +9,10 @@ slug: "first-launch-android"
 1. Open the AirSync app from the apps drawer.
 2. At the top of the app, You will notice a few permission dialogs. Below is a summary of them.
 
-<aside>
-ℹ️
-
 ### 2.2.1 AirSync Android permissions and usage
 
-![Android Permissions](attachment:105eab16-a9a8-4950-9ca3-5109049cf481:image.png)
+<img width="40%" alt="Screenshot_20260415-161611 Medium" src="https://github.com/user-attachments/assets/20f6381e-eee2-4243-bfb0-fe07efa30d8f" />
+
 
 1. Notification Access
     
@@ -23,13 +21,14 @@ slug: "first-launch-android"
     <aside>
     ⚠️
     
-    **Granting notification read permission [No longer necessary for Google Play Store installs]**
+    **Granting notification read permission [Only for sideloaded installs]**
     
     Since the app was installed by sideloading, Android by default prevents granting sensitive permissions such as notification listener and accessibility to those apps. To still allow that, You need to manually go into AirSync app info page, click on the 3 dot menu to allow restricted settings which will require bio-metric authentication.
     
     Then head back to the app and re-try granting notification listener permission.
     
-    ![Restricted Settings](attachment:0e98c2e9-6bce-449c-86aa-a8c222771b6c:image.png)
+    <img width="90%" alt="image" src="https://github.com/user-attachments/assets/491ce6eb-e5ab-4f30-9601-64787cf2cbb2" />
+
     
     </aside>
     
@@ -54,4 +53,3 @@ slug: "first-launch-android"
     
     </aside>
     
-</aside>

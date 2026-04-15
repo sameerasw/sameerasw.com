@@ -6,7 +6,7 @@ slug: "adb-mirroring"
 
 ## 2.5 ADB and mirroring setup
 
-Make sure you got android-platform-tools and scrcpy installed via brew on your mac.
+Make sure you got android-platform-tools and scrcpy installed via brew on your mac if you have not done during the setup screens.
 
 ```bash
 brew install --cask android-platform-tools
@@ -21,7 +21,7 @@ Might need to re-open AirSync after installation.
 2. Go to developer options. Usually will be under settings > system > developer options or you can just search.
 3. Look for Wireless Debugging and enable.
     
-    ![Wireless Debugging](attachment:4beb4b33-ddad-4d37-aabb-891d8ae4192c:Screenshot_20250819-224307.png)
+    <img width="50%" alt="image" src="https://github.com/user-attachments/assets/f9483c72-8109-4edb-aa7e-ac96f4db0c61" />
     
 4. In wireless debugging, go into pair with code.
 5. On mac, open terminal of your choice and execute the following replacing the provided IP and PORT.
@@ -30,15 +30,21 @@ Might need to re-open AirSync after installation.
     adb pair ip:port
     ```
     
-6. You will be prompted to enter the code displayed. Do so. You should now be successfully authenticated for Wireless ADB. These steps were needed only once per device pair.
-7. Now head to the mac app. And click connect ADB in settings. You can see the result in the ADB console that appears below. If all goes correctly, you should see Mirroring options appear. if seeing errors, head to the troubleshooting.
+6. You will be prompted to enter the code displayed. Do so. You should now be successfully authenticated for Wireless ADB. **These steps were needed only once per device pair** .
+7. Now head to the mac app. Re-connect the devices and if you have granted Android permissions, it should detect the open ports automatically and should connect to wireless ADB. You can see the result in the ADB console that appears below.
+8. Now wired ADB is also supported allowing a faster and more stable connection.
+
+> Wireless ADB can be used being on the same WiFi as well as on Tailscale network being on separate WiFi networks.
+> But portable hotspot on Android does not allow wireless ADB via it.
 
 <aside>
 ⚠️
 
 Switching WiFi connections will automatically toggle off Wireless debugging. You can easily turn it back on by adding the Wireless debugging QS tile.
 
-![Wireless Debugging QS](attachment:84aa0cf4-89be-4917-9724-3e7ceb404b2a:Screenshot_20250819-224421.png)
+<img width="50%" alt="image" src="https://github.com/user-attachments/assets/6dfb2233-85c1-4b12-ac05-f2556f0e0185" />
+
+- Upcoming Android versions are working on an auto wireless ADB feature for known networks which will help this process. (Currectly available in Android 17 beta)
 
 </aside>
 
