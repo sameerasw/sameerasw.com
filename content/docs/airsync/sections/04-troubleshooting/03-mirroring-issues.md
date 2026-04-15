@@ -5,7 +5,7 @@ order: 3
 
 ### 4.3.1 No mirroring options
 
-- Mirroring is currently an AirSync+ option. Check your licenses.
+- Mirroring is currently an AirSync+ option. Check your licenses or on the trial.
 - You need adb setup for mirroring to work, Check and refer to [2.5 ADB and mirroring setup](adb-mirroring) first.
 - Make sure you installed `android-platform-tools` via brew before starting.
 - Most of the time, checking the adb console will provide possible solutions.
