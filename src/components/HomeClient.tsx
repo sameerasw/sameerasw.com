@@ -356,7 +356,9 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
               </a>
 
               {/* ── collapsible extras ── */}
-              <div className={`highlight-extras ${showAllProjects ? "expanded" : ""}`}>
+              <div
+                className={`highlight-extras ${showAllProjects ? "expanded" : ""}`}
+              >
                 <div className="highlight-extras-inner">
                   <a
                     id="edc"
@@ -424,7 +426,8 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                     <div className="highlight-content">
                       <h3>Keymappings</h3>
                       <p className="highlight-description">
-                        Custom keyboard macros and remapping for my REDRAGON FIZZ K617
+                        Custom keyboard macros and remapping for my REDRAGON
+                        FIZZ K617
                       </p>
                     </div>
                   </a>
@@ -449,9 +452,13 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
               <button
                 className="highlight-toggle item"
                 onClick={() => setShowAllProjects((p) => !p)}
-                aria-label={showAllProjects ? "Show less projects" : "Show more projects"}
+                aria-label={
+                  showAllProjects ? "Show less projects" : "Show more projects"
+                }
               >
-                <span className={`material-symbols-rounded highlight-toggle-icon ${showAllProjects ? "rotated" : ""}`}>
+                <span
+                  className={`material-symbols-rounded highlight-toggle-icon ${showAllProjects ? "rotated" : ""}`}
+                >
                   expand_more
                 </span>
                 <span>{showAllProjects ? "Show less" : "Show more"}</span>
@@ -469,8 +476,8 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
             <p className="item">
               A passionate developer, designer and a student from Sri Lanka who
               is always ready to learn new things. Outside work, will be mostly
-              dealing with either a customization mod for a browser, a website,
-              watching F1.
+              dealing with either an app, a browser, or watching F1 or a TV
+              show.
             </p>
             <div className="details-pills">
               <div className="pill item">
@@ -493,18 +500,60 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 <span className="material-symbols-rounded">work</span>
                 <span>Trainee Associate UI Engineer at Zone24x7 Pvt. LTD</span>
               </div>
-            </div>
-            <div className="skills">
-              <a
-                href="https://github.com/sameerasw"
-                aria-label="Sameera's github link"
-              >
-                <img
-                  className="item"
-                  src="https://skillicons.dev/icons?i=swift,kotlin,html,css,js,ts,react,mui,figma,apple&theme=light&perline=10"
-                  alt="My skills"
-                />
-              </a>
+              <div className="pill item">
+                <span className="material-symbols-rounded">code</span>
+                <a
+                  href="https://github.com/sameerasw"
+                  aria-label="Sameera's github link"
+                  className="skill-icon-container"
+                >
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=swift&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=kotlin&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=html&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=css&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=js&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=ts&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=react&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=mui&theme=light"
+                    alt="My skills"
+                  />
+                  <img
+                    className=" skill-icons"
+                    src="https://skillicons.dev/icons?i=figma&theme=light"
+                    alt="My skills"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -583,10 +632,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                     </div>
                   </a>
                 </div>
-                <div
-                  id="email-btn"
-                  className="item button-view"
-                >
+                <div id="email-btn" className="item button-view">
                   <a href="mailto:mail@sameerasw.com" aria-label="Email me">
                     <span className="material-symbols-rounded">email</span>
                     <span className="caption">Business? Send an email</span>

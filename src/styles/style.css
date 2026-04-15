@@ -257,7 +257,7 @@ h3 {
   .details-pills {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 2px;
     justify-content: center;
     margin: 2em 0;
     border-radius: var(--radius-out);
@@ -284,13 +284,13 @@ h3 {
   }
 }
 
-.skills {
-  margin: 4em auto;
-  img {
-    width: 40vw;
-    @media screen and (max-width: 600px) {
-      width: 80vw;
-    }
+.skill-icon-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  .skill-icons{
+  max-height: 28px;
   }
 }
 
