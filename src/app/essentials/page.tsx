@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getAllReleaseNotes } from "@/lib/releaseNotes";
@@ -206,9 +207,14 @@ export default async function Essentials() {
                 <span className="es-footer-brand-name">Essentials</span>
               </a>
 
-              <span className="es-footer-copy">
-                &copy; {new Date().getFullYear()} sameerasw.com
-              </span>
+              <div className="es-footer-links" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                <Link href="/essentials-privacy" className="es-footer-link" style={{ fontSize: '0.85rem', color: 'var(--es-text-soft)', textDecoration: 'none' }}>
+                  Privacy Policy
+                </Link>
+                <span className="es-footer-copy">
+                  &copy; {new Date().getFullYear()} sameerasw.com
+                </span>
+              </div>
             </div>
           </div>
         </footer>
