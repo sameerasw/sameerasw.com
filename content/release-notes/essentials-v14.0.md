@@ -8,7 +8,7 @@ link: "https://github.com/sameerasw/essentials/releases/tag/v14.0"
 ---
 
 # What's New?
-- WearOS Android controls and sync
+- [WearOS Android controls and sync](https://github.com/sameerasw/essentials-wear/releases/tag/v2.0)
    - Lock your Android remotely
    - Control flashlight and brightness
    - Toggle Android sound mode
