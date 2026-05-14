@@ -3,6 +3,7 @@ import Script from "next/script";
 
 import "@/styles/style.css";
 import "@/styles/common/no-cursor.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Cursor from "@/components/Cursor";
 import StickyLoveTab from "@/components/StickyLoveTab";
@@ -67,10 +68,6 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
 
         <Script
           id="Cookiebot"
@@ -78,7 +75,6 @@ export default function RootLayout({
           data-cbid="f35df0a1-95c5-4edf-b397-46a6071914f7"
           strategy="beforeInteractive"
         />
-        <script src="https://kit.fontawesome.com/97543652cd.js" crossOrigin="anonymous"/>
         <Script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
           strategy="beforeInteractive"
