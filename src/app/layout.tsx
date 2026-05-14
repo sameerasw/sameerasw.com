@@ -78,7 +78,7 @@ export default function RootLayout({
           data-cbid="f35df0a1-95c5-4edf-b397-46a6071914f7"
           strategy="beforeInteractive"
         />
-        <script src="https://kit.fontawesome.com/97543652cd.js" crossorigin="anonymous"/>
+        <script src="https://kit.fontawesome.com/97543652cd.js" crossOrigin="anonymous"/>
         <Script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
           strategy="beforeInteractive"
