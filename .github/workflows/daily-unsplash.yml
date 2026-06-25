@@ -25,6 +25,47 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node .github/scripts/daily-unsplash.js
 
+      - name: Send Telegram Notification
+        if: success()
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TOPIC_ID: ${{ secrets.TELEGRAM_TOPIC_ID }}
+        run: |
+          METADATA_FILE="public/unsplash-today.json"
+          if [ -f "$METADATA_FILE" ]; then
+            IMG_URL=$(jq -r '.url' "$METADATA_FILE")
+            AUTHOR_NAME=$(jq -r '.author.name' "$METADATA_FILE")
+            AUTHOR_LINK=$(jq -r '.author.link' "$METADATA_FILE")
+            UNSPLASH_LINK=$(jq -r '.link' "$METADATA_FILE")
+            
+            FINAL_CHAT_ID="${CHAT_ID:- -1001653455300}"
+            FINAL_TOPIC_ID="${TOPIC_ID:-71370}"
+            
+            # Format message with image URL at the top for web preview support
+            MESSAGE="<a href=\"$IMG_URL\">&#8205;</a>🌅 <b>New Daily Wallpaper Selected!</b>"$'\n\n'"👤 <b>Photographer:</b> <a href=\"$AUTHOR_LINK\">$AUTHOR_NAME</a>"$'\n'"🔗 <b>Unsplash Link:</b> <a href=\"$UNSPLASH_LINK\">View Photo</a>"
+            
+            jq -n \
+              --arg chat_id "$FINAL_CHAT_ID" \
+              --arg thread_id "$FINAL_TOPIC_ID" \
+              --arg text "$MESSAGE" \
+              '{
+                chat_id: $chat_id, 
+                message_thread_id: $thread_id, 
+                text: $text, 
+                parse_mode: "HTML",
+                disable_web_page_preview: false
+              }' > telegram_payload.json
+              
+            if [ -n "$BOT_TOKEN" ]; then
+              curl -X POST -H "Content-Type: application/json" -d @telegram_payload.json https://api.telegram.org/bot$BOT_TOKEN/sendMessage
+            else
+              echo "Telegram Bot Token is not set. Skipping message dispatch."
+            fi
+          else
+            echo "Wallpaper metadata file not found."
+          fi
+
       - name: Commit and push if changed
         run: |
           git config --global user.name 'github-actions[bot]'
