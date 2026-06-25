@@ -74,7 +74,7 @@ async function run() {
     // Build the output metadata
     const outputData = {
       id: selectedPhoto.id,
-      url: selectedPhoto.urls.regular, // regular is typically 1080p, perfect for screen background
+      url: `${selectedPhoto.urls.raw}&w=2560&q=90`, // 2.5K width, high quality (Retina/4K optimized)
       url_full: selectedPhoto.urls.full,
       author: {
         name: selectedPhoto.user.name,
