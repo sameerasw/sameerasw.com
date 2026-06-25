@@ -49,6 +49,9 @@
     &.zen-logo {
       background-image: url("/assets/img/articles/zen/article-icon-zen.png");
     }
+    &.helium-logo {
+      background-image: url("/assets/img/articles/helium/article-icon-helium-light.png");
+    }
 
     /* dark theme icons */
     @media (prefers-color-scheme: dark) {
@@ -60,6 +63,9 @@
       }
       &.zen-logo {
         background-image: url("/assets/img/articles/zen/article-icon-zen-dark.png");
+      }
+      &.helium-logo {
+        background-image: url("/assets/img/articles/helium/article-icon-helium-dark.png");
       }
     }
 

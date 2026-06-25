@@ -20,6 +20,15 @@ export const apps = [
     price: "foss",
   },
   {
+    name: "Helium Browser",
+    link: "/helium",
+    description:
+      "A fast, lightweight, and efficient chromium-based browser configured for modern web standards.",
+    iconUrl: "/assets/img/articles/helium/article-icon-helium-light.png",
+    imageUrl: "/assets/img/articles/helium-preview.jpeg",
+    price: "foss",
+  },
+  {
     name: "Notion",
     link: "https://notion.so/",
     description:

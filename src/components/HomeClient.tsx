@@ -300,6 +300,20 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                 </div>
               </a>
               <a
+                id="helium"
+                className="highlight-item item"
+                href="/helium"
+                data-title="/assets/img/articles/helium-preview.jpeg"
+              >
+                <div className="highlight-thumbnail"></div>
+                <div className="highlight-content">
+                  <h3>Helium Setup</h3>
+                  <p className="highlight-description">
+                    A minimal but functional daily Helium browser setup
+                  </p>
+                </div>
+              </a>
+              <a
                 id="macos"
                 className="highlight-item item"
                 href="/macos"
