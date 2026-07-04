@@ -299,7 +299,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                   </p>
                 </div>
               </a>
-              <a
+              {/* <a
                 id="helium"
                 className="highlight-item item"
                 href="/helium"
@@ -312,7 +312,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
                     A minimal but functional daily Helium browser setup
                   </p>
                 </div>
-              </a>
+              </a> */}
               <a
                 id="macos"
                 className="highlight-item item"
