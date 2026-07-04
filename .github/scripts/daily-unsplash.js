@@ -7,6 +7,7 @@ const PUBLIC_DIR = path.join(__dirname, '../../public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'unsplash-today.json');
 const SCRIPTS_DIR = __dirname;
 const HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-history.json');
+const MOBILE_HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-mobile-history.json');
 
 async function run() {
   if (!ACCESS_KEY) {
@@ -33,7 +34,7 @@ async function run() {
       throw new Error('No photos found in the collection.');
     }
 
-    // 1. Filter out portrait or square images immediately
+    // 1. Filter out portrait or square images immediately for landscape selector
     const landscapePhotos = photos.filter(p => p.width > p.height);
     console.log(`Found ${landscapePhotos.length} landscape photo(s) out of ${photos.length} total.`);
 
@@ -79,6 +80,47 @@ async function run() {
       }
     }
 
+    // ---- Mobile Portrait Wallpaper Selection ----
+    const portraitPhotos = photos.filter(p => p.height >= p.width);
+    console.log(`Found ${portraitPhotos.length} portrait/square photo(s) out of ${photos.length} total.`);
+
+    let mobileHistory = [];
+    if (fs.existsSync(MOBILE_HISTORY_FILE)) {
+      try {
+        mobileHistory = JSON.parse(fs.readFileSync(MOBILE_HISTORY_FILE, 'utf8'));
+      } catch (e) {
+        console.warn('Failed to parse mobile history file, starting fresh:', e);
+      }
+    }
+
+    let candidateMobilePhotos = portraitPhotos;
+    if (candidateMobilePhotos.length === 0) {
+      candidateMobilePhotos = landscapePhotos; // Fallback to landscape if no portrait available
+    }
+
+    let availableMobilePhotos = candidateMobilePhotos.filter(p => !mobileHistory.includes(p.id));
+    if (availableMobilePhotos.length === 0) {
+      console.log('All mobile photos in this batch have been used. Resetting mobile history.');
+      mobileHistory = [];
+      availableMobilePhotos = candidateMobilePhotos;
+    }
+
+    const selectedMobilePhoto = availableMobilePhotos[Math.floor(Math.random() * availableMobilePhotos.length)];
+
+    if (selectedMobilePhoto.links && selectedMobilePhoto.links.download_location) {
+      try {
+        await fetch(selectedMobilePhoto.links.download_location, {
+          headers: {
+            'Authorization': `Client-ID ${ACCESS_KEY}`,
+            'Accept-Version': 'v1'
+          }
+        });
+        console.log('Mobile Unsplash download tracked successfully.');
+      } catch (err) {
+        console.error('Failed to track mobile download:', err);
+      }
+    }
+
     // Build the output metadata
     const outputData = {
       id: selectedPhoto.id,
@@ -90,7 +132,19 @@ async function run() {
         link: `${selectedPhoto.user.links.html}?utm_source=Glance&utm_medium=referral`
       },
       link: `${selectedPhoto.links.html}?utm_source=Glance&utm_medium=referral`,
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
+      mobile: {
+        id: selectedMobilePhoto.id,
+        url: `${selectedMobilePhoto.urls.raw}&w=1080&q=90`, // Mobile optimized width
+        url_full: selectedMobilePhoto.urls.full,
+        author: {
+          name: selectedMobilePhoto.user.name,
+          username: selectedMobilePhoto.user.username,
+          link: `${selectedMobilePhoto.user.links.html}?utm_source=Glance&utm_medium=referral`
+        },
+        link: `${selectedMobilePhoto.links.html}?utm_source=Glance&utm_medium=referral`,
+        updatedAt: new Date().toISOString()
+      }
     };
 
     // Make sure public dir exists
@@ -107,12 +161,18 @@ async function run() {
       history.shift();
     }
     
+    mobileHistory.push(selectedMobilePhoto.id);
+    if (mobileHistory.length > 15) {
+      mobileHistory.shift();
+    }
+
     if (!fs.existsSync(SCRIPTS_DIR)) {
       fs.mkdirSync(SCRIPTS_DIR, { recursive: true });
     }
     fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
+    fs.writeFileSync(MOBILE_HISTORY_FILE, JSON.stringify(mobileHistory, null, 2), 'utf8');
 
-    console.log(`Successfully updated daily wallpaper: ${selectedPhoto.id} by ${selectedPhoto.user.name}`);
+    console.log(`Successfully updated daily wallpaper: Landscape=${selectedPhoto.id}, Mobile=${selectedMobilePhoto.id}`);
   } catch (error) {
     console.error('Error running daily unsplash selector:', error);
     process.exit(1);
