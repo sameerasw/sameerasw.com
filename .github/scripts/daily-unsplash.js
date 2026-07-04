@@ -33,6 +33,14 @@ async function run() {
       throw new Error('No photos found in the collection.');
     }
 
+    // 1. Filter out portrait or square images immediately
+    const landscapePhotos = photos.filter(p => p.width > p.height);
+    console.log(`Found ${landscapePhotos.length} landscape photo(s) out of ${photos.length} total.`);
+
+    if (landscapePhotos.length === 0) {
+      throw new Error('No landscape photos found in the current batch from this collection.');
+    }
+
     // Load history
     let history = [];
     if (fs.existsSync(HISTORY_FILE)) {
@@ -43,17 +51,17 @@ async function run() {
       }
     }
 
-    // Filter out recently used photos
-    let availablePhotos = photos.filter(p => !history.includes(p.id));
+    // 2. Filter out recently used landscape photos
+    let availablePhotos = landscapePhotos.filter(p => !history.includes(p.id));
 
-    // If all photos from the collection have been used, reset history to avoid getting stuck
+    // If all landscape photos from the collection have been used, reset history to avoid getting stuck
     if (availablePhotos.length === 0) {
-      console.log('All photos in this batch have been used. Resetting history.');
+      console.log('All landscape photos in this batch have been used. Resetting history.');
       history = [];
-      availablePhotos = photos;
+      availablePhotos = landscapePhotos;
     }
 
-    // Select a random photo
+    // Select a random landscape photo
     const selectedPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
 
     // Track download to comply with Unsplash API Guidelines

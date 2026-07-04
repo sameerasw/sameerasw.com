@@ -2,8 +2,8 @@ name: Daily Unsplash Wallpaper Update
 
 on:
   schedule:
-    # Runs at 00:00 UTC every day
-    - cron: '0 0 * * *'
+    # Runs at 02:00 UTC every day
+    - cron: '0 2 * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:
