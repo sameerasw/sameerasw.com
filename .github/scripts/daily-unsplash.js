@@ -1,6 +1,52 @@
 const fs = require('fs');
 const path = require('path');
 
+function hexToHsl(hex) {
+  if (!hex) return { h: 165, s: 50, l: 27 };
+  let sh = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  let fullHex = hex.replace(sh, (m, r, g, b) => r + r + g + g + b + b);
+  let match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(fullHex);
+  if (!match) return { h: 165, s: 50, l: 27 };
+
+  let r = parseInt(match[1], 16) / 255;
+  let g = parseInt(match[2], 16) / 255;
+  let b = parseInt(match[3], 16) / 255;
+
+  let max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+
+  if (max === min) {
+    h = s = 0;
+  } else {
+    let d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+
+  return {
+    h: Math.round(h * 360),
+    s: Math.round(s * 100),
+    l: Math.round(l * 100)
+  };
+}
+
+function generateThemeColors(hexColor) {
+  const { h, s, l } = hexToHsl(hexColor);
+  const lightS = Math.min(90, Math.max(60, s));
+  const lightL = Math.min(38, Math.max(25, l));
+  const darkS = Math.min(100, Math.max(70, s));
+  const darkL = Math.min(75, Math.max(60, l));
+  return {
+    light: `hsl(${h}, ${lightS}%, ${lightL}%)`,
+    dark: `hsl(${h}, ${darkS}%, ${darkL}%)`
+  };
+}
+
 const COLLECTION_ID = 'LqO9knU9z2A';
 const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const PUBLIC_DIR = path.join(__dirname, '../../public');
@@ -170,6 +216,7 @@ async function run() {
       };
       outputData.link = `${selectedPhoto.links.html}?utm_source=Glance&utm_medium=referral`;
       outputData.updatedAt = new Date().toISOString();
+      outputData.themeColors = generateThemeColors(selectedPhoto.color);
 
       history.push(selectedPhoto.id);
       if (history.length > 15) {
@@ -184,6 +231,7 @@ async function run() {
       outputData.author = existingToday?.author || { name: "", username: "", link: "" };
       outputData.link = existingToday?.link || "";
       outputData.updatedAt = existingToday?.updatedAt || new Date().toISOString();
+      outputData.themeColors = existingToday?.themeColors || { light: "hsl(165, 50%, 27%)", dark: "hsl(165, 100%, 65%)" };
     }
 
     // ---- Mobile Portrait Wallpaper Selection ----

@@ -9,6 +9,10 @@
   },
   "link": "https://unsplash.com/photos/a-close-up-of-a-yellow-flower-nHNkR6uYWkM?utm_source=Glance&utm_medium=referral",
   "updatedAt": "2026-07-08T13:38:35.559Z",
+  "themeColors": {
+    "light": "hsl(41, 71%, 38%)",
+    "dark": "hsl(41, 71%, 60%)"
+  },
   "mobile": {
     "id": "t-s1zCveANQ",
     "url": "https://images.unsplash.com/photo-1640044262720-e198a086ac6a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTMzNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4MzUxODEwMXw&ixlib=rb-4.1.0&w=1080&q=90",

@@ -46,15 +46,12 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
   useEffect(() => {
     if (!wallpaperData) return;
 
-    const isMobile = window.innerWidth < 768;
-    const rawUrl = isMobile
-      ? (wallpaperData.mobile?.url || wallpaperData.url)
-      : wallpaperData.url;
-
+    const rawUrl = wallpaperData.url;
     if (!rawUrl) return;
 
+    const isMobile = window.innerWidth < 768;
     // Optimize background image size & quality for performance
-    const targetWidth = isMobile ? 640 : 1280;
+    const targetWidth = isMobile ? 800 : 1280;
     const optimizedUrl = getOptimizedUrl(rawUrl, targetWidth, 70);
 
     setBgUrl(optimizedUrl);
@@ -235,8 +232,22 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const themeColors = wallpaperData?.themeColors || { light: "hsl(165, 50%, 27%)", dark: "hsl(165, 100%, 65%)" };
+
   return (
     <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          :root {
+            --primary-color: ${themeColors.light} !important;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --primary-color: ${themeColors.dark} !important;
+            }
+          }
+        `
+      }} />
       <div 
         id="bg-image" 
         className={bgLoaded ? "show-image" : ""} 
@@ -273,8 +284,8 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
                     blockSize={10}
                     transformData={transformData}
                     theme={{
-                      light: ["#ffffff", "#217d66ff"],
-                      dark: ["#000000", "#4affbd"],
+                      light: ["#ffffff", themeColors.light],
+                      dark: ["#000000", themeColors.dark],
                     }}
                   />
                 )}
