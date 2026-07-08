@@ -153,7 +153,9 @@ h2 {
   transition: all 0.5s ease-in-out;
   font-family: var(--font-family);
   font-weight: 600;
-  font-variation-settings: "wdth" 600, "ROND" 100
+  font-variation-settings:
+    "wdth" 600,
+    "ROND" 100;
 }
 
 h3 {
@@ -284,13 +286,13 @@ h3 {
   }
 }
 
-.skill-icon-container{
+.skill-icon-container {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
 
-  .skill-icons{
-  max-height: 28px;
+  .skill-icons {
+    max-height: 28px;
   }
 }
 
@@ -422,7 +424,9 @@ section:not(#intro, #apps) {
   z-index: -2;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 7s cubic-bezier(0.16, 1, 0.3, 1), transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 7s cubic-bezier(0.16, 1, 0.3, 1);
   transform: scale(1.08);
 }
 
@@ -437,4 +441,61 @@ section:not(#intro, #apps) {
   }
 }
 
+/* Wallpaper Card at Very Bottom */
+.wallpaper-card {
+  background: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  border-radius: 5px;
+  padding: 0.5rem;
+  max-width: 440px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 8px;
+}
 
+.wallpaper-card-preview {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--background-color-secondary);
+  margin-bottom: 8px;
+}
+
+.wallpaper-card-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wallpaper-card-header {
+  display: flex;
+  align-items: start;
+  gap: 6px;
+  margin: 0 1em;
+  font-weight: bold;
+}
+
+.wallpaper-card-header .material-symbols-rounded {
+  color: var(--primary-color);
+}
+
+.wallpaper-card-credits {
+  font-size: 0.7rem;
+  margin: 0 1em;
+  opacity: 0.85;
+}
+
+.wallpaper-card-credits a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.wallpaper-card-credits a:hover {
+  text-decoration: underline;
+}

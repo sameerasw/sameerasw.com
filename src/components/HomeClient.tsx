@@ -24,7 +24,10 @@ interface HomeClientProps {
   wallpaperData?: any;
 }
 
-export default function HomeClient({ updatesSection, wallpaperData }: HomeClientProps) {
+export default function HomeClient({
+  updatesSection,
+  wallpaperData,
+}: HomeClientProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -232,12 +235,16 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const themeColors = wallpaperData?.themeColors || { light: "hsl(165, 50%, 27%)", dark: "hsl(165, 100%, 65%)" };
+  const themeColors = wallpaperData?.themeColors || {
+    light: "hsl(165, 50%, 27%)",
+    dark: "hsl(165, 100%, 65%)",
+  };
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           :root {
             --primary-color: ${themeColors.light} !important;
           }
@@ -246,11 +253,12 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
               --primary-color: ${themeColors.dark} !important;
             }
           }
-        `
-      }} />
-      <div 
-        id="bg-image" 
-        className={bgLoaded ? "show-image" : ""} 
+        `,
+        }}
+      />
+      <div
+        id="bg-image"
+        className={bgLoaded ? "show-image" : ""}
         style={{ backgroundImage: bgUrl ? `url(${bgUrl})` : "none" }}
       />
       <Navbar />
@@ -532,7 +540,6 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
           </div>
         </section>
 
-
         <section id="about-me">
           <div className="heading item">
             <h2>About Me</h2>
@@ -736,6 +743,131 @@ export default function HomeClient({ updatesSection, wallpaperData }: HomeClient
             </div>
           </div>
         </section>
+
+        {/* Wallpaper Cards at Very Bottom */}
+        {wallpaperData && (
+          <div
+            className="container"
+            style={{ margin: "0 auto 4rem auto", width: "100%" }}
+          >
+            <div id="highlights" style={{ width: "100%", maxWidth: "440px" }}>
+              {/* The Wallpaper Details Card */}
+              <div className="wallpaper-card item">
+                <div className="wallpaper-card-preview">
+                  <img
+                    src={getOptimizedUrl(wallpaperData.url, 400, 75)}
+                    alt="Today's wallpaper preview"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="wallpaper-card-header">
+                  <span className="material-symbols-rounded">image</span>
+                  <span>Today's my wallpaper pick</span>
+                </div>
+                <p className="wallpaper-card-credits">
+                  Photo by{" "}
+                  <a
+                    href={wallpaperData.author?.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {wallpaperData.author?.name}
+                  </a>{" "}
+                  on{" "}
+                  <a
+                    href={wallpaperData.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Unsplash
+                  </a>
+                </p>
+              </div>
+
+              {/* Showcase Action Cards below it */}
+              <a
+                id="download-wallpaper"
+                className="highlight-item item"
+                href={wallpaperData.url_full || wallpaperData.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "0.75rem 1.25rem", gap: "0.75rem" }}
+              >
+                <span
+                  className="material-symbols-rounded"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  download
+                </span>
+                <div className="highlight-content">
+                  <h3
+                    style={{
+                      fontSize: "0.95rem",
+                      fontWeight: "normal",
+                      padding: 0,
+                    }}
+                  >
+                    Download
+                  </h3>
+                </div>
+              </a>
+
+              <a
+                id="wallpaper-source"
+                className="highlight-item item"
+                href={wallpaperData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "0.75rem 1.25rem", gap: "0.75rem" }}
+              >
+                <span
+                  className="material-symbols-rounded"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  open_in_new
+                </span>
+                <div className="highlight-content">
+                  <h3
+                    style={{
+                      fontSize: "0.95rem",
+                      fontWeight: "normal",
+                      padding: 0,
+                    }}
+                  >
+                    Unsplash
+                  </h3>
+                </div>
+              </a>
+
+              <a
+                id="wallpaper-collection"
+                className="highlight-item item"
+                href="https://unsplash.com/collections/LqO9knU9z2A"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "0.75rem 1.25rem", gap: "0.75rem" }}
+              >
+                <span
+                  className="material-symbols-rounded"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  photo_library
+                </span>
+                <div className="highlight-content">
+                  <h3
+                    style={{
+                      fontSize: "0.95rem",
+                      fontWeight: "normal",
+                      padding: 0,
+                    }}
+                  >
+                    Visit my collection
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

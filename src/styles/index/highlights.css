@@ -99,6 +99,15 @@
     opacity: 1;
 }
 
+.highlight-item .material-symbols-rounded {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.highlight-item:hover .material-symbols-rounded {
+    color: var(--background-color-primary) !important;
+}
+
 @media screen and (max-width: 1000px) {
     #highlights {
         width: 85vw;
