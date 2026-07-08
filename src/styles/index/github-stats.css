@@ -20,8 +20,9 @@
   gap: 5px;
   padding: 5px 5px 5px 10px;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--text-color) 30%, transparent);
-  /* background: var(--background-color-secondary); */
+  border: 1px solid transparent;
+  background: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
   font-size: 13px;
   cursor: pointer;
   transition: border-color 0.22s ease, background 0.22s ease, padding 0.22s ease;
@@ -31,7 +32,7 @@
 
 .gh-chip:hover {
   border-color: var(--primary-color);
-  background: color-mix(in srgb, var(--primary-color) 10%, var(--background-color-secondary));
+  background: color-mix(in srgb, var(--primary-color) 10%, var(--background-color-tr));
 }
 
 /* ── icon ──────────────────────────────────────────────── */

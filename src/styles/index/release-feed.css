@@ -97,7 +97,7 @@
   background: var(--background-color-tr);
   backdrop-filter: blur(var(--blur));
   border-radius: var(--radius-out);
-  border: 1px solid var(--background-color-secondary);
+  border: none;
   text-align: left;
   padding: 1.5rem;
   display: flex;

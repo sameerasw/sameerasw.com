@@ -15,7 +15,9 @@
   position: relative;
   color: var(--text-color);
   border-radius: var(--radius-out);
-  border: 1px solid var(--text-color);
+  border: none;
+  background: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
   display: flex;
   flex-direction: column;
   align-items: start;
