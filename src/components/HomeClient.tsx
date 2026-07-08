@@ -736,7 +736,7 @@ export default function HomeClient({
         {wallpaperData && (
           <div
             className="container"
-            style={{ margin: "0 auto 4rem auto", width: "100%" }}
+            style={{ margin: "8rem auto 4rem auto", width: "100%" }}
           >
             <div id="highlights" style={{ width: "100%", maxWidth: "440px" }}>
               {/* The Wallpaper Details Card */}
