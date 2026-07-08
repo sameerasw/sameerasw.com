@@ -42,6 +42,7 @@ jobs:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TOPIC_ID: ${{ secrets.TELEGRAM_TOPIC_ID }}
+          TARGET: ${{ inputs.target || 'both' }}
         run: |
           METADATA_FILE="public/unsplash-today.json"
           if [ -f "$METADATA_FILE" ]; then
@@ -49,33 +50,37 @@ jobs:
             FINAL_TOPIC_ID="${TOPIC_ID:-71370}"
             
             # Desktop — skip if mobile-only run
-            DESKTOP_URL=$(jq -r '.url // empty' "$METADATA_FILE")
-            if [ -n "$DESKTOP_URL" ] && [ -n "$BOT_TOKEN" ]; then
-              AUTHOR_NAME=$(jq -r '.author.name' "$METADATA_FILE")
-              AUTHOR_LINK=$(jq -r '.author.link' "$METADATA_FILE")
-              UNSPLASH_LINK=$(jq -r '.link' "$METADATA_FILE")
-              MESSAGE_DESKTOP="<a href=\"$DESKTOP_URL\">&#8205;</a>🖥 <b>New Daily Desktop Wallpaper!</b>"$'\n\n'"👤 <b>Photographer:</b> <a href=\"$AUTHOR_LINK\">$AUTHOR_NAME</a>"$'\n'"🔗 <b>Unsplash Link:</b> <a href=\"$UNSPLASH_LINK\">View Photo</a>"
-              jq -n \
-                --arg chat_id "$FINAL_CHAT_ID" \
-                --arg thread_id "$FINAL_TOPIC_ID" \
-                --arg text "$MESSAGE_DESKTOP" \
-                '{chat_id: $chat_id, message_thread_id: $thread_id, text: $text, parse_mode: "HTML", disable_web_page_preview: false}' > payload_desktop.json
-              curl -X POST -H "Content-Type: application/json" -d @payload_desktop.json https://api.telegram.org/bot$BOT_TOKEN/sendMessage
+            if [ "$TARGET" = "both" ] || [ "$TARGET" = "desktop" ]; then
+              DESKTOP_URL=$(jq -r '.url // empty' "$METADATA_FILE")
+              if [ -n "$DESKTOP_URL" ] && [ -n "$BOT_TOKEN" ]; then
+                AUTHOR_NAME=$(jq -r '.author.name' "$METADATA_FILE")
+                AUTHOR_LINK=$(jq -r '.author.link' "$METADATA_FILE")
+                UNSPLASH_LINK=$(jq -r '.link' "$METADATA_FILE")
+                MESSAGE_DESKTOP="<a href=\"$DESKTOP_URL\">&#8205;</a>🖥 <b>New Daily Desktop Wallpaper!</b>"$'\n\n'"👤 <b>Photographer:</b> <a href=\"$AUTHOR_LINK\">$AUTHOR_NAME</a>"$'\n'"🔗 <b>Unsplash Link:</b> <a href=\"$UNSPLASH_LINK\">View Photo</a>"
+                jq -n \
+                  --arg chat_id "$FINAL_CHAT_ID" \
+                  --arg thread_id "$FINAL_TOPIC_ID" \
+                  --arg text "$MESSAGE_DESKTOP" \
+                  '{chat_id: $chat_id, message_thread_id: $thread_id, text: $text, parse_mode: "HTML", disable_web_page_preview: false}' > payload_desktop.json
+                curl -X POST -H "Content-Type: application/json" -d @payload_desktop.json https://api.telegram.org/bot$BOT_TOKEN/sendMessage
+              fi
             fi
             
             # Mobile — skip if desktop-only run
-            MOBILE_URL=$(jq -r '.mobile.url // empty' "$METADATA_FILE")
-            if [ -n "$MOBILE_URL" ] && [ -n "$BOT_TOKEN" ]; then
-              AUTHOR_NAME_M=$(jq -r '.mobile.author.name' "$METADATA_FILE")
-              AUTHOR_LINK_M=$(jq -r '.mobile.author.link' "$METADATA_FILE")
-              UNSPLASH_LINK_M=$(jq -r '.mobile.link' "$METADATA_FILE")
-              MESSAGE_MOBILE="<a href=\"$MOBILE_URL\">&#8205;</a>📱 <b>New Daily Mobile Wallpaper!</b>"$'\n\n'"👤 <b>Photographer:</b> <a href=\"$AUTHOR_LINK_M\">$AUTHOR_NAME_M</a>"$'\n'"🔗 <b>Unsplash Link:</b> <a href=\"$UNSPLASH_LINK_M\">View Photo</a>"
-              jq -n \
-                --arg chat_id "$FINAL_CHAT_ID" \
-                --arg thread_id "$FINAL_TOPIC_ID" \
-                --arg text "$MESSAGE_MOBILE" \
-                '{chat_id: $chat_id, message_thread_id: $thread_id, text: $text, parse_mode: "HTML", disable_web_page_preview: false}' > payload_mobile.json
-              curl -X POST -H "Content-Type: application/json" -d @payload_mobile.json https://api.telegram.org/bot$BOT_TOKEN/sendMessage
+            if [ "$TARGET" = "both" ] || [ "$TARGET" = "mobile" ]; then
+              MOBILE_URL=$(jq -r '.mobile.url // empty' "$METADATA_FILE")
+              if [ -n "$MOBILE_URL" ] && [ -n "$BOT_TOKEN" ]; then
+                AUTHOR_NAME_M=$(jq -r '.mobile.author.name' "$METADATA_FILE")
+                AUTHOR_LINK_M=$(jq -r '.mobile.author.link' "$METADATA_FILE")
+                UNSPLASH_LINK_M=$(jq -r '.mobile.link' "$METADATA_FILE")
+                MESSAGE_MOBILE="<a href=\"$MOBILE_URL\">&#8205;</a>📱 <b>New Daily Mobile Wallpaper!</b>"$'\n\n'"👤 <b>Photographer:</b> <a href=\"$AUTHOR_LINK_M\">$AUTHOR_NAME_M</a>"$'\n'"🔗 <b>Unsplash Link:</b> <a href=\"$UNSPLASH_LINK_M\">View Photo</a>"
+                jq -n \
+                  --arg chat_id "$FINAL_CHAT_ID" \
+                  --arg thread_id "$FINAL_TOPIC_ID" \
+                  --arg text "$MESSAGE_MOBILE" \
+                  '{chat_id: $chat_id, message_thread_id: $thread_id, text: $text, parse_mode: "HTML", disable_web_page_preview: false}' > payload_mobile.json
+                curl -X POST -H "Content-Type: application/json" -d @payload_mobile.json https://api.telegram.org/bot$BOT_TOKEN/sendMessage
+              fi
             fi
             
             if [ -z "$BOT_TOKEN" ]; then

@@ -71,9 +71,11 @@ async function run() {
 
       let availablePhotos = landscapePhotos.filter(p => !history.includes(p.id));
       if (availablePhotos.length === 0) {
-        console.log('All landscape photos in this batch have been used. Resetting history.');
-        history = [];
-        availablePhotos = landscapePhotos;
+        console.log('All landscape photos in this batch have been used. Selecting the least recently used one.');
+        landscapePhotos.sort((a, b) => history.indexOf(a.id) - history.indexOf(b.id));
+        const selectedPhoto = landscapePhotos[0];
+        history = history.filter(id => id !== selectedPhoto.id);
+        availablePhotos = [selectedPhoto];
       }
 
       const selectedPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
@@ -110,12 +112,12 @@ async function run() {
       fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
     } else {
       console.log('Skipping Desktop Wallpaper update. Preserving existing.');
-      outputData.id = existingToday.id || "";
-      outputData.url = ""; // Blank URL signals Telegram step to skip desktop message
-      outputData.url_full = existingToday.url_full || "";
-      outputData.author = existingToday.author || { name: "", username: "", link: "" };
-      outputData.link = existingToday.link || "";
-      outputData.updatedAt = existingToday.updatedAt || new Date().toISOString();
+      outputData.id = existingToday?.id || "";
+      outputData.url = existingToday?.url || "";
+      outputData.url_full = existingToday?.url_full || "";
+      outputData.author = existingToday?.author || { name: "", username: "", link: "" };
+      outputData.link = existingToday?.link || "";
+      outputData.updatedAt = existingToday?.updatedAt || new Date().toISOString();
     }
 
     // ---- Mobile Portrait Wallpaper Selection ----
@@ -136,9 +138,11 @@ async function run() {
       let candidateMobilePhotos = portraitPhotos.length > 0 ? portraitPhotos : landscapePhotos;
       let availableMobilePhotos = candidateMobilePhotos.filter(p => !mobileHistory.includes(p.id));
       if (availableMobilePhotos.length === 0) {
-        console.log('All mobile photos in this batch have been used. Resetting mobile history.');
-        mobileHistory = [];
-        availableMobilePhotos = candidateMobilePhotos;
+        console.log('All mobile photos in this batch have been used. Selecting the least recently used one.');
+        candidateMobilePhotos.sort((a, b) => mobileHistory.indexOf(a.id) - mobileHistory.indexOf(b.id));
+        const selectedMobilePhoto = candidateMobilePhotos[0];
+        mobileHistory = mobileHistory.filter(id => id !== selectedMobilePhoto.id);
+        availableMobilePhotos = [selectedMobilePhoto];
       }
 
       const selectedMobilePhoto = availableMobilePhotos[Math.floor(Math.random() * availableMobilePhotos.length)];
@@ -178,12 +182,12 @@ async function run() {
     } else {
       console.log('Skipping Mobile Wallpaper update. Preserving existing.');
       outputData.mobile = {
-        id: existingToday.mobile?.id || "",
-        url: "", // Blank URL signals Telegram step to skip mobile message
-        url_full: existingToday.mobile?.url_full || "",
-        author: existingToday.mobile?.author || { name: "", username: "", link: "" },
-        link: existingToday.mobile?.link || "",
-        updatedAt: existingToday.mobile?.updatedAt || new Date().toISOString()
+        id: existingToday?.mobile?.id || "",
+        url: existingToday?.mobile?.url || "",
+        url_full: existingToday?.mobile?.url_full || "",
+        author: existingToday?.mobile?.author || { name: "", username: "", link: "" },
+        link: existingToday?.mobile?.link || "",
+        updatedAt: existingToday?.mobile?.updatedAt || new Date().toISOString()
       };
     }
 
