@@ -21,15 +21,50 @@ interface Activity {
 
 interface HomeClientProps {
   updatesSection: React.ReactNode;
+  wallpaperData?: any;
 }
 
-export default function HomeClient({ updatesSection }: HomeClientProps) {
+export default function HomeClient({ updatesSection, wallpaperData }: HomeClientProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [tick, setTick] = useState(0);
   const calendarRef = useRef<HTMLDivElement>(null);
+
+  const [bgUrl, setBgUrl] = useState("");
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  // Helper to get lower quality/size Unsplash URL for performance
+  const getOptimizedUrl = (url: string, width: number, quality: number) => {
+    if (!url) return "";
+    return url
+      .replace(/&w=\d+/, `&w=${width}`)
+      .replace(/&q=\d+/, `&q=${quality}`);
+  };
+
+  useEffect(() => {
+    if (!wallpaperData) return;
+
+    const isMobile = window.innerWidth < 768;
+    const rawUrl = isMobile
+      ? (wallpaperData.mobile?.url || wallpaperData.url)
+      : wallpaperData.url;
+
+    if (!rawUrl) return;
+
+    // Optimize background image size & quality for performance
+    const targetWidth = isMobile ? 640 : 1280;
+    const optimizedUrl = getOptimizedUrl(rawUrl, targetWidth, 70);
+
+    setBgUrl(optimizedUrl);
+
+    const img = new Image();
+    img.src = optimizedUrl;
+    img.onload = () => {
+      setBgLoaded(true);
+    };
+  }, [wallpaperData]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -202,6 +237,11 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
 
   return (
     <>
+      <div 
+        id="bg-image" 
+        className={bgLoaded ? "show-image" : ""} 
+        style={{ backgroundImage: bgUrl ? `url(${bgUrl})` : "none" }}
+      />
       <Navbar />
       <div className="container">
         <section id="intro">
@@ -480,6 +520,7 @@ export default function HomeClient({ updatesSection }: HomeClientProps) {
             </div>
           </div>
         </section>
+
 
         <section id="about-me">
           <div className="heading item">

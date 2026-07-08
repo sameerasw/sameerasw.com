@@ -16,7 +16,7 @@
     "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
     system-ui, sans-serif;
   --font-weight: 400;
-  --blur: 0.5em;
+  --blur: 5em;
   --contrast: 0;
   --radius-in: 15px;
   --radius-out: 20px;
@@ -409,3 +409,32 @@ section:not(#intro, #apps) {
 .github-calendar div::-webkit-scrollbar {
   display: none !important;
 }
+
+/* --- Daily Unsplash Wallpaper Background Cover & Previews --- */
+#bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 7s cubic-bezier(0.16, 1, 0.3, 1), transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.08);
+}
+
+#bg-image.show-image {
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  #bg-image.show-image {
+    opacity: 0.5;
+  }
+}
+
+
