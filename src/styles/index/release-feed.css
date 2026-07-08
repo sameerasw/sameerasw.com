@@ -80,14 +80,7 @@
 
 /* ---- Fade overlay at the end ---- */
 .release-feed-fade-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 15vw;
-  background: linear-gradient(to left, var(--background-color-primary), transparent);
-  z-index: 10; 
-  pointer-events: none;
+  display: none;
 }
 
 .release-card {
