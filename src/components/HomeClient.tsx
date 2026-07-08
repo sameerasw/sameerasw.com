@@ -671,74 +671,62 @@ export default function HomeClient({
             <div id="contact-form">
               <form name="contact" method="POST">
                 <input type="hidden" name="form-name" value="contact" />
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  required
-                  className="hover-state item"
-                />
-                <input
-                  type="email"
-                  name="_replyto"
-                  id="email"
-                  placeholder="Email"
-                  required
-                  className="hover-state item"
-                />
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  required
-                  className="hover-state item"
-                ></textarea>
-                <button
-                  type="submit"
-                  id="btn"
-                  className="hover-state item"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <span className="material-symbols-rounded">send</span>
-                  Send
-                </button>
-              </form>
-              <div className="contact-actions">
-                <div>
-                  <a
-                    href="/assets/resume.pdf"
-                    target="_blank"
-                    id="resume"
-                    aria-label="Download my resume"
+                <div id="highlights">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                    required
+                    className="highlight-item item"
+                  />
+                  <input
+                    type="email"
+                    name="_replyto"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    className="highlight-item item"
+                  />
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    required
+                    className="highlight-item item"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    id="btn"
+                    className="highlight-item item"
                   >
-                    <div
-                      className="button-view item"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      <span className="material-symbols-rounded">
-                        description
-                      </span>
-                      View My Resume
-                    </div>
-                  </a>
+                    <span className="material-symbols-rounded">send</span>
+                    Send
+                  </button>
                 </div>
-                <div id="email-btn" className="item button-view">
-                  <a href="mailto:mail@sameerasw.com" aria-label="Email me">
-                    <span className="material-symbols-rounded">email</span>
-                    <span className="caption">Business? Send an email</span>
-                  </a>
-                </div>
+              </form>
+              <div id="highlights" style={{ marginTop: "1em" }}>
+                <a
+                  href="/assets/resume.pdf"
+                  target="_blank"
+                  id="resume"
+                  aria-label="Download my resume"
+                  className="highlight-item item"
+                >
+                  <span className="material-symbols-rounded">
+                    description
+                  </span>
+                  <h3>View My Resume</h3>
+                </a>
+                <a 
+                  href="mailto:mail@sameerasw.com" 
+                  id="email-btn" 
+                  aria-label="Email me"
+                  className="highlight-item item"
+                >
+                  <span className="material-symbols-rounded">email</span>
+                  <h3>Business? Send an email</h3>
+                </a>
               </div>
             </div>
           </div>

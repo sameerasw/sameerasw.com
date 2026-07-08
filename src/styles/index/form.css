@@ -1,136 +1,61 @@
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    margin: 2em auto;
-    gap: 8px;
+#contact-form form {
+    margin: 0 auto;
     width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
 }
 
-form input,
-form textarea {
-    width: 100%;
-    padding: 1.2em 1.5em;
-    border: 0.1em solid var(--text-color);
-    background-color: var(--background-color-secondary);
-    color: var(--text-color);
-    border-radius: var(--radius-in);
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
+#contact-form input,
+#contact-form textarea {
     font-family: inherit;
     font-size: 1rem;
-}
-
-form input:focus,
-form textarea:focus {
+    color: var(--text-color);
     outline: none;
-    border-color: var(--primary-color);
-    background-color: var(--background-color-primary);
+    padding: 1.2em 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
 }
 
-@media screen and (min-width: 500px) {
-    form input:hover,
-    form textarea:hover {
-        border-color: var(--primary-color);
-    }
+#contact-form input:focus,
+#contact-form textarea:focus {
+    background-color: var(--primary-color) !important;
+    color: var(--background-color-primary) !important;
 }
 
-form textarea {
+#contact-form input:focus::placeholder,
+#contact-form textarea:focus::placeholder {
+    color: var(--background-color-primary);
+    opacity: 0.8;
+}
+
+#contact-form textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-form button#btn {
-    margin-top: 0.5em;
-    background-color: var(--primary-color);
-    color: var(--background-color-secondary);
-    border: 0.1em solid var(--primary-color);
-    font-weight: 600;
-    cursor: pointer !important;
-    width: 100%;
-    padding: 1.2em 1.5em;
-    border-radius: var(--radius-in);
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
+#contact-form button#btn {
     font-family: inherit;
     font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-}
-
-@media screen and (min-width: 500px) {
-    form button#btn:hover {
-        background-color: var(--background-color-secondary);
-        color: var(--primary-color);
-    }
-}
-
-/* Container for external action buttons to align with the form */
-.contact-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     width: 100%;
-    max-width: 600px;
-    margin: 1em auto 20em auto;
+    padding: 1.2em 1.5em;
+    border: none;
+    cursor: pointer;
 }
 
 #resume,
 #email-btn {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    box-sizing: border-box;
-    cursor: none !important;
-}
-
-#resume .button-view,
-#email-btn {
-    width: 100%;
     padding: 1.2em 1.5em;
-    border: 0.1em solid var(--text-color);
-    background-color: var(--background-color-secondary);
-    color: var(--text-color);
-    border-radius: var(--radius-in);
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 0; /* Override previous margins */
-    cursor: none !important;
-}
-
-#email-btn a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#email-btn a span {
-    margin: 0;
-}
-
-#email-btn a {
     gap: 8px;
-}
-
-#resume .button-view:hover,
-#email-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    background-color: var(--background-color-primary);
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #contact {
@@ -140,22 +65,28 @@ form button#btn {
 /* ── social banner buttons ──────────────────────────────── */
 .social-banners {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto 1.5em auto;
 }
 
 .social-banner-link {
     display: block;
-    width: 100%;
+    flex: 1;
     border-radius: var(--radius-in);
     overflow: hidden;
     text-decoration: none;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
                 box-shadow 0.3s ease,
                 opacity 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+    .social-banners {
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width: 500px) {
