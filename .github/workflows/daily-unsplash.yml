@@ -92,7 +92,7 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'sameerasw'
+          git config --global user.email 'mail@sameerasw.com'
           git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper" && git push)
