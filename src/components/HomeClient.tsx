@@ -37,6 +37,30 @@ export default function HomeClient({
 
   const [bgUrl, setBgUrl] = useState("");
   const [bgLoaded, setBgLoaded] = useState(false);
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormStatus("submitting");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      if (response.ok) {
+        setFormStatus("success");
+        form.reset();
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      setFormStatus("error");
+    }
+  };
 
   // Helper to get lower quality/size Unsplash URL for performance
   const getOptimizedUrl = (url: string, width: number, quality: number) => {
@@ -669,8 +693,19 @@ export default function HomeClient({
               contact me via email or any of my social media profiles.
             </p>
             <div id="contact-form">
-              <form name="contact" method="POST">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleFormSubmit}
+              >
                 <input type="hidden" name="form-name" value="contact" />
+                <p style={{ display: "none" }}>
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
                 <div id="highlights">
                   <input
                     type="text"
@@ -699,9 +734,12 @@ export default function HomeClient({
                     type="submit"
                     id="btn"
                     className="highlight-item item"
+                    disabled={formStatus === "submitting"}
                   >
-                    <span className="material-symbols-rounded">send</span>
-                    Send
+                    <span className="material-symbols-rounded">
+                      {formStatus === "submitting" ? "hourglass_empty" : formStatus === "success" ? "check" : formStatus === "error" ? "error" : "send"}
+                    </span>
+                    {formStatus === "submitting" ? "Sending..." : formStatus === "success" ? "Sent!" : formStatus === "error" ? "Failed, try again?" : "Send"}
                   </button>
                 </div>
               </form>
