@@ -32,53 +32,119 @@ async function run() {
   const shouldUpdateMobile = TARGET === 'both' || TARGET === 'mobile' || !existingToday;
 
   try {
-    console.log('Fetching photos from collection:', COLLECTION_ID);
-    const response = await fetch(`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?per_page=30`, {
+    console.log('Fetching collection details:', COLLECTION_ID);
+    const collectionResponse = await fetch(`https://api.unsplash.com/collections/${COLLECTION_ID}`, {
       headers: {
         'Authorization': `Client-ID ${ACCESS_KEY}`,
         'Accept-Version': 'v1'
       }
     });
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch photos: ${response.statusText}`);
+    if (!collectionResponse.ok) {
+      throw new Error(`Failed to fetch collection details: ${collectionResponse.statusText}`);
     }
 
-    const photos = await response.json();
-    if (!photos || photos.length === 0) {
-      throw new Error('No photos found in the collection.');
+    const collection = await collectionResponse.json();
+    const totalPhotos = collection.total_photos || 0;
+    console.log(`Collection has ${totalPhotos} total photo(s).`);
+
+    const perPage = 30;
+    const totalPages = Math.ceil(totalPhotos / perPage) || 1;
+
+    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+    // Shuffle pages to randomize search order and avoid hitting rate limits
+    for (let i = pages.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pages[i], pages[j]] = [pages[j], pages[i]];
+    }
+    console.log('Randomized page order for search:', pages);
+
+    let history = [];
+    if (fs.existsSync(HISTORY_FILE)) {
+      try {
+        history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+      } catch (e) {
+        console.warn('Failed to parse history file, starting fresh:', e);
+      }
+    }
+
+    let mobileHistory = [];
+    if (fs.existsSync(MOBILE_HISTORY_FILE)) {
+      try {
+        mobileHistory = JSON.parse(fs.readFileSync(MOBILE_HISTORY_FILE, 'utf8'));
+      } catch (e) {
+        console.warn('Failed to parse mobile history file, starting fresh:', e);
+      }
+    }
+
+    let selectedPhoto = null;
+    let selectedMobilePhoto = null;
+
+    let allFetchedLandscape = [];
+    let allFetchedMobileCandidates = [];
+
+    // Loop over the shuffled pages to find unused photos
+    for (const page of pages) {
+      const needDesktop = shouldUpdateDesktop && !selectedPhoto;
+      const needMobile = shouldUpdateMobile && !selectedMobilePhoto;
+      if (!needDesktop && !needMobile) {
+        break;
+      }
+
+      console.log(`Fetching page ${page}...`);
+      const response = await fetch(`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?per_page=${perPage}&page=${page}`, {
+        headers: {
+          'Authorization': `Client-ID ${ACCESS_KEY}`,
+          'Accept-Version': 'v1'
+        }
+      });
+
+      if (!response.ok) {
+        console.warn(`Failed to fetch page ${page}: ${response.statusText}`);
+        continue;
+      }
+
+      const photos = await response.json();
+      if (!photos || photos.length === 0) continue;
+
+      if (needDesktop) {
+        const landscapePhotos = photos.filter(p => p.width > p.height);
+        allFetchedLandscape.push(...landscapePhotos);
+        const availablePhotos = landscapePhotos.filter(p => !history.includes(p.id));
+        if (availablePhotos.length > 0) {
+          selectedPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
+          console.log(`Found unused desktop photo: ${selectedPhoto.id} on page ${page}`);
+        }
+      }
+
+      if (needMobile) {
+        const portraitPhotos = photos.filter(p => p.height >= p.width);
+        const landscapePhotos = photos.filter(p => p.width > p.height);
+        const candidateMobilePhotos = portraitPhotos.length > 0 ? portraitPhotos : landscapePhotos;
+        allFetchedMobileCandidates.push(...candidateMobilePhotos);
+        const availableMobilePhotos = candidateMobilePhotos.filter(p => !mobileHistory.includes(p.id));
+        if (availableMobilePhotos.length > 0) {
+          selectedMobilePhoto = availableMobilePhotos[Math.floor(Math.random() * availableMobilePhotos.length)];
+          console.log(`Found unused mobile photo: ${selectedMobilePhoto.id} on page ${page}`);
+        }
+      }
     }
 
     let outputData = {};
 
     // ---- Landscape Wallpaper Selection ----
     if (shouldUpdateDesktop) {
-      const landscapePhotos = photos.filter(p => p.width > p.height);
-      console.log(`Found ${landscapePhotos.length} landscape photo(s) out of ${photos.length} total.`);
-
-      if (landscapePhotos.length === 0) {
-        throw new Error('No landscape photos found in the current batch from this collection.');
-      }
-
-      let history = [];
-      if (fs.existsSync(HISTORY_FILE)) {
-        try {
-          history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
-        } catch (e) {
-          console.warn('Failed to parse history file, starting fresh:', e);
+      // If we didn't find any unused photo across all pages, fallback to least recently used
+      if (!selectedPhoto) {
+        if (allFetchedLandscape.length === 0) {
+          throw new Error('No landscape photos found in the collection.');
         }
-      }
-
-      let availablePhotos = landscapePhotos.filter(p => !history.includes(p.id));
-      if (availablePhotos.length === 0) {
-        console.log('All landscape photos in this batch have been used. Selecting the least recently used one.');
-        landscapePhotos.sort((a, b) => history.indexOf(a.id) - history.indexOf(b.id));
-        const selectedPhoto = landscapePhotos[0];
+        console.log('All landscape photos in collection have been used. Selecting the least recently used one.');
+        const uniqueLandscape = Array.from(new Map(allFetchedLandscape.map(p => [p.id, p])).values());
+        uniqueLandscape.sort((a, b) => history.indexOf(a.id) - history.indexOf(b.id));
+        selectedPhoto = uniqueLandscape[0];
         history = history.filter(id => id !== selectedPhoto.id);
-        availablePhotos = [selectedPhoto];
       }
-
-      const selectedPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
 
       if (selectedPhoto.links && selectedPhoto.links.download_location) {
         try {
@@ -122,30 +188,17 @@ async function run() {
 
     // ---- Mobile Portrait Wallpaper Selection ----
     if (shouldUpdateMobile) {
-      const portraitPhotos = photos.filter(p => p.height >= p.width);
-      const landscapePhotos = photos.filter(p => p.width > p.height);
-      console.log(`Found ${portraitPhotos.length} portrait/square photo(s) out of ${photos.length} total.`);
-
-      let mobileHistory = [];
-      if (fs.existsSync(MOBILE_HISTORY_FILE)) {
-        try {
-          mobileHistory = JSON.parse(fs.readFileSync(MOBILE_HISTORY_FILE, 'utf8'));
-        } catch (e) {
-          console.warn('Failed to parse mobile history file, starting fresh:', e);
+      // If we didn't find any unused photo across all pages, fallback to least recently used
+      if (!selectedMobilePhoto) {
+        if (allFetchedMobileCandidates.length === 0) {
+          throw new Error('No mobile candidate photos found in the collection.');
         }
-      }
-
-      let candidateMobilePhotos = portraitPhotos.length > 0 ? portraitPhotos : landscapePhotos;
-      let availableMobilePhotos = candidateMobilePhotos.filter(p => !mobileHistory.includes(p.id));
-      if (availableMobilePhotos.length === 0) {
-        console.log('All mobile photos in this batch have been used. Selecting the least recently used one.');
-        candidateMobilePhotos.sort((a, b) => mobileHistory.indexOf(a.id) - mobileHistory.indexOf(b.id));
-        const selectedMobilePhoto = candidateMobilePhotos[0];
+        console.log('All mobile photos in collection have been used. Selecting the least recently used one.');
+        const uniqueMobile = Array.from(new Map(allFetchedMobileCandidates.map(p => [p.id, p])).values());
+        uniqueMobile.sort((a, b) => mobileHistory.indexOf(a.id) - mobileHistory.indexOf(b.id));
+        selectedMobilePhoto = uniqueMobile[0];
         mobileHistory = mobileHistory.filter(id => id !== selectedMobilePhoto.id);
-        availableMobilePhotos = [selectedMobilePhoto];
       }
-
-      const selectedMobilePhoto = availableMobilePhotos[Math.floor(Math.random() * availableMobilePhotos.length)];
 
       if (selectedMobilePhoto.links && selectedMobilePhoto.links.download_location) {
         try {
