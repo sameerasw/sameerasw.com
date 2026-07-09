@@ -10,7 +10,9 @@ const PROJECTS = [
   { id: 'daily', repo: 'sameerasw/Daily' },
   { id: 'canvas', repo: 'sameerasw/Canvas' },
   { id: 'tasks', repo: 'sameerasw/tasks' },
-  { id: 'Browser', repo: 'sameerasw/Browser' }
+  { id: 'Browser', repo: 'sameerasw/Browser' },
+  { id: 'watchfaces', repo: 'sameerasw/watchfaces' },
+  { id: 'macro', repo: 'sameerasw/REDRAGON-FIZZ-K617-macro' }
 ];
 
 const PUBLIC_DIR = path.join(__dirname, '../../public');

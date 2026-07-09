@@ -447,7 +447,7 @@ export default function HomeClient({
                     Transparent minimal Zen Browser setup for a distraction free
                     browsing experience
                   </p>
-                  {renderProjectStats("zeninternet")}
+                  {renderProjectStats("my-internet")}
                 </div>
               </a>
               {/* <a
@@ -583,6 +583,7 @@ export default function HomeClient({
                       <p className="highlight-description">
                         Custom watchfaces for WearOS
                       </p>
+                      {renderProjectStats("watchfaces")}
                     </div>
                   </a>
                   <a
@@ -613,6 +614,7 @@ export default function HomeClient({
                         Custom keyboard macros and remapping for my REDRAGON
                         FIZZ K617
                       </p>
+                      {renderProjectStats("macro")}
                     </div>
                   </a>
                   <a
