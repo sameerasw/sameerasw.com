@@ -10,13 +10,13 @@
   --text-color: light-dark(#000000, #ffffff);
   --background-color-primary: light-dark(#ffffff, #000000);
   --background-color-secondary: light-dark(#dbdbdb, #303030);
-  --background-color-tr: light-dark(#ddddddbb, #55555588);
+  --background-color-tr: light-dark(#ddddddbb, #33333388);
   --font-size: 16px;
   --font-family:
     "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
     system-ui, sans-serif;
   --font-weight: 400;
-  --blur: 5em;
+  --blur: 2em;
   --contrast: 0;
   --radius-in: 15px;
   --radius-out: 20px;
