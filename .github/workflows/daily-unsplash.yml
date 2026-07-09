@@ -36,6 +36,11 @@ jobs:
           TARGET: ${{ inputs.target || 'both' }}
         run: node .github/scripts/daily-unsplash.js
 
+      - name: Update Project Details
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/update-project-details.js
+
       - name: Send Telegram Notification
         if: success()
         env:
@@ -94,5 +99,5 @@ jobs:
         run: |
           git config --global user.name 'sameerasw'
           git config --global user.email 'mail@sameerasw.com'
-          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper" && git push)
+          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper and project details" && git push)

@@ -38,6 +38,71 @@ export default function HomeClient({
   const [bgUrl, setBgUrl] = useState("");
   const [bgLoaded, setBgLoaded] = useState(false);
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [projectDetails, setProjectDetails] = useState<Record<string, { stars: number; downloads: number; latestReleaseAt: string }> | null>(null);
+
+  useEffect(() => {
+    fetch("/project-details.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data) setProjectDetails(data);
+      })
+      .catch(() => {});
+  }, []);
+
+  const formatCount = (count: number) => {
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k`;
+    }
+    return count.toString();
+  };
+
+  const timeAgo = (dateStr: string) => {
+    if (!dateStr) return "";
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMins / 60);
+    const diffDays = Math.floor(diffHours / 24);
+    const diffMonths = Math.floor(diffDays / 30);
+    const diffYears = Math.floor(diffDays / 365);
+
+    if (diffMins < 1) return "now";
+    if (diffMins < 60) return `${diffMins}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffDays < 30) return `${diffDays}d ago`;
+    if (diffMonths < 12) return `${diffMonths}mo ago`;
+    return `${diffYears}y ago`;
+  };
+
+  const renderProjectStats = (key: string) => {
+    if (!projectDetails || !projectDetails[key]) return null;
+    const detail = projectDetails[key];
+    if (detail.stars === 0 && detail.downloads === 0 && !detail.latestReleaseAt) return null;
+
+    return (
+      <div className="highlight-stats">
+        {detail.stars > 0 && (
+          <span className="highlight-stat-badge" title={`${detail.stars} stars`}>
+            <span className="material-symbols-rounded">star</span>
+            <span>{formatCount(detail.stars)}</span>
+          </span>
+        )}
+        {detail.downloads > 0 && (
+          <span className="highlight-stat-badge" title={`${detail.downloads} downloads`}>
+            <span className="material-symbols-rounded">download</span>
+            <span>{formatCount(detail.downloads)}</span>
+          </span>
+        )}
+        {detail.latestReleaseAt && (
+          <span className="highlight-stat-badge" title={`Last release: ${new Date(detail.latestReleaseAt).toLocaleString()}`}>
+            <span className="material-symbols-rounded">schedule</span>
+            <span>{timeAgo(detail.latestReleaseAt)}</span>
+          </span>
+        )}
+      </div>
+    );
+  };
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -350,6 +415,7 @@ export default function HomeClient({
                     clipboard, media, mirroring and more, all over your secure
                     network
                   </p>
+                  {renderProjectStats("airsync-mac")}
                 </div>
               </a>
               <a
@@ -365,6 +431,7 @@ export default function HomeClient({
                     Tools for Android nerds. Customize your Android experience
                     with visual, functional and utility tools
                   </p>
+                  {renderProjectStats("essentials")}
                 </div>
               </a>
               <a
@@ -380,6 +447,7 @@ export default function HomeClient({
                     Transparent minimal Zen Browser setup for a distraction free
                     browsing experience
                   </p>
+                  {renderProjectStats("zeninternet")}
                 </div>
               </a>
               {/* <a
@@ -421,6 +489,7 @@ export default function HomeClient({
                     Draw on Android with a minimal free and open source Jetpack
                     Compose app
                   </p>
+                  {renderProjectStats("canvas")}
                 </div>
               </a>
               <a
@@ -435,6 +504,7 @@ export default function HomeClient({
                   <p className="highlight-description">
                     Google tasks for macOS unofficial native app with SwiftUI
                   </p>
+                  {renderProjectStats("tasks")}
                 </div>
               </a>
               <a
@@ -483,6 +553,7 @@ export default function HomeClient({
                       <p className="highlight-description">
                         Minimal liquid glass browser with SwiftUI
                       </p>
+                      {renderProjectStats("Browser")}
                     </div>
                   </a>
                   <a
@@ -511,6 +582,7 @@ export default function HomeClient({
                       <p className="highlight-description">
                         Custom folder icons for Windows and macOS
                       </p>
+                      {renderProjectStats("folder-icons")}
                     </div>
                   </a>
                   <a

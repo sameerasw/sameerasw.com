@@ -188,3 +188,50 @@
 .highlight-toggle-icon.rotated {
   transform: rotate(180deg);
 }
+
+/* Project details stats badges */
+.highlight-stats {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+  background-color: var(--background-color-primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.highlight-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.highlight-stat-badge .material-symbols-rounded {
+  font-size: 0.95rem !important;
+  color: var(--primary-color);
+}
+
+.highlight-item:hover .highlight-stats {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.highlight-item:hover .highlight-stat-badge {
+  color: var(--background-color-primary);
+  opacity: 0.95;
+}
+
+.highlight-item:hover .highlight-stat-badge .material-symbols-rounded {
+  color: var(--background-color-primary) !important;
+}
+
+
+
+
+

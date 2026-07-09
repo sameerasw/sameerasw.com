@@ -33,6 +33,31 @@ export default function ReleaseFeed({
   const router = useRouter();
   const pathname = usePathname();
 
+  const [projectDetails, setProjectDetails] = useState<Record<string, { stars: number; downloads: number }> | null>(null);
+
+  useEffect(() => {
+    fetch("/project-details.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data) setProjectDetails(data);
+      })
+      .catch(() => {});
+  }, []);
+
+  const formatCount = (count: number) => {
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k`;
+    }
+    return count.toString();
+  };
+
+  const APP_TO_PROJECT_KEY: Record<string, string> = {
+    airsync: "airsync-mac",
+    essentials: "essentials",
+    canvas: "canvas",
+    tasks: "tasks",
+  };
+
   const filteredNotes =
     filter === "all" ? notes : notes.filter((n) => n.app === filter);
 
@@ -231,6 +256,27 @@ export default function ReleaseFeed({
                   )
                 )}
                 <span className="release-modal-app">{selectedNote.app}</span>
+                {(() => {
+                  const projKey = APP_TO_PROJECT_KEY[selectedNote.app];
+                  const detail = projectDetails?.[projKey];
+                  if (!detail) return null;
+                  return (
+                    <div className="release-modal-stats" style={{ display: 'flex', gap: '8px', marginLeft: '12px', alignItems: 'center' }}>
+                      {detail.stars > 0 && (
+                        <span className="release-modal-stat-badge" title={`${detail.stars} stars`} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.8rem', opacity: 0.7 }}>
+                          <span className="material-symbols-rounded" style={{ fontSize: '0.9rem', color: 'var(--primary-color)' }}>star</span>
+                          <span>{formatCount(detail.stars)}</span>
+                        </span>
+                      )}
+                      {detail.downloads > 0 && (
+                        <span className="release-modal-stat-badge" title={`${detail.downloads} downloads`} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.8rem', opacity: 0.7 }}>
+                          <span className="material-symbols-rounded" style={{ fontSize: '0.9rem', color: 'var(--primary-color)' }}>download</span>
+                          <span>{formatCount(detail.downloads)}</span>
+                        </span>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
               <button className="release-modal-close" onClick={closeNote}>
                 <span className="material-symbols-rounded">close</span>
