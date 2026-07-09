@@ -29,6 +29,11 @@ export default function ReleaseFeed({
   const [modalOrigin, setModalOrigin] = useState<{ x: string, y: string } | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
   
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -179,7 +184,7 @@ export default function ReleaseFeed({
 
   return (
     <>
-      <div className="release-feed-wrapper">
+      <div className={`release-feed-wrapper ${isLoaded ? "page-loaded" : ""}`}>
         <div className="release-nav-btns">
           <button 
             className="release-nav-btn prev" 

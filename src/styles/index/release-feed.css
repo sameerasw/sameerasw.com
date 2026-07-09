@@ -25,6 +25,14 @@
   padding: 40px calc(50vw - 140px); 
   box-sizing: border-box;
   width: 100%;
+  opacity: 0;
+  transform: translate3d(100vw, 0, 0);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.release-feed-wrapper.page-loaded .release-feed-scroll {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .release-feed-scroll::-webkit-scrollbar {

@@ -21,7 +21,7 @@ export default async function Home() {
   }
 
   const updatesSection = (
-    <section id="updates" className="item">
+    <section id="updates">
       <div className="heading item">
         <h2>Updates</h2>
       </div>
