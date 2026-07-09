@@ -93,6 +93,7 @@
 #helium .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/helium.png"); }
 #edc .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/edc.png"); }
 #macos .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/mac.png"); }
+#daily .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/daily.png"); }
 #canvas .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/canvas.png"); }
 #tasks .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/tasks.png"); }
 #zero .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/zero.png"); }

@@ -477,6 +477,21 @@ export default function HomeClient({
                 </div>
               </a>
               <a
+                id="daily"
+                className="highlight-item item"
+                href="https://github.com/sameerasw/Daily"
+                data-title="/assets/img/articles/daily-preview.jpeg"
+              >
+                <div className="highlight-thumbnail"></div>
+                <div className="highlight-content">
+                  <h3>Daily</h3>
+                  <p className="highlight-description">
+                    Daily curated hand picked unsplash wallapers for your mac
+                  </p>
+                  {renderProjectStats("daily")}
+                </div>
+              </a>
+              <a
                 id="canvas"
                 className="highlight-item item"
                 href="https://github.com/sameerasw/Canvas"
@@ -507,26 +522,26 @@ export default function HomeClient({
                   {renderProjectStats("tasks")}
                 </div>
               </a>
-              <a
-                id="pixel"
-                className="highlight-item item"
-                href="/pixel"
-                data-title="/assets/img/articles/pixel/web-preview-pixel.jpeg"
-              >
-                <div className="highlight-thumbnail"></div>
-                <div className="highlight-content">
-                  <h3>Pixel Notes</h3>
-                  <p className="highlight-description">
-                    Guide on setting up voLTE in unsupported regions
-                  </p>
-                </div>
-              </a>
 
               {/* ── collapsible extras ── */}
               <div
                 className={`highlight-extras ${showAllProjects ? "expanded" : ""}`}
               >
                 <div className="highlight-extras-inner">
+                  <a
+                    id="pixel"
+                    className="highlight-item"
+                    href="/pixel"
+                    data-title="/assets/img/articles/pixel/web-preview-pixel.jpeg"
+                  >
+                    <div className="highlight-thumbnail"></div>
+                    <div className="highlight-content">
+                      <h3>Pixel Notes</h3>
+                      <p className="highlight-description">
+                        Guide on setting up voLTE in unsupported regions
+                      </p>
+                    </div>
+                  </a>
                   <a
                     id="edc"
                     className="highlight-item"
@@ -775,7 +790,8 @@ export default function HomeClient({
                 <input type="hidden" name="form-name" value="contact" />
                 <p style={{ display: "none" }}>
                   <label>
-                    Don’t fill this out if you’re human: <input name="bot-field" />
+                    Don’t fill this out if you’re human:{" "}
+                    <input name="bot-field" />
                   </label>
                 </p>
                 <div id="highlights">
@@ -809,9 +825,21 @@ export default function HomeClient({
                     disabled={formStatus === "submitting"}
                   >
                     <span className="material-symbols-rounded">
-                      {formStatus === "submitting" ? "hourglass_empty" : formStatus === "success" ? "check" : formStatus === "error" ? "error" : "send"}
+                      {formStatus === "submitting"
+                        ? "hourglass_empty"
+                        : formStatus === "success"
+                          ? "check"
+                          : formStatus === "error"
+                            ? "error"
+                            : "send"}
                     </span>
-                    {formStatus === "submitting" ? "Sending..." : formStatus === "success" ? "Sent!" : formStatus === "error" ? "Failed, try again?" : "Send"}
+                    {formStatus === "submitting"
+                      ? "Sending..."
+                      : formStatus === "success"
+                        ? "Sent!"
+                        : formStatus === "error"
+                          ? "Failed, try again?"
+                          : "Send"}
                   </button>
                 </div>
               </form>
@@ -823,14 +851,12 @@ export default function HomeClient({
                   aria-label="Download my resume"
                   className="highlight-item item"
                 >
-                  <span className="material-symbols-rounded">
-                    description
-                  </span>
+                  <span className="material-symbols-rounded">description</span>
                   <h3>View My Resume</h3>
                 </a>
-                <a 
-                  href="mailto:mail@sameerasw.com" 
-                  id="email-btn" 
+                <a
+                  href="mailto:mail@sameerasw.com"
+                  id="email-btn"
                   aria-label="Email me"
                   className="highlight-item item"
                 >

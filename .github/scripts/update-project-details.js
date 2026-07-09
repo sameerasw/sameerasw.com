@@ -7,6 +7,7 @@ const PROJECTS = [
   { id: 'my-internet', repo: 'sameerasw/my-internet' },
   { id: 'folder-icons', repo: 'sameerasw/folder-icons' },
   { id: 'zeninternet', repo: 'sameerasw/zeninternet' },
+  { id: 'daily', repo: 'sameerasw/Daily' },
   { id: 'canvas', repo: 'sameerasw/Canvas' },
   { id: 'tasks', repo: 'sameerasw/tasks' },
   { id: 'Browser', repo: 'sameerasw/Browser' }
