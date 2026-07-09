@@ -36,34 +36,39 @@ export default function LastFmWidget() {
   }, []);
 
   return (
-        <a
-          href="https://www.last.fm/user/s4m33r4"
-          target="_blank"
-          id="music"
-          rel="noreferrer"
-          data-title="Visit last.fm"
-        >
-    <div id="last" className={track ? "show" : ""}>
-      <div id="music-holder" className="item">
-          <img id="artwork" src={track?.artwork || "null"} alt="artwork" />
-        <div id="track">
-          {track && (
-            <>
-              <p>
-                <strong>{track.name}</strong>
-              </p>
-              <p>{track.artist}</p>
-              <p>{track.album}</p>
-            </>
+    <a
+      href="https://www.last.fm/user/s4m33r4"
+      target="_blank"
+      id="music"
+      rel="noreferrer"
+      data-title="Visit last.fm"
+      className="item"
+    >
+      <div id="last" className="show">
+        <div id="music-holder">
+          {track ? (
+            <img id="artwork" src={track.artwork} alt="artwork" className="loaded" />
+          ) : (
+            <div id="artwork" className="loading" />
           )}
-        </div>
-        <div id="playback-bars">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+          <div id="track" className={track ? "loaded" : "loading"}>
+            {track && (
+              <>
+                <p>
+                  <strong>{track.name}</strong>
+                </p>
+                <p>{track.artist}</p>
+                <p>{track.album}</p>
+              </>
+            )}
+          </div>
+          <div id="playback-bars" className={track ? "loaded" : "loading"}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
         </div>
       </div>
-    </div>
-        </a>
+    </a>
   );
 }

@@ -74,13 +74,25 @@ export async function GET() {
       headers["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
     }
 
-    const [userRes, reposRes] = await Promise.all([
-      fetch("https://api.github.com/users/sameerasw", { headers }),
+    let [userRes, reposRes] = await Promise.all([
+      fetch("https://api.github.com/users/sameerasw", { headers, next: { revalidate: 3600 } }),
       fetch(
         "https://api.github.com/users/sameerasw/repos?per_page=100&type=owner",
-        { headers }
+        { headers, next: { revalidate: 3600 } }
       ),
     ]);
+
+    if ((userRes.status === 401 || userRes.status === 403 || reposRes.status === 401 || reposRes.status === 403) && headers["Authorization"]) {
+      const publicHeaders = { ...headers };
+      delete publicHeaders["Authorization"];
+      [userRes, reposRes] = await Promise.all([
+        fetch("https://api.github.com/users/sameerasw", { headers: publicHeaders, next: { revalidate: 3600 } }),
+        fetch(
+          "https://api.github.com/users/sameerasw/repos?per_page=100&type=owner",
+          { headers: publicHeaders, next: { revalidate: 3600 } }
+        ),
+      ]);
+    }
 
     if (!userRes.ok || !reposRes.ok) {
       return NextResponse.json({ error: "GitHub API error" }, { status: 502 });

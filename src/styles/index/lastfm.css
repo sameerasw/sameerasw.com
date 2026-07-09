@@ -36,6 +36,11 @@
     gap: 2px;
     height: 30px;
     margin: 0 30px;
+    transition: margin 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &.loading {
+      margin: 0 15px;
+    }
 
     .bar {
       width: 3px;
@@ -65,13 +70,28 @@
     visibility: visible;
   }
 
-  img,
-  a {
+  img#artwork {
     height: 80px;
     width: 80px;
     border-radius: 12px;
     margin-right: 10px;
     object-fit: cover;
+    opacity: 1;
+    transition: width 0.5s ease, opacity 0.5s ease, margin-right 0.5s ease;
+
+    &.loading {
+      width: 0;
+      opacity: 0;
+      margin-right: 0;
+    }
+  }
+
+  div#artwork.loading {
+    width: 0;
+    height: 80px;
+    opacity: 0;
+    margin-right: 0;
+    transition: width 0.5s ease, opacity 0.5s ease, margin-right 0.5s ease;
   }
 
   #track {
@@ -79,6 +99,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 300px;
+    opacity: 1;
+    transition: max-width 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &.loading {
+      max-width: 0;
+      opacity: 0;
+    }
+
     strong {
       color: var(--primary-color);
     }
