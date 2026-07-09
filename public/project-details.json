@@ -3,10 +3,10 @@
     "id": "essentials",
     "repo": "sameerasw/essentials",
     "stars": 2183,
-    "downloads": 281677,
+    "downloads": 281738,
     "latestVersion": "v15.7",
     "latestReleaseAt": "2026-07-07T15:03:23Z",
-    "updatedAt": "2026-07-09T05:15:53.616Z"
+    "updatedAt": "2026-07-09T06:12:07.716Z"
   },
   "airsync-mac": {
     "id": "airsync-mac",
@@ -15,7 +15,7 @@
     "downloads": 12354,
     "latestVersion": "v3.2.0",
     "latestReleaseAt": "2026-05-09T13:53:01Z",
-    "updatedAt": "2026-07-09T05:15:54.717Z"
+    "updatedAt": "2026-07-09T06:12:08.570Z"
   },
   "my-internet": {
     "id": "my-internet",
@@ -24,7 +24,7 @@
     "downloads": 0,
     "latestVersion": "pre-release-07a1ecb932cefb23e49dc4959a55fbe15e7b038f",
     "latestReleaseAt": "2025-07-05T09:47:48Z",
-    "updatedAt": "2026-07-09T05:15:55.733Z"
+    "updatedAt": "2026-07-09T06:12:09.339Z"
   },
   "folder-icons": {
     "id": "folder-icons",
@@ -33,7 +33,7 @@
     "downloads": 19936,
     "latestVersion": "v3.1",
     "latestReleaseAt": "2023-09-10T08:57:26Z",
-    "updatedAt": "2026-07-09T05:15:56.864Z"
+    "updatedAt": "2026-07-09T06:12:10.100Z"
   },
   "zeninternet": {
     "id": "zeninternet",
@@ -42,7 +42,7 @@
     "downloads": 0,
     "latestVersion": "2.2.0",
     "latestReleaseAt": "2025-05-08T20:29:25Z",
-    "updatedAt": "2026-07-09T05:15:57.780Z"
+    "updatedAt": "2026-07-09T06:12:10.778Z"
   },
   "canvas": {
     "id": "canvas",
@@ -51,7 +51,7 @@
     "downloads": 760,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-02-10T03:29:13Z",
-    "updatedAt": "2026-07-09T05:15:58.824Z"
+    "updatedAt": "2026-07-09T06:12:11.448Z"
   },
   "tasks": {
     "id": "tasks",
@@ -60,7 +60,7 @@
     "downloads": 164,
     "latestVersion": "v3.0.0",
     "latestReleaseAt": "2026-03-10T05:55:56Z",
-    "updatedAt": "2026-07-09T05:15:59.784Z"
+    "updatedAt": "2026-07-09T06:12:12.082Z"
   },
   "Browser": {
     "id": "Browser",
@@ -69,6 +69,6 @@
     "downloads": 403,
     "latestVersion": "v1.0.0-BETA-02",
     "latestReleaseAt": "2025-10-09T17:41:27Z",
-    "updatedAt": "2026-07-09T05:16:00.846Z"
+    "updatedAt": "2026-07-09T06:12:12.789Z"
   }
 }

@@ -1,7 +1,7 @@
 # sameerasw.com
 My portfolio website source code
 
-<img width="3420" height="2224" alt="CleanShot-Helium-Sameera Wijerathna-20260413-6  50 17@2x" src="https://github.com/user-attachments/assets/b29f119e-d718-4aa5-abff-fec2d69400b1" />
+<img width="1280" height="720" alt="CleanShot-Helium-Sameera Wijerathna-20260709-9  20 35@2x Large" src="https://github.com/user-attachments/assets/44339a5e-5e0c-44c6-baf8-f884b9014f60" />
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
