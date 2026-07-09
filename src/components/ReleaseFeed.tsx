@@ -16,6 +16,7 @@ const LOGO_MAP: Record<string, string> = {
   essentials: "/assets/img/project-logos/essentials-logo.svg",
   tasks: "/assets/img/project-logos/tasks-logo.svg.png",
   blog: "/assets/img/notion.png",
+  daily: "/assets/img/project-logos/daily-logo.png",
 };
 
 export default function ReleaseFeed({ 
@@ -56,6 +57,7 @@ export default function ReleaseFeed({
     essentials: "essentials",
     canvas: "canvas",
     tasks: "tasks",
+    daily: "daily",
   };
 
   const filteredNotes =
@@ -208,6 +210,8 @@ export default function ReleaseFeed({
                 {LOGO_MAP[note.app] && (
                   note.app === "essentials" ? (
                     <div className="release-card-logo essentials-mask" />
+                  ) : note.app === "daily" ? (
+                    <div className="release-card-logo daily-mask" />
                   ) : (
                     <img 
                       src={LOGO_MAP[note.app]} 
@@ -246,6 +250,8 @@ export default function ReleaseFeed({
                 {LOGO_MAP[selectedNote.app] && (
                   selectedNote.app === "essentials" ? (
                     <div className="release-modal-logo essentials-mask" />
+                  ) : selectedNote.app === "daily" ? (
+                    <div className="release-modal-logo daily-mask" />
                   ) : (
                     <img 
                       src={LOGO_MAP[selectedNote.app]} 

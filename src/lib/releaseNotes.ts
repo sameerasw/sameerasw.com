@@ -8,7 +8,7 @@ import rehypeStringify from "rehype-stringify";
 
 const notesDirectory = path.join(process.cwd(), "content/release-notes");
 
-export type AppTag = "airsync" | "essentials" | "canvas" | "tasks" | "blog";
+export type AppTag = "airsync" | "essentials" | "canvas" | "tasks" | "blog" | "daily";
 
 export interface ReleaseNote {
   slug: string;
