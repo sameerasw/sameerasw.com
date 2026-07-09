@@ -414,6 +414,12 @@ section:not(#intro, #apps) {
   display: none !important;
 }
 
+.github-calendar svg rect[data-level="0"] {
+  fill: transparent !important;
+  stroke: var(--background-color-secondary) !important;
+  stroke-width: 1px;
+}
+
 /* --- Daily Unsplash Wallpaper Background Cover & Previews --- */
 #bg-image {
   position: fixed;
