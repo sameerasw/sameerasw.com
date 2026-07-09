@@ -6,7 +6,7 @@ export default function StickyLoveTab() {
         target="_blank"
         aria-label="Buy me a coffee"
       >
-        <span className="love-icon">❤️</span>
+        <span className="love-icon material-symbols-rounded">favorite</span>
         <span className="love-text">Show some love</span>
       </a>
     </div>
