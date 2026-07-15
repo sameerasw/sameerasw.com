@@ -1,28 +1,28 @@
 {
-  "id": "c659bBmJpw0",
-  "url": "https://images.unsplash.com/photo-1770027218173-45e512200cd0?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTY5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MDA0OTg3fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1770027218173-45e512200cd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTY5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MDA0OTg3fA&ixlib=rb-4.1.0&q=85",
+  "id": "oJt02fpQeeg",
+  "url": "https://images.unsplash.com/photo-1714548474550-d533620651c7?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIxN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDA5MTQxM3w&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1714548474550-d533620651c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIxN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDA5MTQxM3w&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Evgeni Tcherkasski",
-    "username": "evgenit",
-    "link": "https://unsplash.com/@evgenit?utm_source=Glance&utm_medium=referral"
+    "name": "Milad Fakurian",
+    "username": "fakurian",
+    "link": "https://unsplash.com/@fakurian?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/autumn-trees-arching-over-a-tranquil-canal-reflecting-colors-c659bBmJpw0?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-14T04:56:27.316Z",
+  "link": "https://unsplash.com/photos/a-black-and-gold-object-with-a-black-background-oJt02fpQeeg?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-15T04:56:53.694Z",
   "themeColors": {
-    "light": "hsl(20, 60%, 30%)",
-    "dark": "hsl(20, 70%, 60%)"
+    "light": "hsl(0, 60%, 25%)",
+    "dark": "hsl(0, 70%, 60%)"
   },
   "mobile": {
-    "id": "uDrWDhyOhow",
-    "url": "https://images.unsplash.com/photo-1776320644111-f72194d35eb8?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTc5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MDA0OTg3fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1776320644111-f72194d35eb8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTc5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MDA0OTg3fA&ixlib=rb-4.1.0&q=85",
+    "id": "zej4HPQLR5o",
+    "url": "https://images.unsplash.com/photo-1531012451721-432c0ae74527?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIyOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDA5MTQxM3w&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1531012451721-432c0ae74527?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIyOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDA5MTQxM3w&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Julian Rösner",
-      "username": "kipfarl",
-      "link": "https://unsplash.com/@kipfarl?utm_source=Glance&utm_medium=referral"
+      "name": "Grace Ho",
+      "username": "bygraceho",
+      "link": "https://unsplash.com/@bygraceho?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/abstract-flowing-lines-of-orange-and-yellow-light-uDrWDhyOhow?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-14T04:56:27.478Z"
+    "link": "https://unsplash.com/photos/people-riding-on-yoyo-ride-at-daytime-zej4HPQLR5o?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-15T04:56:53.765Z"
   }
 }
