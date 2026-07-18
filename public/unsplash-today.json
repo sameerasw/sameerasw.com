@@ -1,28 +1,28 @@
 {
-  "id": "qH36EgNjPJY",
-  "url": "https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjQ5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MjY1NTQ3fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjQ5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MjY1NTQ3fA&ixlib=rb-4.1.0&q=85",
+  "id": "OXW6cRrO0X8",
+  "url": "https://images.unsplash.com/photo-1775217945525-08e13b1db20a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTk5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MzUwNDM3fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1775217945525-08e13b1db20a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTk5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MzUwNDM3fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Alex Siale",
-    "username": "alexsiale",
-    "link": "https://unsplash.com/@alexsiale?utm_source=Glance&utm_medium=referral"
+    "name": "Universtock",
+    "username": "universtock",
+    "link": "https://unsplash.com/@universtock?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/aerial-photography-of-mountain-ridge-qH36EgNjPJY?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-17T05:19:07.944Z",
+  "link": "https://unsplash.com/photos/abstract-orange-vertical-lines-with-soft-light-effect-OXW6cRrO0X8?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-18T04:53:57.869Z",
   "themeColors": {
-    "light": "hsl(220, 76%, 25%)",
-    "dark": "hsl(220, 76%, 60%)"
+    "light": "hsl(0, 60%, 25%)",
+    "dark": "hsl(0, 70%, 60%)"
   },
   "mobile": {
-    "id": "ndtVFSIu68I",
-    "url": "https://images.unsplash.com/photo-1659225260593-f082454ca503?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjMxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MjY1NTQ3fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1659225260593-f082454ca503?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjMxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MjY1NTQ3fA&ixlib=rb-4.1.0&q=85",
+    "id": "TLGXJyX31jM",
+    "url": "https://images.unsplash.com/photo-1654285974359-15fc926f1460?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MzUwNDM3fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1654285974359-15fc926f1460?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0MzUwNDM3fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Cash Macanaya",
-      "username": "cashmacanaya",
-      "link": "https://unsplash.com/@cashmacanaya?utm_source=Glance&utm_medium=referral"
+      "name": "Geronimo Giqueaux",
+      "username": "ggiqueaux",
+      "link": "https://unsplash.com/@ggiqueaux?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-person-holding-an-umbrella-ndtVFSIu68I?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-17T05:19:07.984Z"
+    "link": "https://unsplash.com/photos/a-blurry-image-of-red-and-white-lines-TLGXJyX31jM?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-18T04:53:58.009Z"
   }
 }
