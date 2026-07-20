@@ -57,6 +57,11 @@ link: "https://github.com/sameerasw/essentials/releases/tag/v16.0"
 
 ---
 
+### Also a little bug fix for the wearOS app
+https://github.com/sameerasw/essentials-wear/releases/tag/v4.0
+
+---
+
 ### [Essentials got featured as the best Shizuku app by HowToMen <3](https://youtu.be/mDQ8o4JlXjM?si=kZsIxv37m7K1Gij2&t=780)
 <a href="https://youtu.be/mDQ8o4JlXjM?si=kZsIxv37m7K1Gij2&t=780"><img width="300" alt="CleanShot-Helium-(1) HowToMen - YouTube-20260720-8  33 41@2x" src="https://github.com/user-attachments/assets/cac074da-8b15-44d3-a66c-3ac67316606d" /></a>
 
