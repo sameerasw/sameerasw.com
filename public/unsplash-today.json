@@ -1,28 +1,28 @@
 {
-  "id": "DawmsiVr188",
-  "url": "https://images.unsplash.com/photo-1738193026574-cfbcccbeb052?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODA1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NTI3MTE4fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1738193026574-cfbcccbeb052?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODA1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NTI3MTE4fA&ixlib=rb-4.1.0&q=85",
+  "id": "38X6D2vFYnE",
+  "url": "https://images.unsplash.com/photo-1741515277598-64b4da5d212a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTc0fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NjExNTk4fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1741515277598-64b4da5d212a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTc0fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NjExNTk4fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Tilak Baloni",
-    "username": "tilakbaloni",
-    "link": "https://unsplash.com/@tilakbaloni?utm_source=Glance&utm_medium=referral"
+    "name": "Jon Geng",
+    "username": "jongeng",
+    "link": "https://unsplash.com/@jongeng?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-person-standing-in-the-middle-of-a-foggy-field-DawmsiVr188?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-20T05:58:38.338Z",
+  "link": "https://unsplash.com/photos/aerial-view-of-a-house-surrounded-by-pink-trees-38X6D2vFYnE?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-21T05:26:38.409Z",
   "themeColors": {
-    "light": "hsl(20, 76%, 38%)",
-    "dark": "hsl(20, 76%, 75%)"
+    "light": "hsl(108, 60%, 38%)",
+    "dark": "hsl(108, 70%, 60%)"
   },
   "mobile": {
-    "id": "hmgcNiuyBBs",
-    "url": "https://images.unsplash.com/photo-1752746294485-bade8789edc4?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTY5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NTI2Mzk1fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1752746294485-bade8789edc4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTY5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NTI2Mzk1fA&ixlib=rb-4.1.0&q=85",
+    "id": "bAeQV7lk_r0",
+    "url": "https://images.unsplash.com/photo-1745776793154-9f5c0fa94075?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTk3fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NjExNTk4fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1745776793154-9f5c0fa94075?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTk3fExxTzlrblU5ejJBfHx8fHwyfHwxNzg0NjExNTk4fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Resource Database",
+      "username": "resourcedatabase",
+      "link": "https://unsplash.com/@resourcedatabase?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-swirling-field-of-daisies-hmgcNiuyBBs?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-20T05:46:35.946Z"
+    "link": "https://unsplash.com/photos/wavy-pattern-formed-by-many-white-dots-bAeQV7lk_r0?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-21T05:26:38.524Z"
   }
 }
