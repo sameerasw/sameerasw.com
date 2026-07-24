@@ -407,6 +407,21 @@
   list-style-type: disc;
 }
 
+.release-prose ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+
+.release-prose ul ul,
+.release-prose ul ol,
+.release-prose ol ul,
+.release-prose ol ol {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-left: 1.2rem;
+}
+
 .release-prose li {
   margin-bottom: 0.4rem;
 }
@@ -418,27 +433,93 @@
   margin: 1.5rem 0;
 }
 
-.release-prose a {
-  color: var(--primary-color);
-  text-decoration: none;
+.release-prose video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  display: block;
+  background: var(--background-color-secondary);
+  outline: none;
 }
 
-.release-prose a:hover {
-  text-decoration: underline;
+.release-prose audio {
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+  display: block;
+}
+
+.release-prose iframe {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: none;
+  margin: 1.5rem 0;
+}
+
+.release-prose details {
+  margin: 1.5rem 0;
+  padding: 0.85rem 1.15rem;
+  background: var(--background-color-secondary);
+  border: 1px solid var(--background-color-secondary);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.release-prose summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  outline: none;
+  color: var(--text-color);
+}
+
+.release-prose summary h1,
+.release-prose summary h2,
+.release-prose summary h3,
+.release-prose summary h4,
+.release-prose summary h5,
+.release-prose summary h6 {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.05rem !important;
+  border: none !important;
+}
+
+.release-prose details[open] summary {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--background-color-secondary);
 }
 
 .release-prose blockquote {
   margin: 1.5rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-left: 4px solid var(--primary-color);
   background: color-mix(in srgb, var(--primary-color) 10%, transparent);
-  font-style: italic;
-  opacity: 0.9;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+  opacity: 0.95;
+}
+
+.release-prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.release-prose blockquote img {
+  margin: 0.75rem 0;
 }
 
 .release-prose h1,
 .release-prose h2,
-.release-prose h3 {
+.release-prose h3,
+.release-prose h4,
+.release-prose h5,
+.release-prose h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--text-color);
@@ -452,18 +533,126 @@
 .release-prose h1 { font-size: 1.5rem; }
 .release-prose h2 { font-size: 1.3rem; }
 .release-prose h3 { font-size: 1.1rem; }
+.release-prose h4 { font-size: 1.0rem; }
 
-.release-prose strong {
+.release-prose strong, .release-prose b {
   color: var(--primary-color);
   font-weight: 600;
 }
 
-/* Ensure images in <p align="center"> or other wrappers also work */
+.release-prose em, .release-prose i {
+  font-style: italic;
+}
+
+.release-prose hr {
+  border: 0;
+  height: 1px;
+  background: var(--background-color-secondary);
+  margin: 2rem 0;
+}
+
+.release-prose code {
+  font-family: monospace, var(--font-family);
+  font-size: 0.88em;
+  background: var(--background-color-secondary);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--primary-color);
+}
+
+.release-prose pre {
+  background: var(--background-color-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--background-color-secondary);
+}
+
+.release-prose pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.release-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.release-prose th,
+.release-prose td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--background-color-secondary);
+  text-align: left;
+}
+
+.release-prose th {
+  background: var(--background-color-secondary);
+  font-weight: 600;
+}
+
+.release-prose ul.contains-task-list {
+  list-style-type: none;
+  padding-left: 0.2rem;
+}
+
+.release-prose li.task-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.release-prose input[type="checkbox"] {
+  accent-color: var(--primary-color);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.release-prose kbd {
+  background: var(--background-color-secondary);
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+  font-family: monospace;
+}
+
+.release-prose del, .release-prose s {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.release-prose mark {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+/* Ensure images and links in <p align="center"> or other wrappers work properly */
 .release-prose [align="center"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   text-align: center;
+  margin: 1.5rem 0;
 }
+
+.release-prose [align="center"] a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.release-prose [align="center"] img {
+  margin: 0 !important;
+  height: auto;
+  display: inline-block;
+}
+

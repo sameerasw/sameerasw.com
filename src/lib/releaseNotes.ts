@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
@@ -36,8 +37,9 @@ export async function getAllReleaseNotes(): Promise<ReleaseNote[]> {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
 
-      // Process markdown to HTML supporting raw HTML tags
+      // Process markdown to HTML supporting raw HTML tags and GFM features
       const processedContent = await remark()
+        .use(remarkGfm)
         .use(remarkRehype, { allowDangerousHtml: true })
         .use(rehypeRaw)
         .use(rehypeStringify)
