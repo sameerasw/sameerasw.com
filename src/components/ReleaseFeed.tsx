@@ -14,6 +14,7 @@ interface ReleaseFeedProps {
 const LOGO_MAP: Record<string, string> = {
   airsync: "/assets/img/project-logos/airsync-logo.svg",
   essentials: "/assets/img/project-logos/essentials-logo.svg",
+  draft: "/assets/img/project-logos/draft-logo.svg",
   tasks: "/assets/img/project-logos/tasks-logo.svg.png",
   blog: "/assets/img/notion.png",
   daily: "/assets/img/project-logos/daily-logo.png",
@@ -60,6 +61,7 @@ export default function ReleaseFeed({
   const APP_TO_PROJECT_KEY: Record<string, string> = {
     airsync: "airsync-mac",
     essentials: "essentials",
+    draft: "draft-mac",
     canvas: "canvas",
     tasks: "tasks",
     daily: "daily",
@@ -215,6 +217,8 @@ export default function ReleaseFeed({
                 {LOGO_MAP[note.app] && (
                   note.app === "essentials" ? (
                     <div className="release-card-logo essentials-mask" />
+                  ) : note.app === "draft" ? (
+                    <div className="release-card-logo draft-mask" />
                   ) : note.app === "daily" ? (
                     <div className="release-card-logo daily-mask" />
                   ) : (
@@ -255,6 +259,8 @@ export default function ReleaseFeed({
                 {LOGO_MAP[selectedNote.app] && (
                   selectedNote.app === "essentials" ? (
                     <div className="release-modal-logo essentials-mask" />
+                  ) : selectedNote.app === "draft" ? (
+                    <div className="release-modal-logo draft-mask" />
                   ) : selectedNote.app === "daily" ? (
                     <div className="release-modal-logo daily-mask" />
                   ) : (

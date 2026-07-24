@@ -154,6 +154,18 @@
   mask-position: center;
 }
 
+.draft-mask {
+  background-color: var(--primary-color);
+  -webkit-mask-image: url("/assets/img/project-logos/draft-logo.svg");
+  mask-image: url("/assets/img/project-logos/draft-logo.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
 .daily-mask {
   background-color: var(--primary-color);
   -webkit-mask-image: url("/assets/img/project-logos/daily-logo.png");
@@ -167,6 +179,7 @@
 }
 
 .release-card:hover .essentials-mask,
+.release-card:hover .draft-mask,
 .release-card:hover .daily-mask {
   background-color: var(--background-color-primary) !important;
 }
