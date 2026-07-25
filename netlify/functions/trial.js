@@ -85,7 +85,7 @@ export default async (req) => {
   }
 
   // --- Issue new trial ---
-  const expiresAt = Date.now() + 48 * 60 * 60 * 1000; // 48 hours
+  const expiresAt = Date.now() + 7 * 24 * 60 * 60 * 1000; // 7 days (168 hours)
   const token = crypto.createHmac("sha256", secret).update(`${id}.${expiresAt}`).digest("hex");
   
   // Extract extra details from body
