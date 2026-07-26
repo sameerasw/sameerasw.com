@@ -1,28 +1,28 @@
 {
-  "id": "iTLs00i1yqc",
-  "url": "https://images.unsplash.com/photo-1618418701527-a550b6a78814?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTAwM3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDk2NjY0Nnw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1618418701527-a550b6a78814?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTAwM3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDk2NjY0Nnw&ixlib=rb-4.1.0&q=85",
+  "id": "tcvsnbk195w",
+  "url": "https://images.unsplash.com/photo-1706021445439-ccf7ffd42adb?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTA0NDI2OXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1706021445439-ccf7ffd42adb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTA0NDI2OXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Matthieu Lemarchal",
-    "username": "tamieuh",
-    "link": "https://unsplash.com/@tamieuh?utm_source=Glance&utm_medium=referral"
+    "name": "Midnite Gallery",
+    "username": "midnite_gallery",
+    "link": "https://unsplash.com/@midnite_gallery?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-group-of-snow-covered-trees-in-the-snow-iTLs00i1yqc?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-25T08:04:06.487Z",
+  "link": "https://unsplash.com/photos/a-group-of-colorful-flowers-sitting-on-top-of-a-blue-surface-tcvsnbk195w?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-26T05:37:49.891Z",
   "themeColors": {
-    "light": "hsl(200, 60%, 38%)",
-    "dark": "hsl(200, 70%, 60%)"
+    "light": "hsl(180, 60%, 25%)",
+    "dark": "hsl(180, 70%, 60%)"
   },
   "mobile": {
-    "id": "OZsheZpC-kc",
-    "url": "https://images.unsplash.com/photo-1714368241060-03437a9541c9?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI1OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDk1Njc5NXw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1714368241060-03437a9541c9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI1OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NDk1Njc5NXw&ixlib=rb-4.1.0&q=85",
+    "id": "JzVaAuxInAY",
+    "url": "https://images.unsplash.com/photo-1647872963304-d81d51243285?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTExNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTA0NDI2OXw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1647872963304-d81d51243285?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTExNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTA0NDI2OXw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Clark Van Der Beken",
+      "username": "snapsbyclark",
+      "link": "https://unsplash.com/@snapsbyclark?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-blurry-photo-of-trees-with-red-leaves-OZsheZpC-kc?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-25T05:19:56.174Z"
+    "link": "https://unsplash.com/photos/a-tall-light-pole-with-a-purple-sky-in-the-background-JzVaAuxInAY?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-26T05:37:49.961Z"
   }
 }
