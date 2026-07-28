@@ -1,28 +1,28 @@
 {
-  "id": "fgXBH9f477A",
-  "url": "https://images.unsplash.com/photo-1719427209368-8ee06271a8b1?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3M3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTEzMTc4OHw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1719427209368-8ee06271a8b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3M3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTEzMTc4OHw&ixlib=rb-4.1.0&q=85",
+  "id": "eu0uVZNt7Gc",
+  "url": "https://images.unsplash.com/photo-1714448459253-14723c92a2fe?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1714448459253-14723c92a2fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Eugene Chystiakov",
-    "username": "eugenechystiakov",
-    "link": "https://unsplash.com/@eugenechystiakov?utm_source=Glance&utm_medium=referral"
+    "name": "Eugene Golovesov",
+    "username": "eugene_golovesov",
+    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-night-view-of-a-city-and-a-bridge-fgXBH9f477A?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-27T05:56:28.704Z",
+  "link": "https://unsplash.com/photos/a-black-and-white-photo-of-trees-in-the-snow-eu0uVZNt7Gc?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-28T05:20:39.135Z",
   "themeColors": {
-    "light": "hsl(220, 76%, 25%)",
-    "dark": "hsl(220, 76%, 60%)"
+    "light": "hsl(0, 60%, 38%)",
+    "dark": "hsl(0, 70%, 75%)"
   },
   "mobile": {
-    "id": "XUlsF9LYeVk",
-    "url": "https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTMyNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTEzMzkzNXw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1604079628040-94301bb21b91?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTMyNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTEzMzkzNXw&ixlib=rb-4.1.0&q=85",
+    "id": "Bogur-lSk3w",
+    "url": "https://images.unsplash.com/photo-1711823660809-f52f09cefeb5?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI0OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1711823660809-f52f09cefeb5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI0OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "mymind",
-      "username": "mymind",
-      "link": "https://unsplash.com/@mymind?utm_source=Glance&utm_medium=referral"
+      "name": "Chirayu Trivedi",
+      "username": "rc820",
+      "link": "https://unsplash.com/@rc820?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/abstract-warm-orange-orb-on-blue-gradient-background-XUlsF9LYeVk?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-27T06:32:15.867Z"
+    "link": "https://unsplash.com/photos/a-blurry-photo-of-a-plane-flying-in-the-sky-Bogur-lSk3w?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-28T05:20:39.235Z"
   }
 }
