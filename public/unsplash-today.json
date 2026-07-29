@@ -1,28 +1,28 @@
 {
-  "id": "eu0uVZNt7Gc",
-  "url": "https://images.unsplash.com/photo-1714448459253-14723c92a2fe?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1714448459253-14723c92a2fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTIxNjAzOXw&ixlib=rb-4.1.0&q=85",
+  "id": "HMmgtrDs6vA",
+  "url": "https://images.unsplash.com/photo-1768934623646-6bff41f8c1cd?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzU4fExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MzAyODg4fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1768934623646-6bff41f8c1cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzU4fExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MzAyODg4fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Eugene Golovesov",
-    "username": "eugene_golovesov",
-    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+    "name": "Maharram Hasanli",
+    "username": "maharram",
+    "link": "https://unsplash.com/@maharram?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-black-and-white-photo-of-trees-in-the-snow-eu0uVZNt7Gc?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-28T05:20:39.135Z",
+  "link": "https://unsplash.com/photos/abstract-blur-of-red-flowers-and-green-foliage-HMmgtrDs6vA?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-07-29T05:28:08.950Z",
   "themeColors": {
-    "light": "hsl(0, 60%, 38%)",
-    "dark": "hsl(0, 70%, 75%)"
+    "light": "hsl(0, 60%, 25%)",
+    "dark": "hsl(0, 70%, 60%)"
   },
   "mobile": {
-    "id": "Ixj2msiz2TE",
-    "url": "https://images.unsplash.com/photo-1736406685051-32a550c2ff00?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODcyfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MjIzNjE3fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1736406685051-32a550c2ff00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODcyfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MjIzNjE3fA&ixlib=rb-4.1.0&q=85",
+    "id": "TYKFXapka84",
+    "url": "https://images.unsplash.com/photo-1759295405120-95a4973974e2?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzQxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MzAyODg4fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1759295405120-95a4973974e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzQxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1MzAyODg4fA&ixlib=rb-4.1.0&q=85",
     "author": {
       "name": "Eugene Golovesov",
       "username": "eugene_golovesov",
       "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-black-and-white-photo-of-a-bunch-of-flowers-Ixj2msiz2TE?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-28T07:26:57.699Z"
+    "link": "https://unsplash.com/photos/red-marigolds-bloom-in-a-green-garden-TYKFXapka84?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-07-29T05:28:09.020Z"
   }
 }
