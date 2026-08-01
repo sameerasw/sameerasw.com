@@ -1,28 +1,28 @@
 {
-  "id": "DkfnGxoy5NI",
-  "url": "https://images.unsplash.com/photo-1736297150541-89378f055b96?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NDc2NDY2fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1736297150541-89378f055b96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NDc2NDY2fA&ixlib=rb-4.1.0&q=85",
+  "id": "kLBW1kzx82U",
+  "url": "https://images.unsplash.com/photo-1739959272086-afc87e72776b?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODI5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NTYyMzc4fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1739959272086-afc87e72776b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODI5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NTYyMzc4fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Alim",
-    "username": "apyfz",
-    "link": "https://unsplash.com/@apyfz?utm_source=Glance&utm_medium=referral"
+    "name": "Andrea De Santis",
+    "username": "santesson89",
+    "link": "https://unsplash.com/@santesson89?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-large-city-with-a-lot-of-tall-buildings-DkfnGxoy5NI?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-07-31T05:41:06.591Z",
+  "link": "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-kLBW1kzx82U?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-01T05:32:58.623Z",
   "themeColors": {
-    "light": "hsl(216, 84%, 30%)",
-    "dark": "hsl(216, 84%, 60%)"
+    "light": "hsl(210, 68%, 25%)",
+    "dark": "hsl(210, 70%, 60%)"
   },
   "mobile": {
-    "id": "BGzgZIzauiw",
-    "url": "https://images.unsplash.com/photo-1718906457196-3d3523107ef0?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA4N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTQ3ODEyNHw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1718906457196-3d3523107ef0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA4N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NTQ3ODEyNHw&ixlib=rb-4.1.0&q=85",
+    "id": "G1roUq7npuE",
+    "url": "https://images.unsplash.com/photo-1738584672973-f33b662c05d4?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODMyfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NTYyMzc4fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1738584672973-f33b662c05d4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODMyfExxTzlrblU5ejJBfHx8fHwyfHwxNzg1NTYyMzc4fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Marek Piwnicki",
-      "username": "marekpiwnicki",
-      "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
+      "name": "Ingmar",
+      "username": "visualsbying",
+      "link": "https://unsplash.com/@visualsbying?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-snow-covered-mountain-with-a-sky-background-BGzgZIzauiw?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-07-31T06:08:44.615Z"
+    "link": "https://unsplash.com/photos/a-bunch-of-dry-grass-blowing-in-the-wind-G1roUq7npuE?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-01T05:32:58.674Z"
   }
 }
