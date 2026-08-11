@@ -1,28 +1,28 @@
 {
-  "id": "Q3odV3gdBpE",
-  "url": "https://images.unsplash.com/photo-1760196256634-91f4fb37f865?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg2MzM0NTE2fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1760196256634-91f4fb37f865?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg2MzM0NTE2fA&ixlib=rb-4.1.0&q=85",
+  "id": "HcnDk9mNJUE",
+  "url": "https://images.unsplash.com/photo-1686642848560-e980295a9360?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2M3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjQyMDE3MXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1686642848560-e980295a9360?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2M3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjQyMDE3MXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Eugene Golovesov",
-    "username": "eugene_golovesov",
-    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+    "name": "Tim Mossholder",
+    "username": "timmossholder",
+    "link": "https://unsplash.com/@timmossholder?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/abstract-autumn-forest-with-blurred-trees-and-orange-ground-Q3odV3gdBpE?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-08-10T04:01:56.833Z",
+  "link": "https://unsplash.com/photos/a-close-up-of-a-palm-leaf-against-a-yellow-background-HcnDk9mNJUE?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-11T03:49:32.147Z",
   "themeColors": {
-    "light": "hsl(24, 63%, 38%)",
-    "dark": "hsl(24, 70%, 60%)"
+    "light": "hsl(60, 60%, 25%)",
+    "dark": "hsl(60, 70%, 60%)"
   },
   "mobile": {
-    "id": "eD1k6-AoW30",
-    "url": "https://images.unsplash.com/photo-1623804991241-84eb318f539f?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM5MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjMzNzc2MHw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1623804991241-84eb318f539f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM5MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjMzNzc2MHw&ixlib=rb-4.1.0&q=85",
+    "id": "zu4IvRMY1W8",
+    "url": "https://images.unsplash.com/photo-1719594489444-e0189b2e61f7?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjQyMDE3MXw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1719594489444-e0189b2e61f7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjQyMDE3MXw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Lydia Mailloux",
-      "username": "lydia_mailloux",
-      "link": "https://unsplash.com/@lydia_mailloux?utm_source=Glance&utm_medium=referral"
+      "name": "Dylan Taylor",
+      "username": "dyltayl",
+      "link": "https://unsplash.com/@dyltayl?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/brown-and-white-floral-textile-eD1k6-AoW30?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-08-10T04:56:01.056Z"
+    "link": "https://unsplash.com/photos/the-sun-is-setting-over-the-ocean-on-a-clear-day-zu4IvRMY1W8?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-11T03:49:32.297Z"
   }
 }
