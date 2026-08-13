@@ -6,7 +6,7 @@
     "downloads": 379931,
     "latestVersion": "v17.0",
     "latestReleaseAt": "2026-08-09T10:30:09Z",
-    "updatedAt": "2026-08-13T04:30:43.043Z"
+    "updatedAt": "2026-08-13T04:31:12.723Z"
   },
   "airsync-mac": {
     "id": "airsync-mac",
@@ -15,7 +15,7 @@
     "downloads": 13851,
     "latestVersion": "v4.0.0",
     "latestReleaseAt": "2026-07-25T09:10:07Z",
-    "updatedAt": "2026-08-13T04:30:43.592Z"
+    "updatedAt": "2026-08-13T04:31:13.358Z"
   },
   "my-internet": {
     "id": "my-internet",
@@ -24,7 +24,7 @@
     "downloads": 0,
     "latestVersion": "pre-release-07a1ecb932cefb23e49dc4959a55fbe15e7b038f",
     "latestReleaseAt": "2025-07-05T09:47:48Z",
-    "updatedAt": "2026-08-13T04:30:44.077Z"
+    "updatedAt": "2026-08-13T04:31:13.942Z"
   },
   "folder-icons": {
     "id": "folder-icons",
@@ -33,7 +33,7 @@
     "downloads": 20118,
     "latestVersion": "v3.1",
     "latestReleaseAt": "2023-09-10T08:57:26Z",
-    "updatedAt": "2026-08-13T04:30:44.599Z"
+    "updatedAt": "2026-08-13T04:31:14.529Z"
   },
   "zeninternet": {
     "id": "zeninternet",
@@ -42,7 +42,7 @@
     "downloads": 0,
     "latestVersion": "2.2.0",
     "latestReleaseAt": "2025-05-08T20:29:25Z",
-    "updatedAt": "2026-08-13T04:30:45.192Z"
+    "updatedAt": "2026-08-13T04:31:15.299Z"
   },
   "canvas": {
     "id": "canvas",
@@ -51,7 +51,7 @@
     "downloads": 843,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-02-10T03:29:13Z",
-    "updatedAt": "2026-08-13T04:30:46.113Z"
+    "updatedAt": "2026-08-13T04:31:16.317Z"
   },
   "tasks": {
     "id": "tasks",
@@ -60,7 +60,7 @@
     "downloads": 183,
     "latestVersion": "v3.0.0",
     "latestReleaseAt": "2026-03-10T05:55:56Z",
-    "updatedAt": "2026-08-13T04:30:46.528Z"
+    "updatedAt": "2026-08-13T04:31:16.802Z"
   },
   "Browser": {
     "id": "Browser",
@@ -69,7 +69,7 @@
     "downloads": 450,
     "latestVersion": "v1.0.0-BETA-02",
     "latestReleaseAt": "2025-10-09T17:41:27Z",
-    "updatedAt": "2026-08-13T04:30:47.007Z"
+    "updatedAt": "2026-08-13T04:31:17.379Z"
   },
   "daily": {
     "id": "daily",
@@ -78,7 +78,7 @@
     "downloads": 26,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-07-09T17:55:51Z",
-    "updatedAt": "2026-08-13T04:30:45.674Z"
+    "updatedAt": "2026-08-13T04:31:15.863Z"
   },
   "watchfaces": {
     "id": "watchfaces",
@@ -87,7 +87,7 @@
     "downloads": 134,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-02-11T14:56:56Z",
-    "updatedAt": "2026-08-13T04:30:47.494Z"
+    "updatedAt": "2026-08-13T04:31:17.913Z"
   },
   "macro": {
     "id": "macro",
@@ -96,6 +96,6 @@
     "downloads": 0,
     "latestVersion": "",
     "latestReleaseAt": "2026-07-17T09:45:46Z",
-    "updatedAt": "2026-08-13T04:30:47.856Z"
+    "updatedAt": "2026-08-13T04:31:18.378Z"
   }
 }
