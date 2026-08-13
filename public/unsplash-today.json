@@ -1,28 +1,28 @@
 {
-  "id": "bkDJqyCaesY",
-  "url": "https://images.unsplash.com/photo-1755174578188-0742b622d184?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTcxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NjYwfA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1755174578188-0742b622d184?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTcxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NjYwfA&ixlib=rb-4.1.0&q=85",
+  "id": "779R6cnpfn0",
+  "url": "https://images.unsplash.com/photo-1768849940833-88a1be7a6b44?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NDQ0fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1768849940833-88a1be7a6b44?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NDQ0fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Fons Heijnsbroek",
-    "username": "heijnsbroek_abstract_art",
-    "link": "https://unsplash.com/@heijnsbroek_abstract_art?utm_source=Glance&utm_medium=referral"
+    "name": "Rafael Ishkhanyan",
+    "username": "rafael_ishkhanyan",
+    "link": "https://unsplash.com/@rafael_ishkhanyan?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/impressionist-painting-of-a-sunlit-grassy-field-bkDJqyCaesY?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-08-12T04:24:20.356Z",
+  "link": "https://unsplash.com/photos/close-up-of-decorative-gold-metalwork-on-a-building-window-779R6cnpfn0?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-13T04:16:54.059Z",
   "themeColors": {
-    "light": "hsl(60, 60%, 38%)",
-    "dark": "hsl(60, 70%, 75%)"
+    "light": "hsl(0, 60%, 38%)",
+    "dark": "hsl(0, 70%, 60%)"
   },
   "mobile": {
-    "id": "2M1FhJxx0eo",
-    "url": "https://images.unsplash.com/photo-1684097417554-bba1dda7b94e?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI3MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjUwNzk0MHw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1684097417554-bba1dda7b94e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI3MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NjUwNzk0MHw&ixlib=rb-4.1.0&q=85",
+    "id": "YN4WLr2T-6w",
+    "url": "https://images.unsplash.com/photo-1730199793291-71572fa2732b?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NDQ0fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1730199793291-71572fa2732b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg2NTA4NDQ0fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Hossein Nasr",
-      "username": "nasrphotos",
-      "link": "https://unsplash.com/@nasrphotos?utm_source=Glance&utm_medium=referral"
+      "name": "Robert Clark",
+      "username": "robert_clark",
+      "link": "https://unsplash.com/@robert_clark?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-very-tall-building-with-a-sky-in-the-background-2M1FhJxx0eo?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-08-12T04:12:20.451Z"
+    "link": "https://unsplash.com/photos/YN4WLr2T-6w?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-13T04:16:54.130Z"
   }
 }
