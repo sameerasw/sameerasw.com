@@ -10,8 +10,8 @@
   "link": "https://unsplash.com/photos/close-up-of-decorative-gold-metalwork-on-a-building-window-779R6cnpfn0?utm_source=Glance&utm_medium=referral",
   "updatedAt": "2026-08-13T04:16:54.059Z",
   "themeColors": {
-    "light": "hsl(38%, 60%, 38%)",
-    "dark": "hsl(38%, 70%, 60%)"
+    "light": "hsl(38, 60%, 38%)",
+    "dark": "hsl(38, 70%, 60%)"
   },
   "mobile": {
     "id": "BKYJq3RiAss",
