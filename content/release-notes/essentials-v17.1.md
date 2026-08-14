@@ -1,6 +1,6 @@
 ---
 title: "Essentials v17.1"
-description: "Automation improvements, WearOS launcher, QS tiles and a lot more"
+description: "Flashlight Effects, Automation improvements, WearOS launcher, QS tiles and a lot more"
 app: "essentials"
 version: "v17.1"
 date: "2026-08-14"
