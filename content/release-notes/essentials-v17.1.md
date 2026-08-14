@@ -31,14 +31,19 @@ link: "https://github.com/sameerasw/essentials/releases/tag/v17.1"
     - Fade in & out
     - Auto shift
 
-
-https://github.com/user-attachments/assets/b88aa0ad-6f62-41d4-a7e3-c5e975154ae9
+<video width="480" height="448" controls preload="none" poster="https://github.com/user-attachments/assets/b88aa0ad-6f62-41d4-a7e3-c5e975154ae9">
+    <source src="https://github.com/user-attachments/assets/b88aa0ad-6f62-41d4-a7e3-c5e975154ae9" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 <img width="1280" height="952" alt="Screenshot_20260814-205001 Large" src="https://github.com/user-attachments/assets/78458832-8823-4d1c-874d-1bb13f8c9b27" />
 <img width="1147" height="1280" alt="Screenshot_20260814-204338 Large" src="https://github.com/user-attachments/assets/95df7339-d151-45cc-a66e-852074bcf098" />
 <img width="1280" height="335" alt="watch_media_2026-08-10_10_39_02 Large" src="https://github.com/user-attachments/assets/6ab4dc22-bbf4-4a92-922e-d0ee3c8f8e92" />
 
-https://github.com/user-attachments/assets/75cb7fa3-d988-49c3-b4d7-d6e889cdd386
+<video width="480" height="448" controls preload="none" poster="https://github.com/user-attachments/assets/75cb7fa3-d988-49c3-b4d7-d6e889cdd386">
+    <source src="https://github.com/user-attachments/assets/75cb7fa3-d988-49c3-b4d7-d6e889cdd386" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 > A lil easter egg, not so hidden.
 
