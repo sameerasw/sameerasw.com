@@ -10,8 +10,8 @@
   "link": "https://unsplash.com/photos/a-tall-red-structure-with-a-boat-on-top-of-it-r4wQjakjRUE?utm_source=Glance&utm_medium=referral",
   "updatedAt": "2026-08-15T04:37:32.637Z",
   "themeColors": {
-    "light": "hsl(180, 60%, 38%)",
-    "dark": "hsl(180, 70%, 75%)"
+    "light": "hsl(0, 60%, 38%)",
+    "dark": "hsl(0, 70%, 75%)"
   },
   "mobile": {
     "id": "leHyZ7bTr5g",
