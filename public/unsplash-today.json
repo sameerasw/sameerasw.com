@@ -1,28 +1,28 @@
 {
-  "id": "r4wQjakjRUE",
-  "url": "https://images.unsplash.com/photo-1717381359262-5f6f6706498a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njc2ODY1Mnw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1717381359262-5f6f6706498a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA2OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njc2ODY1Mnw&ixlib=rb-4.1.0&q=85",
+  "id": "hItc3wRAgzI",
+  "url": "https://images.unsplash.com/photo-1694885677234-f29f8c2979b4?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM4N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njg0OTUzOHw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1694885677234-f29f8c2979b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM4N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njg0OTUzOHw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Frank Huang",
-    "username": "frankhme",
-    "link": "https://unsplash.com/@frankhme?utm_source=Glance&utm_medium=referral"
+    "name": "Marek Piwnicki",
+    "username": "marekpiwnicki",
+    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-tall-red-structure-with-a-boat-on-top-of-it-r4wQjakjRUE?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-08-15T04:37:32.637Z",
+  "link": "https://unsplash.com/photos/a-black-and-white-photo-of-a-mountain-hItc3wRAgzI?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-16T03:05:39.107Z",
   "themeColors": {
     "light": "hsl(0, 60%, 38%)",
     "dark": "hsl(0, 70%, 75%)"
   },
   "mobile": {
-    "id": "leHyZ7bTr5g",
-    "url": "https://images.unsplash.com/photo-1621300801324-b17755c2964d?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njc2ODY1Mnw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1621300801324-b17755c2964d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njc2ODY1Mnw&ixlib=rb-4.1.0&q=85",
+    "id": "j_6KbM26FMU",
+    "url": "https://images.unsplash.com/photo-1660050186491-cbd9d8e02d2d?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQxMHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njg0OTUzOHw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1660050186491-cbd9d8e02d2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQxMHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4Njg0OTUzOHw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Maxime Doré",
-      "username": "maxime_dore",
-      "link": "https://unsplash.com/@maxime_dore?utm_source=Glance&utm_medium=referral"
+      "name": "Leandra Rieger",
+      "username": "leandrarieger",
+      "link": "https://unsplash.com/@leandrarieger?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/white-and-black-ferris-wheel-under-blue-sky-during-daytime-leHyZ7bTr5g?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-08-15T04:37:32.702Z"
+    "link": "https://unsplash.com/photos/small-house-under-large-moon-j_6KbM26FMU?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-16T03:05:39.238Z"
   }
 }
