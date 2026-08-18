@@ -79,10 +79,6 @@ function PhotoCardItem({
         <div className="photo-capture-overlay" />
 
         <div className="photo-capture-content">
-          <h3 className="photo-capture-title">
-            {photo.title !== "Photography by Sameera" ? photo.title : "Recent capture"}
-          </h3>
-
           {(photo.location || photo.likes > 0) && (
             <div className="photo-capture-meta">
               {photo.location && (
@@ -99,6 +95,10 @@ function PhotoCardItem({
               )}
             </div>
           )}
+
+          <span className="photo-capture-title">
+            {photo.title !== "Photography by Sameera" ? photo.title : "Recent capture"}
+          </span>
         </div>
       </button>
     </div>
