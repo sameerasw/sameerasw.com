@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 
 export interface PhotoItem {
   id: string;
@@ -110,9 +110,11 @@ export default function PhotographyCarousel({
   photos = [],
 }: PhotographyCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalOrigin, setModalOrigin] = useState<{ x: string; y: string } | null>(null);
+
+  const selectedPhoto = selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : null;
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -132,6 +134,7 @@ export default function PhotographyCarousel({
   };
 
   const openPhoto = (photo: PhotoItem, e?: React.MouseEvent) => {
+    const idx = photos.findIndex((p) => p.id === photo.id);
     if (e) {
       const rect = e.currentTarget.getBoundingClientRect();
       setModalOrigin({
@@ -141,7 +144,7 @@ export default function PhotographyCarousel({
     } else {
       setModalOrigin({ x: "50%", y: "50%" });
     }
-    setSelectedPhoto(photo);
+    setSelectedPhotoIndex(idx !== -1 ? idx : 0);
     setTimeout(() => {
       setIsModalVisible(true);
     }, 10);
@@ -150,10 +153,31 @@ export default function PhotographyCarousel({
   const closePhoto = () => {
     setIsModalVisible(false);
     setTimeout(() => {
-      setSelectedPhoto(null);
+      setSelectedPhotoIndex(null);
       setModalOrigin(null);
     }, 300);
   };
+
+  const navigatePhoto = useCallback((direction: "prev" | "next", e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (selectedPhotoIndex === null || photos.length <= 1) return;
+    if (direction === "prev") {
+      setSelectedPhotoIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : photos.length - 1));
+    } else {
+      setSelectedPhotoIndex((prev) => (prev !== null && prev < photos.length - 1 ? prev + 1 : 0));
+    }
+  }, [selectedPhotoIndex, photos]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedPhoto) return;
+      if (e.key === "Escape") closePhoto();
+      if (e.key === "ArrowLeft") navigatePhoto("prev");
+      if (e.key === "ArrowRight") navigatePhoto("next");
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhoto, navigatePhoto]);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -328,7 +352,7 @@ export default function PhotographyCarousel({
         </div>
       </section>
 
-      {/* Expanded Modal with dynamic aspect ratio */}
+      {/* Expanded Modal with dynamic aspect ratio and photo navigation */}
       {selectedPhoto && (
         <div
           className={`photo-modal-backdrop ${isModalVisible ? "visible" : ""}`}
@@ -338,6 +362,17 @@ export default function PhotographyCarousel({
             "--origin-y": modalOrigin?.y ?? "50%",
           } as React.CSSProperties}
         >
+          {/* Previous Button */}
+          {photos.length > 1 && (
+            <button
+              className="photo-modal-nav-btn prev"
+              onClick={(e) => navigatePhoto("prev", e)}
+              aria-label="Previous photo"
+            >
+              <span className="material-symbols-rounded">chevron_left</span>
+            </button>
+          )}
+
           <div
             className={`photo-modal ${isModalVisible ? "visible" : ""}`}
             style={{
@@ -349,6 +384,7 @@ export default function PhotographyCarousel({
             }}
           >
             <img
+              key={selectedPhoto.id}
               src={selectedPhoto.url_full || selectedPhoto.url}
               alt={selectedPhoto.title}
               className="photo-modal-bg"
@@ -402,6 +438,17 @@ export default function PhotographyCarousel({
               </div>
             </div>
           </div>
+
+          {/* Next Button */}
+          {photos.length > 1 && (
+            <button
+              className="photo-modal-nav-btn next"
+              onClick={(e) => navigatePhoto("next", e)}
+              aria-label="Next photo"
+            >
+              <span className="material-symbols-rounded">chevron_right</span>
+            </button>
+          )}
         </div>
       )}
     </>

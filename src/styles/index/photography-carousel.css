@@ -227,17 +227,63 @@
   padding: 24px;
   box-sizing: border-box;
   touch-action: none;
+  gap: 20px;
 }
 
 .photo-modal-backdrop.visible {
   opacity: 1;
 }
 
+/* Modal Navigation Buttons (prev/next) */
+.photo-modal-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  z-index: 10000;
+}
+
+.photo-modal-nav-btn:hover {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  transform: scale(1.1);
+}
+
+.photo-modal-nav-btn .material-symbols-rounded {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .photo-modal-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .photo-modal-nav-btn.prev {
+    left: 12px;
+  }
+
+  .photo-modal-nav-btn.next {
+    right: 12px;
+  }
+}
+
 .photo-modal {
   position: relative;
   border-radius: var(--radius-out);
   overflow: hidden;
-  width: min(92vw, 900px);
+  width: min(85vw, 850px);
   max-height: 85vh;
   display: flex;
   flex-direction: column;
