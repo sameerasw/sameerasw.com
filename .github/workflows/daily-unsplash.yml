@@ -15,6 +15,8 @@ on:
           - both
           - desktop
           - mobile
+          - photos-only
+          - none
 
 jobs:
   update-wallpaper:
@@ -31,10 +33,17 @@ jobs:
           node-version: '20'
 
       - name: Fetch and Select Daily Wallpaper
+        if: ${{ inputs.target != 'photos-only' && inputs.target != 'none' }}
         env:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           TARGET: ${{ inputs.target || 'both' }}
         run: node .github/scripts/daily-unsplash.js
+
+      - name: Fetch Recent Photography
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          UNSPLASH_USERNAME: 'sameeraswdotcom'
+        run: node .github/scripts/fetch-photos.js
 
       - name: Update Project Details
         env:
@@ -99,5 +108,5 @@ jobs:
         run: |
           git config --global user.name 'sameerasw'
           git config --global user.email 'mail@sameerasw.com'
-          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper and project details" && git push)
+          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json public/photos.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper and photos" && git push)

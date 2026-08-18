@@ -1,0 +1,390 @@
+/* Photography & Wallpaper Carousel horizontal scrolling wrapper */
+
+.photo-carousel-wrapper {
+  position: relative;
+  width: 100vw;
+  margin: 0 0 1em;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#photography {
+  overflow-x: visible !important;
+}
+
+.photo-carousel-scroll {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 12px;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Match release-feed alignment */
+  padding: 20px calc(50vw - 180px);
+  box-sizing: border-box;
+  width: 100%;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.photo-carousel-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Wider cards for showcase */
+.photo-slide-container {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 360px !important;
+  max-width: 85vw !important;
+  margin: 0 !important;
+  border-radius: var(--radius-out);
+  overflow: hidden;
+}
+
+/* Full-image capture card for photography */
+.photo-capture-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  border-radius: var(--radius-out);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  background-color: var(--background-color-secondary);
+  border: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.3s ease;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.photo-capture-card:hover {
+  transform: scale(1.02);
+  border-radius: var(--radius-in);
+}
+
+.photo-capture-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.photo-capture-card:hover .photo-capture-img {
+  transform: scale(1.05);
+}
+
+/* Smooth gradient overlay without any blur artifacts */
+.photo-capture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 45%,
+    rgba(0, 0, 0, 0.55) 75%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Bottom Left Details inside the card: Clean, unblurred text */
+.photo-capture-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Strictly clamped to 2 lines max with ellipsis and clean transparent text background */
+.photo-capture-content h3.photo-capture-title {
+  color: #ffffff !important;
+  background: none !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  height: auto !important;
+  max-height: 2.7em !important;
+  word-break: break-word;
+}
+
+/* Metadata row in small cards (location & likes) */
+.photo-capture-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  margin: 0;
+  background: none !important;
+  backdrop-filter: none !important;
+}
+
+.photo-card-info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.photo-card-info-item .material-symbols-rounded {
+  font-size: 1rem !important;
+  color: var(--primary-color);
+}
+
+/* Navigation Buttons matching Release Feed nav style */
+.photo-nav-btns {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.photo-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--background-color-secondary);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.photo-nav-btn:hover {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .photo-nav-btns {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Expansion Modal
+   ───────────────────────────────────────────────────────────── */
+
+.photo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 24px;
+  box-sizing: border-box;
+  touch-action: none;
+}
+
+.photo-modal-backdrop.visible {
+  opacity: 1;
+}
+
+.photo-modal {
+  position: relative;
+  border-radius: var(--radius-out);
+  overflow: hidden;
+  width: min(92vw, 900px);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transform: translate(calc(var(--origin-x) - 50vw), calc(var(--origin-y) - 50vh)) scale(0);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  border: none;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  background-color: var(--background-color-secondary);
+}
+
+.photo-modal-backdrop.visible .photo-modal {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.photo-modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.photo-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.05) 30%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photo-modal-header {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem 1.5rem;
+}
+
+.photo-modal-close {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: none;
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.photo-modal-close:hover {
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  transform: scale(1.1);
+}
+
+.photo-modal-footer {
+  position: relative;
+  z-index: 4;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.photo-modal-title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: left;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* Actions & Info Row below title */
+.photo-modal-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.photo-modal-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--primary-color);
+  color: var(--background-color-primary) !important;
+  padding: 8px 18px;
+  border-radius: var(--radius-out);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.photo-modal-view-btn:hover {
+  border-radius: var(--radius-in);
+  transform: scale(1.03);
+}
+
+.photo-modal-view-btn .material-symbols-rounded {
+  font-size: 1.15rem;
+}
+
+/* Info chip using accent primary-color icon */
+.photo-modal-info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  padding: 6px 14px;
+  border-radius: var(--radius-out);
+  font-weight: 500;
+}
+
+.photo-modal-info-chip .material-symbols-rounded {
+  font-size: 1rem !important;
+  color: var(--primary-color);
+}

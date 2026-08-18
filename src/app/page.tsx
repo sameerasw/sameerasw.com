@@ -8,6 +8,7 @@ import "@/styles/index/photos-switcher.css";
 import "@/styles/index/highlights.css";
 import "@/styles/index/form.css";
 import "@/styles/index/lastfm.css";
+import "@/styles/index/photography-carousel.css";
 
 export default async function Home() {
   const metadataPath = path.join(process.cwd(), "public/unsplash-today.json");
@@ -17,6 +18,16 @@ export default async function Home() {
       wallpaperData = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
     } catch (e) {
       console.error("Failed to parse unsplash-today.json", e);
+    }
+  }
+
+  const photosPath = path.join(process.cwd(), "public/photos.json");
+  let photosData = [];
+  if (fs.existsSync(photosPath)) {
+    try {
+      photosData = JSON.parse(fs.readFileSync(photosPath, "utf8"));
+    } catch (e) {
+      console.error("Failed to parse photos.json", e);
     }
   }
 
@@ -31,5 +42,11 @@ export default async function Home() {
     </section>
   );
 
-  return <HomeClient updatesSection={updatesSection} wallpaperData={wallpaperData} />;
+  return (
+    <HomeClient
+      updatesSection={updatesSection}
+      wallpaperData={wallpaperData}
+      photosData={photosData}
+    />
+  );
 }
