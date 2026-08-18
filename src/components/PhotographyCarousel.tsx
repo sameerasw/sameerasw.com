@@ -158,15 +158,22 @@ export default function PhotographyCarousel({
     }, 300);
   };
 
-  const navigatePhoto = useCallback((direction: "prev" | "next", e?: React.MouseEvent) => {
-    e?.stopPropagation();
-    if (selectedPhotoIndex === null || photos.length <= 1) return;
-    if (direction === "prev") {
-      setSelectedPhotoIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : photos.length - 1));
-    } else {
-      setSelectedPhotoIndex((prev) => (prev !== null && prev < photos.length - 1 ? prev + 1 : 0));
-    }
-  }, [selectedPhotoIndex, photos]);
+  const navigatePhoto = useCallback(
+    (direction: "prev" | "next", e?: React.MouseEvent) => {
+      e?.stopPropagation();
+      if (selectedPhotoIndex === null || photos.length <= 1) return;
+      if (direction === "prev") {
+        setSelectedPhotoIndex((prev) =>
+          prev !== null && prev > 0 ? prev - 1 : photos.length - 1
+        );
+      } else {
+        setSelectedPhotoIndex((prev) =>
+          prev !== null && prev < photos.length - 1 ? prev + 1 : 0
+        );
+      }
+    },
+    [selectedPhotoIndex, photos]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -222,7 +229,6 @@ export default function PhotographyCarousel({
           </div>
 
           <div className="photo-carousel-scroll" ref={scrollRef}>
-            {/* Slide 1: Today's wallpaper pick (Exact original structure) */}
             {wallpaperData && (
               <div id="highlights" className="photo-slide-container">
                 <div className="wallpaper-card item">
@@ -348,6 +354,19 @@ export default function PhotographyCarousel({
                 onOpen={openPhoto}
               />
             ))}
+
+            <div className="photo-slide-container">
+              <a
+                href="https://unsplash.com/@sameeraswdotcom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="photo-end-card"
+                aria-label="Visit my Unsplash"
+              >
+                <span className="material-symbols-rounded photo-end-card-icon">open_in_new</span>
+                <span className="photo-end-card-title">Visit my Unsplash</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

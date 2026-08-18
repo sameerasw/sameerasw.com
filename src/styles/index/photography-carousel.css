@@ -165,6 +165,57 @@
   word-break: break-word;
 }
 
+.photo-end-card {
+  background: var(--background-color-primary) !important;
+  border-radius: var(--radius-out) !important;
+  padding: 2rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 440px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.photo-end-card:hover {
+  background: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
+  transform: scale(1.02) !important;
+  border-radius: var(--radius-in) !important;
+}
+
+.photo-end-card-icon {
+  font-size: 2.75rem !important;
+  color: var(--primary-color) !important;
+  transition: all 0.3s ease !important;
+}
+
+.photo-end-card:hover .photo-end-card-icon {
+  color: var(--background-color-primary) !important;
+  transform: scale(1.15) !important;
+}
+
+.photo-end-card-title {
+  color: var(--text-color) !important;
+  font-family: var(--font-family) !important;
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  font-variation-settings: "wdth" 350, "ROND" 100 !important;
+  transition: color 0.3s ease !important;
+}
+
+.photo-end-card:hover .photo-end-card-title {
+  color: var(--background-color-primary) !important;
+}
+
 /* Navigation Buttons matching Release Feed nav style */
 .photo-nav-btns {
   position: absolute;
