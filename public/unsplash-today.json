@@ -1,28 +1,28 @@
 {
-  "id": "-iTlzBSukZ0",
-  "url": "https://images.unsplash.com/photo-1690205785164-a4737e1e7a84?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM1NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzAyMjA0NHw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1690205785164-a4737e1e7a84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM1NXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzAyMjA0NHw&ixlib=rb-4.1.0&q=85",
+  "id": "bHeLsFzVcuU",
+  "url": "https://images.unsplash.com/photo-1750810977721-268bfbca359c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MzY3NTUyfA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1750810977721-268bfbca359c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MzY3NTUyfA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Ilia Bronskiy",
-    "username": "idbronskiy",
-    "link": "https://unsplash.com/@idbronskiy?utm_source=Glance&utm_medium=referral"
+    "name": "Willian Justen de Vasconcellos",
+    "username": "willianjusten",
+    "link": "https://unsplash.com/@willianjusten?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-scenic-view-of-a-mountain-lake-surrounded-by-pine-trees--iTlzBSukZ0?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-08-18T03:00:44.424Z",
+  "link": "https://unsplash.com/photos/looking-up-at-the-vessels-center-bHeLsFzVcuU?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-22T02:59:12.697Z",
   "themeColors": {
-    "light": "hsl(200, 60%, 25%)",
-    "dark": "hsl(200, 70%, 60%)"
+    "light": "hsl(199, 60%, 38%)",
+    "dark": "hsl(199, 70%, 70%)"
   },
   "mobile": {
-    "id": "H1b6BYT0NW4",
-    "url": "https://images.unsplash.com/photo-1765238358559-81dd5b57c094?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDI5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MDI2OTQ1fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1765238358559-81dd5b57c094?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDI5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MDI2OTQ1fA&ixlib=rb-4.1.0&q=85",
+    "id": "N_yJGWotRaE",
+    "url": "https://images.unsplash.com/photo-1752805936214-bbdd8c94a576?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjI1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MzY3NTUyfA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1752805936214-bbdd8c94a576?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjI1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg3MzY3NTUyfA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Geronimo Giqueaux",
-      "username": "ggiqueaux",
-      "link": "https://unsplash.com/@ggiqueaux?utm_source=Glance&utm_medium=referral"
+      "name": "Linus Belanger",
+      "username": "linusbelanger",
+      "link": "https://unsplash.com/@linusbelanger?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/abstract-streaks-of-orange-and-blue-light-H1b6BYT0NW4?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-08-18T04:22:25.267Z"
+    "link": "https://unsplash.com/photos/cherry-blossoms-bloom-vibrantly-against-a-blue-sky-N_yJGWotRaE?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-22T02:59:12.802Z"
   }
 }
