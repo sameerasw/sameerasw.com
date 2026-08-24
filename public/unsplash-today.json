@@ -1,28 +1,28 @@
 {
-  "id": "V5TGdF_ZLfk",
-  "url": "https://images.unsplash.com/photo-1716980197259-0777aaa6c094?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE5NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzQ1NDUwNnw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1716980197259-0777aaa6c094?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE5NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzQ1NDUwNnw&ixlib=rb-4.1.0&q=85",
+  "id": "S1vS1KgQCug",
+  "url": "https://images.unsplash.com/photo-1781644444361-b9dcee78b159?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzg3NTQwOTgxfA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1781644444361-b9dcee78b159?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzg3NTQwOTgxfA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Marek Piwnicki",
-    "username": "marekpiwnicki",
-    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
+    "name": "Rafael Peier",
+    "username": "rafaelpeier",
+    "link": "https://unsplash.com/@rafaelpeier?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-V5TGdF_ZLfk?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-08-23T03:08:26.388Z",
+  "link": "https://unsplash.com/photos/close-up-of-vibrant-orange-flower-petals-with-dew-drops-S1vS1KgQCug?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-08-24T03:09:41.206Z",
   "themeColors": {
-    "light": "hsl(199, 76%, 25%)",
-    "dark": "hsl(199, 76%, 60%)"
+    "light": "hsl(180, 60%, 35%)",
+    "dark": "hsl(180, 70%, 60%)"
   },
   "mobile": {
-    "id": "uRxVBvi54pQ",
-    "url": "https://images.unsplash.com/photo-1717479062901-1e7737429ca5?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE5NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzQ1NDUwNnw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1717479062901-1e7737429ca5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE5NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4NzQ1NDUwNnw&ixlib=rb-4.1.0&q=85",
+    "id": "Jp6DcrUF7n8",
+    "url": "https://images.unsplash.com/photo-1782241594334-42fcca7cd3e0?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTV8THFPOWtuVTl6MkF8fHx8fDJ8fDE3ODc1NDA5ODF8&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1782241594334-42fcca7cd3e0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTV8THFPOWtuVTl6MkF8fHx8fDJ8fDE3ODc1NDA5ODF8&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Planet Volumes",
+      "username": "planetvolumes",
+      "link": "https://unsplash.com/@planetvolumes?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-blurry-photo-of-red-and-yellow-flowers-uRxVBvi54pQ?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-08-23T03:08:26.502Z"
+    "link": "https://unsplash.com/photos/soft-focus-bouquet-of-white-and-orange-flowers-Jp6DcrUF7n8?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-08-24T03:09:41.256Z"
   }
 }
