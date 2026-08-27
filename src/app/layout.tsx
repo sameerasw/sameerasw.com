@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Cursor from "@/components/Cursor";
 import StickyLoveTab from "@/components/StickyLoveTab";
+import TallyFeedbackWidget from "@/components/TallyFeedbackWidget";
 
 export const metadata: Metadata = {
   title: "Sameera Wijerathna",
@@ -95,6 +96,7 @@ export default function RootLayout({
       <body>
         <Cursor />
         <StickyLoveTab />
+        <TallyFeedbackWidget />
         {children}
       </body>
     </html>

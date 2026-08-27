@@ -1,0 +1,91 @@
+/* Tally Floating Feedback Button - Solid Primary Style */
+.tally-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  border-radius: var(--radius-out, 20px);
+  color: var(--background-color-primary);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: none !important;
+  outline: none;
+}
+
+.tally-floating-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.08);
+}
+
+.tally-floating-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.tally-floating-icon {
+  font-size: 1.25rem;
+  color: var(--background-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tally-floating-label {
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Smooth reveal of emoji on hover (web / pointer devices only) */
+.tally-hover-emoji {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  transform: translateX(-6px) scale(0.8);
+  white-space: pre;
+  overflow: hidden;
+  transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tally-floating-btn:hover .tally-hover-emoji {
+    max-width: 80px;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Mobile responsive view: circular icon button elevated above bottom nav */
+@media screen and (max-width: 750px) {
+  .tally-floating-btn {
+    bottom: 5.5rem;
+    right: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    width: 3.25rem;
+    height: 3.25rem;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  .tally-floating-label {
+    display: none;
+  }
+
+  .tally-floating-icon {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}
