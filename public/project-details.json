@@ -17,6 +17,15 @@
     "latestReleaseAt": "2026-07-25T09:10:07Z",
     "updatedAt": "2026-08-28T15:44:21.203Z"
   },
+  "medrop": {
+    "id": "medrop",
+    "repo": "sameerasw/MeDrop",
+    "stars": 7,
+    "downloads": 10,
+    "latestVersion": "v1.0",
+    "latestReleaseAt": "2026-08-28T15:00:00Z",
+    "updatedAt": "2026-08-28T15:44:21.203Z"
+  },
   "my-internet": {
     "id": "my-internet",
     "repo": "sameerasw/my-internet",

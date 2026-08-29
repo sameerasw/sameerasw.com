@@ -439,6 +439,21 @@ export default function HomeClient({
                 </div>
               </a>
               <a
+                id="medrop"
+                className="highlight-item item"
+                href="https://github.com/sameerasw/MeDrop"
+                data-title="https://github.com/sameerasw/MeDrop"
+              >
+                <div className="highlight-thumbnail"></div>
+                <div className="highlight-content">
+                  <h3>MeDrop</h3>
+                  <p className="highlight-description">
+                    NameDrop for Android — share contacts effortlessly via NFC or QR code
+                  </p>
+                  {renderProjectStats("medrop")}
+                </div>
+              </a>
+              <a
                 id="zen-t"
                 className="highlight-item item"
                 href="/zen"

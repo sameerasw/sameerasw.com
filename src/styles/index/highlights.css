@@ -89,6 +89,7 @@
 /* Background images for thumbnails */
 #airsync .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/airsync.png"); }
 #essentials .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/essentials.png"); }
+#medrop .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/MeDrop.png"); }
 #zen-t .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/zen.png"); }
 #helium .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/helium.png"); }
 #edc .highlight-thumbnail::before { background-image: url("/assets/img/project-cards/edc.png"); }
