@@ -1,28 +1,28 @@
 {
-  "id": "4aHEXLNnE2g",
-  "url": "https://images.unsplash.com/photo-1727946301270-dbc7f3c0946c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTA2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTA1NjgxfA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1727946301270-dbc7f3c0946c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTA2fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTA1NjgxfA&ixlib=rb-4.1.0&q=85",
+  "id": "Q3odV3gdBpE",
+  "url": "https://images.unsplash.com/photo-1760196256634-91f4fb37f865?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTE4fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTkxMDc2fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1760196256634-91f4fb37f865?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTE4fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTkxMDc2fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Samuel Quek",
-    "username": "samuelqyx",
-    "link": "https://unsplash.com/@samuelqyx?utm_source=Glance&utm_medium=referral"
+    "name": "Eugene Golovesov",
+    "username": "eugene_golovesov",
+    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-mountain-range-with-a-blue-sky-in-the-background-4aHEXLNnE2g?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-04T07:08:02.097Z",
+  "link": "https://unsplash.com/photos/abstract-autumn-forest-with-blurred-trees-and-orange-ground-Q3odV3gdBpE?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-09-05T06:51:16.550Z",
   "themeColors": {
-    "light": "hsl(200, 60%, 38%)",
-    "dark": "hsl(200, 70%, 60%)"
+    "light": "hsl(24, 63%, 38%)",
+    "dark": "hsl(24, 70%, 60%)"
   },
   "mobile": {
-    "id": "lI06Ce8Tam0",
-    "url": "https://images.unsplash.com/photo-1586869871566-d8e41dd50318?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTAxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTA1NjgxfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1586869871566-d8e41dd50318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTAxfExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTA1NjgxfA&ixlib=rb-4.1.0&q=85",
+    "id": "t_jSrDW5xPw",
+    "url": "https://images.unsplash.com/photo-1760300908166-45f1ebeb202e?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTI3fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTkxMDc2fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1760300908166-45f1ebeb202e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTI3fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4NTkxMDc2fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Simone Hutsch",
-      "username": "heysupersimi",
-      "link": "https://unsplash.com/@heysupersimi?utm_source=Glance&utm_medium=referral"
+      "name": "Adam Hornyak",
+      "username": "adamhornyak",
+      "link": "https://unsplash.com/@adamhornyak?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/gray-concrete-building-during-night-time-lI06Ce8Tam0?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-04T07:08:02.196Z"
+    "link": "https://unsplash.com/photos/grasses-in-foreground-with-misty-mountains-beyond-t_jSrDW5xPw?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-09-05T06:51:16.636Z"
   }
 }
