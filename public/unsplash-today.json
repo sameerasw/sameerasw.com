@@ -1,28 +1,28 @@
 {
-  "id": "T6KkCCoDFJk",
-  "url": "https://images.unsplash.com/photo-1723711183425-7d202944cff2?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA1NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4ODc2NTE3M3w&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1723711183425-7d202944cff2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA1NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc4ODc2NTE3M3w&ixlib=rb-4.1.0&q=85",
+  "id": "cPFN3zdtf6s",
+  "url": "https://images.unsplash.com/photo-1767256760771-2ade47ca0eca?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDU5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4ODUxMzExfA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1767256760771-2ade47ca0eca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDU5fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4ODUxMzExfA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Joost Crop",
-    "username": "smallcamerabigpictures",
-    "link": "https://unsplash.com/@smallcamerabigpictures?utm_source=Glance&utm_medium=referral"
+    "name": "National Gallery of Art",
+    "username": "nationalgallery",
+    "link": "https://unsplash.com/@nationalgallery?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/rows-of-black-seats-in-a-large-auditorium-T6KkCCoDFJk?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-07T07:12:53.148Z",
+  "link": "https://unsplash.com/photos/cPFN3zdtf6s?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-09-08T07:08:32.079Z",
   "themeColors": {
-    "light": "hsl(0, 60%, 25%)",
-    "dark": "hsl(0, 70%, 60%)"
+    "light": "hsl(60, 60%, 30%)",
+    "dark": "hsl(60, 70%, 60%)"
   },
   "mobile": {
-    "id": "DSDlzcLKR1A",
-    "url": "https://images.unsplash.com/photo-1722401378213-712562c934bd?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4ODc2NTE3M3w&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1722401378213-712562c934bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc4ODc2NTE3M3w&ixlib=rb-4.1.0&q=85",
+    "id": "20u5ZQImHZ0",
+    "url": "https://images.unsplash.com/photo-1764866915273-ea87cf57526d?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4ODUxMzExfA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1764866915273-ea87cf57526d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc1fExxTzlrblU5ejJBfHx8fHwyfHwxNzg4ODUxMzExfA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Alim",
+      "username": "apyfz",
+      "link": "https://unsplash.com/@apyfz?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-bunch-of-white-and-red-flowers-in-a-field-DSDlzcLKR1A?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-07T07:12:53.260Z"
+    "link": "https://unsplash.com/photos/traditional-chinese-temple-roof-with-red-lanterns-20u5ZQImHZ0?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-09-08T07:08:32.245Z"
   }
 }
