@@ -2,5 +2,9 @@
   "Always on Display": {
     "type": "video",
     "url": "https://sameerasw.com/essentials/help/aod.mp4"
+  },
+  "Maps power saving mode": {
+    "type": "image",
+    "url": "https://sameerasw.com/essentials/help/maps-power-saving.jpeg"
   }
 }
