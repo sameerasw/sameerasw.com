@@ -42,6 +42,7 @@
     }
     &.home-logo {
       background-image: url("/assets/img/notion.png");
+      clip-path: url(#m3-flower-12);
     }
     &.pixel-logo {
       background-image: url("/assets/img/articles/pixel/article-icon-pixel.png");
@@ -75,9 +76,17 @@
       left: 50%;
       translate: -50% 0;
       scale: 0.25;
-      border-radius: 50%;
       margin: 20px 0;
       z-index: 100;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  @keyframes spinFlowerPath {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
