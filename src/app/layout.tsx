@@ -4,6 +4,7 @@ import Script from "next/script";
 import "@/styles/style.css";
 import "@/styles/common/no-cursor.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import "material-symbols/rounded.css";
 
 import Cursor from "@/components/Cursor";
 import StickyLoveTab from "@/components/StickyLoveTab";
@@ -58,16 +59,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,wdth,ROND@6..144,1..1000,100..150,0..100&display=swap"
           rel="stylesheet"
-        />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,200"
-          as="style"
-        />
-
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
 
         <Script

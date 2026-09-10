@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^7.2.0",
     "@types/pg": "^8.20.0",
     "gray-matter": "^4.0.3",
+    "material-symbols": "^0.47.2",
     "next": "16.1.6",
     "pg": "^8.20.0",
     "react": "19.2.3",

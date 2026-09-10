@@ -17,6 +17,9 @@ importers:
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
+      material-symbols:
+        specifier: ^0.47.2
+        version: 0.47.2
       next:
         specifier: 16.1.6
         version: 16.1.6(@babel/core@7.29.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1074,6 +1077,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -1498,6 +1502,9 @@ packages:
 
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
+
+  material-symbols@0.47.2:
+    resolution: {integrity: sha512-+IWfgccIy3A7OFX+2LzI9LNXCkg3m8h+FhuNyNNOdL+uOQxw8zaP2nsuj2MOQmapND8OnmlHZ1XWrQFc4/9ZKw==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -3805,6 +3812,8 @@ snapshots:
       yallist: 3.1.1
 
   markdown-table@3.0.4: {}
+
+  material-symbols@0.47.2: {}
 
   math-intrinsics@1.1.0: {}
 
