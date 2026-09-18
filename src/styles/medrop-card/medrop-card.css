@@ -1,0 +1,162 @@
+.medrop-card-page {
+  display: flex;
+  justify-content: center;
+  padding: 3em 20px 4em;
+  min-height: 100vh;
+  background: var(--background-color-primary);
+  color: var(--text-color);
+}
+
+.medrop-card-wrap {
+  width: 100%;
+  max-width: 460px;
+}
+
+.medrop-avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.medrop-avatar {
+  background-color: var(--primary-color);
+  height: 160px;
+  width: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--radius-out);
+  clip-path: url(#m3-flower-12);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: 600;
+  font-variation-settings: "wdth" 500, "ROND" 100;
+  color: var(--background-color-primary);
+}
+.medrop-flower-path {
+  transform-origin: 0.5px 0.5px;
+  animation: medropSpinFlowerPath 30s linear infinite;
+}
+@keyframes medropSpinFlowerPath {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.medrop-name {
+  text-align: center;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 0 0 2px;
+  font-weight: 600;
+  text-transform: none;
+  font-family: var(--font-family);
+  font-variation-settings: "wdth" 350, "ROND" 100;
+}
+.medrop-empty h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.medrop-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin: 0 0 4px;
+}
+.medrop-pronouns {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.55;
+  margin: 0 0 24px;
+}
+
+.medrop-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-out);
+  border: none;
+  background: var(--primary-color);
+  color: var(--background-color-primary);
+  font-family: var(--font-family);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-variation-settings: "wdth" 350, "ROND" 100;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.medrop-save-btn:hover { transform: scale(1.02); border-radius: var(--radius-in); }
+.medrop-save-btn:active { transform: scale(0.98); }
+
+/* ── segmented list, matching #highlights ── */
+.medrop-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: var(--radius-out);
+  overflow: hidden;
+}
+.medrop-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+  background-color: var(--background-color-tr);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 14px 16px;
+}
+.medrop-detail-item:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.02);
+  border-radius: var(--radius-in);
+  z-index: 2;
+}
+.medrop-detail-item .material-symbols-rounded {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+.medrop-detail-item:hover .material-symbols-rounded {
+  color: var(--background-color-primary);
+}
+.medrop-detail-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  margin-bottom: 1px;
+}
+.medrop-detail-value {
+  font-size: 1rem;
+  word-break: break-word;
+  font-variation-settings: "wdth" 100;
+}
+
+.medrop-footer {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+.medrop-footer a { color: inherit; }
+
+.medrop-empty {
+  text-align: center;
+  padding: 60px 20px;
+  opacity: 0.75;
+}
+.medrop-empty h1 { opacity: 1; }
