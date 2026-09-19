@@ -2,29 +2,29 @@
   "essentials": {
     "id": "essentials",
     "repo": "sameerasw/essentials",
-    "stars": 3010,
-    "downloads": 495639,
+    "stars": 3022,
+    "downloads": 497966,
     "latestVersion": "v18.2-beta.1",
     "latestReleaseAt": "2026-09-17T13:42:47Z",
-    "updatedAt": "2026-09-18T07:16:29.414Z"
+    "updatedAt": "2026-09-19T07:13:26.612Z"
   },
   "airsync-mac": {
     "id": "airsync-mac",
     "repo": "sameerasw/airsync-mac",
-    "stars": 833,
-    "downloads": 15617,
+    "stars": 835,
+    "downloads": 15650,
     "latestVersion": "v4.0.0",
     "latestReleaseAt": "2026-07-25T09:10:07Z",
-    "updatedAt": "2026-09-18T07:16:30.019Z"
+    "updatedAt": "2026-09-19T07:13:27.183Z"
   },
   "medrop": {
     "id": "medrop",
     "repo": "sameerasw/MeDrop",
     "stars": 38,
-    "downloads": 348,
+    "downloads": 352,
     "latestVersion": "v1.0-beta2",
     "latestReleaseAt": "2026-09-01T17:08:55Z",
-    "updatedAt": "2026-09-18T07:16:30.473Z"
+    "updatedAt": "2026-09-19T07:13:27.620Z"
   },
   "my-internet": {
     "id": "my-internet",
@@ -33,16 +33,16 @@
     "downloads": 0,
     "latestVersion": "pre-release-07a1ecb932cefb23e49dc4959a55fbe15e7b038f",
     "latestReleaseAt": "2025-07-05T09:47:48Z",
-    "updatedAt": "2026-09-18T07:16:30.969Z"
+    "updatedAt": "2026-09-19T07:13:28.119Z"
   },
   "folder-icons": {
     "id": "folder-icons",
     "repo": "sameerasw/folder-icons",
     "stars": 872,
-    "downloads": 20428,
+    "downloads": 20430,
     "latestVersion": "v3.1",
     "latestReleaseAt": "2023-09-10T08:57:26Z",
-    "updatedAt": "2026-09-18T07:16:31.535Z"
+    "updatedAt": "2026-09-19T07:13:28.707Z"
   },
   "zeninternet": {
     "id": "zeninternet",
@@ -51,34 +51,34 @@
     "downloads": 0,
     "latestVersion": "2.2.0",
     "latestReleaseAt": "2025-05-08T20:29:25Z",
-    "updatedAt": "2026-09-18T07:16:32.028Z"
+    "updatedAt": "2026-09-19T07:13:29.110Z"
   },
   "canvas": {
     "id": "canvas",
     "repo": "sameerasw/Canvas",
     "stars": 89,
-    "downloads": 966,
+    "downloads": 968,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-02-10T03:29:13Z",
-    "updatedAt": "2026-09-18T07:16:32.975Z"
+    "updatedAt": "2026-09-19T07:13:29.886Z"
   },
   "tasks": {
     "id": "tasks",
     "repo": "sameerasw/tasks",
     "stars": 43,
-    "downloads": 206,
+    "downloads": 207,
     "latestVersion": "v3.0.0",
     "latestReleaseAt": "2026-03-10T05:55:56Z",
-    "updatedAt": "2026-09-18T07:16:33.414Z"
+    "updatedAt": "2026-09-19T07:13:30.226Z"
   },
   "Browser": {
     "id": "Browser",
     "repo": "sameerasw/Browser",
     "stars": 121,
-    "downloads": 515,
+    "downloads": 517,
     "latestVersion": "v1.0.0-BETA-02",
     "latestReleaseAt": "2025-10-09T17:41:27Z",
-    "updatedAt": "2026-09-18T07:16:33.937Z"
+    "updatedAt": "2026-09-19T07:13:30.695Z"
   },
   "daily": {
     "id": "daily",
@@ -87,7 +87,7 @@
     "downloads": 31,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-07-09T17:55:51Z",
-    "updatedAt": "2026-09-18T07:16:32.461Z"
+    "updatedAt": "2026-09-19T07:13:29.508Z"
   },
   "watchfaces": {
     "id": "watchfaces",
@@ -96,7 +96,7 @@
     "downloads": 178,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-02-11T14:56:56Z",
-    "updatedAt": "2026-09-18T07:16:34.358Z"
+    "updatedAt": "2026-09-19T07:13:31.063Z"
   },
   "macro": {
     "id": "macro",
@@ -105,6 +105,6 @@
     "downloads": 0,
     "latestVersion": "",
     "latestReleaseAt": "2026-07-17T09:45:46Z",
-    "updatedAt": "2026-09-18T07:16:34.694Z"
+    "updatedAt": "2026-09-19T07:13:31.358Z"
   }
 }
