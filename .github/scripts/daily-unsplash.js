@@ -54,6 +54,7 @@ const OUTPUT_FILE = path.join(PUBLIC_DIR, 'unsplash-today.json');
 const SCRIPTS_DIR = __dirname;
 const HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-history.json');
 const MOBILE_HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-mobile-history.json');
+const MAX_HISTORY_LENGTH = 45;
 
 async function run() {
   if (!ACCESS_KEY) {
@@ -219,7 +220,7 @@ async function run() {
       outputData.themeColors = generateThemeColors(selectedPhoto.color);
 
       history.push(selectedPhoto.id);
-      if (history.length > 15) {
+      if (history.length > MAX_HISTORY_LENGTH) {
         history.shift();
       }
       fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
@@ -276,7 +277,7 @@ async function run() {
       };
 
       mobileHistory.push(selectedMobilePhoto.id);
-      if (mobileHistory.length > 15) {
+      if (mobileHistory.length > MAX_HISTORY_LENGTH) {
         mobileHistory.shift();
       }
       fs.writeFileSync(MOBILE_HISTORY_FILE, JSON.stringify(mobileHistory, null, 2), 'utf8');
