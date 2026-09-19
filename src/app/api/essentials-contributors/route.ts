@@ -56,7 +56,7 @@ export async function GET() {
           c.type !== "Bot" &&
           !c.login.toLowerCase().endsWith("[bot]")
       )
-      .slice(0, 10)
+      .slice(0, 15)
       .map((c) => ({
         login: c.login,
         avatar_url: c.avatar_url,
