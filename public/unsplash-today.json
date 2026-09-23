@@ -1,28 +1,28 @@
 {
-  "id": "erAwtFf5eeU",
-  "url": "https://images.unsplash.com/photo-1779083552552-e17e83296ecd?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUyfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1779083552552-e17e83296ecd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUyfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&q=85",
+  "id": "OvB7KPihcL8",
+  "url": "https://images.unsplash.com/photo-1778469841603-e0e622042ffb?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjY3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1778469841603-e0e622042ffb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjY3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Winston Chen",
-    "username": "winstonchen",
-    "link": "https://unsplash.com/@winstonchen?utm_source=Glance&utm_medium=referral"
+    "name": "Eugene Golovesov",
+    "username": "eugene_golovesov",
+    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/airplane-wing-against-a-starry-night-sky-erAwtFf5eeU?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-22T07:34:33.322Z",
+  "link": "https://unsplash.com/photos/abstract-forest-with-blurred-orange-trees-and-blue-background-OvB7KPihcL8?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-09-23T07:37:01.724Z",
   "themeColors": {
-    "light": "hsl(210, 68%, 25%)",
-    "dark": "hsl(210, 70%, 60%)"
+    "light": "hsl(200, 87%, 35%)",
+    "dark": "hsl(200, 87%, 60%)"
   },
   "mobile": {
-    "id": "x6eA35TUyzY",
-    "url": "https://images.unsplash.com/photo-1769670172608-f741dd969509?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjU2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1769670172608-f741dd969509?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjU2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&q=85",
+    "id": "RJqq_uey-aE",
+    "url": "https://images.unsplash.com/photo-1779083551858-2cb88d7bddcf?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1779083551858-2cb88d7bddcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMDYyNDczfA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Balázs Gábor",
-      "username": "balazsgabor17",
-      "link": "https://unsplash.com/@balazsgabor17?utm_source=Glance&utm_medium=referral"
+      "name": "Winston Chen",
+      "username": "winstonchen",
+      "link": "https://unsplash.com/@winstonchen?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/white-wave-crests-on-black-sand-beach-x6eA35TUyzY?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-22T07:34:33.458Z"
+    "link": "https://unsplash.com/photos/airplane-wing-against-a-starry-night-sky-RJqq_uey-aE?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-09-23T07:37:01.889Z"
   }
 }
