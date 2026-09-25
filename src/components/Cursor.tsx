@@ -55,79 +55,65 @@ export default function Cursor() {
       }
     };
 
-    const handleMouseEnterLink = (e: Event) => {
-      const link = e.currentTarget as HTMLElement;
+    const enterLink = (link: HTMLElement) => {
       cursor.classList.add("blur-mini");
       cursor.classList.add("cursor-grow");
       updateTitle(link.getAttribute("data-title"));
     };
 
-    const handleMouseLeaveLink = () => {
+    const leaveLink = () => {
       cursor.classList.remove("blur-mini");
       cursor.classList.remove("cursor-grow");
       updateTitle("");
     };
 
-    const handleMouseEnterHoverable = () => {
+    const enterHoverable = () => {
       cursor.style.display = "none";
       document.body.style.cursor = "pointer";
     };
 
-    const handleMouseLeaveHoverable = () => {
+    const leaveHoverable = () => {
       cursor.style.display = "block";
       document.body.style.cursor = "none";
     };
 
-    window.addEventListener("mousemove", moveCursor);
+    // Delegated so elements added or re-rendered later never leave the cursor stuck
+    let currentLink: HTMLElement | null = null;
+    let currentHoverable: HTMLElement | null = null;
 
-    // Apply listeners to current elements
-    const attachListeners = () => {
-      const links = document.querySelectorAll("a, button");
-      const hoverables = document.querySelectorAll(".hover-state");
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target instanceof Element ? e.target : null;
+      const link = target?.closest<HTMLElement>("a, button, .contact-chip") ?? null;
+      const hoverable = target?.closest<HTMLElement>(".hover-state") ?? null;
 
-      links.forEach((link) => {
-        link.addEventListener("mouseenter", handleMouseEnterLink);
-        link.addEventListener("mouseleave", handleMouseLeaveLink);
-      });
+      if (link !== currentLink) {
+        if (currentLink) leaveLink();
+        currentLink = link;
+        if (link) enterLink(link);
+      }
 
-      hoverables.forEach((hoverable) => {
-        hoverable.addEventListener("mouseenter", handleMouseEnterHoverable);
-        hoverable.addEventListener("mouseleave", handleMouseLeaveHoverable);
-      });
-
-      return () => {
-        links.forEach((link) => {
-          link.removeEventListener("mouseenter", handleMouseEnterLink);
-          link.removeEventListener("mouseleave", handleMouseLeaveLink);
-        });
-
-        hoverables.forEach((hoverable) => {
-          hoverable.removeEventListener(
-            "mouseenter",
-            handleMouseEnterHoverable,
-          );
-          hoverable.removeEventListener(
-            "mouseleave",
-            handleMouseLeaveHoverable,
-          );
-        });
-      };
+      if (hoverable !== currentHoverable) {
+        if (currentHoverable) leaveHoverable();
+        currentHoverable = hoverable;
+        if (hoverable) enterHoverable();
+      }
     };
 
-    let cleanupListeners = attachListeners();
+    const handleMouseLeaveWindow = () => {
+      if (currentLink) leaveLink();
+      if (currentHoverable) leaveHoverable();
+      currentLink = null;
+      currentHoverable = null;
+    };
 
-    // Re-attach listeners if DOM changes (Next.js route changes)
-    const observer = new MutationObserver(() => {
-      cleanupListeners();
-      cleanupListeners = attachListeners();
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener("mousemove", moveCursor);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.documentElement.addEventListener("mouseleave", handleMouseLeaveWindow);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      cleanupListeners();
-      observer.disconnect();
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.documentElement.removeEventListener("mouseleave", handleMouseLeaveWindow);
     };
   }, []);
 

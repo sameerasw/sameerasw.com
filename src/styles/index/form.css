@@ -104,3 +104,100 @@
     border-radius: var(--radius-in);
     object-fit: cover;
 }
+
+/* ── pickers ─────────────────────────────────────────────── */
+#contact-form .contact-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8em 1.5em;
+    color: var(--text-color);
+}
+
+.contact-chips-label {
+    margin-right: 0.5em;
+    opacity: 0.6;
+}
+
+.contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.45em 0.9em;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--text-color) 18%, transparent);
+    cursor: none;
+    font-size: 0.95rem;
+    user-select: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-chip:hover {
+    border-color: var(--primary-color);
+}
+
+.contact-chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+.contact-chip:has(input:focus-visible) {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+#contact-form .contact-chips .contact-chip .material-symbols-rounded {
+    font-size: 1.15em;
+    color: inherit !important;
+}
+
+.contact-chip-logo,
+.contact-chip-mask {
+    width: 1.15em;
+    height: 1.15em;
+    flex-shrink: 0;
+}
+
+.contact-chip-logo {
+    object-fit: contain;
+}
+
+.contact-chip-mask {
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.contact-chip.selected {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color-primary);
+    font-weight: 600;
+}
+
+/* form rows keep their resting look on hover; only focus and the send button react */
+#contact-form .contact-chips:hover,
+#contact-form input.highlight-item:hover,
+#contact-form textarea.highlight-item:hover {
+    background-color: var(--background-color-tr);
+    transform: none;
+    border-radius: 5px;
+}
+
+#contact-form input.highlight-item:focus,
+#contact-form textarea.highlight-item:focus {
+    transform: none;
+}
+
+#contact-form button#btn:hover .material-symbols-rounded {
+    color: var(--background-color-primary);
+}
+

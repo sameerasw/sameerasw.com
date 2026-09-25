@@ -6,6 +6,7 @@ import LastFmWidget from "@/components/LastFmWidget";
 import SocialsChips from "@/components/SocialsChips";
 import { GitHubCalendar } from "react-github-calendar";
 import GitHubChips from "@/components/GitHubChips";
+import ContactForm from "@/components/ContactForm";
 
 import PhotographyCarousel, { PhotoItem } from "@/components/PhotographyCarousel";
 
@@ -43,7 +44,6 @@ export default function HomeClient({
 
   const [bgUrl, setBgUrl] = useState("");
   const [bgLoaded, setBgLoaded] = useState(false);
-  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [projectDetails, setProjectDetails] = useState<Record<string, { stars: number; downloads: number; latestReleaseAt: string }> | null>(null);
 
   useEffect(() => {
@@ -123,30 +123,6 @@ export default function HomeClient({
         )}
       </div>
     );
-  };
-
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormStatus("submitting");
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      formData.append("access_key", "1e8103b3-2bf2-47fe-93bf-4faf9847bfb8");
-      formData.append("subject", "New message from sameerasw.com");
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-      if (response.ok) {
-        setFormStatus("success");
-        form.reset();
-      } else {
-        setFormStatus("error");
-      }
-    } catch (error) {
-      setFormStatus("error");
-    }
   };
 
   // Helper to get lower quality/size Unsplash URL for performance
@@ -840,66 +816,7 @@ export default function HomeClient({
               contact me via email or any of my social media profiles.
             </p>
             <div id="contact-form">
-              <form
-                name="contact"
-                method="POST"
-                onSubmit={handleFormSubmit}
-              >
-                <p style={{ display: "none" }}>
-                  <label>
-                    Don’t fill this out if you’re human:{" "}
-                    <input type="checkbox" name="botcheck" tabIndex={-1} />
-                  </label>
-                </p>
-                <div id="highlights">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Name"
-                    required
-                    className="highlight-item item"
-                  />
-                  <input
-                    type="email"
-                    name="_replyto"
-                    id="email"
-                    placeholder="Email"
-                    required
-                    className="highlight-item item"
-                  />
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Message"
-                    required
-                    className="highlight-item item"
-                  ></textarea>
-                  <button
-                    type="submit"
-                    id="btn"
-                    className="highlight-item item"
-                    disabled={formStatus === "submitting"}
-                  >
-                    <span className="material-symbols-rounded">
-                      {formStatus === "submitting"
-                        ? "hourglass_empty"
-                        : formStatus === "success"
-                          ? "check"
-                          : formStatus === "error"
-                            ? "error"
-                            : "send"}
-                    </span>
-                    {formStatus === "submitting"
-                      ? "Sending..."
-                      : formStatus === "success"
-                        ? "Sent!"
-                        : formStatus === "error"
-                          ? "Failed, try again?"
-                          : "Send"}
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
               <div id="highlights" style={{ marginTop: "1em" }}>
                 <a
                   href="/assets/resume.pdf"
