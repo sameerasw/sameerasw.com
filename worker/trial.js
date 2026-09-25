@@ -1,9 +1,9 @@
 import { Client } from "pg";
-import crypto from "crypto";
+import crypto from "node:crypto";
 
-async function getDb() {
+async function getDb(env) {
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: env.DATABASE_URL,
     ssl: { rejectUnauthorized: false },
   });
   await client.connect();
@@ -23,13 +23,13 @@ async function getDb() {
   return client;
 }
 
-export default async (req) => {
+export default async function handleTrial(req, env) {
   const url = new URL(req.url);
-  const adminKey = process.env.TRIAL_ADMIN_KEY;
-  const secret = process.env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
+  const adminKey = env.TRIAL_ADMIN_KEY;
+  const secret = env.TRIAL_SECRET ?? "CHANGE_ME_SECRET";
   const deviceId = url.searchParams.get("deviceId");
 
-  const client = await getDb();
+  const client = await getDb(env);
 
   // --- Admin actions ---
   const action = url.searchParams.get("action");
@@ -108,4 +108,4 @@ export default async (req) => {
   return new Response(JSON.stringify(trialData), {
     headers: { "Content-Type": "application/json" },
   });
-};
+}

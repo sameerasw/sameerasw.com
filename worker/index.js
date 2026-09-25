@@ -1,3 +1,5 @@
+import handleTrial from "./trial.js";
+
 const DATA_FILES = {
   "/unsplash-today.json": "unsplash-today.json",
   "/photos.json": "photos.json",
@@ -12,6 +14,10 @@ const DATA_FILES = {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname.replace(/\/$/, "") === "/.netlify/functions/trial") {
+      return handleTrial(request, env);
+    }
     const key = DATA_FILES[url.pathname.replace(/\/$/, "")];
 
     if (key) {
