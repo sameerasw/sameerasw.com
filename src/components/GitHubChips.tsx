@@ -19,7 +19,7 @@ export default function GitHubChips() {
   const [stats, setStats] = useState<GitHubStats | null>(null);
 
   useEffect(() => {
-    fetch("/api/github-stats")
+    fetch("/github-stats.json")
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => d && setStats(d))
       .catch(() => {});

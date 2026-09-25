@@ -38,7 +38,7 @@ export default function GitHubStatsCard() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("/api/github-stats")
+    fetch("/github-stats.json")
       .then((r) => {
         if (!r.ok) throw new Error("failed");
         return r.json();

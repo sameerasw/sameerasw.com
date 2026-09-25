@@ -50,6 +50,26 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/update-project-details.js
 
+      - name: Update GitHub Stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/scripts/update-github-stats.js
+          node .github/scripts/update-essentials-contributors.js
+
+      - name: Push data to Cloudflare KV
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
+        run: |
+          .github/scripts/push-data-to-kv.sh \
+            public/unsplash-today.json \
+            public/photos.json \
+            public/project-details.json \
+            public/github-stats.json \
+            public/essentials-contributors.json
+
       - name: Send Telegram Notification
         if: success()
         env:
@@ -108,5 +128,5 @@ jobs:
         run: |
           git config --global user.name 'sameerasw'
           git config --global user.email 'mail@sameerasw.com'
-          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json public/photos.json
+          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json public/photos.json public/github-stats.json public/essentials-contributors.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper and photos" && git push)

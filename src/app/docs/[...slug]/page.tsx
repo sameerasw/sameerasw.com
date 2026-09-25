@@ -13,6 +13,22 @@ interface PageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const params: { slug: string[] }[] = [];
+  const walk = (productId: string, items: DocSection[], parents: string[]) => {
+    for (const item of items) {
+      const path = [...parents, item.slug];
+      params.push({ slug: [productId, ...path] });
+      if (item.items) walk(productId, item.items, path);
+    }
+  };
+  for (const productId of Object.keys(PRODUCTS)) {
+    params.push({ slug: [productId] });
+    walk(productId, await getDocSections(productId), []);
+  }
+  return params;
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   if (!slug || slug.length < 1) return { title: 'Docs' };
