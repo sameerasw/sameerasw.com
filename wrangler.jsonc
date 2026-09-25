@@ -12,6 +12,7 @@
       "/project-details.json",
       "/github-stats.json",
       "/essentials-contributors.json",
+      "/essentials-update.json",
       "/api/*"
     ],
 		"not_found_handling": "404-page",

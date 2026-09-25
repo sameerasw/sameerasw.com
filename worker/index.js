@@ -4,6 +4,7 @@ const DATA_FILES = {
   "/project-details.json": "project-details.json",
   "/github-stats.json": "github-stats.json",
   "/essentials-contributors.json": "essentials-contributors.json",
+  "/essentials-update.json": "essentials-update.json",
   "/api/github-stats": "github-stats.json",
   "/api/essentials-contributors": "essentials-contributors.json",
 };
