@@ -706,7 +706,7 @@ export default function HomeClient({
               </div>
               <div className="pill item">
                 <span className="material-symbols-rounded">cake</span>
-                <span>24</span>
+                <span>25</span>
               </div>
               <div className="pill item">
                 <span className="material-symbols-rounded">location_on</span>
