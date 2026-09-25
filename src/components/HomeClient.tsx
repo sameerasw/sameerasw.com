@@ -29,9 +29,11 @@ interface HomeClientProps {
 
 export default function HomeClient({
   updatesSection,
-  wallpaperData,
-  photosData = [],
+  wallpaperData: initialWallpaperData,
+  photosData: initialPhotosData = [],
 }: HomeClientProps) {
+  const [wallpaperData, setWallpaperData] = useState(initialWallpaperData);
+  const [photosData, setPhotosData] = useState(initialPhotosData);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -43,6 +45,21 @@ export default function HomeClient({
   const [bgLoaded, setBgLoaded] = useState(false);
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [projectDetails, setProjectDetails] = useState<Record<string, { stars: number; downloads: number; latestReleaseAt: string }> | null>(null);
+
+  useEffect(() => {
+    fetch("/unsplash-today.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.url && data.url !== initialWallpaperData?.url) setWallpaperData(data);
+      })
+      .catch(() => {});
+    fetch("/photos.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) setPhotosData(data);
+      })
+      .catch(() => {});
+  }, [initialWallpaperData?.url]);
 
   useEffect(() => {
     fetch("/project-details.json")
@@ -115,10 +132,11 @@ export default function HomeClient({
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("/__forms.html", {
+      formData.append("access_key", "1e8103b3-2bf2-47fe-93bf-4faf9847bfb8");
+      formData.append("subject", "New message from sameerasw.com");
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: formData,
       });
       if (response.ok) {
         setFormStatus("success");
@@ -825,15 +843,12 @@ export default function HomeClient({
               <form
                 name="contact"
                 method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
                 onSubmit={handleFormSubmit}
               >
-                <input type="hidden" name="form-name" value="contact" />
                 <p style={{ display: "none" }}>
                   <label>
                     Don’t fill this out if you’re human:{" "}
-                    <input name="bot-field" />
+                    <input type="checkbox" name="botcheck" tabIndex={-1} />
                   </label>
                 </p>
                 <div id="highlights">
