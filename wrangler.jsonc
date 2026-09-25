@@ -3,6 +3,7 @@
 	"name": "sameerasw-com",
 	"main": "worker/index.js",
 	"compatibility_date": "2026-09-01",
+	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"directory": "./out",
 		"binding": "ASSETS",
@@ -13,7 +14,8 @@
       "/github-stats.json",
       "/essentials-contributors.json",
       "/essentials-update.json",
-      "/api/*"
+      "/api/*",
+      "/.netlify/*"
     ],
 		"not_found_handling": "404-page",
 		"html_handling": "auto-trailing-slash"
