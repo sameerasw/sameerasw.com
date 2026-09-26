@@ -1,28 +1,28 @@
 {
-  "id": "3jwkT79xKrE",
-  "url": "https://images.unsplash.com/photo-1781440619954-7bfa9d81e9e6?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg5fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMzIxMzkzfA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1781440619954-7bfa9d81e9e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg5fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMzIxMzkzfA&ixlib=rb-4.1.0&q=85",
+  "id": "mqyLHroQz2g",
+  "url": "https://images.unsplash.com/photo-1722855421013-1a0ab2fb0036?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA4NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDQwNzQ0NXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1722855421013-1a0ab2fb0036?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA4NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDQwNzQ0NXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "damien dufour",
-    "username": "damiendufourphotographie",
-    "link": "https://unsplash.com/@damiendufourphotographie?utm_source=Glance&utm_medium=referral"
+    "name": "Hugo ROUQUETTE",
+    "username": "hugorqut",
+    "link": "https://unsplash.com/@hugorqut?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/dark-mountain-silhouettes-against-a-colorful-twilight-sky-3jwkT79xKrE?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-25T07:29:53.965Z",
+  "link": "https://unsplash.com/photos/an-aerial-view-of-the-ocean-and-a-cliff-mqyLHroQz2g?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-09-26T07:24:05.975Z",
   "themeColors": {
-    "light": "hsl(180, 60%, 25%)",
-    "dark": "hsl(180, 70%, 60%)"
+    "light": "hsl(199, 60%, 38%)",
+    "dark": "hsl(199, 70%, 70%)"
   },
   "mobile": {
-    "id": "w95dhFvoJ_Q",
-    "url": "https://images.unsplash.com/photo-1748015847481-a6292f4e7b11?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjEwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMzIxMzkzfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1748015847481-a6292f4e7b11?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjEwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwMzIxMzkzfA&ixlib=rb-4.1.0&q=85",
+    "id": "YfGSckc9xsU",
+    "url": "https://images.unsplash.com/photo-1723444130340-109512cc90f5?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA5OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDQwNzQ0NXw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1723444130340-109512cc90f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA5OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDQwNzQ0NXw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Linus Belanger",
-      "username": "linusbelanger",
-      "link": "https://unsplash.com/@linusbelanger?utm_source=Glance&utm_medium=referral"
+      "name": "Eugene Golovesov",
+      "username": "eugene_golovesov",
+      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/pink-flowers-bloom-beautifully-against-the-sky-w95dhFvoJ_Q?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-25T07:29:54.008Z"
+    "link": "https://unsplash.com/photos/a-blurry-photo-of-feathers-flying-in-the-sky-YfGSckc9xsU?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-09-26T07:24:06.098Z"
   }
 }
