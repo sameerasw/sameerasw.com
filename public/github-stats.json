@@ -1,7 +1,7 @@
 {
   "repos": 130,
-  "stars": 6178,
-  "followers": 854,
+  "stars": 6187,
+  "followers": 858,
   "topLanguages": [
     "Kotlin",
     "Java",
@@ -11,7 +11,7 @@
   "streak": {
     "current": 270,
     "longest": 270,
-    "totalThisYear": 12014
+    "totalThisYear": 12000
   },
   "graphqlOk": true
 }
