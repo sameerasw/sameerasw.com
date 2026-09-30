@@ -1,28 +1,28 @@
 {
-  "id": "pOjZHFGNZhk",
-  "url": "https://images.unsplash.com/photo-1736881383086-46fa30c7ee90?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTcxfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNjY5Njg5fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1736881383086-46fa30c7ee90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTcxfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNjY5Njg5fA&ixlib=rb-4.1.0&q=85",
+  "id": "Qp98pvJki-U",
+  "url": "https://images.unsplash.com/photo-1542320868-5e9bcce320c3?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1542320868-5e9bcce320c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Marek Piwnicki",
-    "username": "marekpiwnicki",
-    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
+    "name": "Nikita Taparia",
+    "username": "kryptobanana",
+    "link": "https://unsplash.com/@kryptobanana?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-mountain-covered-in-snow-under-a-colorful-sky-pOjZHFGNZhk?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-29T08:14:49.200Z",
+  "link": "https://unsplash.com/photos/a-blurry-photo-of-a-street-light-with-trees-in-the-background-Qp98pvJki-U?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-09-30T08:16:56.374Z",
   "themeColors": {
-    "light": "hsl(220, 76%, 25%)",
-    "dark": "hsl(220, 76%, 60%)"
+    "light": "hsl(300, 60%, 38%)",
+    "dark": "hsl(300, 70%, 70%)"
   },
   "mobile": {
-    "id": "btTwIZMkQyY",
-    "url": "https://images.unsplash.com/photo-1752084724342-e9ce3d8c6d09?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NzI0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNjcxMDY2fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1752084724342-e9ce3d8c6d09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NzI0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNjcxMDY2fA&ixlib=rb-4.1.0&q=85",
+    "id": "kb87Ie-Z2Qs",
+    "url": "https://images.unsplash.com/photo-1738890106477-9a661f5c9edc?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTUzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1738890106477-9a661f5c9edc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTUzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Susan Wilkinson",
-      "username": "susan_wilkinson",
-      "link": "https://unsplash.com/@susan_wilkinson?utm_source=Glance&utm_medium=referral"
+      "name": "Wenhao Ruan",
+      "username": "wenhao_ruan",
+      "link": "https://unsplash.com/@wenhao_ruan?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/abstract-art-with-pink-green-and-clear-textures-btTwIZMkQyY?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-29T08:37:46.219Z"
+    "link": "https://unsplash.com/photos/a-tall-red-building-with-a-bird-flying-by-kb87Ie-Z2Qs?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-09-30T08:16:56.434Z"
   }
 }
