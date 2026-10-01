@@ -34,4 +34,39 @@ export default {
 
     return env.ASSETS.fetch(request);
   },
+
+  async scheduled(event, env, ctx) {
+    if (!env.GH_DISPATCH_TOKEN) {
+      console.error("GH_DISPATCH_TOKEN is not set in Worker environment variables / secrets.");
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "https://api.github.com/repos/sameerasw/sameerasw.com/actions/workflows/daily-unsplash.yml/dispatches",
+        {
+          method: "POST",
+          headers: {
+            "Accept": "application/vnd.github.v3+json",
+            "Authorization": `Bearer ${env.GH_DISPATCH_TOKEN}`,
+            "User-Agent": "Cloudflare-Worker-Cron-Dispatcher",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ref: "main",
+            inputs: { target: "both" },
+          }),
+        }
+      );
+
+      if (!res.ok) {
+        const errText = await res.text();
+        console.error(`Failed to dispatch daily-unsplash workflow: HTTP ${res.status} - ${errText}`);
+      } else {
+        console.log("Successfully triggered daily-unsplash workflow right on time.");
+      }
+    } catch (err) {
+      console.error("Error dispatching daily-unsplash workflow:", err);
+    }
+  },
 };

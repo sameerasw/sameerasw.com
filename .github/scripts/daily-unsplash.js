@@ -180,7 +180,7 @@ const OUTPUT_FILE = path.join(PUBLIC_DIR, 'unsplash-today.json');
 const SCRIPTS_DIR = __dirname;
 const HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-history.json');
 const MOBILE_HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-mobile-history.json');
-const MAX_HISTORY_LENGTH = 45;
+const MAX_HISTORY_LENGTH = 150;
 
 async function run() {
   if (!ACCESS_KEY) {

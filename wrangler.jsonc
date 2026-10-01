@@ -4,6 +4,9 @@
 	"main": "worker/index.js",
 	"compatibility_date": "2026-09-01",
 	"compatibility_flags": ["nodejs_compat"],
+	"triggers": {
+		"crons": ["0 5 * * *"]
+	},
 	"assets": {
 		"directory": "./out",
 		"binding": "ASSETS",
