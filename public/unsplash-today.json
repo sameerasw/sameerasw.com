@@ -1,28 +1,28 @@
 {
-  "id": "Qp98pvJki-U",
-  "url": "https://images.unsplash.com/photo-1542320868-5e9bcce320c3?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1542320868-5e9bcce320c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTYwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&q=85",
+  "id": "HlJjGMlf2Mo",
+  "url": "https://images.unsplash.com/photo-1769008301383-a3a996d2c075?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1769008301383-a3a996d2c075?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Nikita Taparia",
-    "username": "kryptobanana",
-    "link": "https://unsplash.com/@kryptobanana?utm_source=Glance&utm_medium=referral"
+    "name": "Willian Justen de Vasconcellos",
+    "username": "willianjusten",
+    "link": "https://unsplash.com/@willianjusten?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-blurry-photo-of-a-street-light-with-trees-in-the-background-Qp98pvJki-U?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-09-30T08:16:56.374Z",
+  "link": "https://unsplash.com/photos/modern-building-facade-with-repeating-windows-and-yellow-accents-HlJjGMlf2Mo?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-01T08:39:09.557Z",
   "themeColors": {
-    "light": "hsl(300, 60%, 38%)",
-    "dark": "hsl(300, 70%, 70%)"
+    "light": "hsl(0, 60%, 38%)",
+    "dark": "hsl(0, 70%, 60%)"
   },
   "mobile": {
-    "id": "kb87Ie-Z2Qs",
-    "url": "https://images.unsplash.com/photo-1738890106477-9a661f5c9edc?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTUzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1738890106477-9a661f5c9edc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258OTUzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwNzU2MjE2fA&ixlib=rb-4.1.0&q=85",
+    "id": "xP6ngsgxck0",
+    "url": "https://images.unsplash.com/photo-1768280511074-3b3effe7a139?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc4fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1768280511074-3b3effe7a139?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc4fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Wenhao Ruan",
-      "username": "wenhao_ruan",
-      "link": "https://unsplash.com/@wenhao_ruan?utm_source=Glance&utm_medium=referral"
+      "name": "Resource Database",
+      "username": "resourcedatabase",
+      "link": "https://unsplash.com/@resourcedatabase?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-tall-red-building-with-a-bird-flying-by-kb87Ie-Z2Qs?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-09-30T08:16:56.434Z"
+    "link": "https://unsplash.com/photos/abstract-black-and-white-wavy-lines-pattern-xP6ngsgxck0?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-01T08:39:09.697Z"
   }
 }
