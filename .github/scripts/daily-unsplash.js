@@ -178,9 +178,8 @@ const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const PUBLIC_DIR = path.join(__dirname, '../../public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'unsplash-today.json');
 const NEXT_FILE = path.join(PUBLIC_DIR, 'unsplash-next.json');
-const SCRIPTS_DIR = __dirname;
-const HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-history.json');
-const MOBILE_HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-mobile-history.json');
+const HISTORY_FILE = path.join(PUBLIC_DIR, 'unsplash-history.json');
+const MOBILE_HISTORY_FILE = path.join(PUBLIC_DIR, 'unsplash-mobile-history.json');
 const MAX_HISTORY_LENGTH = 150;
 
 async function run() {
