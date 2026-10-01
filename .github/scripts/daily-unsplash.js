@@ -177,6 +177,7 @@ const COLLECTION_ID = 'LqO9knU9z2A';
 const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const PUBLIC_DIR = path.join(__dirname, '../../public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'unsplash-today.json');
+const NEXT_FILE = path.join(PUBLIC_DIR, 'unsplash-next.json');
 const SCRIPTS_DIR = __dirname;
 const HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-history.json');
 const MOBILE_HISTORY_FILE = path.join(SCRIPTS_DIR, 'unsplash-mobile-history.json');
@@ -363,50 +364,82 @@ async function run() {
 
     // ---- Mobile Portrait Wallpaper Selection ----
     if (shouldUpdateMobile) {
-      // If we didn't find any unused photo across all pages, fallback to least recently used
-      if (!selectedMobilePhoto) {
-        if (allFetchedMobileCandidates.length === 0) {
-          throw new Error('No mobile candidate photos found in the collection.');
-        }
-        console.log('All mobile photos in collection have been used. Selecting the least recently used one.');
-        const uniqueMobile = Array.from(new Map(allFetchedMobileCandidates.map(p => [p.id, p])).values());
-        uniqueMobile.sort((a, b) => mobileHistory.indexOf(a.id) - mobileHistory.indexOf(b.id));
-        selectedMobilePhoto = uniqueMobile[0];
-        mobileHistory = mobileHistory.filter(id => id !== selectedMobilePhoto.id);
-      }
-
-      if (selectedMobilePhoto.links && selectedMobilePhoto.links.download_location) {
+      // 1. Check if a staged mobile wallpaper is queued in unsplash-next.json
+      let stagedNext = null;
+      if (fs.existsSync(NEXT_FILE)) {
         try {
-          await fetch(selectedMobilePhoto.links.download_location, {
-            headers: {
-              'Authorization': `Client-ID ${ACCESS_KEY}`,
-              'Accept-Version': 'v1'
-            }
-          });
-          console.log('Mobile Unsplash download tracked successfully.');
-        } catch (err) {
-          console.error('Failed to track mobile download:', err);
+          stagedNext = JSON.parse(fs.readFileSync(NEXT_FILE, 'utf8'));
+        } catch (e) {
+          console.warn('Failed to parse unsplash-next.json:', e);
         }
       }
 
-      outputData.mobile = {
-        id: selectedMobilePhoto.id,
-        url: `${selectedMobilePhoto.urls.raw}&w=1080&q=90`,
-        url_full: selectedMobilePhoto.urls.full,
-        author: {
-          name: selectedMobilePhoto.user.name,
-          username: selectedMobilePhoto.user.username,
-          link: `${selectedMobilePhoto.user.links.html}?utm_source=Glance&utm_medium=referral`
-        },
-        link: `${selectedMobilePhoto.links.html}?utm_source=Glance&utm_medium=referral`,
-        updatedAt: new Date().toISOString()
-      };
+      if (stagedNext && stagedNext.mobile && stagedNext.mobile.id && stagedNext.mobile.url) {
+        console.log(`Using user-staged mobile wallpaper pick from unsplash-next.json: ${stagedNext.mobile.id}`);
+        outputData.mobile = {
+          ...stagedNext.mobile,
+          updatedAt: new Date().toISOString()
+        };
 
-      mobileHistory.push(selectedMobilePhoto.id);
-      if (mobileHistory.length > MAX_HISTORY_LENGTH) {
-        mobileHistory.shift();
+        mobileHistory.push(stagedNext.mobile.id);
+        if (mobileHistory.length > MAX_HISTORY_LENGTH) {
+          mobileHistory.shift();
+        }
+        fs.writeFileSync(MOBILE_HISTORY_FILE, JSON.stringify(mobileHistory, null, 2), 'utf8');
+
+        // Clear or reset the staged mobile wallpaper
+        try {
+          fs.writeFileSync(NEXT_FILE, JSON.stringify({}, null, 2), 'utf8');
+          console.log('Cleared unsplash-next.json after successfully applying staged mobile wallpaper.');
+        } catch (e) {
+          console.warn('Failed to reset unsplash-next.json:', e);
+        }
+      } else {
+        // Fallback to random candidate from collection
+        if (!selectedMobilePhoto) {
+          if (allFetchedMobileCandidates.length === 0) {
+            throw new Error('No mobile candidate photos found in the collection.');
+          }
+          console.log('All mobile photos in collection have been used. Selecting the least recently used one.');
+          const uniqueMobile = Array.from(new Map(allFetchedMobileCandidates.map(p => [p.id, p])).values());
+          uniqueMobile.sort((a, b) => mobileHistory.indexOf(a.id) - mobileHistory.indexOf(b.id));
+          selectedMobilePhoto = uniqueMobile[0];
+          mobileHistory = mobileHistory.filter(id => id !== selectedMobilePhoto.id);
+        }
+
+        if (selectedMobilePhoto.links && selectedMobilePhoto.links.download_location) {
+          try {
+            await fetch(selectedMobilePhoto.links.download_location, {
+              headers: {
+                'Authorization': `Client-ID ${ACCESS_KEY}`,
+                'Accept-Version': 'v1'
+              }
+            });
+            console.log('Mobile Unsplash download tracked successfully.');
+          } catch (err) {
+            console.error('Failed to track mobile download:', err);
+          }
+        }
+
+        outputData.mobile = {
+          id: selectedMobilePhoto.id,
+          url: `${selectedMobilePhoto.urls.raw}&w=1080&q=90`,
+          url_full: selectedMobilePhoto.urls.full,
+          author: {
+            name: selectedMobilePhoto.user.name,
+            username: selectedMobilePhoto.user.username,
+            link: `${selectedMobilePhoto.user.links.html}?utm_source=Glance&utm_medium=referral`
+          },
+          link: `${selectedMobilePhoto.links.html}?utm_source=Glance&utm_medium=referral`,
+          updatedAt: new Date().toISOString()
+        };
+
+        mobileHistory.push(selectedMobilePhoto.id);
+        if (mobileHistory.length > MAX_HISTORY_LENGTH) {
+          mobileHistory.shift();
+        }
+        fs.writeFileSync(MOBILE_HISTORY_FILE, JSON.stringify(mobileHistory, null, 2), 'utf8');
       }
-      fs.writeFileSync(MOBILE_HISTORY_FILE, JSON.stringify(mobileHistory, null, 2), 'utf8');
     } else {
       console.log('Skipping Mobile Wallpaper update. Preserving existing.');
       outputData.mobile = {

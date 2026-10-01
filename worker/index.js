@@ -2,6 +2,9 @@ import handleTrial from "./trial.js";
 
 const DATA_FILES = {
   "/unsplash-today.json": "unsplash-today.json",
+  "/unsplash-next.json": "unsplash-next.json",
+  "/unsplash-history.json": "unsplash-history.json",
+  "/unsplash-mobile-history.json": "unsplash-mobile-history.json",
   "/photos.json": "photos.json",
   "/project-details.json": "project-details.json",
   "/github-stats.json": "github-stats.json",

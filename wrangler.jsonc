@@ -12,6 +12,9 @@
 		"binding": "ASSETS",
 		"run_worker_first": [
       "/unsplash-today.json",
+      "/unsplash-next.json",
+      "/unsplash-history.json",
+      "/unsplash-mobile-history.json",
       "/photos.json",
       "/project-details.json",
       "/github-stats.json",

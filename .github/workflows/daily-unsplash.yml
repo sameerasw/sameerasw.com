@@ -62,6 +62,7 @@ jobs:
         run: |
           .github/scripts/push-data-to-kv.sh \
             public/unsplash-today.json \
+            public/unsplash-next.json \
             public/photos.json \
             public/project-details.json \
             public/github-stats.json \
@@ -125,5 +126,5 @@ jobs:
         run: |
           git config --global user.name 'sameerasw'
           git config --global user.email 'mail@sameerasw.com'
-          git add public/unsplash-today.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json public/photos.json public/github-stats.json public/essentials-contributors.json
+          git add public/unsplash-today.json public/unsplash-next.json .github/scripts/unsplash-history.json .github/scripts/unsplash-mobile-history.json public/project-details.json public/photos.json public/github-stats.json public/essentials-contributors.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily unsplash wallpaper and photos" && git push)
