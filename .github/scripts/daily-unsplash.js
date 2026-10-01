@@ -1,24 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-function hexToHsl(hex) {
-  if (!hex) return { h: 165, s: 50, l: 27 };
-  let sh = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  let fullHex = hex.replace(sh, (m, r, g, b) => r + r + g + g + b + b);
-  let match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(fullHex);
-  if (!match) return { h: 165, s: 50, l: 27 };
+const zlib = require('zlib');
 
-  let r = parseInt(match[1], 16) / 255;
-  let g = parseInt(match[2], 16) / 255;
-  let b = parseInt(match[3], 16) / 255;
+function rgbToHsl(r, g, b) {
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h = 0;
+  let s = 0;
+  const l = (max + min) / 2;
 
-  let max = Math.max(r, g, b), min = Math.min(r, g, b);
-  let h, s, l = (max + min) / 2;
-
-  if (max === min) {
-    h = s = 0;
-  } else {
-    let d = max - min;
+  if (max !== min) {
+    const d = max - min;
     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
     switch (max) {
       case r: h = (g - b) / d + (g < b ? 6 : 0); break;
@@ -27,7 +23,6 @@ function hexToHsl(hex) {
     }
     h /= 6;
   }
-
   return {
     h: Math.round(h * 360),
     s: Math.round(s * 100),
@@ -35,16 +30,147 @@ function hexToHsl(hex) {
   };
 }
 
-function generateThemeColors(hexColor) {
-  const { h, s, l } = hexToHsl(hexColor);
-  const lightS = Math.min(90, Math.max(60, s));
-  const lightL = Math.min(38, Math.max(25, l));
-  const darkS = Math.min(100, Math.max(70, s));
-  const darkL = Math.min(75, Math.max(60, l));
+function hexToHsl(hex) {
+  if (!hex) return { h: 165, s: 50, l: 27 };
+  const sh = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  const fullHex = hex.replace(sh, (m, r, g, b) => r + r + g + g + b + b);
+  const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(fullHex);
+  if (!match) return { h: 165, s: 50, l: 27 };
+
+  const r = parseInt(match[1], 16);
+  const g = parseInt(match[2], 16);
+  const b = parseInt(match[3], 16);
+
+  const { h, s, l } = rgbToHsl(r, g, b);
+  const effectiveHue = s < 10 ? 165 : h;
+  const effectiveSat = s < 10 ? 50 : s;
+
+  return { h: effectiveHue, s: effectiveSat, l };
+}
+
+function decodePngPixels(pngBuffer) {
+  let offset = 8;
+  let width = 0;
+  let height = 0;
+  let colorType = 0;
+  const idatChunks = [];
+
+  while (offset < pngBuffer.length) {
+    const len = pngBuffer.readUInt32BE(offset);
+    const type = pngBuffer.slice(offset + 4, offset + 8).toString('ascii');
+    if (type === 'IHDR') {
+      width = pngBuffer.readUInt32BE(offset + 8);
+      height = pngBuffer.readUInt32BE(offset + 12);
+      colorType = pngBuffer[offset + 17];
+    } else if (type === 'IDAT') {
+      idatChunks.push(pngBuffer.slice(offset + 8, offset + 8 + len));
+    }
+    offset += 12 + len;
+  }
+
+  const decompressed = zlib.inflateSync(Buffer.concat(idatChunks));
+  const bytesPerPixel = colorType === 6 ? 4 : colorType === 2 ? 3 : 1;
+  const stride = width * bytesPerPixel;
+  const pixels = [];
+
+  let prevScanline = Buffer.alloc(stride);
+  let srcPos = 0;
+
+  for (let row = 0; row < height; row++) {
+    const filter = decompressed[srcPos++];
+    const currentScanline = Buffer.alloc(stride);
+
+    for (let col = 0; col < stride; col++) {
+      const raw = decompressed[srcPos++];
+      const a = col >= bytesPerPixel ? currentScanline[col - bytesPerPixel] : 0;
+      const b = prevScanline[col];
+      const c = col >= bytesPerPixel ? prevScanline[col - bytesPerPixel] : 0;
+
+      let val = raw;
+      if (filter === 1) {
+        val = (raw + a) & 0xff;
+      } else if (filter === 2) {
+        val = (raw + b) & 0xff;
+      } else if (filter === 3) {
+        val = (raw + Math.floor((a + b) / 2)) & 0xff;
+      } else if (filter === 4) {
+        const p = a + b - c;
+        const pa = Math.abs(p - a);
+        const pb = Math.abs(p - b);
+        const pc = Math.abs(p - c);
+        const pr = (pa <= pb && pa <= pc) ? a : (pb <= pc ? b : c);
+        val = (raw + pr) & 0xff;
+      }
+      currentScanline[col] = val;
+    }
+
+    for (let col = 0; col < width; col++) {
+      const pxOffset = col * bytesPerPixel;
+      const r = currentScanline[pxOffset];
+      const g = currentScanline[pxOffset + 1];
+      const b = currentScanline[pxOffset + 2];
+      pixels.push({ r, g, b });
+    }
+
+    prevScanline = currentScanline;
+  }
+
+  return pixels;
+}
+
+function formatThemeColors(hsl) {
+  const lightS = Math.min(90, Math.max(55, hsl.s));
+  const lightL = Math.min(38, Math.max(25, hsl.l < 15 ? 30 : hsl.l > 85 ? 32 : hsl.l));
+  const darkS = Math.min(100, Math.max(70, hsl.s));
+  const darkL = Math.min(75, Math.max(55, hsl.l < 15 ? 65 : hsl.l > 85 ? 70 : hsl.l));
   return {
-    light: `hsl(${h}, ${lightS}%, ${lightL}%)`,
-    dark: `hsl(${h}, ${darkS}%, ${darkL}%)`
+    light: `hsl(${hsl.h}, ${lightS}%, ${lightL}%)`,
+    dark: `hsl(${hsl.h}, ${darkS}%, ${darkL}%)`
   };
+}
+
+async function extractThemeColorsFromImage(rawImageUrl, fallbackHex) {
+  if (rawImageUrl) {
+    try {
+      const tinyUrl = `${rawImageUrl.replace(/&w=\d+/, '')}&w=48&fm=png&q=40`;
+      const res = await fetch(tinyUrl);
+      if (res.ok) {
+        const buf = Buffer.from(await res.arrayBuffer());
+        const pixels = decodePngPixels(buf);
+
+        const scoredColors = [];
+        for (const { r, g, b } of pixels) {
+          const hsl = rgbToHsl(r, g, b);
+          if (hsl.s >= 12 && hsl.l >= 12 && hsl.l <= 88) {
+            const chromaScore = hsl.s;
+            const lightnessScore = 100 - Math.abs(hsl.l - 50);
+            const score = chromaScore * 1.5 + lightnessScore;
+            scoredColors.push({ hsl, score });
+          }
+        }
+
+        if (scoredColors.length > 0) {
+          const buckets = Array(18).fill(0).map(() => ({ totalScore: 0, items: [] }));
+          for (const item of scoredColors) {
+            const bIdx = Math.floor(item.hsl.h / 20) % 18;
+            buckets[bIdx].totalScore += item.score;
+            buckets[bIdx].items.push(item);
+          }
+
+          buckets.sort((a, b) => b.totalScore - a.totalScore);
+          const topBucket = buckets[0];
+          topBucket.items.sort((a, b) => b.score - a.score);
+
+          return formatThemeColors(topBucket.items[0].hsl);
+        }
+      }
+    } catch (err) {
+      console.warn('Direct image color extraction fallback:', err.message);
+    }
+  }
+
+  const fallbackHsl = hexToHsl(fallbackHex);
+  return formatThemeColors(fallbackHsl);
 }
 
 const COLLECTION_ID = 'LqO9knU9z2A';
@@ -217,7 +343,7 @@ async function run() {
       };
       outputData.link = `${selectedPhoto.links.html}?utm_source=Glance&utm_medium=referral`;
       outputData.updatedAt = new Date().toISOString();
-      outputData.themeColors = generateThemeColors(selectedPhoto.color);
+      outputData.themeColors = await extractThemeColorsFromImage(selectedPhoto.urls?.raw || selectedPhoto.urls?.full, selectedPhoto.color);
 
       history.push(selectedPhoto.id);
       if (history.length > MAX_HISTORY_LENGTH) {
