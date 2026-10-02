@@ -1,28 +1,28 @@
 {
-  "id": "HlJjGMlf2Mo",
-  "url": "https://images.unsplash.com/photo-1769008301383-a3a996d2c075?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1769008301383-a3a996d2c075?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDY2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODQzOTQ5fA&ixlib=rb-4.1.0&q=85",
+  "id": "3xs5yZ1JBVA",
+  "url": "https://images.unsplash.com/photo-1693253024090-1fc1e1821a5c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ0MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDkxNzI5MXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1693253024090-1fc1e1821a5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ0MXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDkxNzI5MXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Willian Justen de Vasconcellos",
-    "username": "willianjusten",
-    "link": "https://unsplash.com/@willianjusten?utm_source=Glance&utm_medium=referral"
+    "name": "Marek Piwnicki",
+    "username": "marekpiwnicki",
+    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/modern-building-facade-with-repeating-windows-and-yellow-accents-HlJjGMlf2Mo?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-01T08:39:09.557Z",
+  "link": "https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-3xs5yZ1JBVA?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-02T05:01:31.385Z",
   "themeColors": {
-    "light": "hsl(35, 90%, 25%)",
-    "dark": "hsl(35, 100%, 55%)"
+    "light": "hsl(36, 90%, 38%)",
+    "dark": "hsl(36, 100%, 65%)"
   },
   "mobile": {
-    "id": "5bpRlCWRD7s",
-    "url": "https://images.unsplash.com/photo-1583784578816-944a7c3626b6?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI0OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDg0NDIxNXw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1583784578816-944a7c3626b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI0OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MDg0NDIxNXw&ixlib=rb-4.1.0&q=85",
+    "id": "QAJL1C3qJrI",
+    "url": "https://images.unsplash.com/photo-1757217672783-e9a8b81281be?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODU5MTk2fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1757217672783-e9a8b81281be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjEzfExxTzlrblU5ejJBfHx8fHwyfHwxNzkwODU5MTk2fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Dave Hoefler",
-      "username": "iamthedave",
-      "link": "https://unsplash.com/@iamthedave?utm_source=Glance&utm_medium=referral"
+      "name": "Jaykumar Bherwani",
+      "username": "hashcode_error",
+      "link": "https://unsplash.com/@hashcode_error?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/leafless-tree-under-blue-sky-5bpRlCWRD7s?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-01T08:43:35.186Z"
+    "link": "https://unsplash.com/photos/abstract-green-and-pink-swirls-of-light-QAJL1C3qJrI?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-02T05:01:32.022Z"
   }
 }
