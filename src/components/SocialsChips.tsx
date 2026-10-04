@@ -51,7 +51,7 @@ const SOCIALS = [
   },
   {
     label: "Discord",
-    url: "https://discord.gg/GTbCVCjf7",
+    url: "https://discord.gg/X2aWS4muz",
     icon: <i className="fa-brands fa-discord" />,
     social: "discord",
   },
