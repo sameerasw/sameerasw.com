@@ -1,7 +1,7 @@
 {
   "repos": 132,
-  "stars": 6304,
-  "followers": 880,
+  "stars": 6324,
+  "followers": 885,
   "topLanguages": [
     "Kotlin",
     "Swift",
@@ -11,7 +11,7 @@
   "streak": {
     "current": 277,
     "longest": 277,
-    "totalThisYear": 12094
+    "totalThisYear": 11997
   },
   "graphqlOk": true
 }
