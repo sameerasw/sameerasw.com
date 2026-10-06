@@ -19,6 +19,7 @@
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: none !important;
   outline: none;
+  scale: 1 !important;
 }
 
 .tally-floating-btn:hover {

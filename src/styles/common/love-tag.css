@@ -1,103 +1,92 @@
-
-/* Sticky Love Tab */
+/* Love FAB - same styling and motion as the survey button, icon only until hover */
 .love-tab {
   position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  background: var(--background-color-tr);
-  backdrop-filter: blur(var(--blur));
-  border-radius: var(--radius-out) 0 0 var(--radius-out);
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  max-width: 50px;
+  right: 24px;
+  bottom: 82px;
+  z-index: 999;
+  background-color: var(--primary-color);
+  border-radius: var(--radius-out, 20px);
+  color: var(--background-color-primary);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: none !important;
 }
 
 .love-tab:hover {
-  max-width: 200px;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.08);
+}
+
+.love-tab:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .love-tab a {
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  height: 46px;
+  padding: 0 14px;
+  color: inherit;
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
   white-space: nowrap;
-  min-width: 50px;
-  justify-content: flex-start;
+  cursor: none !important;
 }
 
 .love-icon {
-  font-size: 1.5rem;
-  margin-right: 8px;
+  font-size: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 24px;
-  animation: heartbeat 2s ease-in-out infinite;
-  color: var(--primary-color);
+  color: var(--background-color-primary);
 }
 
 .love-text {
+  display: inline-block;
+  max-width: 0;
   opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  transform: translateX(6px) scale(0.8);
+  transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              margin 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.love-tab:hover .love-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.love-tab:hover .love-icon {
-  animation: heartbeat-faster 0.8s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-  0%,
-  50%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .love-tab:hover .love-text {
+    max-width: 160px;
+    margin-right: 8px;
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
-@keyframes heartbeat-faster {
-  0%,
-  50%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
+/* Mobile: circular icon above the survey circle */
+@media screen and (max-width: 750px) {
   .love-tab {
-    left: 0;
-    border-radius: 0 var(--radius-out) var(--radius-out) 0;
-  }
-
-  .love-tab:hover {
-    max-width: 40px;
-    width: 40px;
-    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+    right: 1.25rem;
+    bottom: 9.5rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
   }
 
   .love-tab a {
-    padding: 8px;
-    min-width: 40px;
     justify-content: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  .love-icon {
+    font-size: 1.4rem;
   }
 
   .love-text {

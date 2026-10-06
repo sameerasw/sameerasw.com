@@ -1,6 +1,6 @@
 export default function StickyLoveTab() {
   return (
-    <div id="love-tab" className="love-tab item">
+    <div id="love-tab" className="love-tab">
       <a
         href="https://www.buymeacoffee.com/sameerasw"
         target="_blank"
