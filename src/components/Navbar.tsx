@@ -20,56 +20,65 @@ interface NavbarProps {
 export default function Navbar({ isArticle = false, extraLinks = [], backHref = "/" }: NavbarProps) {
   const [isMini, setIsMini] = useState(false);
   const [activeSegment, setActiveSegment] = useState("home");
+  const linkKey = extraLinks.map((l) => l.href).join("|");
 
   useEffect(() => {
-    let lastScrollTop = 0;
+    let lastScrollTop = Math.max(window.scrollY, 0);
+    let anchor = lastScrollTop;
+    let direction = 0;
+    const THRESHOLD = 48;
 
-    // Scroll-based mini-nav logic
     const handleScroll = () => {
-      let currentScroll = window.scrollY || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop && currentScroll > 50) {
-        setIsMini(true);
-      } else {
+      const current = Math.max(window.scrollY || document.documentElement.scrollTop, 0);
+      if (current <= 50) {
         setIsMini(false);
+        anchor = current;
+        direction = 0;
+        lastScrollTop = current;
+        return;
       }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      const dir = Math.sign(current - lastScrollTop);
+      if (dir !== 0 && dir !== direction) {
+        direction = dir;
+        anchor = lastScrollTop;
+      }
+      lastScrollTop = current;
+      if (direction > 0 && current - anchor > THRESHOLD) setIsMini(true);
+      else if (direction < 0 && anchor - current > THRESHOLD) setIsMini(false);
     };
 
-    // IntersectionObserver for active segment logic
-    const observerOptions = {
-      root: null,
-      rootMargin: "-20% 0px -70% 0px", // Focus on the top-ish part of the screen
-      threshold: 0
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSegment(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Elements to observe
-    const idsToObserve = isArticle 
-      ? extraLinks.map(l => l.href.replace("#", "")) 
+    const idsToObserve = isArticle
+      ? extraLinks.map((l) => l.href.replace("#", ""))
       : ["intro", "updates", "projects", "about-me", "contact"];
 
-    idsToObserve.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    const updateActive = () => {
+      const line = window.innerHeight * 0.35;
+      let current = idsToObserve[0];
+      idsToObserve.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= line) current = id;
+      });
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (atBottom) current = idsToObserve[idsToObserve.length - 1];
+      setActiveSegment(current);
+    };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    let raf = 0;
+    const onScroll = () => {
+      handleScroll();
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateActive);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    updateActive();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
     };
-  }, [isArticle, extraLinks]);
+  }, [isArticle, linkKey]);
 
   const renderLink = (link: NavLink | any, isNextLink = false) => {
     const Component = isNextLink ? Link : "a";
@@ -90,8 +99,19 @@ export default function Navbar({ isArticle = false, extraLinks = [], backHref = 
     );
   };
 
+  const sectionIds = isArticle
+    ? extraLinks.map((l) => l.href.replace("#", ""))
+    : ["intro", "updates", "projects", "about-me", "contact"];
+  const sectionIndex = sectionIds.indexOf(activeSegment);
+  const activeIndex = sectionIndex < 0 ? -1 : sectionIndex + (isArticle ? 1 : 0);
+
   return (
-    <nav id="nav" className={isMini ? "mini" : ""}>
+    <nav
+      id="nav"
+      className={isMini ? "mini" : ""}
+      style={{ "--i": activeIndex } as React.CSSProperties}
+    >
+      <span className={`nav-indicator${activeIndex < 0 ? " hidden" : ""}`} aria-hidden="true" />
       <ul>
         {isArticle ? (
           <>

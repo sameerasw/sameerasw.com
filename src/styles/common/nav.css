@@ -10,7 +10,7 @@ nav {
   width: fit-content;
   height: fit-content;
   border-radius: var(--radius-out);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
   z-index: 100;
   padding: 40px auto;
 
@@ -20,10 +20,10 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0.1em;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+    transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
     li {
       margin: 0.25em;
-      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+      transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
       a {
         width: 3em;
         height: 3em;
@@ -37,12 +37,12 @@ nav {
         text-decoration: none;
         font-size: 0.75rem;
         text-align: center;
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+        transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
         opacity: 0.4;
         .caption {
           height: 0px;
           scale: 0;
-          transition: all 0.5s ease-in-out;
+          transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
         }
         @media screen and (min-width: 500px) {
           &:hover {
@@ -56,7 +56,7 @@ nav {
         i {
           scale: 1.75;
           padding: 0.5rem;
-          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+          transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
         }
       }
     }
@@ -66,8 +66,36 @@ nav {
     }
   }
 
-  .active {
+  --size: 68px;
+  --step: 72px;
+  --offset-x: 5.6px;
+  --offset-y: 4px;
+
+  .nav-indicator {
+    position: absolute;
+    top: var(--offset-y);
+    left: var(--offset-x);
+    transform: translateY(calc(var(--i, 0) * var(--step)));
+    will-change: transform;
+    z-index: 0;
+    width: var(--size);
+    height: var(--size);
     background-color: var(--primary-color);
+    border-radius: var(--radius-in);
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(0.2, 0, 0, 1);
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  ul {
+    position: relative;
+    z-index: 1;
+  }
+
+  .active {
     color: var(--background-color-secondary);
     opacity: 1;
     .caption {
@@ -77,13 +105,19 @@ nav {
   }
 
   &.mini {
-    border-radius: 10em;
+    --size: 44px;
+    --step: 48px;
+    border-radius: 28px;
+    .nav-indicator {
+      border-radius: 22px;
+    }
     a {
-      border-radius: 10em;
+      border-radius: 22px;
       width: 1em !important;
       height: 1em !important;
       .caption {
-        display: none;
+        height: 0 !important;
+        scale: 0 !important;
       }
       i {
         scale: 1 !important;
@@ -98,9 +132,28 @@ nav {
     left: 50%;
     top: auto;
     transform: translateX(-50%);
+    --step: 76px;
+
+    &.mini {
+      --step: 52px;
+    }
+
+    .nav-indicator {
+      top: 5.6px;
+      left: 5.6px;
+      transform: translateX(calc(var(--i, 0) * var(--step)));
+    }
   }
 
   @media screen and (max-width: 500px) {
+    --size: 56px;
+    --step: 64px;
+
+    &.mini {
+      --size: 44px;
+      --step: 52px;
+    }
+
     a {
       width: 2em !important;
       height: 2em !important;
