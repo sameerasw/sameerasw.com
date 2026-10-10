@@ -5,6 +5,7 @@ const PROJECTS = [
   { id: 'essentials', repo: 'sameerasw/essentials' },
   { id: 'airsync-mac', repo: 'sameerasw/airsync-mac' },
   { id: 'medrop', repo: 'sameerasw/MeDrop' },
+  { id: 'overcast', repo: 'sameerasw/Overcast' },
   { id: 'my-internet', repo: 'sameerasw/my-internet' },
   { id: 'folder-icons', repo: 'sameerasw/folder-icons' },
   { id: 'zeninternet', repo: 'sameerasw/zeninternet' },
