@@ -469,6 +469,21 @@ export default function HomeClient({
                 </div>
               </a>
               <a
+                id="overcast"
+                className="highlight-item item"
+                href="https://github.com/sameerasw/Overcast"
+                data-title="https://github.com/sameerasw/Overcast"
+              >
+                <div className="highlight-thumbnail"></div>
+                <div className="highlight-content">
+                  <h3>Overcast</h3>
+                  <p className="highlight-description">
+                    A clean, expressive weather app for Android
+                  </p>
+                  {renderProjectStats("overcast")}
+                </div>
+              </a>
+              <a
                 id="zen-t"
                 className="highlight-item item"
                 href="/zen"

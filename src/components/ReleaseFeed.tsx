@@ -19,6 +19,7 @@ const LOGO_MAP: Record<string, string> = {
   tasks: "/assets/img/project-logos/tasks-logo.svg.png",
   blog: "/assets/img/notion.png",
   daily: "/assets/img/project-logos/daily-logo.png",
+  overcast: "/assets/img/project-logos/overcast-logo.svg",
 };
 
 export default function ReleaseFeed({ 
@@ -67,6 +68,7 @@ export default function ReleaseFeed({
     canvas: "canvas",
     tasks: "tasks",
     daily: "daily",
+    overcast: "overcast",
   };
 
   const filteredNotes =
