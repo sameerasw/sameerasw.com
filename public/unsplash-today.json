@@ -1,28 +1,28 @@
 {
-  "id": "w6tttE65NqQ",
-  "url": "https://images.unsplash.com/photo-1775656926048-16743f9a6c7a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUxfExxTzlrblU5ejJBfHx8fHwyfHwxNzkxNzgxMzM4fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1775656926048-16743f9a6c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjUxfExxTzlrblU5ejJBfHx8fHwyfHwxNzkxNzgxMzM4fA&ixlib=rb-4.1.0&q=85",
+  "id": "U-ImnBq2Oo4",
+  "url": "https://images.unsplash.com/photo-1722312770309-0df1e0ab5c3c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTExOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTg2NzcyNnw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1722312770309-0df1e0ab5c3c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTExOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTg2NzcyNnw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Veli Batuhan Aytaç",
-    "username": "velibatuhanaytac",
-    "link": "https://unsplash.com/@velibatuhanaytac?utm_source=Glance&utm_medium=referral"
+    "name": "Jaykumar Bherwani",
+    "username": "hashcode_error",
+    "link": "https://unsplash.com/@hashcode_error?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/abstract-colorful-light-streak-on-dark-background-w6tttE65NqQ?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-12T05:02:18.511Z",
+  "link": "https://unsplash.com/photos/a-street-light-with-a-bird-sitting-on-top-of-it-U-ImnBq2Oo4?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-13T05:02:06.716Z",
   "themeColors": {
-    "light": "hsl(27, 90%, 38%)",
-    "dark": "hsl(27, 100%, 55%)"
+    "light": "hsl(165, 55%, 38%)",
+    "dark": "hsl(165, 70%, 75%)"
   },
   "mobile": {
-    "id": "AyqATnC-stc",
-    "url": "https://images.unsplash.com/photo-1720998951414-dca93d14552e?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTc3NDQxNXw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1720998951414-dca93d14552e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEzN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTc3NDQxNXw&ixlib=rb-4.1.0&q=85",
+    "id": "ihNCoLkOE-c",
+    "url": "https://images.unsplash.com/photo-1720769909488-2e6c9ab26665?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE1N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTc5MTc5MXw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1720769909488-2e6c9ab26665?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE1N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MTc5MTc5MXw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Leo Yan",
-      "username": "leonidas718",
-      "link": "https://unsplash.com/@leonidas718?utm_source=Glance&utm_medium=referral"
+      "name": "Eugene Golovesov",
+      "username": "eugene_golovesov",
+      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-close-up-of-a-palm-tree-with-a-blue-sky-in-the-background-AyqATnC-stc?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-12T05:02:19.446Z"
+    "link": "https://unsplash.com/photos/a-painting-of-a-tree-with-red-leaves-ihNCoLkOE-c?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-13T05:02:07.378Z"
   }
 }
