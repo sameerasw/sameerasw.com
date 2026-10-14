@@ -60,15 +60,21 @@
     "contributions": 15
   },
   {
+    "login": "BenceBarens",
+    "avatar_url": "https://avatars.githubusercontent.com/u/51375275?v=4",
+    "html_url": "https://github.com/BenceBarens",
+    "contributions": 13
+  },
+  {
     "login": "CapMarkoTo",
     "avatar_url": "https://avatars.githubusercontent.com/u/260668900?v=4",
     "html_url": "https://github.com/CapMarkoTo",
     "contributions": 13
   },
   {
-    "login": "BenceBarens",
-    "avatar_url": "https://avatars.githubusercontent.com/u/51375275?v=4",
-    "html_url": "https://github.com/BenceBarens",
+    "login": "isaacsa51",
+    "avatar_url": "https://avatars.githubusercontent.com/u/43853643?v=4",
+    "html_url": "https://github.com/isaacsa51",
     "contributions": 13
   },
   {
@@ -82,11 +88,5 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/273137447?v=4",
     "html_url": "https://github.com/Ndraaa-repo",
     "contributions": 12
-  },
-  {
-    "login": "Celestial04",
-    "avatar_url": "https://avatars.githubusercontent.com/u/60318993?v=4",
-    "html_url": "https://github.com/Celestial04",
-    "contributions": 11
   }
 ]
