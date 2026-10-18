@@ -1,28 +1,28 @@
 {
-  "id": "YoKT5RAO9Us",
-  "url": "https://images.unsplash.com/photo-1634659515422-ac98506cceca?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIyNHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjIxMzIzNXw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1634659515422-ac98506cceca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIyNHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjIxMzIzNXw&ixlib=rb-4.1.0&q=85",
+  "id": "1NlJ2XBViLk",
+  "url": "https://images.unsplash.com/photo-1687201363580-1cd1bb33c2b5?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ4OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjI5OTYzM3w&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1687201363580-1cd1bb33c2b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ4OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjI5OTYzM3w&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Esteban Chinchilla",
-    "username": "esteban__chinchilla",
-    "link": "https://unsplash.com/@esteban__chinchilla?utm_source=Glance&utm_medium=referral"
+    "name": "Marek Piwnicki",
+    "username": "marekpiwnicki",
+    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-red-sports-car-parked-on-the-side-of-the-road-YoKT5RAO9Us?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-17T05:00:35.248Z",
+  "link": "https://unsplash.com/photos/the-sun-is-setting-over-a-mountain-range-1NlJ2XBViLk?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-18T05:00:33.759Z",
   "themeColors": {
-    "light": "hsl(3, 90%, 38%)",
-    "dark": "hsl(3, 100%, 55%)"
+    "light": "hsl(6, 90%, 38%)",
+    "dark": "hsl(6, 100%, 58%)"
   },
   "mobile": {
-    "id": "eI1E8GG-J34",
-    "url": "https://images.unsplash.com/photo-1778740058249-e326065e0ba1?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mjc1fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyMTM2OTAxfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1778740058249-e326065e0ba1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mjc1fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyMTM2OTAxfA&ixlib=rb-4.1.0&q=85",
+    "id": "jq1j7PweM3Q",
+    "url": "https://images.unsplash.com/photo-1691686113920-07168e005820?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM5fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyMjkwOTExfA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1691686113920-07168e005820?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTM5fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyMjkwOTExfA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Kevin Flores",
-      "username": "kevinflores_28",
-      "link": "https://unsplash.com/@kevinflores_28?utm_source=Glance&utm_medium=referral"
+      "name": "Slava Auchynnikau",
+      "username": "auchynnikau",
+      "link": "https://unsplash.com/@auchynnikau?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/yellow-flowers-on-tree-branches-against-a-clear-blue-sky-eI1E8GG-J34?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-17T05:00:36.541Z"
+    "link": "https://unsplash.com/photos/a-large-mountain-covered-in-snow-under-a-blue-sky-jq1j7PweM3Q?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-18T05:00:34.535Z"
   }
 }
