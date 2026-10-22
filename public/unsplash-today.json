@@ -1,28 +1,28 @@
 {
-  "id": "GulQlC2BJVc",
-  "url": "https://images.unsplash.com/photo-1764617755316-ffb5ff87c2d7?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTI0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNTU4ODY0fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1764617755316-ffb5ff87c2d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTI0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNTU4ODY0fA&ixlib=rb-4.1.0&q=85",
+  "id": "OmeepUGQBA0",
+  "url": "https://images.unsplash.com/photo-1699951896659-2bca947121f8?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjM3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNjQ1MjY2fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1699951896659-2bca947121f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjM3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNjQ1MjY2fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Kevin Mueller",
-    "username": "kevinmueller",
-    "link": "https://unsplash.com/@kevinmueller?utm_source=Glance&utm_medium=referral"
+    "name": "Pawel Czerwinski",
+    "username": "pawel_czerwinski",
+    "link": "https://unsplash.com/@pawel_czerwinski?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/snowy-forest-path-with-sun-shining-through-trees-GulQlC2BJVc?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-21T05:01:04.385Z",
+  "link": "https://unsplash.com/photos/a-computer-generated-image-of-a-wavy-brown-background-OmeepUGQBA0?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-22T05:01:06.480Z",
   "themeColors": {
-    "light": "hsl(202, 55%, 38%)",
-    "dark": "hsl(202, 70%, 61%)"
+    "light": "hsl(20, 79%, 32%)",
+    "dark": "hsl(20, 79%, 55%)"
   },
   "mobile": {
-    "id": "sny4Kp0PjcQ",
-    "url": "https://images.unsplash.com/photo-1622526212310-3ebe1cfbf169?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEwN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjQ5ODkwOHw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1622526212310-3ebe1cfbf169?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTEwN3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5MjQ5ODkwOHw&ixlib=rb-4.1.0&q=85",
+    "id": "aMC_8t7gRWk",
+    "url": "https://images.unsplash.com/photo-1757514055001-dcf00bd64a06?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjM4fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNjQ1MjY2fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1757514055001-dcf00bd64a06?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NjM4fExxTzlrblU5ejJBfHx8fHwyfHwxNzkyNjQ1MjY2fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Dim Gunger",
-      "username": "gundim",
-      "link": "https://unsplash.com/@gundim?utm_source=Glance&utm_medium=referral"
+      "name": "Steve Busch",
+      "username": "sdbusch77",
+      "link": "https://unsplash.com/@sdbusch77?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/green-leaves-on-blue-plastic-bag-sny4Kp0PjcQ?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-21T05:01:05.546Z"
+    "link": "https://unsplash.com/photos/colorful-nebula-clouds-in-deep-space-with-stars-aMC_8t7gRWk?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-22T05:01:07.473Z"
   }
 }
