@@ -1,17 +1,17 @@
 {
-  "repos": 132,
-  "stars": 6630,
-  "followers": 958,
+  "repos": 133,
+  "stars": 6637,
+  "followers": 959,
   "topLanguages": [
     "Kotlin",
     "Swift",
-    "Java",
-    "JavaScript"
+    "JavaScript",
+    "Java"
   ],
   "streak": {
-    "current": 296,
-    "longest": 296,
-    "totalThisYear": 12558
+    "current": 297,
+    "longest": 297,
+    "totalThisYear": 12561
   },
   "graphqlOk": true
 }
