@@ -48,8 +48,14 @@ link: "https://github.com/sameerasw/essentials/releases/tag/v20.1"
 - Translations
 - And a lot more minor fixes and improvements
 
+<p align="center">
+<img width="90%" src="https://github.com/user-attachments/assets/0110824a-bd43-484d-8e4e-3f5f8658bbab" />
+<img width="90%" src="https://github.com/user-attachments/assets/1072ed17-2373-48ce-b97b-2a70de966078" />
+</p>
+
 <details>
    <summary><h3>PRs & Contributions</h3></summary>
+
 
 * Develop - notificaiton hub in island, liquid island by @sameerasw in https://github.com/sameerasw/essentials/pull/1451
 * Develop - Translations by @sameerasw in https://github.com/sameerasw/essentials/pull/1452
@@ -78,6 +84,7 @@ link: "https://github.com/sameerasw/essentials/releases/tag/v20.1"
 * Develop - aod wallpaper fix for samsung, fix per-app audio pop up colors by @sameerasw in https://github.com/sameerasw/essentials/pull/1532
 * Develop - fix battery icon colors in island, fix tests, island time chip/ date suffix/ brief time formatting, hide cts gesture in qs, fix networks with VPN, fix notification switching in island hub, fix island navigation icon flicker, fix double notif in island, calls chip, themed app icons, CTS automation trigger mode by @sameerasw in https://github.com/sameerasw/essentials/pull/1539
 * Develop - Translations and minor fixes by @sameerasw in https://github.com/sameerasw/essentials/pull/1541
+* Develop - hotfixes for island app icon colors and text contrast in chips by @sameerasw in https://github.com/sameerasw/essentials/pull/1542
 
 ## New Contributors
 * @spaina93 made their first contribution in https://github.com/sameerasw/essentials/pull/1528
