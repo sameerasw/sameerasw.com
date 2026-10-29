@@ -1,28 +1,28 @@
 {
-  "id": "j2rYlCTZZ4g",
-  "url": "https://images.unsplash.com/photo-1725113114049-31121918636c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2MzcxMnw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1725113114049-31121918636c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA3OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2MzcxMnw&ixlib=rb-4.1.0&q=85",
+  "id": "m5oOEXIRWdU",
+  "url": "https://images.unsplash.com/photo-1742993493624-ac0f22810eb6?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMjUwMDY0fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1742993493624-ac0f22810eb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258ODg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMjUwMDY0fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Milad Fakurian",
-    "username": "fakurian",
-    "link": "https://unsplash.com/@fakurian?utm_source=Glance&utm_medium=referral"
+    "name": "Oskar Kadaksoo",
+    "username": "oskark",
+    "link": "https://unsplash.com/@oskark?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-close-up-of-a-cd-disc-on-a-black-background-j2rYlCTZZ4g?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-28T05:01:52.308Z",
+  "link": "https://unsplash.com/photos/aurora-borealis-glows-brightly-in-the-night-sky-m5oOEXIRWdU?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-29T05:01:04.956Z",
   "themeColors": {
-    "light": "hsl(194, 90%, 25%)",
-    "dark": "hsl(194, 100%, 55%)"
+    "light": "hsl(120, 90%, 36%)",
+    "dark": "hsl(120, 100%, 55%)"
   },
   "mobile": {
-    "id": "anvTuCR-MyQ",
-    "url": "https://images.unsplash.com/photo-1728544048289-f7c8be1afa73?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA0OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2MjA5M3w&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1728544048289-f7c8be1afa73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTA0OXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2MjA5M3w&ixlib=rb-4.1.0&q=85",
+    "id": "z0bkjsulaQM",
+    "url": "https://images.unsplash.com/photo-1719996510843-25348b436dcc?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIwNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2NzUxM3w&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1719996510843-25348b436dcc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIwNnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzE2NzUxM3w&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Ashford Marx",
+      "username": "ashford_marx",
+      "link": "https://unsplash.com/@ashford_marx?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-painting-of-a-tree-with-yellow-leaves-anvTuCR-MyQ?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-28T05:01:52.797Z"
+    "link": "https://unsplash.com/photos/a-close-up-of-a-plant-with-a-blue-sky-in-the-background-z0bkjsulaQM?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-29T05:01:05.878Z"
   }
 }
