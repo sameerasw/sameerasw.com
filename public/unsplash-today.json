@@ -1,28 +1,28 @@
 {
-  "id": "gnDmwo2QE_w",
-  "url": "https://images.unsplash.com/photo-1748382089121-da6acd3dda13?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Nzk0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzM2NDY5fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1748382089121-da6acd3dda13?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Nzk0fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzM2NDY5fA&ixlib=rb-4.1.0&q=85",
+  "id": "fMH1QVrWA-w",
+  "url": "https://images.unsplash.com/photo-1669745355187-a926c7a721ab?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTU1MnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzQyMjg2Nnw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1669745355187-a926c7a721ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTU1MnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5MzQyMjg2Nnw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Aleksandr Artiushenko",
-    "username": "artyshena",
-    "link": "https://unsplash.com/@artyshena?utm_source=Glance&utm_medium=referral"
+    "name": "Paweł Wielądek",
+    "username": "pawelwieladek",
+    "link": "https://unsplash.com/@pawelwieladek?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/blooming-tree-blossoms-against-a-bright-blue-sky-gnDmwo2QE_w?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-10-30T05:01:09.401Z",
+  "link": "https://unsplash.com/photos/a-sand-dune-under-a-blue-sky-fMH1QVrWA-w?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-10-31T05:01:06.617Z",
   "themeColors": {
-    "light": "hsl(21, 90%, 38%)",
-    "dark": "hsl(21, 100%, 55%)"
+    "light": "hsl(215, 55%, 28%)",
+    "dark": "hsl(215, 70%, 55%)"
   },
   "mobile": {
-    "id": "910B32-V0E4",
-    "url": "https://images.unsplash.com/photo-1749370250800-4164aea78707?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Nzg3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzM2NDY5fA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1749370250800-4164aea78707?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Nzg3fExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzM2NDY5fA&ixlib=rb-4.1.0&q=85",
+    "id": "Ll-YtH3XEQk",
+    "url": "https://images.unsplash.com/photo-1779862947277-3d7398ea7e36?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzQyMzU3fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1779862947277-3d7398ea7e36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MjcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzkzMzQyMzU3fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Fadhil Abhimantra",
-      "username": "fabhimantra",
-      "link": "https://unsplash.com/@fabhimantra?utm_source=Glance&utm_medium=referral"
+      "name": "Alexander Lunyov",
+      "username": "sunify",
+      "link": "https://unsplash.com/@sunify?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/waves-crash-against-a-rocky-coastline-910B32-V0E4?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-10-30T05:01:09.897Z"
+    "link": "https://unsplash.com/photos/blurred-green-leaves-against-a-vibrant-blue-sky-Ll-YtH3XEQk?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-10-31T05:01:07.266Z"
   }
 }
