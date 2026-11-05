@@ -3,7 +3,7 @@ title: "Overcast v2.0"
 description: "Air quality, More weather info, UI customization, AI advice, Notifications, Widgets, Predictions and more improvements"
 app: "overcast"
 version: "v2.0"
-date: "2026-12-05"
+date: "2026-11-05"
 link: "https://github.com/sameerasw/Overcast/releases/tag/v2.0"
 ---
 
