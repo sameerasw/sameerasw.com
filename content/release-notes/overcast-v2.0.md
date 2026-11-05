@@ -7,6 +7,9 @@ date: "2026-12-05"
 link: "https://github.com/sameerasw/Overcast/releases/tag/v2.0"
 ---
 
+## Overcast is now on Play Store as a supporter version!
+[<img width="200" alt="image" src="https://github.com/user-attachments/assets/b9ff839a-95c4-4e5c-8af2-08a4b59e89ad" />](https://play.google.com/store/apps/details?id=com.sameerasw.overcast&pcampaignid=web_share)
+
 
 # What's New
 - AI weather advice
