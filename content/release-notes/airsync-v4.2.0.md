@@ -17,6 +17,9 @@ link: "https://sameerasw.com/airsync"
 
 <video src="https://github.com/user-attachments/assets/bef7f175-9066-42c1-bef5-05eb27954fb8"></video>
 
+
+<video src="https://github.com/user-attachments/assets/bd3947d0-6d59-4f71-afb1-777a0e003df0"> </video>
+
 ---
 
 * Add macOS Share menu support for Quick Share by @hkay-dev in https://github.com/sameerasw/airsync-mac/pull/301
