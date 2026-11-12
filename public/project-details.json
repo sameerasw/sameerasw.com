@@ -2,47 +2,47 @@
   "essentials": {
     "id": "essentials",
     "repo": "sameerasw/essentials",
-    "stars": 3765,
-    "downloads": 698570,
-    "latestVersion": "v21.0",
-    "latestReleaseAt": "2026-11-09T14:29:53Z",
-    "updatedAt": "2026-11-11T05:01:06.178Z"
+    "stars": 3799,
+    "downloads": 708080,
+    "latestVersion": "v21.2",
+    "latestReleaseAt": "2026-11-11T17:11:28Z",
+    "updatedAt": "2026-11-12T05:01:10.855Z"
   },
   "airsync-mac": {
     "id": "airsync-mac",
     "repo": "sameerasw/airsync-mac",
-    "stars": 878,
-    "downloads": 18364,
+    "stars": 879,
+    "downloads": 18499,
     "latestVersion": "v4.2.0",
     "latestReleaseAt": "2026-11-10T03:54:55Z",
-    "updatedAt": "2026-11-11T05:01:06.818Z"
+    "updatedAt": "2026-11-12T05:01:11.803Z"
   },
   "medrop": {
     "id": "medrop",
     "repo": "sameerasw/MeDrop",
     "stars": 51,
-    "downloads": 571,
+    "downloads": 572,
     "latestVersion": "v1.0-beta2",
     "latestReleaseAt": "2026-09-01T17:08:55Z",
-    "updatedAt": "2026-11-11T05:01:07.283Z"
+    "updatedAt": "2026-11-12T05:01:12.465Z"
   },
   "my-internet": {
     "id": "my-internet",
     "repo": "sameerasw/my-internet",
-    "stars": 484,
+    "stars": 485,
     "downloads": 0,
     "latestVersion": "pre-release-07a1ecb932cefb23e49dc4959a55fbe15e7b038f",
     "latestReleaseAt": "2025-07-05T09:47:48Z",
-    "updatedAt": "2026-11-11T05:01:08.461Z"
+    "updatedAt": "2026-11-12T05:01:13.934Z"
   },
   "folder-icons": {
     "id": "folder-icons",
     "repo": "sameerasw/folder-icons",
-    "stars": 897,
+    "stars": 896,
     "downloads": 21035,
     "latestVersion": "v3.1",
     "latestReleaseAt": "2023-09-10T08:57:26Z",
-    "updatedAt": "2026-11-11T05:01:08.985Z"
+    "updatedAt": "2026-11-12T05:01:14.642Z"
   },
   "zeninternet": {
     "id": "zeninternet",
@@ -51,25 +51,25 @@
     "downloads": 0,
     "latestVersion": "2.2.0",
     "latestReleaseAt": "2025-05-08T20:29:25Z",
-    "updatedAt": "2026-11-11T05:01:09.536Z"
+    "updatedAt": "2026-11-12T05:01:15.361Z"
   },
   "canvas": {
     "id": "canvas",
     "repo": "sameerasw/Canvas",
-    "stars": 97,
-    "downloads": 1164,
+    "stars": 98,
+    "downloads": 1168,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-02-10T03:29:13Z",
-    "updatedAt": "2026-11-11T05:01:10.464Z"
+    "updatedAt": "2026-11-12T05:01:16.657Z"
   },
   "tasks": {
     "id": "tasks",
     "repo": "sameerasw/tasks",
-    "stars": 51,
-    "downloads": 280,
+    "stars": 52,
+    "downloads": 284,
     "latestVersion": "v3.0.0",
     "latestReleaseAt": "2026-03-10T05:55:56Z",
-    "updatedAt": "2026-11-11T05:01:10.961Z"
+    "updatedAt": "2026-11-12T05:01:17.315Z"
   },
   "Browser": {
     "id": "Browser",
@@ -78,7 +78,7 @@
     "downloads": 588,
     "latestVersion": "v1.0.0-BETA-02",
     "latestReleaseAt": "2025-10-09T17:41:27Z",
-    "updatedAt": "2026-11-11T05:01:11.501Z"
+    "updatedAt": "2026-11-12T05:01:18.003Z"
   },
   "daily": {
     "id": "daily",
@@ -87,16 +87,16 @@
     "downloads": 44,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-07-09T17:55:51Z",
-    "updatedAt": "2026-11-11T05:01:10.002Z"
+    "updatedAt": "2026-11-12T05:01:16.062Z"
   },
   "watchfaces": {
     "id": "watchfaces",
     "repo": "sameerasw/watchfaces",
     "stars": 21,
-    "downloads": 232,
+    "downloads": 236,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-02-11T14:56:56Z",
-    "updatedAt": "2026-11-11T05:01:11.958Z"
+    "updatedAt": "2026-11-12T05:01:18.645Z"
   },
   "macro": {
     "id": "macro",
@@ -105,15 +105,15 @@
     "downloads": 0,
     "latestVersion": "",
     "latestReleaseAt": "2026-07-17T09:45:46Z",
-    "updatedAt": "2026-11-11T05:01:12.361Z"
+    "updatedAt": "2026-11-12T05:01:19.264Z"
   },
   "overcast": {
     "id": "overcast",
     "repo": "sameerasw/Overcast",
     "stars": 123,
-    "downloads": 7261,
+    "downloads": 7336,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-11-05T02:47:50Z",
-    "updatedAt": "2026-11-11T05:01:07.868Z"
+    "updatedAt": "2026-11-12T05:01:13.208Z"
   }
 }
