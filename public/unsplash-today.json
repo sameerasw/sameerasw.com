@@ -1,28 +1,28 @@
 {
-  "id": "T69iGeJCKO8",
-  "url": "https://images.unsplash.com/photo-1690278843591-f44b73566704?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ3N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDU0NjA2OXw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1690278843591-f44b73566704?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTQ3N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDU0NjA2OXw&ixlib=rb-4.1.0&q=85",
+  "id": "C16nEnn1qAo",
+  "url": "https://images.unsplash.com/photo-1782741575084-7b8f4cb5934f?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NjMyNDY1fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1782741575084-7b8f4cb5934f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NjMyNDY1fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Ilia Bronskiy",
-    "username": "idbronskiy",
-    "link": "https://unsplash.com/@idbronskiy?utm_source=Glance&utm_medium=referral"
+    "name": "Takashi Miyazaki",
+    "username": "miyatankun",
+    "link": "https://unsplash.com/@miyatankun?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-view-of-a-mountain-range-with-trees-and-mountains-in-the-background-T69iGeJCKO8?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-11-13T05:01:09.800Z",
+  "link": "https://unsplash.com/photos/two-pink-and-purple-calla-lilies-against-a-light-background-C16nEnn1qAo?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-11-14T05:01:05.781Z",
   "themeColors": {
-    "light": "hsl(211, 55%, 38%)",
-    "dark": "hsl(211, 70%, 55%)"
+    "light": "hsl(340, 90%, 25%)",
+    "dark": "hsl(340, 100%, 55%)"
   },
   "mobile": {
-    "id": "nJ0Z6eYyoPI",
-    "url": "https://images.unsplash.com/photo-1772665450983-21c9021c2e7c?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzY0fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NTM0OTMzfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1772665450983-21c9021c2e7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MzY0fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NTM0OTMzfA&ixlib=rb-4.1.0&q=85",
+    "id": "wZNJz5HVMGU",
+    "url": "https://images.unsplash.com/photo-1718036094878-ecdce2b1be95?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDYyMDYxOHw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1718036094878-ecdce2b1be95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDYyMDYxOHw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Beyza Yurtkuran",
-      "username": "beyzaayurtkuran",
-      "link": "https://unsplash.com/@beyzaayurtkuran?utm_source=Glance&utm_medium=referral"
+      "name": "A Chosen Soul",
+      "username": "a_chosensoul",
+      "link": "https://unsplash.com/@a_chosensoul?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/abstract-blurred-pink-and-blue-floral-pattern-nJ0Z6eYyoPI?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-11-13T05:01:11.166Z"
+    "link": "https://unsplash.com/photos/a-spiral-object-is-shown-in-the-middle-of-the-image-wZNJz5HVMGU?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-11-14T05:01:06.721Z"
   }
 }
