@@ -1,28 +1,28 @@
 {
-  "id": "C16nEnn1qAo",
-  "url": "https://images.unsplash.com/photo-1782741575084-7b8f4cb5934f?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NjMyNDY1fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1782741575084-7b8f4cb5934f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTg2fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NjMyNDY1fA&ixlib=rb-4.1.0&q=85",
+  "id": "W2pwbgyn5RE",
+  "url": "https://images.unsplash.com/photo-1614273845736-dc4df920c51a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI4NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDcxODg2OHw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1614273845736-dc4df920c51a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI4NHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDcxODg2OHw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Takashi Miyazaki",
-    "username": "miyatankun",
-    "link": "https://unsplash.com/@miyatankun?utm_source=Glance&utm_medium=referral"
+    "name": "Lisa Yount",
+    "username": "lisaleo",
+    "link": "https://unsplash.com/@lisaleo?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/two-pink-and-purple-calla-lilies-against-a-light-background-C16nEnn1qAo?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-11-14T05:01:05.781Z",
+  "link": "https://unsplash.com/photos/brown-rock-formation-under-blue-sky-during-daytime-W2pwbgyn5RE?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-11-15T05:01:08.227Z",
   "themeColors": {
-    "light": "hsl(340, 90%, 25%)",
-    "dark": "hsl(340, 100%, 55%)"
+    "light": "hsl(23, 90%, 25%)",
+    "dark": "hsl(23, 100%, 55%)"
   },
   "mobile": {
-    "id": "wZNJz5HVMGU",
-    "url": "https://images.unsplash.com/photo-1718036094878-ecdce2b1be95?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDYyMDYxOHw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1718036094878-ecdce2b1be95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIzOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDYyMDYxOHw&ixlib=rb-4.1.0&q=85",
+    "id": "eWJCKSHA5jE",
+    "url": "https://images.unsplash.com/photo-1748426453172-0a30e1456b9a?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NzAxNjgyfA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1748426453172-0a30e1456b9a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDcwfExxTzlrblU5ejJBfHx8fHwyfHwxNzk0NzAxNjgyfA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "A Chosen Soul",
-      "username": "a_chosensoul",
-      "link": "https://unsplash.com/@a_chosensoul?utm_source=Glance&utm_medium=referral"
+      "name": "Eugene Golovesov",
+      "username": "eugene_golovesov",
+      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-spiral-object-is-shown-in-the-middle-of-the-image-wZNJz5HVMGU?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-11-14T05:01:06.721Z"
+    "link": "https://unsplash.com/photos/blurry-trees-create-a-dreamy-pink-forest-scene-eWJCKSHA5jE?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-11-15T05:01:08.559Z"
   }
 }
