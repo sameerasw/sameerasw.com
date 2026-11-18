@@ -2,65 +2,65 @@
   "essentials": {
     "id": "essentials",
     "repo": "sameerasw/essentials",
-    "stars": 3922,
-    "downloads": 730032,
-    "latestVersion": "v21.3-beta.2",
-    "latestReleaseAt": "2026-11-16T13:48:53Z",
-    "updatedAt": "2026-11-17T05:01:08.423Z"
+    "stars": 3934,
+    "downloads": 732938,
+    "latestVersion": "v21.3-beta.3",
+    "latestReleaseAt": "2026-11-17T17:51:19Z",
+    "updatedAt": "2026-11-18T05:01:06.781Z"
   },
   "airsync-mac": {
     "id": "airsync-mac",
     "repo": "sameerasw/airsync-mac",
-    "stars": 883,
-    "downloads": 18888,
+    "stars": 885,
+    "downloads": 18961,
     "latestVersion": "v4.2.0",
     "latestReleaseAt": "2026-11-10T03:54:55Z",
-    "updatedAt": "2026-11-17T05:01:09.134Z"
+    "updatedAt": "2026-11-18T05:01:07.588Z"
   },
   "medrop": {
     "id": "medrop",
     "repo": "sameerasw/MeDrop",
     "stars": 51,
-    "downloads": 593,
+    "downloads": 595,
     "latestVersion": "v1.0-beta2",
     "latestReleaseAt": "2026-09-01T17:08:55Z",
-    "updatedAt": "2026-11-17T05:01:09.682Z"
+    "updatedAt": "2026-11-18T05:01:08.157Z"
   },
   "my-internet": {
     "id": "my-internet",
     "repo": "sameerasw/my-internet",
-    "stars": 487,
+    "stars": 488,
     "downloads": 0,
     "latestVersion": "pre-release-07a1ecb932cefb23e49dc4959a55fbe15e7b038f",
     "latestReleaseAt": "2025-07-05T09:47:48Z",
-    "updatedAt": "2026-11-17T05:01:10.929Z"
+    "updatedAt": "2026-11-18T05:01:09.402Z"
   },
   "folder-icons": {
     "id": "folder-icons",
     "repo": "sameerasw/folder-icons",
     "stars": 898,
-    "downloads": 21198,
+    "downloads": 21225,
     "latestVersion": "v3.1",
     "latestReleaseAt": "2023-09-10T08:57:26Z",
-    "updatedAt": "2026-11-17T05:01:11.707Z"
+    "updatedAt": "2026-11-18T05:01:10.116Z"
   },
   "zeninternet": {
     "id": "zeninternet",
     "repo": "sameerasw/zeninternet",
-    "stars": 157,
+    "stars": 158,
     "downloads": 0,
     "latestVersion": "2.2.0",
     "latestReleaseAt": "2025-05-08T20:29:25Z",
-    "updatedAt": "2026-11-17T05:01:12.342Z"
+    "updatedAt": "2026-11-18T05:01:10.740Z"
   },
   "canvas": {
     "id": "canvas",
     "repo": "sameerasw/Canvas",
-    "stars": 99,
-    "downloads": 1182,
+    "stars": 100,
+    "downloads": 1186,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-02-10T03:29:13Z",
-    "updatedAt": "2026-11-17T05:01:13.352Z"
+    "updatedAt": "2026-11-18T05:01:11.817Z"
   },
   "tasks": {
     "id": "tasks",
@@ -69,25 +69,25 @@
     "downloads": 292,
     "latestVersion": "v3.0.0",
     "latestReleaseAt": "2026-03-10T05:55:56Z",
-    "updatedAt": "2026-11-17T05:01:13.890Z"
+    "updatedAt": "2026-11-18T05:01:12.291Z"
   },
   "Browser": {
     "id": "Browser",
     "repo": "sameerasw/Browser",
-    "stars": 131,
-    "downloads": 595,
+    "stars": 132,
+    "downloads": 596,
     "latestVersion": "v1.0.0-BETA-02",
     "latestReleaseAt": "2025-10-09T17:41:27Z",
-    "updatedAt": "2026-11-17T05:01:14.449Z"
+    "updatedAt": "2026-11-18T05:01:12.877Z"
   },
   "daily": {
     "id": "daily",
     "repo": "sameerasw/Daily",
     "stars": 12,
-    "downloads": 45,
+    "downloads": 46,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-07-09T17:55:51Z",
-    "updatedAt": "2026-11-17T05:01:12.846Z"
+    "updatedAt": "2026-11-18T05:01:11.311Z"
   },
   "watchfaces": {
     "id": "watchfaces",
@@ -96,7 +96,7 @@
     "downloads": 236,
     "latestVersion": "v1.0",
     "latestReleaseAt": "2026-02-11T14:56:56Z",
-    "updatedAt": "2026-11-17T05:01:14.962Z"
+    "updatedAt": "2026-11-18T05:01:13.457Z"
   },
   "macro": {
     "id": "macro",
@@ -105,15 +105,15 @@
     "downloads": 0,
     "latestVersion": "",
     "latestReleaseAt": "2026-07-17T09:45:46Z",
-    "updatedAt": "2026-11-17T05:01:15.430Z"
+    "updatedAt": "2026-11-18T05:01:13.903Z"
   },
   "overcast": {
     "id": "overcast",
     "repo": "sameerasw/Overcast",
-    "stars": 124,
-    "downloads": 7535,
+    "stars": 125,
+    "downloads": 7550,
     "latestVersion": "v2.0",
     "latestReleaseAt": "2026-11-05T02:47:50Z",
-    "updatedAt": "2026-11-17T05:01:10.298Z"
+    "updatedAt": "2026-11-18T05:01:08.725Z"
   }
 }
