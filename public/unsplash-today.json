@@ -1,28 +1,28 @@
 {
-  "id": "_NnQ7eRmSPQ",
-  "url": "https://images.unsplash.com/photo-1723096559077-d909d5b70a97?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE2OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDg5MTY2Nnw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1723096559077-d909d5b70a97?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTE2OHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDg5MTY2Nnw&ixlib=rb-4.1.0&q=85",
+  "id": "spmU0phaFDc",
+  "url": "https://images.unsplash.com/photo-1775874462081-6a1725a58a89?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mzk0fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0OTc4MDY0fA&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1775874462081-6a1725a58a89?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mzk0fExxTzlrblU5ejJBfHx8fHwyfHwxNzk0OTc4MDY0fA&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Eugene Golovesov",
-    "username": "eugene_golovesov",
-    "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+    "name": "Universtock",
+    "username": "universtock",
+    "link": "https://unsplash.com/@universtock?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-blurry-photo-of-two-trees-in-a-field-_NnQ7eRmSPQ?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-11-17T05:01:06.175Z",
+  "link": "https://unsplash.com/photos/orange-and-blue-abstract-fluid-background-spmU0phaFDc?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-11-18T05:01:04.475Z",
   "themeColors": {
-    "light": "hsl(27, 55%, 38%)",
-    "dark": "hsl(27, 70%, 55%)"
+    "light": "hsl(19, 84%, 38%)",
+    "dark": "hsl(19, 84%, 62%)"
   },
   "mobile": {
-    "id": "hDSY8EzIrrY",
-    "url": "https://images.unsplash.com/photo-1718262630549-6a4a9c8e0a2f?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI2N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDg4NDg5Mnw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1718262630549-6a4a9c8e0a2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTI2N3xMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDg4NDg5Mnw&ixlib=rb-4.1.0&q=85",
+    "id": "xfvoqRQ3T44",
+    "url": "https://images.unsplash.com/photo-1784942524954-9fde68f610b2?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDkzODM3NHw&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1784942524954-9fde68f610b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NDkzODM3NHw&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "Eugene Golovesov",
-      "username": "eugene_golovesov",
-      "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
+      "name": "Planet Volumes",
+      "username": "planetvolumes",
+      "link": "https://unsplash.com/@planetvolumes?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/a-field-full-of-yellow-and-white-flowers-hDSY8EzIrrY?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-11-17T05:01:06.495Z"
+    "link": "https://unsplash.com/photos/blurred-pink-and-orange-flowers-with-green-foliage-xfvoqRQ3T44?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-11-18T05:01:05.132Z"
   }
 }
