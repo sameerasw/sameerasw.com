@@ -1,28 +1,28 @@
 {
-  "id": "HcnDk9mNJUE",
-  "url": "https://images.unsplash.com/photo-1686642848560-e980295a9360?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIxOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTIzNzI2NXw&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1686642848560-e980295a9360?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTIxOXxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTIzNzI2NXw&ixlib=rb-4.1.0&q=85",
+  "id": "FrR0nSrJyyw",
+  "url": "https://images.unsplash.com/photo-1736967439874-d0c856eacda1?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTAzNHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTMyMzY2NXw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1736967439874-d0c856eacda1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTAzNHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTMyMzY2NXw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "Tim Mossholder",
-    "username": "timmossholder",
-    "link": "https://unsplash.com/@timmossholder?utm_source=Glance&utm_medium=referral"
+    "name": "Marek Piwnicki",
+    "username": "marekpiwnicki",
+    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/a-close-up-of-a-palm-leaf-against-a-yellow-background-HcnDk9mNJUE?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-11-21T05:01:05.587Z",
+  "link": "https://unsplash.com/photos/a-bird-flying-over-a-mountain-range-at-sunset-FrR0nSrJyyw?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-11-22T05:01:05.977Z",
   "themeColors": {
-    "light": "hsl(43, 90%, 38%)",
-    "dark": "hsl(43, 99%, 57%)"
+    "light": "hsl(27, 90%, 38%)",
+    "dark": "hsl(27, 98%, 75%)"
   },
   "mobile": {
-    "id": "5wEj7Lum4cI",
-    "url": "https://images.unsplash.com/photo-1771608995985-d13dc5467699?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc5fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1MTUxOTUzfA&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1771608995985-d13dc5467699?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NDc5fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1MTUxOTUzfA&ixlib=rb-4.1.0&q=85",
+    "id": "BsgtjgW-RBE",
+    "url": "https://images.unsplash.com/photo-1755070596521-0a89855b1325?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTAzfExxTzlrblU5ejJBfHx8fHwyfHwxNzk1MjY2ODQ1fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1755070596521-0a89855b1325?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NTAzfExxTzlrblU5ejJBfHx8fHwyfHwxNzk1MjY2ODQ1fA&ixlib=rb-4.1.0&q=85",
     "author": {
       "name": "Eugene Golovesov",
       "username": "eugene_golovesov",
       "link": "https://unsplash.com/@eugene_golovesov?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/bare-tree-in-a-winter-landscape-with-motion-blur-5wEj7Lum4cI?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-11-21T05:01:06.236Z"
+    "link": "https://unsplash.com/photos/pink-flowers-with-blue-accents-in-soft-focus-BsgtjgW-RBE?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-11-22T05:01:06.347Z"
   }
 }
