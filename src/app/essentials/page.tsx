@@ -58,6 +58,9 @@ export default async function Essentials() {
     <EssentialsClient>
       <EssentialsSplash />
       <div className="essentials-page">
+        <svg className="es-bg-flower" viewBox="-2 -2 204 204" fill="none" aria-hidden="true">
+          <path stroke="currentColor" strokeWidth={1} vectorEffect="non-scaling-stroke" />
+        </svg>
         {/* ── HERO ── */}
         <section className="es-hero" id="intro">
           <div className="es-hero-logo-wrap item">

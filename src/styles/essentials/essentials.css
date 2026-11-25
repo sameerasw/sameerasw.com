@@ -763,3 +763,31 @@ body:has(.essentials-page) {
   background: light-dark(#d6e4db, #24312b);
   border-radius: 20px;
 }
+
+.es-bg-flower {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: min(110vw, 1100px);
+  aspect-ratio: 1;
+  translate: 35% 35%;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--es-accent);
+  opacity: 0.35;
+  overflow: visible;
+}
+
+.es-bg-flower {
+  animation:
+    es-flower-in 3s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
+}
+
+@keyframes es-flower-in {
+  from { scale: 0.4; rotate: -160deg; opacity: 0; }
+  to   { scale: 1;   rotate: 0deg;    opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .es-bg-flower { animation: none; }
+}

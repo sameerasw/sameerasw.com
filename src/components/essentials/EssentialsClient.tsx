@@ -43,7 +43,55 @@ export default function EssentialsClient({ children }: { children: React.ReactNo
     // Small delay before starting items animation
     setTimeout(animateItems, 300);
 
-    return () => observerRef.current?.disconnect();
+    const flower = document.querySelector<SVGSVGElement>(".es-bg-flower");
+    const flowerPath = flower?.querySelector("path");
+    let lastAmp = -1;
+    const drawFlower = (amp: number) => {
+      if (!flowerPath || Math.abs(amp - lastAmp) < 0.0005) return;
+      lastAmp = amp;
+      const pts: string[] = [];
+      for (let i = 0; i < 360; i++) {
+        const t = (i / 360) * Math.PI * 2;
+        const r = (100 * (1 + amp * Math.cos(12 * t))) / (1 + amp);
+        pts.push(`${(100 + r * Math.cos(t)).toFixed(2)} ${(100 + r * Math.sin(t)).toFixed(2)}`);
+      }
+      flowerPath.setAttribute("d", `M${pts.join(" L")}Z`);
+    };
+    drawFlower(0.09);
+    const scroller = document.querySelector<HTMLElement>(".essentials-page");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let raf = 0;
+    let angle = 0;
+    let boost = 0;
+    let dir = 1;
+    let lastY = scroller?.scrollTop ?? 0;
+    let lastT = performance.now();
+    const onScroll = () => {
+      if (!scroller) return;
+      const dy = scroller.scrollTop - lastY;
+      lastY = scroller.scrollTop;
+      boost = Math.max(-120, Math.min(120, boost + dy * 0.25));
+      if (dy !== 0) dir = Math.sign(dy);
+    };
+    const spin = (now: number) => {
+      const dt = Math.min(0.05, (now - lastT) / 1000);
+      lastT = now;
+      boost *= Math.exp(-dt * 1.6);
+      angle = (angle + (dir * 360 / 140 + boost) * dt) % 360;
+      if (flower) flower.style.transform = `rotate(${angle}deg)`;
+      drawFlower(0.09 * (1 - 0.75 * Math.min(1, Math.abs(boost) / 80)));
+      raf = requestAnimationFrame(spin);
+    };
+    if (flower && !reduced) {
+      scroller?.addEventListener("scroll", onScroll, { passive: true });
+      raf = requestAnimationFrame(spin);
+    }
+
+    return () => {
+      observerRef.current?.disconnect();
+      cancelAnimationFrame(raf);
+      scroller?.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return <>{children}</>;
