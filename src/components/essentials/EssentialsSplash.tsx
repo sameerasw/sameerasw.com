@@ -114,6 +114,18 @@ export default function EssentialsSplash() {
               ).finished,
             );
           });
+        const title = document.querySelector<HTMLElement>(".es-hero-title");
+        if (title) {
+          reveal.push(
+            title.animate(
+              [
+                { fontVariationSettings: '"wdth" 100, "ROND" 100' },
+                { fontVariationSettings: '"wdth" 150, "ROND" 100' },
+              ],
+              { duration: 1200, delay: 350, easing: EASE, fill: "backwards" },
+            ).finished,
+          );
+        }
         const from = logo.getBoundingClientRect();
         const to = hero?.getBoundingClientRect();
         const anims: Promise<unknown>[] = [
