@@ -126,6 +126,31 @@ export default function EssentialsSplash() {
             ).finished,
           );
         }
+        const chip = document.querySelector<HTMLElement>("#intro .made-by-chip");
+        const chipText = chip?.querySelector<HTMLElement>(":scope > span");
+        if (chip && chipText) {
+          const w = chipText.getBoundingClientRect().width;
+          chipText.style.display = "inline-block";
+          chipText.style.overflow = "hidden";
+          chipText.style.whiteSpace = "nowrap";
+          const opts = { duration: 800, delay: 600, easing: EASE, fill: "backwards" as const };
+          reveal.push(
+            chipText.animate(
+              [
+                { width: "0px", opacity: 0 },
+                { width: `${w}px`, opacity: 1 },
+              ],
+              opts,
+            ).finished,
+            chip.animate(
+              [
+                { gap: "0rem", paddingRight: "0.2rem" },
+                { gap: "0.75rem", paddingRight: "0.8rem" },
+              ],
+              opts,
+            ).finished,
+          );
+        }
         const from = logo.getBoundingClientRect();
         const to = hero?.getBoundingClientRect();
         const anims: Promise<unknown>[] = [
