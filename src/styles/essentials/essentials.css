@@ -578,3 +578,213 @@ body:has(.essentials-page) {
   opacity: 0;
   filter: drop-shadow(0 10px 30px var(--es-accent-glow));
 }
+
+/* ─── M3 Expressive: hero actions ───────────────────────── */
+.es-hero-actions {
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.es-split {
+  position: relative;
+  display: inline-flex;
+  gap: 3px;
+}
+
+.es-split-main,
+.es-split-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  background: var(--es-accent);
+  color: light-dark(#fff, #0a0a0a);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+  transition:
+    border-radius 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.2s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.es-split-main {
+  gap: 0.65rem;
+  padding: 0 1.4rem 0 1.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 32px 8px 8px 32px;
+  box-shadow: 0 4px 20px var(--es-accent-glow);
+}
+
+.es-split-version {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  background: light-dark(rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.14));
+}
+
+.es-split-toggle {
+  width: 56px;
+  border-radius: 8px 32px 32px 8px;
+  box-shadow: 0 4px 20px var(--es-accent-glow);
+}
+
+.es-split-toggle .material-symbols-rounded {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.es-split-main:hover,
+.es-split-toggle:hover {
+  filter: brightness(1.08);
+}
+
+.es-split-main:hover {
+  border-radius: 32px 14px 14px 32px;
+}
+
+.es-split-main:active {
+  border-radius: 20px 8px 8px 20px;
+}
+
+.es-split-toggle.is-open {
+  border-radius: 32px;
+}
+
+.es-split-toggle.is-open .material-symbols-rounded {
+  transform: rotate(180deg);
+}
+
+.es-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  min-width: 230px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 20px;
+  background: light-dark(#e7efea, #1b2420);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  transform-origin: top right;
+  opacity: 0;
+  transform: scale(0.85) translateY(-6px);
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.es-menu.is-open {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.es-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--es-text);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-radius 0.25s ease;
+}
+
+.es-menu-item .material-symbols-rounded {
+  font-size: 1.3rem;
+  color: var(--es-accent);
+}
+
+.es-menu-item:hover,
+.es-menu-item:focus-visible {
+  background: var(--es-accent-subtle);
+  border-radius: 20px;
+  outline: none;
+}
+
+.es-btn-group {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.es-btn-group-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 48px;
+  padding: 0 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--es-text);
+  background: light-dark(#dde7e1, #1c2622);
+  transition:
+    border-radius 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.2s ease;
+}
+
+.es-btn-group-item:first-child {
+  border-radius: 24px 8px 8px 24px;
+}
+
+.es-btn-group-item:last-child {
+  border-radius: 8px 24px 24px 8px;
+}
+
+.es-btn-group-item:hover {
+  background: light-dark(#d0ddd5, #24302b);
+  border-radius: 24px;
+}
+
+.es-btn-group-item .material-symbols-rounded {
+  font-size: 1.25rem;
+  color: var(--es-accent);
+}
+
+.es-hero {
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+/* Segmented (Android-style) menu */
+.es-menu {
+  padding: 0;
+  gap: 3px;
+  background: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.es-menu-item {
+  background: light-dark(#e7efea, #1b2420);
+  border-radius: 6px;
+  padding: 0.95rem 1.1rem;
+}
+
+.es-menu-item:first-child {
+  border-radius: 20px 20px 6px 6px;
+}
+
+.es-menu-item:last-child {
+  border-radius: 6px 6px 20px 20px;
+}
+
+.es-menu-item:hover,
+.es-menu-item:focus-visible {
+  background: light-dark(#d6e4db, #24312b);
+  border-radius: 20px;
+}

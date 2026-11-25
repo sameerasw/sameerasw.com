@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import type { ReleaseNote, AppTag } from "@/lib/releaseNotes";
 import "@/styles/index/release-feed.css";
@@ -91,6 +92,16 @@ export default function ReleaseFeed({
       }
     }
   }, []); // Only run on mount
+
+  useEffect(() => {
+    const onOpen = (e: Event) => {
+      const slug = (e as CustomEvent<string>).detail;
+      const note = notes.find((n) => n.slug === slug);
+      if (note) openNote(note);
+    };
+    window.addEventListener("open-release-note", onOpen);
+    return () => window.removeEventListener("open-release-note", onOpen);
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -247,7 +258,7 @@ export default function ReleaseFeed({
         {!hideGradient && <div className="release-feed-fade-right" />}
       </div>
 
-      {selectedNote && (
+      {selectedNote && typeof document !== "undefined" && createPortal(
         <div
           className={`release-modal-backdrop ${isModalVisible ? "visible" : ""}`}
           onClick={(e) => e.target === e.currentTarget && closeNote()}
@@ -329,7 +340,7 @@ export default function ReleaseFeed({
             />
           </div>
         </div>
-      )}
+      , document.body)}
     </>
   );
 }

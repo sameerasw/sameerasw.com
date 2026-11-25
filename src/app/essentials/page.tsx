@@ -6,6 +6,7 @@ import ReleaseFeed from "@/components/ReleaseFeed";
 import Navbar from "@/components/Navbar";
 import EssentialsClient from "@/components/essentials/EssentialsClient";
 import EssentialsSplash from "@/components/essentials/EssentialsSplash";
+import InstallSplitButton from "@/components/essentials/InstallSplitButton";
 import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
 import FeatureChips from "@/components/essentials/FeatureChips";
 import MadeByChip from "@/components/MadeByChip";
@@ -51,6 +52,7 @@ export const metadata: Metadata = {
 export default async function Essentials() {
   const allNotes = await getAllReleaseNotes();
   const notes = allNotes.filter(n => n.app === "essentials");
+  const latestStable = notes.find(n => !/beta|alpha|rc/i.test(n.version));
 
   return (
     <EssentialsClient>
@@ -75,34 +77,33 @@ export default async function Essentials() {
           </p>
 
           <div className="es-hero-actions">
-            <a
-              href="https://github.com/sameerasw/essentials/releases/latest/download/app-release.apk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="es-btn es-btn-primary"
-            >
-              <span className="material-symbols-rounded">download</span>
-              Install
-            </a>
-            <a
-              href="https://reddit.com/r/MadebySameerasw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="es-btn es-btn-ghost"
-            >
-              <span className="material-symbols-rounded">group</span>
-              Join Community
-            </a>
-
-            <a
-              href="https://t.me/tidwib"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="es-btn es-btn-ghost"
-            >
-              <span className="material-symbols-rounded">chat</span>
-              Join Chat
-            </a>
+            {latestStable && (
+              <InstallSplitButton
+                version={latestStable.version}
+                noteSlug={latestStable.slug}
+                releaseUrl={latestStable.link}
+              />
+            )}
+            <div className="es-btn-group">
+              <a
+                href="https://reddit.com/r/MadebySameerasw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="es-btn-group-item"
+              >
+                <span className="material-symbols-rounded">group</span>
+                Join Community
+              </a>
+              <a
+                href="https://t.me/tidwib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="es-btn-group-item"
+              >
+                <span className="material-symbols-rounded">chat</span>
+                Join Chat
+              </a>
+            </div>
           </div>
         </section>
 
