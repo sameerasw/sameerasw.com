@@ -394,7 +394,7 @@ body:has(.essentials-page) {
 .es-screenshot-card {
   flex: 0 0 auto;
   width: 280px;
-  aspect-ratio: 9/19.5;
+  aspect-ratio: 287 / 640;
   border-radius: var(--radius);
   background: var(--es-card-bg);
   border: 1.5px solid var(--es-border);
