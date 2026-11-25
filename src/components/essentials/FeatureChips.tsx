@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface FeatureChipsProps {
   features: string[];
@@ -8,11 +8,15 @@ interface FeatureChipsProps {
 
 export default function FeatureChips({ features }: FeatureChipsProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="es-features-grid-wrapper">
-      <div className={`es-features-grid-container ${isExpanded ? "expanded" : "collapsed"}`}>
-        <div className="es-features-grid">
+      <div
+        className={`es-features-grid-container ${isExpanded ? "expanded" : "collapsed"}`}
+        style={isExpanded ? { maxHeight: gridRef.current?.scrollHeight } : undefined}
+      >
+        <div className="es-features-grid" ref={gridRef}>
           {features.map((feature, i) => (
             <div key={i} className="es-feature-chip">
               {feature}
@@ -26,18 +30,9 @@ export default function FeatureChips({ features }: FeatureChipsProps) {
           className="es-toggle-btn" 
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          <div className="es-toggle-btn-content">
-            <span className="es-toggle-btn-title">
-              {isExpanded ? "Collapse Features" : "Show All Features"}
-            </span>
-            {!isExpanded && (
-              <span className="es-toggle-btn-desc">
-                Explore 25+ power user tools & utilities
-              </span>
-            )}
-          </div>
-          <span className="material-symbols-rounded es-toggle-icon">
-            {isExpanded ? "keyboard_arrow_up" : "keyboard_arrow_down"}
+          {isExpanded ? "Show less" : "Show more"}
+          <span className={`material-symbols-rounded es-toggle-icon${isExpanded ? " is-open" : ""}`}>
+            keyboard_arrow_down
           </span>
         </button>
       </div>

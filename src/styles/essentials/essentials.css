@@ -225,16 +225,21 @@ body:has(.essentials-page) {
 .es-feature-chip {
   display: inline-flex;
   align-items: center;
-  padding: 0.3rem 1.2rem;
-  background: var(--es-card-bg);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1.5px solid var(--es-border);
-  border-radius: var(--radius-pill);
-  font-size: 0.95rem;
+  height: 40px;
+  padding: 0 1.1rem;
+  background: light-dark(#dee5df, #252b27);
+  border-radius: 12px;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: var(--es-text-soft);
-  transition: all var(--transition);
+  color: var(--es-text);
+  transition:
+    border-radius 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.2s ease;
+}
+
+.es-feature-chip:hover {
+  background: light-dark(#d0ddd5, #2e3631);
+  border-radius: 20px;
 }
 
 /* ─── COLLAPSIBLE CHIPS ─────────────────────────────────── */
@@ -248,7 +253,8 @@ body:has(.essentials-page) {
 
 .es-features-grid-container {
   overflow: hidden;
-  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 140px;
+  transition: max-height 0.7s cubic-bezier(0.2, 0, 0, 1);
   position: relative;
   width: 100%;
 }
@@ -257,13 +263,17 @@ body:has(.essentials-page) {
   max-height: 140px; /* Roughly 3 lines */
 }
 
-.es-features-grid-container.collapsed::after {
+.es-features-grid-container::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, transparent 20%, var(--es-bg) 95%);
   pointer-events: none;
-  animation: es-fade-in 0.4s ease both;
+  transition: opacity 0.5s ease;
+}
+
+.es-features-grid-container.expanded::after {
+  opacity: 0;
 }
 
 .es-toggle-btn-wrapper {
@@ -276,55 +286,33 @@ body:has(.essentials-page) {
 }
 
 .es-toggle-btn {
-  background: var(--es-card-bg);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1.5px solid var(--es-border-accent);
-  color: var(--es-text);
-  padding: 1rem 2.5rem;
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1.5rem;
-  transition: all var(--transition);
-  text-align: left;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  gap: 0.3rem;
+  height: 40px;
+  padding: 0 0.9rem 0 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--es-accent);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .es-toggle-btn:hover {
-  transform: translateY(-4px) scale(1.02);
-  border-color: var(--es-accent);
-  box-shadow: 0 12px 40px var(--es-accent-glow);
-}
-
-.es-toggle-btn-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
-
-.es-toggle-btn-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--es-accent);
-  letter-spacing: -0.01em;
-}
-
-.es-toggle-btn-desc {
-  font-size: 0.8rem;
-  color: var(--es-text-soft);
-  font-weight: 500;
+  background: var(--es-accent-subtle);
 }
 
 .es-toggle-icon {
-  font-size: 1.8rem !important;
-  color: var(--es-accent);
-  transition: transform 0.4s ease;
+  font-size: 1.3rem;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.es-toggle-btn:hover .es-toggle-icon {
-  transform: translateY(2px);
+.es-toggle-icon.is-open {
+  transform: rotate(180deg);
 }
 
 .es-back-card {
