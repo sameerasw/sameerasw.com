@@ -100,7 +100,7 @@ body:has(.essentials-page) {
 }
 
 .es-hero-title {
-  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-size: clamp(2rem, 10vw, 7.5rem);
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -808,4 +808,19 @@ body:has(.essentials-page) {
   top: 0;
   width: min(30vw, 320px);
   translate: 5% -5%;
+}
+
+.essentials-page {
+  padding-top: 0;
+}
+
+.es-hero {
+  padding: 5rem 1.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  body:has(.essentials-page) .love-tab {
+    top: 1.25rem;
+    bottom: auto;
+  }
 }
