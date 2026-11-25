@@ -5,6 +5,7 @@ import { getAllReleaseNotes } from "@/lib/releaseNotes";
 import ReleaseFeed from "@/components/ReleaseFeed";
 import Navbar from "@/components/Navbar";
 import EssentialsClient from "@/components/essentials/EssentialsClient";
+import EssentialsSplash from "@/components/essentials/EssentialsSplash";
 import ScreenshotsCarousel from "@/components/essentials/ScreenshotsCarousel";
 import FeatureChips from "@/components/essentials/FeatureChips";
 import MadeByChip from "@/components/MadeByChip";
@@ -53,6 +54,7 @@ export default async function Essentials() {
 
   return (
     <EssentialsClient>
+      <EssentialsSplash />
       <div className="essentials-page">
         {/* ── HERO ── */}
         <section className="es-hero" id="intro">
