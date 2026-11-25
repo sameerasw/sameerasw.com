@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react";
 
 const LOGO_SRC = "/assets/img/project-logos/essentials-logo.svg";
 const LAYER_ANGLES = [30, 24, 18, 12, 6];
-const EASE = "cubic-bezier(0.22, 1, 0.36, 1)";
+const SPIN_MS = 1100;
+const LOADING_CAP = 0.8;
+const EASE ="cubic-bezier(0.22, 1, 0.36, 1)";
 
 export default function EssentialsSplash() {
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -60,19 +62,38 @@ export default function EssentialsSplash() {
             { duration: 450, easing: EASE, fill: "forwards" },
           ).finished;
 
-          await Promise.all(
-            layers.map((g, i) =>
-              g
-                ? g.animate(
-                    [
-                      { transform: `rotate(${-LAYER_ANGLES[i]}deg)` },
-                      { transform: "rotate(0deg)" },
-                    ],
-                    { duration: 1100, delay: (LAYER_ANGLES.length - 1 - i) * 60, easing: EASE, fill: "both" },
-                  ).finished
-                : Promise.resolve(),
-            ),
-          );
+          const total = SPIN_MS + (LAYER_ANGLES.length - 1) * 60;
+          const spins = layers.flatMap((g, i) => {
+            if (!g) return [];
+            const a = g.animate(
+              [{ transform: `rotate(${-LAYER_ANGLES[i]}deg)` }, { transform: "rotate(0deg)" }],
+              { duration: SPIN_MS, delay: (LAYER_ANGLES.length - 1 - i) * 60, easing: "linear", fill: "both" },
+            );
+            a.pause();
+            return [a];
+          });
+
+          let loaded = document.readyState === "complete";
+          const onLoad = () => (loaded = true);
+          if (!loaded) window.addEventListener("load", onLoad, { once: true });
+
+          await new Promise<void>((resolve) => {
+            let p = 0;
+            let last = performance.now();
+            const tick = (now: number) => {
+              if (cancelled) return resolve();
+              const dt = now - last;
+              last = now;
+              const rate = dt / total;
+              p = loaded ? Math.min(1, p + rate) : p + rate * Math.max(0, (LOADING_CAP - p) / LOADING_CAP);
+              const eased = 1 - Math.pow(1 - p, 3);
+              spins.forEach((a) => (a.currentTime = eased * total));
+              if (p >= 1) resolve();
+              else requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          });
+          window.removeEventListener("load", onLoad);
         }
         if (cancelled) return;
 
