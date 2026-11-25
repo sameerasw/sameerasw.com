@@ -20,8 +20,8 @@ body:has(.essentials-page) {
   --es-border-accent: light-dark(rgba(46, 125, 50, 0.35), rgba(61, 220, 132, 0.3));
   --es-text: light-dark(#0d0d0d, #f0f0f0);
   --es-text-soft: light-dark(#555, #aaa);
-  --es-bg: light-dark(#f4f6f5, #080c0b);
-  --es-card-bg: light-dark(rgba(255,255,255,0.65), rgba(16,22,20,0.65));
+  --es-bg: light-dark(color-mix(in oklab, var(--es-accent-l) 7%, #fafdfb), color-mix(in oklab, var(--es-accent-d) 7%, #0b100e));
+  --es-card-bg: light-dark(#e9efe9, #1b211d);
   --es-hero-grad: light-dark(
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(46,125,50,0.18) 0%, transparent 70%),
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(61,220,132,0.12) 0%, transparent 70%)
@@ -60,19 +60,6 @@ body:has(.essentials-page) {
   -webkit-overflow-scrolling: touch;
 }
 
-.essentials-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background:
-    var(--es-hero-grad),
-    light-dark(
-      radial-gradient(circle 500px at 85% 70%, rgba(46,125,50,0.07) 0%, transparent 70%),
-      radial-gradient(circle 500px at 85% 70%, rgba(61,220,132,0.06) 0%, transparent 70%)
-    );
-  pointer-events: none;
-}
 
 .es-wrap {
   max-width: 1160px;
@@ -668,7 +655,7 @@ body:has(.essentials-page) {
   flex-direction: column;
   gap: 2px;
   border-radius: 20px;
-  background: light-dark(#e7efea, #1b2420);
+  background: light-dark(#dee5df, #252b27);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
   transform-origin: top right;
   opacity: 0;
@@ -731,7 +718,7 @@ body:has(.essentials-page) {
   text-decoration: none;
   white-space: nowrap;
   color: var(--es-text);
-  background: light-dark(#dde7e1, #1c2622);
+  background: light-dark(#dee5df, #252b27);
   transition:
     border-radius 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
     background 0.2s ease;
@@ -770,7 +757,7 @@ body:has(.essentials-page) {
 }
 
 .es-menu-item {
-  background: light-dark(#e7efea, #1b2420);
+  background: light-dark(#dee5df, #252b27);
   border-radius: 6px;
   padding: 0.95rem 1.1rem;
 }
