@@ -562,11 +562,17 @@ body:has(.essentials-page) {
   z-index: 9999;
   display: grid;
   place-items: center;
-  background-color: var(--es-bg);
   pointer-events: none;
 }
 
+.es-splash-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--es-bg);
+}
+
 .es-splash-logo {
+  position: relative;
   width: 220px;
   height: 220px;
   opacity: 0;

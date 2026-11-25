@@ -97,11 +97,28 @@ export default function EssentialsSplash() {
         }
         if (cancelled) return;
 
+        const reveal: Promise<unknown>[] = [];
+
+        document
+          .querySelectorAll<HTMLElement>("#intro > :not(.es-hero-logo-wrap), #intro ~ section, .es-hero ~ *")
+          .forEach((el, i) => {
+            const r = el.getBoundingClientRect();
+            if (r.top > window.innerHeight || r.bottom < 0) return;
+            reveal.push(
+              el.animate(
+                [
+                  { opacity: 0, transform: "translateY(40px)" },
+                  { opacity: 1, transform: "translateY(0)" },
+                ],
+                { duration: 700, delay: 250 + i * 80, easing: EASE, fill: "backwards" },
+              ).finished,
+            );
+          });
         const from = logo.getBoundingClientRect();
         const to = hero?.getBoundingClientRect();
         const anims: Promise<unknown>[] = [
-          overlay.animate([{ backgroundColor: "var(--es-bg)" }, { backgroundColor: "transparent" }], {
-            duration: 700,
+          overlay.querySelector(".es-splash-bg")!.animate([{ opacity: 1 }, { opacity: 0 }], {
+            duration: 900,
             delay: 150,
             easing: "ease",
             fill: "forwards",
@@ -123,7 +140,7 @@ export default function EssentialsSplash() {
         } else {
           anims.push(logo.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 400, fill: "forwards" }).finished);
         }
-        await Promise.all(anims);
+        await Promise.all([...anims, ...reveal]);
       } catch {
         // fall through to reveal
       }
@@ -141,6 +158,7 @@ export default function EssentialsSplash() {
 
   return (
     <div ref={overlayRef} className="es-splash" aria-hidden="true">
+      <div className="es-splash-bg" />
       <div ref={logoRef} className="es-splash-logo" />
     </div>
   );

@@ -71,7 +71,7 @@ export default async function Essentials() {
 
           <p className="es-hero-tagline">
             Tools for Android nerds. Customize your Android experience with
-            visual, functional and utility tools — all in one place.
+            visual, functional and utility tools, all in one place.
           </p>
 
           <div className="es-hero-actions">
