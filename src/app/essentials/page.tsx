@@ -61,6 +61,12 @@ export default async function Essentials() {
         <svg className="es-bg-flower" viewBox="-2 -2 204 204" fill="none" aria-hidden="true">
           <path stroke="currentColor" strokeWidth={1} vectorEffect="non-scaling-stroke" />
         </svg>
+        <svg className="es-bg-flower es-bg-cookie" viewBox="-2 -2 204 204" fill="none" aria-hidden="true">
+          <path stroke="currentColor" strokeWidth={1} vectorEffect="non-scaling-stroke" />
+        </svg>
+        <svg className="es-bg-flower es-bg-burst" viewBox="-2 -2 204 204" fill="none" aria-hidden="true">
+          <path stroke="currentColor" strokeWidth={1} vectorEffect="non-scaling-stroke" />
+        </svg>
         {/* ── HERO ── */}
         <section className="es-hero" id="intro">
           <div className="es-hero-logo-wrap item">

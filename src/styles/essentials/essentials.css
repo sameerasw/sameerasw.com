@@ -791,3 +791,21 @@ body:has(.essentials-page) {
 @media (prefers-reduced-motion: reduce) {
   .es-bg-flower { animation: none; }
 }
+
+.es-bg-cookie {
+  right: auto;
+  bottom: auto;
+  left: 0;
+  top: 0;
+  width: min(70vw, 700px);
+  translate: -35% -35%;
+}
+
+.es-bg-burst {
+  right: 0;
+  bottom: auto;
+  left: auto;
+  top: 0;
+  width: min(30vw, 320px);
+  translate: 5% -5%;
+}
