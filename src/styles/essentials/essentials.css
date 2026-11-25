@@ -263,17 +263,27 @@ body:has(.essentials-page) {
   max-height: 140px; /* Roughly 3 lines */
 }
 
-.es-features-grid-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 20%, var(--es-bg) 95%);
-  pointer-events: none;
-  transition: opacity 0.5s ease;
+@property --es-fade {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
 }
 
-.es-features-grid-container.expanded::after {
-  opacity: 0;
+.es-features-grid-container {
+  --es-fade: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--es-fade)), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--es-fade)), transparent);
+  transition:
+    max-height 0.7s cubic-bezier(0.2, 0, 0, 1),
+    --es-fade 0.5s ease;
+}
+
+.es-features-grid-container.collapsed {
+  --es-fade: 75%;
+}
+
+.es-features-grid-container.expanded {
+  --es-fade: 0%;
 }
 
 .es-toggle-btn-wrapper {
