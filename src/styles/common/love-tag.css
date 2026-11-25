@@ -1,8 +1,8 @@
-/* Love FAB - same styling and motion as the survey button, icon only until hover */
+/* Love FAB - icon only until hover */
 .love-tab {
   position: fixed;
   right: 24px;
-  bottom: 82px;
+  bottom: 24px;
   z-index: 999;
   background-color: var(--primary-color);
   border-radius: var(--radius-out, 20px);
@@ -68,11 +68,11 @@
   }
 }
 
-/* Mobile: circular icon above the survey circle */
+/* Mobile: circular icon above the bottom nav */
 @media screen and (max-width: 750px) {
   .love-tab {
     right: 1.25rem;
-    bottom: 9.5rem;
+    bottom: 5.5rem;
     width: 3.25rem;
     height: 3.25rem;
     border-radius: 50%;

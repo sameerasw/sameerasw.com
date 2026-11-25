@@ -17,9 +17,6 @@ link: "https://sameerasw.com/airsync"
 - Accurate media playback sync
 - More fixes and improvements
 
-## Also if you got a couple minutes to spare, [Please consider filling this survey](https://tally.so/r/rjMgGN) to help me with my Final Year Research Project at university which is also about AirSync bridging the Android + macOS gap. <3
-
-
 <img width="1894" height="2014" alt="CleanShot-Activity Monitor-Activity Monitor-20260827-5  24 45@2x" src="https://github.com/user-attachments/assets/795af1c5-c233-40e5-bb1e-11df3941ceac" />
 
 > Efficiency improvements! No more CPU hog :)
