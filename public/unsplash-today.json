@@ -1,28 +1,28 @@
 {
-  "id": "XeIf57bkYSg",
-  "url": "https://images.unsplash.com/photo-1755722206368-f9ce12fdb1c8?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NzA5fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1NjY5MjY3fA&ixlib=rb-4.1.0&w=2560&q=90",
-  "url_full": "https://images.unsplash.com/photo-1755722206368-f9ce12fdb1c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258NzA5fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1NjY5MjY3fA&ixlib=rb-4.1.0&q=85",
+  "id": "0VawIhTEdpM",
+  "url": "https://images.unsplash.com/photo-1717330550630-659d5d3f5f29?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTMzMHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTc1NTY2Mnw&ixlib=rb-4.1.0&w=2560&q=90",
+  "url_full": "https://images.unsplash.com/photo-1717330550630-659d5d3f5f29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MTMzMHxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTc1NTY2Mnw&ixlib=rb-4.1.0&q=85",
   "author": {
-    "name": "G",
-    "username": "visualsbying",
-    "link": "https://unsplash.com/@visualsbying?utm_source=Glance&utm_medium=referral"
+    "name": "Marek Piwnicki",
+    "username": "marekpiwnicki",
+    "link": "https://unsplash.com/@marekpiwnicki?utm_source=Glance&utm_medium=referral"
   },
-  "link": "https://unsplash.com/photos/blurred-pink-orb-against-a-purple-and-blue-sky-XeIf57bkYSg?utm_source=Glance&utm_medium=referral",
-  "updatedAt": "2026-11-26T05:01:08.135Z",
+  "link": "https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-0VawIhTEdpM?utm_source=Glance&utm_medium=referral",
+  "updatedAt": "2026-11-27T05:01:03.095Z",
   "themeColors": {
-    "light": "hsl(241, 55%, 38%)",
-    "dark": "hsl(241, 70%, 55%)"
+    "light": "hsl(36, 90%, 38%)",
+    "dark": "hsl(36, 100%, 64%)"
   },
   "mobile": {
-    "id": "vGaAjWIODxc",
-    "url": "https://images.unsplash.com/photo-1791998839822-4257520d7ee9?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTYyMDYwNXw&ixlib=rb-4.1.0&w=1080&q=90",
-    "url_full": "https://images.unsplash.com/photo-1791998839822-4257520d7ee9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258MnxMcU85a25VOXoyQXx8fHx8Mnx8MTc5NTYyMDYwNXw&ixlib=rb-4.1.0&q=85",
+    "id": "QFf4N18l9Uk",
+    "url": "https://images.unsplash.com/photo-1778470075349-ad8fc4233a8f?ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mjk1fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1NzIxNjQ4fA&ixlib=rb-4.1.0&w=1080&q=90",
+    "url_full": "https://images.unsplash.com/photo-1778470075349-ad8fc4233a8f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NDQ2OTZ8MHwxfGNvbGxlY3Rpb258Mjk1fExxTzlrblU5ejJBfHx8fHwyfHwxNzk1NzIxNjQ4fA&ixlib=rb-4.1.0&q=85",
     "author": {
-      "name": "curaits",
-      "username": "curaits",
-      "link": "https://unsplash.com/@curaits?utm_source=Glance&utm_medium=referral"
+      "name": "Linus Belanger",
+      "username": "linusbelanger",
+      "link": "https://unsplash.com/@linusbelanger?utm_source=Glance&utm_medium=referral"
     },
-    "link": "https://unsplash.com/photos/scalloped-circular-shapes-with-dotted-texture-vGaAjWIODxc?utm_source=Glance&utm_medium=referral",
-    "updatedAt": "2026-11-26T05:01:08.986Z"
+    "link": "https://unsplash.com/photos/clusters-of-orange-flowers-on-branches-against-a-teal-sky-QFf4N18l9Uk?utm_source=Glance&utm_medium=referral",
+    "updatedAt": "2026-11-27T05:01:03.580Z"
   }
 }
